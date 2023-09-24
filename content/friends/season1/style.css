@@ -125,27 +125,21 @@ body {
 /* Style the columns for content */
 .row {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-wrap: nowrap; /* Prevent columns from wrapping to the next line */
+    margin-right: -10px; /* Add negative margin to counteract margin-right on columns */
+    margin-left: -10px; /* Add negative margin to counteract margin-right on columns */
+    overflow: hidden; /* Add horizontal scroll if the content overflows the screen */
 }
 
 .col-md-6 {
     margin-right: 10px; /* Add margin between columns */
+    margin-left: 10px; /* Add margin between columns */
     transition: transform 0.3s ease;
-    flex: 0 0 calc(50% - 5px); /* Equal-width columns with margin between */
+    flex: 0 0 calc(50% - 20px); /* Equal-width columns with margin between */
 }
 
 .col-md-6:last-child {
     margin-right: 0; /* Remove margin from the last column */
-}
-
-/* Add hover effect to columns */
-.col-md-6:hover {
-    transform: scale(1.02); /* Slightly scale up on hover */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-
 }
 
 .content-container {
