@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'Anton-Regular'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+
+/* Reset some default styles for better consistency */
+body, h1, h2, p, iframe {
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    color:#007bff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the entire page */
+body {
+    background-color: #eceef0 !important; /* Replace with your desired background color */
+    color: #333;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    margin: 0px 20px !important; /* Add margin to both left and right sides */
+}
+
+/* Styling for categories */
+.category-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Style the category heading */
+.category-heading {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the category description */
+.category-description {
+    margin-top: 10px;
+}
+
+/* Example media query for screens smaller than 768px (typical smartphones) */
+@media (max-width: 768px) {
+    /* Adjust styles for small screens here */
+    .navbar-brand {
+        font-size: 20px; /* Decrease font size for small screens */
+    }
+    
+    .col-lg-6 {
+        width: 100%; /* Make columns full width on small screens */
+    }
+}
+
+.video-header {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Set the height to your desired size */
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the video cover the entire header */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send it to the background */
+}
+
+/* Other styles for the navbar, logo, and menu */
+nav {
+    /* Style your navigation bar here, e.g., background color, text color, padding, etc. */
+    position: relative;
+    z-index: 1; /* Ensures the navigation is displayed above the video */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-clip: url('../assets/videos/video-bg.mp4');
+    background-size: cover; /* or 'contain' or specific dimensions */
+    background-position: center center; /* Center the image both horizontally and vertically */
+    background-repeat: no-repeat;
+    border-radius: 10px; /* Remove border radius */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    padding: 10px 0; /* Add padding to the Navbar */
+}
+
+.navbar-brand {
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.nav-link {
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #fff !important;
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+    margin: 0 20px; /* Add margin to each link for spacing */
+}
+
+.nav-link:hover {
+    color: #007BFF; /* Change the color on hover */
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+/* Header Styles */
+.container.text-center {
+    margin-top: 20px;
+}
+
+.display-4 {
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.lead {
+    font-size: 1.2rem; /* Larger font size for the lead text */
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px; /* Add some spacing below the lead text */
+}
+
+/* Add some spacing for better visual separation */
+.mt-4 {
+    margin-top: 40px;
+}
+
+/* Style the video container for larger screens */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.video-container iframe {
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+/* Align the video to the left within the container */
+.video-container.left-aligned {
+    text-align: left;
+}
+
+/* Media query for screens smaller than 768px (typical smartphones) */
+@media (max-width: 768px) {
+    /* Adjust the video container size for small screens */
+    .video-container {
+        max-width: 100%; /* Make it 100% width of the parent container */
+    }
+
+    /* Adjust the iframe size for small screens */
+    .video-container iframe {
+        width: 100%; /* Make the video 100% width */
+        height: ""; /* If you use "auto" you allow the height to adjust proportionally */
+    }
+}
+
+/* Style the columns for content */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.col-md-6 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Style headings and paragraph text */
+h2 {
+    color: #000000; /* Primary blue color */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Add hover effect to columns */
+.col-md-6:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style links */
+a {
+    color: #007bff; /* Primary blue color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* TRANSLATOR */
+
+/* Center-align the translator container */
+.translator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Style for the input field and button */
+#inputText {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 0.9rem !important;
+    background-color: #007bff;
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the translated text display */
+#translatedText {
+    display: none;
+    margin-top: 20px;
+    font-size: 24px; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: #007bff; /* Primary blue color */
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 10px; /* Add some padding to create space around the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    text-align: center; /* Center-align the text */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition effects */
+}
+
+#translatedText:hover {
+    background-color: #007bff; /* Darker blue background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Add some padding top and bottom */
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #141414;
+    color: #fff;
+}
+
+.eng-logo {
+    width: 240px;
+    height: 120px;
+}
+
+#pauseVideoBtn {
+    font-size: 0.7rem;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+.eye-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-container {
+    text-align: left;
+}
