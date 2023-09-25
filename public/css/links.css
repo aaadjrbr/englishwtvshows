@@ -1,34 +1,33 @@
 /* Style Settings */
 
 @import url('https://fonts.googleapis.com/css?family=Product%20Sans:400,700&display=swap');
+
 :root {
     --font: 'Prodcut Sans', 'Product Sans', sans-serif;
 }
 
 body {
-    background: linear-gradient(30deg, #e95950,#bc2a8d, #fccc63, #8a3ab9);
-	background-size: 450% 450%;
-	animation: gradient 10s ease infinite;
+    background: linear-gradient(30deg, #0080bf, #00acdf, 	#55d0ff, #7ce8ff);
+    background-size: 450% 450%;
+    animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-
 
 .theme-light {
     --color-main: #fff;
     --color-text: #fff;
- }
-
+}
 
 #Photo {
     width: 100px;
@@ -45,7 +44,7 @@ body {
     display: block;
     font-family: 'Product Sans';
     width: 100%;
-    text-align: center;
+    text-align: center; /* Center text horizontally */
 }
 
 #title {
@@ -57,31 +56,29 @@ body {
     font-family: var(--font);
     width: 100%;
     margin-top: 50px;
-    text-align: center;
+    text-align: center; /* Center text horizontally */
     text-decoration: none;
 }
-
-
 
 #linksbutton {
     max-width: 580px;
     width: auto;
     display: block;
-    margin: 27px auto;
+    margin: 27px auto; /* Center block horizontally */
 }
 
 .links {
     display: block;
-        background-color: rgba(255, 255, 255, 0.0 );
+    background-color: rgba(255, 255, 255, 0.0);
     color: var(--color-text);
     font-family: var(--font);
-    text-align: center;
+    text-align: center; /* Center text horizontally */
     margin-bottom: 8px;
     padding: 17px;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    transition: all .25s cubic-bezier(.08, .59, .29, .99);
+    transition: all 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
     border: solid var(--color-main) 2px;
 }
 
@@ -91,25 +88,24 @@ body {
     border: solid var(--color-main) 2px;
 }
 
-
 .gears {
     width: auto;
-    text-align: center;
-    margin: 10px auto;
-  }
+    text-align: center; /* Center text horizontally */
+    margin: 10px auto; /* Center block horizontally */
+}
 
 .gear {
     display: inline-block;
-        background-color: rgba(255, 255, 255, 0.0 );
+    background-color: rgba(255, 255, 255, 0.0);
     color: var(--color-text);
     font-family: var(--font);
-    text-align: center;
+    text-align: center; /* Center text horizontally */
     margin-bottom: 10px;
     padding: 12px;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
-    transition: all .25s cubic-bezier(.08, .59, .29, .99);
+    transition: all 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99);
     border: solid var(--color-main) 2px;
 }
 
@@ -120,13 +116,13 @@ body {
 }
 
 .footervalue {
-    text-align: center;
+    text-align: center; /* Center text horizontally */
     font-size: 1.3rem;
     margin-top: 10px;
 }
 
 .footervalue a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 #footertext {
@@ -138,6 +134,6 @@ body {
     font-family: var(--font);
     width: 100%;
     margin-top: 20px;
-    text-align: center;
+    text-align: center; /* Center text horizontally */
     text-decoration: none;
 }
