@@ -11,54 +11,60 @@
     <meta property="og:description" content="Aprenda inglês com séries e filmes!">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2110834991626364"
-     crossorigin="anonymous"></script>
 
 
 
-
-    <title>Em breve - English w/ TV Shows</title>
-    <link rel="icon" href="./favicon.png" type="image/x-icon">
-
-
+    <title>Contato - English w/ TV Shows</title>
     <link rel="stylesheet" href="./public/css/main.css">
-    <link rel="stylesheet" href="./public/css/imagestocategories.css">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <style>
+        /* Center-align the form container */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* This ensures the form container takes up the full viewport height */
+            overflow: hidden; /* Hide the horizontal scroll bar for this container */
+        }
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/css/main.css"> <!-- Replace with the actual path to your updated CSS file -->
+        /* Ensure the embedded form is responsive */
+        .embedded-form {
+            max-width: 100%;
+            width: 100%;
+            height: 100%; /* Ensure the iframe takes up all available vertical space */
+            border: none; /* Remove the iframe border */
+        }
+    </style>
 </head>
 <body>
-    <header style="text-align: center;">
-        <nav style="background-color: black; border-radius: 10px; padding: 10px;">
+    <header style="text-align: center; padding-bottom: 10px;">
+        <nav style="border-radius: 10px; width: 100%; height: 120px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); padding: 10px;">
             <div class="container">
-                <a href="./index.html"><img class="eng-logo navbar-brand" src="./public/assets/images/eng-logo.png"></a>
+                <a href="./index.html"><img class="eng-logo navbar-brand" style="width: 200px; height: 100px; margin-bottom: 20px;" src="./public/assets/images/eng-logo.png"></a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <div class="container text-center">
-            <h1 class="display-4">Em breve!</h1>
-            <p class="lead">Estamos trabalhando diariamente em atualizações.</p>
-            <p class="lead">Conteúdo novo diaramente, acompanhe no instagram: @englishwadenilson</p>
-            <p class="lead"><a href="./index.html">Início</a></p>
+    <div class="container text-center">
+        <h2 class="display-4">Em breve!</h2>
+        <p class="lead"><a href="./index.html"><strong>Início</strong></a></p>
+        <p class="lead">Estamos trabalhando diariamente em atualizações.<br/> </p>
+    </div>
+    <br/>
 
-            <button style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;" id="goBackButton">Voltar</button>
-        </div>
-    </main>
+    <h2 style="text-align: center;">Conteúdo novo diaramente, acompanhe no instagram: <a href="https://www.instagram.com/englishwadenilson/">@englishwadenilson</a></h2>
 
-    <hr/> <br/>
+
+
 
     <footer class="text-white text-center">
-        <p class="lead" style="font-size: 1.0rem;">&copy; 2023 English w/ TV Shows</p>
-        <p style="font-size: 0.8rem;">Powered by English w/ Adenilson</p>
+        <div class="container">
+            <p>&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p><br>
+            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
+        </div>
     </footer>
 
-    <button id="scrollToTopBtn" onclick="scrollToTop()">Scroll to Top</button>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">&#128316;</button>
 
     <script>
         // JavaScript function to scroll to the top of the page
