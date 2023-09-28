@@ -58,15 +58,16 @@ iframe {
     box-sizing: border-box;
 }
 
+p {
+    text-align: center;
+}
+
 h1 {
     font-weight: 600;
     color: #007bff;
+    margin-bottom: 10px;
     text-align: center;
     font-family: 'Anton-Regular', Arial, sans-serif;
-}
-
-p {
-    text-align: center;
 }
 
 .top__container {

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Inglês com filmes e séries!">
+    <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+    <meta name="author" content="English w/ Adenilson">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="English w/ Tv Shows">
+    <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+
+    <title>100 Frases Mais Usadas - English w/ TV Shows</title>
+    
+    <style>
+        @font-face {
+            font-family: 'Anton-Regular';
+            src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(228, 241, 255);
+        }
+
+        header {
+            background-color: rgb(174, 210, 255);
+            font-family: 'Anton-Regular', Arial, sans-serif;
+            color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            color: #007bff;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .phrase-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .phrase-list li {
+            margin-bottom: 10px;
+        }
+
+        .translation {
+            font-style: italic;
+        }
+
+        #goback {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #goback a {
+            color: #007bff;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-family: 'Anton-Regular', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.3em;
+            border: 1px solid #007bff;
+            background-color: rgb(174, 210, 255);
+            box-shadow: 0px 3px 0px 0px #2e8cf0;
+        }
+
+        #goback a:hover {
+            background-color: #ffffff;
+        }
+
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 0.8rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #141414;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 1.2em;
+            }
+
+            .phrase-list li {
+                font-size: 16px;
+            }
+
+            #goback a {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 100 First Words in English 📚</h1>
+    </header>
+    
+    <div class="container">
+        <ul class="phrase-list">
+            <li><strong>1. Hello</strong> - <span class="translation">Hola</span></li>
+            <li><strong>1. Hello</strong> - <span class="translation">Hola</span></li>
+            <!-- Your phrases and translations here -->
+        </ul>
+        <br/>
+        <div id="goback">
+            <a href="./test.html">Voltar</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p>
+        </div>
+    </footer>
+    
+
+    <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
+
+    <script>
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.addEventListener("click", function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+</html>
