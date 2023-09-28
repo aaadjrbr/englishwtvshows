@@ -14,7 +14,7 @@
 }
 
 body {
-    margin: 20px;
+    margin: 20px auto; /* Adds 20px margin to the top and bottom, and centers horizontally */
     padding: var(--root-padding);
     display: flex;
     flex-direction: column;
@@ -49,6 +49,7 @@ iframe {
     max-width: 600px; /* Make the video responsive */
     height: 350px;
     border-radius: 10px;
+    
 }
 
 .wrapper {

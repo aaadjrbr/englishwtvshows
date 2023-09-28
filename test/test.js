@@ -79,7 +79,7 @@ function checkAnswer() {
     const currentPhrase = phrases[currentPhraseIndex].english;
 
     if (userWords === currentPhrase) {
-        feedbackContainer.textContent = "Mandou bem!";
+        feedbackContainer.textContent = "✔️ Mandou bem!";
         feedbackContainer.classList.remove("incorrect");
         feedbackContainer.classList.add("correct");
         
@@ -89,19 +89,19 @@ function checkAnswer() {
                 displayPhrase();
                 chancesLeft = 2;
             } else {
-                feedbackContainer.textContent = "Parabéns! Você completou todas as frases.";
+                feedbackContainer.textContent = "🥳🎉 Parabéns! Você completou todas as frases.";
                 checkButton.disabled = true; // Disable the check button
                 skipButton.disabled = true; // Disable the skip button
             }
         }, 2500);
     } else {
         if (chancesLeft > 0) {
-            feedbackContainer.textContent = `Incorreto. Você tem ${chancesLeft} tentativas.`;
+            feedbackContainer.textContent = `❌ Incorreto. Você tem ${chancesLeft} tentativas. ⏳`;
             feedbackContainer.classList.remove("correct");
             feedbackContainer.classList.add("incorrect");
             chancesLeft--;
         } else {
-            feedbackContainer.textContent = `Incorreto. A resposta correta é: "${currentPhrase}".`;
+            feedbackContainer.textContent = `😕 Incorreto. A resposta correta é: "${currentPhrase}".`;
             feedbackContainer.classList.remove("correct");
             feedbackContainer.classList.add("incorrect");
             
@@ -111,7 +111,7 @@ function checkAnswer() {
                     displayPhrase();
                     chancesLeft = 2;
                 } else {
-                    feedbackContainer.textContent = "Parabéns! Você completou todas as frases.";
+                    feedbackContainer.textContent = "🥳 Parabéns! Você completou todas as frases.";
                     checkButton.disabled = true; // Disable the check button
                     skipButton.disabled = true; // Disable the skip button
                 }
