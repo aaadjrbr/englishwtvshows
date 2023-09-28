@@ -1,0 +1,321 @@
+:root {
+    --grey-color: rgb(228, 228, 228);
+    --darker-grey-color: rgb(189, 189, 189);
+    --text-color: rgb(60, 60, 60);
+    --border-radius: 15px;
+    --correct-color: #2ec748; /* Green color for correct words */
+    --incorrect-color: #ff4242; /* Red color for incorrect words */
+    --root-padding: 20px; /* Adjust padding for the root element */
+}
+
+body {
+    margin: 0;
+    padding: var(--root-padding); /* Apply the padding here */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: rgb(250, 250, 250);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+}
+
+.video-and-content {
+    display: flex;
+    flex-direction: row; /* Display video and content side by side */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    height: auto;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+iframe {
+    width: 70%; /* Set the video width to 50% of the container */
+    height: auto; /* Let the height adjust proportionally */
+    border-radius: 10px;
+}
+
+.wrapper {
+    width: 50%; /* Set the content width to 50% of the container */
+    padding: 20px; /* Add some spacing around content */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+h1 {
+    width: 100%;
+    font-weight: 600;
+    text-align: center; /* Center-align the heading */
+}
+
+.top__container {
+    margin-top: 50px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content horizontally */
+}
+
+.image_text__container {
+    display: flex;
+    justify-content: center; /* Center-align the image */
+    align-items: center;
+}
+
+img {
+    width: 150px;
+    display: block;
+}
+
+#original__text {
+    border: 2px solid var(--grey-color);
+    padding: 1em;
+    width: auto;
+    border-radius: var(--border-radius);
+    margin-left: 20px;
+    font-size: 1.2em;
+    text-align: center; /* Center-align the Portuguese word */
+}
+
+span {
+    display: inline-block;
+    border-bottom: 2px dashed var(--darker-grey-color);
+    margin-right: 5px;
+}
+
+#destination__container {
+    padding: 0.5em 0;
+    height: 60px;
+    width: 100%;
+    border-top: 2px solid var(--grey-color);
+    border-bottom: 2px solid var(--grey-color);
+    display: flex;
+    justify-content: center; /* Center-align the content horizontally */
+    align-items: center;
+}
+
+#origin__container {
+    padding: 3em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack elements in a column */
+    justify-content: center; /* Center-align the content vertically */
+    align-items: center; /* Center-align the content horizontally */
+}
+
+.word {
+    position: relative;
+    border: 1px solid var(--grey-color);
+    background-color: white;
+    margin: 0 0.2em;
+    padding: 0.5em 1em;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 3px 0px 0px var(--grey-color);
+    transition: 0.2s transform ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.word__container {
+    display: flex; /* Align words in a row */
+    margin: 0 0.2em;
+    padding: 0.5em 1em;
+    border-radius: var(--border-radius);
+}
+
+/* Green background for correct words */
+.word.correct {
+    background-color: var(--correct-color);
+    padding: var(--root-padding);
+    color: white; /* White text for visibility */
+}
+
+/* Red background for incorrect words */
+.word.incorrect {
+    background-color: var(--incorrect-color);
+    padding: var(--root-padding);
+    color: white; /* White text for visibility */
+}
+
+/* Green feedback for correct answer */
+.correct {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--correct-color);
+}
+
+/* Red feedback for incorrect answer */
+.incorrect {
+    color: var(--incorrect-color);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.word__container:empty {
+    background: var(--grey-color);
+}
+
+.word:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center-align the content horizontally */
+    align-items: center; /* Center-align the content vertically */
+    padding: 1em 5em;
+}
+
+.skip_button,
+.check_button {
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.8em 2.5em;
+    border-radius: var(--border-radius);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0s all ease-in-out;
+    cursor: pointer;
+}
+
+.skip_button {
+    color: var(--darker-grey-color);
+    border: 1px solid var(--grey-color);
+    background-color: white;
+    box-shadow: 0px 3px 0px 0px var(--grey-color);
+    margin-right: 10px; /* Add a small margin to the right */
+}
+
+.skip_button:hover {
+    background-color: rgba(143, 157, 173, 0.2);
+}
+
+.check_button {
+    color: white;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    margin-left: 10px; /* Add a small margin to the left */
+}
+
+.check_button:hover {
+    background-color: #0056b3;
+}
+
+.skip_button:active,
+.check_button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Add styles for the divider */
+.divider {
+    width: 100%;
+    margin: 10px 0; /* Adjust the margin as needed */
+    border: none;
+    border-top: 1px solid var(--grey-color); /* Style the divider */
+}
+
+/* Adjust the styles for the Portuguese word */
+#original__text {
+    border: 2px solid var(--grey-color);
+    padding: 0.8em;
+    width: auto;
+    border-radius: var(--border-radius);
+    margin-left: 20px;
+    font-size: 1.2em;
+    text-align: center; /* Center-align the Portuguese word */
+}
+
+#portuguese__text {
+    /* Your styles for the #portuguese__text element here */
+    font-size: 1.6em;
+    color: #333; /* Change the color as needed */
+    font-weight: bold;
+    /* Add any other styles you want */
+}
+
+.feedback-container {
+    width: 100%;
+    margin-top: 20px; /* Add some space between content and feedback */
+    margin-bottom: 20px; /* Add space below the feedback */
+}
+
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .wrapper {
+        width: 100%; /* Make the content take up the full width */
+    }
+
+    /* Stack the elements in the top__container for smaller screens */
+    .top__container {
+        flex-direction: column;
+        height: auto; /* Allow content to determine height */
+        align-items: center;
+        text-align: center;
+    }
+
+    img {
+        margin-bottom: 1em; /* Add space below the image */
+    }
+
+    #original__text {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Stack words in a column for smaller screens */
+    .word__container {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Reduce padding for smaller screens */
+    .word {
+        padding: 0.3em 0.5em;
+        margin: 0.2em 0;
+    }
+
+    /* Adjust footer button styles for smaller screens */
+    .skip_button,
+    .check_button {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
+    }
+
+    .video-and-content {
+        flex-direction: column; /* Stack video and content on top of each other */
+        align-items: center; /* Center-align them */
+    }
+
+    iframe {
+        width: 100%; /* Make the video take up the full width */
+    }
+
+    h1 {
+        margin-top: 10px; /* Reduce the margin for smaller screens */
+    }
+
+    .feedback-container {
+        margin-top: 10px; /* Reduce the margin for smaller screens */
+        margin-bottom: 10px; /* Reduce space below the feedback for smaller screens */
+    }
+}
