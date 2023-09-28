@@ -338,3 +338,39 @@ footer {
 .form-container {
     text-align: left;
 }
+
+/* Styles for the loader container */
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 241, 255);
+    z-index: 9999; /* Ensure the loader is on top of everything */
+}
+
+/* Styles for your logo */
+.loader img {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    /* Add any additional styles for your logo */
+}
+
+/* Styles for the loading text */
+#loader-phrase {
+    margin-top: 20px;
+    color: #007bff;
+    text-align: center;
+    font-size: 18px;
+    /* Add any additional styles for the loading text */
+}
+
+/* Styles for your site content */
+.content {
+    display: none; /* Hide the content initially */
+}
