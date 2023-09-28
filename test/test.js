@@ -65,7 +65,7 @@ function displayPhrase() {
         });
     } else {
         // User has completed all phrases
-        phraseContainer.textContent = "You finished all the words in this list!";
+        phraseContainer.textContent = "Parabéns! Você completou todas as frases.";
     }
 }
 
@@ -86,7 +86,7 @@ function checkAnswer() {
 
     if (userWords === currentPhrase) {
         // User's answer is correct
-        feedbackContainer.textContent = "Correct!";
+        feedbackContainer.textContent = "Mandou bem!";
         feedbackContainer.classList.remove("incorrect"); // Remove incorrect class
         feedbackContainer.classList.add("correct"); // Add class for correct feedback
 
@@ -99,22 +99,22 @@ function checkAnswer() {
                 displayPhrase(); // Display the next phrase
                 chancesLeft = 2; // Reset chances
             } else {
-                feedbackContainer.textContent = "Congratulations! You've completed the exercise.";
+                feedbackContainer.textContent = "Parabéns! Você completou todas as frases.";
                 currentPhraseIndex = 0; // Reset the exercise
                 displayPhrase(); // Display the first phrase
                 chancesLeft = 2; // Reset chances
             }
-        }, 1000); // Delay for 1 second before proceeding
+        }, 2500); // Delay for 2,5 second before proceeding
     } else {
         if (chancesLeft > 0) {
             // User's answer is incorrect, but they have chances left
-            feedbackContainer.textContent = `Incorrect. You have ${chancesLeft} chances left.`;
+            feedbackContainer.textContent = `Incorreto. Você tem ${chancesLeft} tentativas.`;
             feedbackContainer.classList.remove("correct"); // Remove correct class
             feedbackContainer.classList.add("incorrect"); // Add class for incorrect feedback
             chancesLeft--;
         } else {
             // User has used all chances, reveal the correct answer
-            feedbackContainer.textContent = `Incorrect. The correct answer is: "${currentPhrase}".`;
+            feedbackContainer.textContent = `Incorreto. A resposta correta é: "${currentPhrase}".`;
             feedbackContainer.classList.remove("correct"); // Remove correct class
             feedbackContainer.classList.add("incorrect"); // Add class for incorrect feedback
 
@@ -124,12 +124,12 @@ function checkAnswer() {
                     displayPhrase(); // Display the next phrase
                     chancesLeft = 2; // Reset chances
                 } else {
-                    feedbackContainer.textContent = "Congratulations! You've completed the exercise.";
+                    feedbackContainer.textContent = "Parabéns! Você completou todas as frases.";
                     currentPhraseIndex = 0; // Reset the exercise
                     displayPhrase(); // Display the first phrase
                     chancesLeft = 2; // Reset chances
                 }
-            }, 1000); // Delay for 1 second before proceeding
+            }, 2000); // Delay for 2 second before proceeding
         }
     }
 
@@ -158,68 +158,4 @@ displayPhrase();
 // Function to check if all words have been completed
 function checkAllWordsCompleted() {
     return currentPhraseIndex >= phrases.length;
-}
-
-// Function to check the user's answer
-function checkAnswer() {
-    const userWords = selectedWordsOrder.join(' ');
-    const currentPhrase = phrases[currentPhraseIndex].english;
-
-    if (userWords === currentPhrase) {
-        // User's answer is correct
-        feedbackContainer.textContent = "Correct!";
-        feedbackContainer.classList.remove("incorrect"); // Remove incorrect class
-        feedbackContainer.classList.add("correct"); // Add class for correct feedback
-
-        // Clear the English translation
-        document.getElementById("english__text").textContent = '';
-
-        setTimeout(() => {
-            currentPhraseIndex++;
-            if (currentPhraseIndex < phrases.length) {
-                displayPhrase(); // Display the next phrase
-                chancesLeft = 2; // Reset chances
-            } else if (checkAllWordsCompleted()) {
-                feedbackContainer.textContent = "Congratulations! You've finished all the words!";
-            } else {
-                feedbackContainer.textContent = "Congratulations! You've completed the exercise.";
-                currentPhraseIndex = 0; // Reset the exercise
-                displayPhrase(); // Display the first phrase
-                chancesLeft = 2; // Reset chances
-            }
-        }, 1000); // Delay for 1 second before proceeding
-    } else {
-        if (chancesLeft > 0) {
-            // User's answer is incorrect, but they have chances left
-            feedbackContainer.textContent = `Incorrect. You have ${chancesLeft} chances left.`;
-            feedbackContainer.classList.remove("correct"); // Remove correct class
-            feedbackContainer.classList.add("incorrect"); // Add class for incorrect feedback
-            chancesLeft--;
-        } else {
-            // User has used all chances, reveal the correct answer
-            feedbackContainer.textContent = `Incorrect. The correct answer is: "${currentPhrase}".`;
-            feedbackContainer.classList.remove("correct"); // Remove correct class
-            feedbackContainer.classList.add("incorrect"); // Add class for incorrect feedback
-
-            setTimeout(() => {
-                currentPhraseIndex++;
-                if (currentPhraseIndex < phrases.length) {
-                    displayPhrase(); // Display the next phrase
-                    chancesLeft = 2; // Reset chances
-                } else if (checkAllWordsCompleted()) {
-                    feedbackContainer.textContent = "Congratulations! You've finished all the words!";
-                } else {
-                    feedbackContainer.textContent = "Congratulations! You've completed the exercise.";
-                    currentPhraseIndex = 0; // Reset the exercise
-                    displayPhrase(); // Display the first phrase
-                    chancesLeft = 2; // Reset chances
-                }
-            }, 1000); // Delay for 1 second before proceeding
-        }
-    }
-
-    // Clear selection and selected words order
-    const selectedWords = document.querySelectorAll(".word.selected");
-    selectedWords.forEach((element) => element.classList.remove("selected"));
-    selectedWordsOrder = [];
 }
