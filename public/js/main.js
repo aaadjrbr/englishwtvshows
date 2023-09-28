@@ -50,23 +50,29 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Array of phrases with line breaks
   const phrases = [
-      "<strong>Você sabia?</strong><br>Com 2.000 palavras você<br> entende 80% do inglês falado 🤔",
-      "<strong>5 minutos todos os dias 📚📖📝</strong><br>Isso te leva a fluência!",
-      "<strong>Quase lá!</strong><br>Em 6 meses você pode aprender<br>+ de 2 mil palavras 💭",
-      "<strong>Aprenda inglês sozinho!</strong><br>Sabia que aqui no site tem aulas grátis? 💸",
-  ];
+    "<strong>Você sabia?</strong><br>Com 2.000 palavras você<br> entende 80% do inglês falado 🤔",
+    "<strong>5 minutos todos os dias 📚📖📝</strong><br>Isso te leva a fluência!",
+    "<strong>Quase lá!</strong><br>Em 6 meses você pode aprender<br>+ de 2 mil palavras 💭",
+    "<strong>Aprenda inglês sozinho!</strong><br>Sabia que aqui no site tem aulas grátis? 💸",
+];
 
-  // Get a random phrase from the array
-  const randomIndex = Math.floor(Math.random() * phrases.length);
-  const randomPhrase = phrases[randomIndex];
+  // Check if a phrase is stored in local storage
+  let storedPhrase = localStorage.getItem("loaderPhrase");
 
-  // Update the loader text with the random phrase
+  // If a phrase is not stored, select a random phrase and store it
+  if (!storedPhrase) {
+      const randomIndex = Math.floor(Math.random() * phrases.length);
+      storedPhrase = phrases[randomIndex];
+      localStorage.setItem("loaderPhrase", storedPhrase);
+  }
+
+  // Update the loader text with the stored phrase
   const loaderPhrase = document.getElementById("loader-phrase");
-  loaderPhrase.innerHTML = randomPhrase;
+  loaderPhrase.innerHTML = storedPhrase;
 
   // After some time (you can adjust the delay), hide the loader and display the content
   setTimeout(function () {
       document.querySelector(".loader").style.display = "none";
       document.querySelector(".content").style.display = "block";
-  }, 3500); // 3,5 seconds delay (adjust as needed)
+  }, 3000); // 3 seconds delay (adjust as needed)
 });
