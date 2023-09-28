@@ -65,6 +65,11 @@ h1 {
     font-family: 'Anton-Regular', Arial, sans-serif;
 }
 
+p {
+    text-align: center;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+}
+
 .top__container {
     margin-top: 50px;
     width: 100%;
