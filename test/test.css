@@ -154,6 +154,8 @@ span {
 /* Green feedback for correct answer */
 .correct {
     font-size: 1.1em;
+    margin-bottom: 20px;
+    padding: 10px;
     font-weight: 600;
     color: var(--correct-color);
 }
@@ -161,6 +163,8 @@ span {
 /* Red feedback for incorrect answer */
 .incorrect {
     color: var(--incorrect-color);
+    margin-bottom: 20px;
+    padding: 10px;
     font-weight: 600;
     font-size: 1.1em;
 }
