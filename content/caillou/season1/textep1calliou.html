@@ -19,8 +19,36 @@
     
     <!-- Add your custom CSS -->
     <link rel="stylesheet" href="./style.css">
+
+
+        <!--Styles for loader-->
+
+        <style>
+            .loader-container {
+                display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(228, 241, 255);
+        z-index: 9999; /* Ensure the loader is on top of everything */
+            }
+        </style>
+
 </head>
 <body>
+                <!-- Loading spinner container -->
+                <div class="loader-container">
+                    <img style="width: 150px; height: 150px;" src="../../../public/assets/images/tv-loader-pages.gif"></img>
+                </div>
+
+                <div id="site-content" style="display: none;">
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a href="../../../index.html"><img class="eng-logo navbar-brand" src="../../../public/assets/images/eng-logo.png"></a>
@@ -51,6 +79,8 @@
         <p class="lead"> Terminou de estudar com o texto e tradução? <a href="../../../flashcards/caillou/season1/quizep1s1caillou.html"><strong>Revise o vocabulário aqui</strong></a>.</p>
         <p class="lead" style="background-color: rgb(255, 255, 255); padding: 15px; border-radius: 5px;"><a href="../menu-caillou.html"><strong>Escolher outro episódio</strong></a></p>
     </div>
+    
+    <hr><br/><br/>
 
             <!-- Add Bootstrap Container for Content -->
             <h2 style="text-align: center;">Estude comigo:</h2>
@@ -61,11 +91,8 @@
                     
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/oxGXxPpjPkg" frameborder="0" allowfullscreen></iframe>
                 </div>
-
+                <hr/>
     <br/><br/>
-
-    
-    <hr><br/><br/>
 
     <!-- Add Bootstrap Container for Content -->
     <h2 style="text-align: center;">Caillou - Caillou Makes Cookies<br> (Season 1 - Episode 1)</h2>
@@ -83,13 +110,12 @@
             <div id="translatedText"></div>
             <br>
             <div id="notFoundText" style="display: none;"></div>
-            <br>
         </div>
         
         <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
 
         
-            <table>
+        <table>
             <tr>
                 <th style="font-size: 1.4rem;">English</th>
                 <th style="font-size: 1.4rem;">Português</th>
@@ -374,7 +400,7 @@
                 <td><strong>70</strong> A big mess.</td>
                 <td><strong>70</strong> Uma grande bagunça.</td>
             </tr>
-            </table>
+            </table>                        
 
 
 
@@ -402,5 +428,16 @@
             <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
         </div>
     </footer>
+
+</div><!-- div for loader -->
+<script>
+    // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
+</script>
+
 </body>
 </html>

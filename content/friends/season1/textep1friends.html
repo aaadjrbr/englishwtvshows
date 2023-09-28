@@ -19,8 +19,34 @@
     
     <!-- Add your custom CSS -->
     <link rel="stylesheet" href="./style.css">
+
+    <style>
+        .loader-container {
+            display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 241, 255);
+    z-index: 9999; /* Ensure the loader is on top of everything */
+        }
+    </style>
+
 </head>
 <body>
+
+                    <!-- Loading spinner container -->
+                    <div class="loader-container">
+                        <img style="width: 150px; height: 150px;" src="../../../public/assets/images/tv-loader-pages.gif"></img>
+                    </div>
+    
+                    <div id="site-content" style="display: none;">
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a href="../../../index.html"><img class="eng-logo navbar-brand" src="../../../public/assets/images/eng-logo.png"></a>
@@ -70,7 +96,6 @@
             <div id="translatedText"></div>
             <br>
             <div id="notFoundText" style="display: none;"></div>
-            <br>
         </div>
         
         <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
@@ -547,5 +572,16 @@
             <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
         </div>
     </footer>
+
+</div><!-- div for loader -->
+<script>
+    // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
+</script>    
+
 </body>
 </html>
