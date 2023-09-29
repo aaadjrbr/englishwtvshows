@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:title" content="English w/ Tv Shows">
     <meta property="og:description" content="Aprenda inglês com séries e filmes!">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="icon" href="../../favicon.png" type="image/x-icon">
 
-    <title>100 Frases Mais Usadas - English w/ TV Shows</title>
+    <title>100 Frases Mais Usadas Em Inglês - English w/ TV Shows</title>
     
     <style>
         @font-face {
@@ -33,6 +33,16 @@
             color: #007bff;
             padding: 10px;
             text-align: center;
+        }
+
+        /* Style the audio player itself */
+        .custom-audio-player {
+            width: 150px;
+            height: 20px;
+            padding: 5px;
+            background-color: rgb(174, 210, 255);
+            box-shadow: 0px 3px 0px 0px #2e8cf0;
+            border-radius: 5px;
         }
 
         .container {
@@ -103,6 +113,20 @@
             color: #fff;
         }
 
+        .loader-container {
+            display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 241, 255);
+    z-index: 9999; /* Ensure the loader is on top of everything */
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -123,17 +147,68 @@
         }
     </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7LS5S7RDE3');
+</script>
+
 <body>
+
+                            <!-- Loading spinner container -->
+                            <div class="loader-container">
+                                <img style="width: 150px; height: 150px;" src="../../../public/assets/images/tv-loader-pages.gif"></img>
+                            </div>
+            
+                            <div id="site-content" style="display: none;">
+
     <header>
-        <h1>📚 100 First Words in English 📚</h1>
+        <h1>📚 100 Frases Mais Usadas Em Inglês 📚</h1>
+        <div id="goback">
+            <a href="./100-primeiras-frases.html">Voltar</a>
+        </div>
+        <br/>
     </header>
     
     <div class="container">
         <ul class="phrase-list">
             <li><strong>1. Hello!</strong> - <span class="translation">Olá!</span></li>
+            <div class="audio-container">
+                <audio class="custom-audio-player" controls>
+                    <source src="https://drive.google.com/uc?export=download&id=1Rvkg_3q8okNn7-SD6SR1EsInUYQDygeB" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <br/>
             <li><strong>2. Good morning!</strong> - <span class="translation">Bom dia!</span></li>
+            <div class="audio-container">
+                <audio class="custom-audio-player" controls>
+                    <source src="https://drive.google.com/uc?export=download&id=1dEK-E2rQkVSmXfN3e2l5Iycu3f1HWnqD" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <br/>
             <li><strong>3. Good afternoon!</strong> - <span class="translation">Boa tarde!</span></li>
+            <div class="audio-container">
+                <audio class="custom-audio-player" controls>
+                    <source src="https://drive.google.com/uc?export=download&id=1m8dE8DkiZQtdDZqhfaR0KUD6qVllQf7R" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <br/>
             <li><strong>4. Good evening!</strong> - <span class="translation">Boa noite!</span></li>
+            <div class="audio-container">
+                <audio class="custom-audio-player" controls>
+                    <source src="https://drive.google.com/uc?export=download&id=1CoGJCogzONxC2Y-BmJuadI7zGwQuAW2K" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <br/>
             <li><strong>5. How are you?</strong> - <span class="translation">Como você está?</span></li>
             <li><strong>6. I'm fine, thank you.</strong> - <span class="translation">Estou bem, obrigado(a).</span></li>
             <li><strong>7. What's your name?</strong> - <span class="translation">Qual é o seu nome?</span></li>
@@ -234,7 +309,7 @@
         </ul>
         <br/>
         <div id="goback">
-            <a href="./test.html">Voltar</a>
+            <a href="./100-primeiras-frases.html">Voltar</a>
         </div>
     </div>
 
@@ -262,6 +337,17 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         });
+
+            // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
     </script>
+
+
+
+</div><!-- div for loader -->  
 </body>
 </html>
