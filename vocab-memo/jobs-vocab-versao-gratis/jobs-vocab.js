@@ -88,10 +88,10 @@ function checkAnswer(selectedOption) {
     const question = questions[currentQuestionIndex];
 
     if (selectedOption === question.correctOption) {
-        feedbackElement.textContent = 'Correct!';
+        feedbackElement.textContent = '✔️ Mandou bem!';
         nextButton1.style.display = 'block';
     } else {
-        feedbackElement.textContent = 'Incorrect. Try again.';
+        feedbackElement.textContent = '😕 Incorreto. Tente novamente.';
     }
 }
 
@@ -100,7 +100,7 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
-        questionElement.innerHTML = '<h2>Quiz Complete!</h2>';
+        questionElement.innerHTML = '<h2>🥳✨🎉 Parabéns! Você completou tudo.<br/> Vá para o próximo desafio abaixo. 👇</h2>';
         optionsContainer.innerHTML = '';
         feedbackElement.innerHTML = '';
         nextButton1.style.display = 'none';
@@ -155,14 +155,14 @@ function checkVideoAnswer() {
     const userAnswer = textInputElement.value.trim();
 
     if (userAnswer.toLowerCase() === videoQuestion.correctAnswer.toLowerCase()) {
-        videoFeedbackElement.textContent = 'Correct!';
+        videoFeedbackElement.textContent = '✔️ Mandou bem!';
         nextButton2.style.display = 'block'; // Display the "Next" button
     } else {
         attempts++;
         if (attempts === 1) {
-            videoFeedbackElement.textContent = 'Incorrect. Try again.';
+            videoFeedbackElement.textContent = '😕 Incorreto. Tente novamente.';
         } else if (attempts === 2) {
-            videoFeedbackElement.textContent = `Incorrect. The correct answer is: "${videoQuestion.correctAnswer}"`;
+            videoFeedbackElement.textContent = `❌ Incorreto. A reposta correta é: "${videoQuestion.correctAnswer}"`;
             nextButton2.style.display = 'block'; // Display the "Next" button after two attempts
         }
     }
@@ -175,9 +175,9 @@ function nextVideoQuestion() {
         showVideoQuestion();
         nextButton2.style.display = 'none'; // Hide the "Next" button for the next question
     } else {
-        videoQuestionElement.innerHTML = '<h2>Video Quiz Complete!</h2>';
+        videoQuestionElement.innerHTML = '<h2>🥳🎉 Parabéns! Continue assim.</h2>';
         textInputElement.style.display = 'none';
-        videoFeedbackElement.innerHTML = 'Congratulations! You have concluded the quiz.';
+        videoFeedbackElement.innerHTML = '🚀 Você completou todo desafio! 🚀';
         checkButton.style.display = 'none';
         nextButton2.style.display = 'none';
     }
