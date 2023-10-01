@@ -113,8 +113,8 @@ h2 {
 /* Add this CSS code in styles.css */
 .question img {
     border-radius: 10px;
-    width: 60%; /* Adjust the width to your desired size */
-    height: 60%; /* Adjust the height to your desired size */
+    width: 85%; /* Adjust the width to your desired size */
+    height: 85%; /* Adjust the height to your desired size */
     max-width: 100%; /* Ensures the image doesn't exceed its container */
     max-height: 100%; /* Ensures the image doesn't exceed its container */
 }
