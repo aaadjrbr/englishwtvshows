@@ -1,0 +1,320 @@
+:root {
+    --grey-color: rgb(174, 210, 255);
+    --darker-grey-color: rgb(189, 189, 189);
+    --text-color: rgb(60, 60, 60);
+    --border-radius: 15px;
+    --correct-color: #2ec748;
+    --incorrect-color: #ff4242;
+    --root-padding: 20px;
+}
+
+@font-face {
+    font-family: 'Anton-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+body {
+    margin: 20px auto; /* Adds 20px margin to the top and bottom, and centers horizontally */
+    padding: var(--root-padding);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: rgb(228, 241, 255);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+.next-button {
+    display: block;
+    margin: 10px auto; /* Center horizontally and add top margin */
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #007bff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #007bff;
+    background-color: rgb(174, 210, 255);
+    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #ffffff;
+}
+
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Adjusted to full width */
+}
+
+.quiz {
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 1.5em !important;
+    color: #007bff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+}
+
+.options-container {
+    text-align: center; /* Center the buttons horizontally */
+}
+
+.options-container button {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #007bff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #007bff;
+    background-color: rgb(174, 210, 255);
+    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options-container button:hover {
+    background-color: #ffffff;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Add this CSS code in styles.css */
+.question img {
+    border-radius: 10px;
+    width: 60%; /* Adjust the width to your desired size */
+    height: 60%; /* Adjust the height to your desired size */
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    max-height: 100%; /* Ensures the image doesn't exceed its container */
+}
+
+
+/* video quiz */
+
+.quiz-container-video-quiz {
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-video-quiz {
+    width: 80%;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.question-video-quiz video {
+    width: 70%; /* Adjust the width to your desired size */
+    height: 70%; /* Adjust the height to your desired size */
+    max-width: 100%; /* Ensures the image doesn't exceed its container */
+    max-height: 100%; /* Ensures the image doesn't exceed its container */
+}
+
+.options-video-quiz button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #007bff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #007bff;
+    background-color: rgb(174, 210, 255);
+    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options-video-quiz button:hover {
+    background-color: #ffffff;
+}
+
+.feedback-video-quiz {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#text-input {
+    width: 60%;
+    height: 20px;
+    padding: 10px;
+    color: #007bff;
+    font-size: 1.2em;
+    border: 1px solid var(--grey-color);
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+}
+
+/* Style for the "Check" button */
+.check-button {
+    color: var(--darker-grey-color);
+    font-size: 1.2em;
+    margin: 5px 5px 5px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid var(--grey-color);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 0px 0px var(--grey-color);
+    margin-right: 10px;
+}
+
+.check-button:hover {
+    background-color: rgba(58, 58, 58, 0.2);
+    color: rgb(105, 105, 105);
+}
+
+header {
+    background-color: rgb(174, 210, 255);
+    color: #007bff;
+    width: 100% !important;
+    border-radius: 10px;
+}
+
+.video-and-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust the height as needed */
+}
+
+.video-and-content iframe {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+footer {
+    width: 100%;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--grey-color);
+    padding: 1em 5%; /* Adjusted padding */
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #141414;
+    color: #fff;
+}
+
+#goback {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#goback a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    border: 1px solid #007bff;
+    background-color: rgb(174, 210, 255);
+    box-shadow: 0px 3px 0px 0px #2e8cf0;
+}
+
+#goback a:hover {
+    background-color: #ffffff;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 241, 255);
+    z-index: 9999; /* Ensure the loader is on top of everything */
+}
+
+/* Media query for screens with a maximum width of 768px (typical for phones) */
+@media (max-width: 768px) {
+    body {
+        /* Adjustments for smaller screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .quiz {
+        /* Adjustments for smaller screens */
+        width: 90%; /* Increase quiz width for better readability on small screens */
+    }
+
+    .options {
+        /* Adjustments for smaller screens */
+        text-align: center; /* Center the buttons horizontally on small screens */
+    }
+
+    .options button {
+        /* Adjustments for smaller screens */
+        margin: 5px; /* Reduce margin for smaller screens */
+        padding: 10px; /* Increase button padding for better touch interaction */
+    }
+
+    /* Add more adjustments as needed for smaller screens */
+}
