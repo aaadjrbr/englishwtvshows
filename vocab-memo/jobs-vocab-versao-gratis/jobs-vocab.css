@@ -1,3 +1,4 @@
+/* Global Variables */
 :root {
     --grey-color: rgb(174, 210, 255);
     --darker-grey-color: rgb(189, 189, 189);
@@ -8,13 +9,15 @@
     --root-padding: 20px;
 }
 
+/* Fonts */
 @font-face {
-    font-family: 'Anton-Regular'; /* Specify the desired font family name */
-    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+    font-family: 'Anton-Regular';
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
 }
 
+/* Body Styles */
 body {
-    margin: 20px auto; /* Adds 20px margin to the top and bottom, and centers horizontally */
+    margin: 20px auto;
     padding: var(--root-padding);
     flex-direction: column;
     justify-content: center;
@@ -23,13 +26,13 @@ body {
     font-weight: 600;
     color: var(--text-color);
     background-color: rgb(228, 241, 255);
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden;
 }
 
-
+/* Next Button */
 .next-button {
     display: block;
-    margin: 10px auto; /* Center horizontally and add top margin */
+    margin: 10px auto;
     padding: 5px 10px;
     font-size: 1.2em;
     color: #007bff;
@@ -45,27 +48,30 @@ body {
     background-color: #ffffff;
 }
 
-
+/* Quiz Container */
 .quiz-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Adjusted to full width */
+    width: 100%;
 }
 
+/* Quiz */
 .quiz {
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    align-items: center;
+    justify-content: center;
     width: 80%;
     padding: 20px;
     border-radius: 10px;
 }
 
+/* Paragraph Styles */
 p {
     text-align: center;
 }
 
+/* Heading 1 Styles */
 h1 {
     font-weight: 600;
     color: #007bff;
@@ -74,6 +80,7 @@ h1 {
     font-family: 'Anton-Regular', Arial, sans-serif;
 }
 
+/* Heading 2 Styles */
 h2 {
     font-size: 1.5em !important;
     color: #007bff;
@@ -82,10 +89,19 @@ h2 {
     font-weight: 600px;
 }
 
-.options-container {
-    text-align: center; /* Center the buttons horizontally */
+h3 {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
 }
 
+/* Options Container */
+.options-container {
+    text-align: center;
+}
+
+/* Option Buttons */
 .options-container button {
     margin-top: 20px;
     margin-left: 5px;
@@ -105,23 +121,23 @@ h2 {
     background-color: #ffffff;
 }
 
+/* Feedback */
 .feedback {
     margin-top: 20px;
     font-weight: bold;
 }
 
-/* Add this CSS code in styles.css */
+/* Image Styles */
 .question img {
     border-radius: 10px;
-    width: 85%; /* Adjust the width to your desired size */
-    height: 85%; /* Adjust the height to your desired size */
-    max-width: 100%; /* Ensures the image doesn't exceed its container */
-    max-height: 100%; /* Ensures the image doesn't exceed its container */
+    box-shadow: 0px 5px 0px 0px #2e8cf0;
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-
-/* video quiz */
-
+/* Video Quiz Container */
 .quiz-container-video-quiz {
     display: flex;
     border-radius: 10px;
@@ -130,22 +146,27 @@ h2 {
     height: 100vh;
 }
 
+/* Video Quiz */
 .quiz-video-quiz {
     width: 80%;
     padding: 20px;
 }
 
+/* Heading 2 for Video Quiz */
 h2 {
     font-size: 24px;
 }
 
+/* Video Quiz Question Video */
 .question-video-quiz video {
-    width: 70%; /* Adjust the width to your desired size */
-    height: 70%; /* Adjust the height to your desired size */
-    max-width: 100%; /* Ensures the image doesn't exceed its container */
-    max-height: 100%; /* Ensures the image doesn't exceed its container */
+    width: 70%;
+    height: 70%;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0px 5px 0px 0px #2e8cf0;
 }
 
+/* Option Buttons for Video Quiz */
 .options-video-quiz button {
     display: block;
     margin-top: 10px;
@@ -164,11 +185,13 @@ h2 {
     background-color: #ffffff;
 }
 
+/* Feedback for Video Quiz */
 .feedback-video-quiz {
     margin-top: 20px;
     font-weight: bold;
 }
 
+/* Text Input */
 #text-input {
     width: 60%;
     height: 20px;
@@ -180,7 +203,7 @@ h2 {
     margin-top: 10px;
 }
 
-/* Style for the "Check" button */
+/* Check Button */
 .check-button {
     color: var(--darker-grey-color);
     font-size: 1.2em;
@@ -198,6 +221,7 @@ h2 {
     color: rgb(105, 105, 105);
 }
 
+/* Header Styles */
 header {
     background-color: rgb(174, 210, 255);
     color: #007bff;
@@ -205,20 +229,23 @@ header {
     border-radius: 10px;
 }
 
+/* Video and Content Styles */
 .video-and-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Adjust the height as needed */
+    height: 50vh;
 }
 
+/* Responsive Video */
 .video-and-content iframe {
     border-radius: 10px;
     max-width: 100%;
     max-height: 100%;
+
 }
 
-
+/* Footer Styles */
 footer {
     width: 100%;
     color: #007bff;
@@ -226,9 +253,9 @@ footer {
     justify-content: center;
     align-items: center;
     border-top: 2px solid var(--grey-color);
-    padding: 1em 5%; /* Adjusted padding */
 }
 
+/* Scroll To Top Button Styles */
 #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -249,6 +276,7 @@ footer {
     color: #fff;
 }
 
+/* Go Back Styles */
 #goback {
     display: block;
     margin-top: 20px;
@@ -271,6 +299,7 @@ footer {
     background-color: #ffffff;
 }
 
+/* Loader Container Styles */
 .loader-container {
     display: flex;
     flex-direction: column;
@@ -282,14 +311,13 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgb(228, 241, 255);
-    z-index: 9999; /* Ensure the loader is on top of everything */
+    z-index: 9999;
 }
 
-/* Media query for screens with a maximum width of 768px (typical for phones) */
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     body {
-        /* Adjustments for smaller screens */
-        padding: 20px; /* Reduce padding for smaller screens */
+        padding: 20px;
     }
 
     h1 {
@@ -301,19 +329,12 @@ footer {
     }
 
     .quiz {
-        /* Adjustments for smaller screens */
-        width: 90%; /* Increase quiz width for better readability on small screens */
+        width: 90%;
     }
 
-    .options {
-        /* Adjustments for smaller screens */
-        text-align: center; /* Center the buttons horizontally on small screens */
-    }
-
-    .options button {
-        /* Adjustments for smaller screens */
-        margin: 5px; /* Reduce margin for smaller screens */
-        padding: 10px; /* Increase button padding for better touch interaction */
+    .options-container button {
+        margin: 5px;
+        padding: 10px;
     }
 
     /* Add more adjustments as needed for smaller screens */

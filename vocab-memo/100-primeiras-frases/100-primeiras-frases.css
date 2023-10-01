@@ -9,12 +9,12 @@
 }
 
 @font-face {
-    font-family: 'Anton-Regular'; /* Specify the desired font family name */
-    src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+    font-family: 'Anton-Regular';
+    src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype');
 }
 
 body {
-    margin: 20px auto; /* Adds 20px margin to the top and bottom, and centers horizontally */
+    margin: 20px auto;
     padding: var(--root-padding);
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
     font-weight: 600;
     color: var(--text-color);
     background-color: rgb(228, 241, 255);
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 .container {
@@ -32,28 +32,35 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Adjusted to full width */
+    width: 100%;
+}
+
+header {
+    background-color: var(--grey-color);
+    color: #007bff;
+    width: 100% !important;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .video-and-content {
     display: flex;
-    flex-direction: column; /* Stack video and content on smaller screens */
+    flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    box-sizing: border-box; /* Include padding in width calculation */
-    padding: 0 20px; /* Adjusted padding */
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 iframe {
-    max-width: 600px; /* Make the video responsive */
+    max-width: 600px;
     height: 350px;
     border-radius: 10px;
-    
 }
 
 .wrapper {
-    width: 100%; /* Make the content take full width on smaller screens */
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -73,7 +80,7 @@ h1 {
 .top__container {
     margin-top: 50px;
     width: 100%;
-    height: auto; /* Allow content to determine height */
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +88,7 @@ h1 {
 }
 
 img {
-    max-width: 100%; /* Ensure images don't overflow */
+    max-width: 100%;
     margin-bottom: 1em;
 }
 
@@ -91,7 +98,7 @@ img {
     padding: 0.8em;
     width: auto;
     border-radius: var(--border-radius);
-    margin: 20px 0; /* Center align on smaller screens */
+    margin: 20px 0;
     font-size: 1.2em;
     text-align: center;
 }
@@ -123,9 +130,9 @@ span {
 .word {
     position: relative;
     border: 1px solid var(--grey-color);
-    background-color: rgb(174, 210, 255);
+    background-color: var(--grey-color);
     color: #007bff;
-    margin: 0.1em 0.3em; /* Increased margin to create space between words */
+    margin: 0.1em 0.3em;
     padding: 0.5em 1em;
     border-radius: var(--border-radius);
     box-shadow: 0px 3px 0px 0px #2e8cf0;
@@ -142,9 +149,9 @@ span {
 
 .word__container {
     display: flex;
-    flex-wrap: wrap; /* Ensure words wrap on smaller screens */
+    flex-wrap: wrap;
     margin: 0.2em 0;
-    padding: 0.3em 0.5em; /* Adjusted padding for smaller screens */
+    padding: 0.3em 0.5em;
     border-radius: var(--border-radius);
 }
 
@@ -184,22 +191,27 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid var(--grey-color);
-    padding: 1em 5%; /* Adjusted padding */
 }
 
-.go-back-button {
+#goback {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#goback a {
     color: #007bff;
     text-decoration: none;
-    padding: 0px 15px 0px 15px;
+    padding: 5px 15px;
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
     border: 1px solid #007bff;
-    background-color: rgb(174, 210, 255);
+    background-color: var(--grey-color);
     box-shadow: 0px 3px 0px 0px #2e8cf0;
 }
 
-.go-back-button:hover {
+#goback a:hover {
     background-color: #ffffff;
 }
 
@@ -232,7 +244,7 @@ footer {
     color: #007bff;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid #007bff;
-    background-color: rgb(174, 210, 255);
+    background-color: var(--grey-color);
     box-shadow: 0px 3px 0px 0px #2e8cf0;
     margin-left: 10px;
 }
@@ -289,7 +301,7 @@ footer {
     }
 
     iframe {
-        max-width: 360px; /* Make the video responsive */
+        max-width: 360px;
         height: 270px;
         border-radius: 10px;
     }

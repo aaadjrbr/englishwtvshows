@@ -63,7 +63,9 @@ const questions = [
     // Add more questions in the same format
 ];
 
+let score = 0; // Initialize the score
 let currentQuestionIndex = 0;
+let attemptsRemaining = 2; // Number of attempts allowed for an incorrect answer
 
 function showQuestion() {
     const question = questions[currentQuestionIndex];
@@ -88,22 +90,44 @@ function checkAnswer(selectedOption) {
     const question = questions[currentQuestionIndex];
 
     if (selectedOption === question.correctOption) {
-        feedbackElement.textContent = '✔️ Mandou bem!';
-        nextButton1.style.display = 'block';
+        feedbackElement.textContent = '✔️ Mandou bem! Você acertou a resposta.';
+        score++; // Increment the score for correct answers
     } else {
-        feedbackElement.textContent = '😕 Incorreto. Tente novamente.';
+        attemptsRemaining--;
+
+        if (attemptsRemaining === 1) {
+            feedbackElement.textContent = '😕 Incorreto. Tente novamente. Você tem mais 1 tentativa.';
+        } else if (attemptsRemaining === 0) {
+            feedbackElement.textContent = `❌ Incorreto. A resposta correta é: "${question.correctOption}"`;
+            nextButton1.style.display = 'block'; // Display the "Next" button for incorrect answers after 2 attempts
+        }
+    }
+
+    if (selectedOption === question.correctOption || attemptsRemaining === 0) {
+        nextQuestion(); // Call the nextQuestion function to move to the next question
     }
 }
 
+function displayScore() {
+    questionElement.innerHTML = `<h2>🥳✨🎉 Parabéns! Você completou tudo.<br/> Vá para o próximo desafio abaixo. 👇</h2>`;
+    optionsContainer.innerHTML = `<h3>Sua pontuação final é: ${score}/${questions.length}</h3>`;
+    feedbackElement.innerHTML = '';
+    nextButton1.style.display = 'none';
+
+    // Hide the quiz info container for the first quiz
+    const quiz1InfoContainer = document.querySelector('.quiz-1-info');
+    quiz1InfoContainer.style.display = 'none';
+}
+
+
 function nextQuestion() {
     currentQuestionIndex++;
+    attemptsRemaining = 2; // Reset the number of attempts for each new question
+
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
-        questionElement.innerHTML = '<h2>🥳✨🎉 Parabéns! Você completou tudo.<br/> Vá para o próximo desafio abaixo. 👇</h2>';
-        optionsContainer.innerHTML = '';
-        feedbackElement.innerHTML = '';
-        nextButton1.style.display = 'none';
+        displayScore(); // Call the displayScore function when all questions are completed
     }
 }
 
@@ -148,7 +172,38 @@ function showVideoQuestion() {
     textInputElement.value = ''; // Clear the input field
     videoFeedbackElement.textContent = '';
     attempts = 0; // Reset the number of attempts for each new question
+
+    // Hide the paragraphs for quiz 1 info (just to be consistent)
+    const quiz1InfoParagraphs = document.querySelectorAll('.quiz-2-info p');
+    quiz1InfoParagraphs.forEach((paragraph) => {
+        paragraph.style.display = 'none';
+    });
 }
+
+function nextVideoQuestion() {
+    videoFeedbackElement.textContent = ''; // Clear feedback before proceeding
+    videoCurrentQuestionIndex++;
+    if (videoCurrentQuestionIndex < videoQuestions.length) {
+        showVideoQuestion();
+        nextButton2.style.display = 'none'; // Hide the "Next" button for the next question
+    } else {
+        // Hide the content inside the quiz-info-container quiz-video-info
+        const quizVideoInfo = document.querySelector('.quiz-video-info');
+        quizVideoInfo.style.display = 'none';
+        
+        // Display the feedback and completion message
+        videoQuestionElement.innerHTML = '<h2>🥳🎉 Parabéns! Continue assim.</h2>';
+        textInputElement.style.display = 'none';
+        videoFeedbackElement.innerHTML = '<h3>🚀 Você completou todo desafio! 🚀</h3>';
+        
+        // Optionally, you can also hide the input field, "Corrigir" (Check) button, and "Próximo" (Next) button
+        textInputElement.style.display = 'none';
+        checkButton.style.display = 'none';
+        nextButton2.style.display = 'none';
+    }
+}
+
+
 
 function checkVideoAnswer() {
     const videoQuestion = videoQuestions[videoCurrentQuestionIndex];
@@ -162,24 +217,9 @@ function checkVideoAnswer() {
         if (attempts === 1) {
             videoFeedbackElement.textContent = '😕 Incorreto. Tente novamente.';
         } else if (attempts === 2) {
-            videoFeedbackElement.textContent = `❌ Incorreto. A reposta correta é: "${videoQuestion.correctAnswer}"`;
+            videoFeedbackElement.textContent = `❌ Incorreto. A resposta correta é: "${videoQuestion.correctAnswer}"`;
             nextButton2.style.display = 'block'; // Display the "Next" button after two attempts
         }
-    }
-}
-
-function nextVideoQuestion() {
-    videoFeedbackElement.textContent = ''; // Clear feedback before proceeding
-    videoCurrentQuestionIndex++;
-    if (videoCurrentQuestionIndex < videoQuestions.length) {
-        showVideoQuestion();
-        nextButton2.style.display = 'none'; // Hide the "Next" button for the next question
-    } else {
-        videoQuestionElement.innerHTML = '<h2>🥳🎉 Parabéns! Continue assim.</h2>';
-        textInputElement.style.display = 'none';
-        videoFeedbackElement.innerHTML = '🚀 Você completou todo desafio! 🚀';
-        checkButton.style.display = 'none';
-        nextButton2.style.display = 'none';
     }
 }
 
