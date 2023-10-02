@@ -23,57 +23,57 @@ const correctVideoFeedback = [
 
 const questions = [
     {
-        image: '../../public/assets/images/jobs/actor.jpg',
+        image: 'https://drive.google.com/uc?id=1Ir8YCguktJtxjWWpf9wNPxvontnjTFAI',
         options: ['Doctor', 'Actor', 'Vet', 'Fireman'],
         correctOption: 'Actor',
     },
     {
-        image: '../../public/assets/images/jobs/bus-driver.jpg',
+        image: 'https://drive.google.com/uc?id=1E4yIKVGrvImKbLmcYUBeHcJdEAODa2uM',
         options: ['Farmer', 'Police Officer', 'Singer', 'Bus Driver'],
         correctOption: 'Bus Driver',
     },
     {
-        image: '../../public/assets/images/jobs/chef.jpg',
+        image: 'https://drive.google.com/uc?id=1CwgHC9imnvyfWzhz0kekyRWojjocOjT7',
         options: ['Accountant', 'Teacher', 'Server', 'Chef'],
         correctOption: 'Chef',
     },
     {
-        image: '../../public/assets/images/jobs/doctor.jpg',
+        image: 'https://drive.google.com/uc?id=1xHklpJk40e67kGOCN_5Zdmjmzmn9rcry',
         options: ['Nurse', 'Secretary', 'Locksmith', 'Doctor'],
         correctOption: 'Doctor',
     },
     {
-        image: '../../public/assets/images/jobs/farmer.jpg',
+        image: 'https://drive.google.com/uc?id=1VR5RH3rijo0XLYecLVsaPCUs8Bp82ra9',
         options: ['Farmer', 'Hairdresser', 'Plumber', 'Vet'],
         correctOption: 'Farmer',
     },
     {
-        image: '../../public/assets/images/jobs/fireman.jpg',
+        image: 'https://drive.google.com/uc?id=1lBi4rt845aqzJFVFHt6V0ONG9o_7GHxT',
         options: ['Judge', 'Lawyer', 'Server', 'Fireman/Firefigther'],
         correctOption: 'Fireman/Firefigther',
     },
     {
-        image: '../../public/assets/images/jobs/police-officer.jpg',
+        image: 'https://drive.google.com/uc?id=1zc9SlPvsgCN-1SPl1AdEfvbuPo1I3voh',
         options: ['Police Officer', 'Hairdresser', 'Plumber', 'Vet'],
         correctOption: 'Police Officer',
     },
     {
-        image: '../../public/assets/images/jobs/singer.jpg',
+        image: 'https://drive.google.com/uc?id=1SxsgZqPgbifqduoJTxiAUSxXGXWfMQX9',
         options: ['Waiter', 'Writer', 'Singer', 'Director'],
         correctOption: 'Singer',
     },
     {
-        image: '../../public/assets/images/jobs/teacher.jpg',
+        image: 'https://drive.google.com/uc?id=1JvNJxzNQmNs65JU62AYF6TPQ9YOO7KVd',
         options: ['Teacher', 'Artist', 'Musician', 'Priest'],
         correctOption: 'Teacher',
     },
     {
-        image: '../../public/assets/images/jobs/server.jpg',
+        image: 'https://drive.google.com/uc?id=1ki0JTdRQ6L34sNhXIiYrV5d46gy9u9Cr',
         options: ['Salesperson', 'Scientist', 'Cashier', 'Server'],
         correctOption: 'Server',
     },
     {
-        image: '../../public/assets/images/jobs/photographer.jpg',
+        image: 'https://drive.google.com/uc?id=1KWV09gpocVGo7t6sR1yGxzHw7eanC9se',
         options: ['Vet', 'Teacher', 'Fireman', 'Photographer'],
         correctOption: 'Photographer',
     },
