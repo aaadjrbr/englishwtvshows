@@ -10,11 +10,11 @@
 
 @font-face {
     font-family: 'Anton-Regular';
-    src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
 }
 
 body {
-    margin: 0px 10px 10px 10px;
+    margin: 20px auto;
     padding: var(--root-padding);
     flex-direction: column;
     justify-content: center;
@@ -35,11 +35,10 @@ body {
 }
 
 header {
-    background-color: var(--grey-color);
+    background-color: rgb(174, 210, 255);
     color: #007bff;
     width: 100% !important;
     border-radius: 10px;
-    padding: 10px;
 }
 
 .video-and-content {
@@ -74,6 +73,21 @@ h1 {
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Anton-Regular', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 1.5em !important;
+    color: #007bff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+}
+
+h3 {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
 }
 
 .top__container {
@@ -207,7 +221,16 @@ span {
     background-color: #ffffff;
 }
 
-.footer {
+footer {
+    width: 100%;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--grey-color);
+}
+
+#correction-buttons {
     width: 100%;
     display: flex;
     justify-content: center;
