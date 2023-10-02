@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Anton-Regular'; /* Specify the desired font family name */
+    src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+
+body {
+    background-color: #eceef0 !important; /* Replace with your desired background color */
+    color: #333;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    margin: 0px 20px !important; /* Add margin to both left and right sides */
+}
+
+body, h1, h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#007bff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style headings and paragraph text */
+h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #007bff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#confirmation {
+    margin-top: 20px;
+}
+
+#qrCode {
+    max-width: 100%;
+}
+
+#paymentInfo {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.eng-logo {
+    width: 150px;
+    height: 150;
+}
+
+.bg-nav-stuff {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Adjust the margin between menu items as needed */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Change the text color to your desired color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007BFF; /* Change the text color on hover to your desired color */
+}
+
+/* Style the navbar toggler icon */
+.navbar-toggler-icon {
+    padding: 5px;
+}
+
+/* Style for the container of the images */
+.image-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows images to wrap onto a new line on smaller screens */
+}
+
+/* Style for the individual images */
+.image-container img {
+    width: 150px;
+    height: 75px; /* Automatically adjust the height to maintain aspect ratio */
+    margin: 10px; /* Adjust the margin between images as needed */
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .image-container {
+        justify-content: space-around; /* Space out the images horizontally */
+    }
+}
