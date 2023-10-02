@@ -4,6 +4,23 @@ const optionsContainer = document.querySelector('.options-container');
 const feedbackElement = document.querySelector('.feedback');
 const nextButton1 = document.getElementById('next-button-1');
 
+const correctFeedback = [
+    '✔️ Parabéns! Você acertou!',
+    '👍 Muito bem!',
+    '🎉 Excelente trabalho!',
+    '💯 Você acertou!',
+    // Add more feedback messages as needed
+];
+
+const correctVideoFeedback = [
+    '✔️ Mandou bem!',
+    '👍 Muito bem!',
+    '🎉 Excelente trabalho!',
+    '💯 Você acertou!',
+    // Add more feedback messages as needed
+];
+
+
 const questions = [
     {
         image: '../../public/assets/images/jobs/actor.png',
@@ -90,23 +107,26 @@ function checkAnswer(selectedOption) {
     const question = questions[currentQuestionIndex];
 
     if (selectedOption === question.correctOption) {
-        feedbackElement.textContent = '✔️ Mandou bem! Você acertou a resposta.';
+        const randomIndex = Math.floor(Math.random() * correctFeedback.length);
+        feedbackElement.textContent = correctFeedback[randomIndex];
+        nextButton1.style.display = 'block';
         score++; // Increment the score for correct answers
+
     } else {
         attemptsRemaining--;
 
         if (attemptsRemaining === 1) {
-            feedbackElement.textContent = '😕 Incorreto. Tente novamente. Você tem mais 1 tentativa.';
+            feedbackElement.textContent = '😕 Incorreto. Tente novamente. Você tem mais 1 tentativa. ⌛';
         } else if (attemptsRemaining === 0) {
             feedbackElement.textContent = `❌ Incorreto. A resposta correta é: "${question.correctOption}"`;
-            nextButton1.style.display = 'block'; // Display the "Next" button for incorrect answers after 2 attempts
         }
     }
 
-    if (selectedOption === question.correctOption || attemptsRemaining === 0) {
-        nextQuestion(); // Call the nextQuestion function to move to the next question
+    if (attemptsRemaining === 0) {
+        nextButton1.style.display = 'block'; // Display the "Next" button for incorrect answers after 2 attempts
     }
 }
+
 
 function displayScore() {
     questionElement.innerHTML = `<h2>🥳✨🎉 Parabéns! Você completou tudo.<br/> Vá para o próximo desafio abaixo. 👇</h2>`;
@@ -192,7 +212,7 @@ function nextVideoQuestion() {
         quizVideoInfo.style.display = 'none';
         
         // Display the feedback and completion message
-        videoQuestionElement.innerHTML = '<h2>🥳🎉 Parabéns! Continue assim.</h2>';
+        videoQuestionElement.innerHTML = '<h2>🥳🎉 Parabéns! Continue assim.<br><br> Quer mais? Vá p/ "início" e assine p/ versão completa!</h2>';
         textInputElement.style.display = 'none';
         videoFeedbackElement.innerHTML = '<h3>🚀 Você completou todo desafio! 🚀</h3>';
         
@@ -209,10 +229,17 @@ function checkVideoAnswer() {
     const videoQuestion = videoQuestions[videoCurrentQuestionIndex];
     const userAnswer = textInputElement.value.trim();
 
-    if (userAnswer.toLowerCase() === videoQuestion.correctAnswer.toLowerCase()) {
-        videoFeedbackElement.textContent = '✔️ Mandou bem!';
-        nextButton2.style.display = 'block'; // Display the "Next" button
-    } else {
+            // Clear the translated text after 10 seconds
+            setTimeout(function () {
+                videoFeedbackElement.style.display = 'none';
+                videoFeedbackElement.textContent = '';
+            }, 1500); // 1,5 seconds
+
+            if (userAnswer.toLowerCase() === videoQuestion.correctAnswer.toLowerCase()) {
+                const randomIndex = Math.floor(Math.random() * correctVideoFeedback.length);
+                videoFeedbackElement.textContent = correctVideoFeedback[randomIndex];
+                nextButton2.style.display = 'block'; // Display the "Next" button
+            } else {
         attempts++;
         if (attempts === 1) {
             videoFeedbackElement.textContent = '😕 Incorreto. Tente novamente.';
