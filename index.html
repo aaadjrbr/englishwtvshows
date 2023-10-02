@@ -88,50 +88,45 @@
 
     <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark video-header">
-            <div class="container">
+            <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="./index.html"><img class="eng-logo navbar-brand" src="./public/assets/images/eng-logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#como-funciona2">Como usar o site?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#acessar-conta3">Acessar Conta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
                 <!-- Video Background -->
                 <video autoplay muted loop playsinline id="video-bg" class="video-background">
                     <source src="./public/assets/videos/video-bg.mp4" type="video/mp4">
                     <!-- You can add multiple <source> elements for different video formats -->
                 </video>
-    
-                <a href="./index.html"><img class="eng-logo navbar-brand" src="./public/assets/images/eng-logo.png"></a>
-    
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./em-breve.html">Aulas Gratuitas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./em-breve.html">Quem sou eu?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contato.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
+                <br/>
                 <button id="pauseVideoBtn" style="font-family: Arial, Helvetica, sans-serif;">Pausar ⏸️</button>
-            </div>
             
         </nav>
         
     </header>    
     
-    <a href="#acessar-conta3"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Acessar Conta</strong></button></a>
     <a href="#como-funciona2"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Como usar o site?</strong></button></a>
-    <a href="#vocab-memo"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Vocabulário & Memorização</strong></button></a>
     <a href="https://api.whatsapp.com/send/?phone=5564992521429&text=Hey%21+Adenilson%2C+gostaria+de+saber+como+ter+acesso+total+no+site+English+with+TVShows%3F&type=phone_number&app_absent=0"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Assine já</strong></button></a>
     
 
     <!-- Section 1: Teste grátis -->
     <section id="teste-gratis1"></section>
     <div class="container mt-5">   
-        <h1 class="section-heading text-center">Teste gratuitamente:</h1>
+        <h1 class="section-heading text-center">Comece Gratuitamente:</h1>
         <br/>
         <div class="">   
             <div class="category-card-caillou">
@@ -161,11 +156,12 @@
     <br/><br/>
     <section id="vocab-memo">
     <div class="container">
-        <h1 class="section-heading">Vocabulário & Memorização (Grátis)</h1>
+        <h1 class="section-heading text-center">Melhore seu vocabulário:</h1>
         <br/>
         <div class="category-card-vocab-memo">
             <h2 class="category-heading-vocab-memo">📚 100 Frases Mais Usadas Em Inglês 📚</h2>
             <p class="category-description-vocab-memo">Vídeo-aula, exercícios de memorização e muito mais.</p>
+            <p class="category-description-vocab-memo">Incluso teste grátis. Vem!</p>
             <br/>
             <a class="category-description-vocab-memo" href="./vocab-memo/menu-vocab-memo.html"><button style="border-radius: 5px;"><strong>Experimente agora</strong></button></a>
         </div>
@@ -228,47 +224,40 @@
 
     <div id="hiddenContent" style="display: none;">
         <!-- Paid content -->
-        <div class="container mt-5">
-            <!-- Section 4: Comece a estudar -->
-            <section>
-                <h1 class="section-heading text-center">Bem-vindo (a):</h1><br/>
-                <div class="">   
-                    <div class="category-card-caillou">
-                        <h2 class="category-heading-caillou">Aprenda com Caillou</h2>
-                        <p class="category-description-caillou">Explore o mundo do Inglês com Caillou!</p>
-                        <p class="category-description-caillou">Nível: básico, intermediário.</p>
-                        <!-- Add a button or link to this category's content -->
-                        <a class="category-description-caillou" href="./content/caillou/menu-caillou.html"><button style="border-radius: 5px;"><strong>Comece a estudar agora</strong></button></a>
-                    </div>
+
+            <!-- Membership Benefits Section -->
+    <section class="container mt-4">
+        <div class="row">
+                <div class="col-md-6">
+                    <h2>Aprenda Inglês Com Séries</h2>
+                    <p>Aprimore seu inglês enquanto se diverte com suas séries e filmes favoritos.</p>
+                    <br/>
+                    <a class="category-description-vocab-memo" href="./content/content-menu.html"><button style="border-radius: 5px;"><strong>Experimente agora</strong></button></a>
+                </div>
+                <div class="col-md-6">
+                    <h2>Coming soon</h2>
+                    <p>Coming Soon</p>
+                    <br/>
+                    <a class="category-description-vocab-memo" href="#"><button style="border-radius: 5px;"><strong>Experimente agora</strong></button></a>
                 </div>
             </div>
-            <div class="container mt-5">
-                <div class="">   
-                    <div class="category-card-friends">
-                        <h2 class="category-heading-friends">Aprenda com Friends</h2>
-                        <p class="category-description-friends">Explore o mundo do Inglês com Friends!</p>
-                        <p class="category-description-friends">Nível: intermediário, avançado.</p>
-                        <!-- Add a button or link to this category's content -->
-                        <a class="category-description-friends" href="./content/friends/menu-friends.html"><button style="border-radius: 5px;"><strong>Comece a estudar agora</strong></button></a>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Coming soon</h2>
+                <p>Coming soon</p>
+                <br/>
+                <a class="category-description-vocab-memo" href="#"><button style="border-radius: 5px;"><strong>Experimente agora</strong></button></a>
             </div>
-            <div class="container mt-5">
-                <div class="">   
-                    <div class="category-card-himym">
-                        <h2 class="category-heading-himym">Aprenda com How I Met Your Mother</h2>
-                        <p class="category-description-himym">Explore o mundo do Inglês com How I Met Your Mother!</p>
-                        <p class="category-description-himym">Nível: intermediário, avançado.</p>
-                        <!-- Add a button or link to this category's content -->
-                        <a class="category-description-himym" href="./content/how-i-met-your-mother/menu-himym.html"><button style="border-radius: 5px;"><strong>Comece a estudar agora</strong></button></a>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <h2>Coming soon</h2>
+                <p>Coming soon</p>
+                <br/>
+                <a class="category-description-vocab-memo" href="#"><button style="border-radius: 5px;"><strong>Experimente agora</strong></button></a>
             </div>
-            </section>
-            <br><br><hr>
-                <br><br><hr>
-            </section>
         </div>
+    </section>
+
+
     </div>
 
     <footer class="text-white text-center">

@@ -58,12 +58,16 @@ body {
     .col-lg-6 {
         width: 100%; /* Make columns full width on small screens */
     }
+
+    .navbar {
+        height: 250px; /* You can adjust the height to your preference */
+    }
 }
 
 .video-header {
     position: relative;
     width: 100%;
-    height: 40vh; /* Set the height to your desired size */
+    height: 60vh; /* Adjust the height to your desired size, e.g., 60vh */
     overflow: hidden;
 }
 
@@ -83,6 +87,7 @@ video {
 
 .video-background {
     position: absolute;
+    border-radius: 10px;
     top: 0;
     left: 0;
     width: 100%;
@@ -104,7 +109,8 @@ nav {
     background-size: cover; /* or 'contain' or specific dimensions */
     background-position: center center; /* Center the image both horizontally and vertically */
     background-repeat: no-repeat;
-    border-radius: 10px; /* Remove border radius */
+    height: 300px; /* You can adjust the height to your preference */
+    border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
     padding: 10px 0; /* Add padding to the Navbar */
 }
@@ -206,8 +212,15 @@ nav {
 
 /* Style headings and paragraph text */
 h2 {
-    color: #000000; /* Primary blue color */
+    color: #007bff;
     font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #007bff;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
@@ -218,7 +231,6 @@ p {
 
 /* Add hover effect to columns */
 .col-md-6:hover {
-    transform: scale(1.02); /* Slightly scale up on hover */
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
