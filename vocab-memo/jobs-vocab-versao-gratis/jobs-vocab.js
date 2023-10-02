@@ -23,52 +23,52 @@ const correctVideoFeedback = [
 
 const questions = [
     {
-        image: '../../public/assets/images/jobs/actor.png',
+        image: '../../public/assets/images/jobs/actor.jpg',
         options: ['Doctor', 'Actor', 'Vet', 'Fireman'],
         correctOption: 'Actor',
     },
     {
-        image: '../../public/assets/images/jobs/bus-driver.png',
+        image: '../../public/assets/images/jobs/bus-driver.jpg',
         options: ['Farmer', 'Police Officer', 'Singer', 'Bus Driver'],
         correctOption: 'Bus Driver',
     },
     {
-        image: '../../public/assets/images/jobs/chef.png',
+        image: '../../public/assets/images/jobs/chef.jpg',
         options: ['Accountant', 'Teacher', 'Server', 'Chef'],
         correctOption: 'Chef',
     },
     {
-        image: '../../public/assets/images/jobs/doctor.png',
+        image: '../../public/assets/images/jobs/doctor.jpg',
         options: ['Nurse', 'Secretary', 'Locksmith', 'Doctor'],
         correctOption: 'Doctor',
     },
     {
-        image: '../../public/assets/images/jobs/farmer.png',
+        image: '../../public/assets/images/jobs/farmer.jpg',
         options: ['Farmer', 'Hairdresser', 'Plumber', 'Vet'],
         correctOption: 'Farmer',
     },
     {
-        image: '../../public/assets/images/jobs/fireman.png',
+        image: '../../public/assets/images/jobs/fireman.jpg',
         options: ['Judge', 'Lawyer', 'Server', 'Fireman/Firefigther'],
         correctOption: 'Fireman/Firefigther',
     },
     {
-        image: '../../public/assets/images/jobs/police-officer.png',
+        image: '../../public/assets/images/jobs/police-officer.jpg',
         options: ['Police Officer', 'Hairdresser', 'Plumber', 'Vet'],
         correctOption: 'Police Officer',
     },
     {
-        image: '../../public/assets/images/jobs/singer.png',
+        image: '../../public/assets/images/jobs/singer.jpg',
         options: ['Waiter', 'Writer', 'Singer', 'Director'],
         correctOption: 'Singer',
     },
     {
-        image: '../../public/assets/images/jobs/teacher.png',
+        image: '../../public/assets/images/jobs/teacher.jpg',
         options: ['Teacher', 'Artist', 'Musician', 'Priest'],
         correctOption: 'Teacher',
     },
     {
-        image: '../../public/assets/images/jobs/server.png',
+        image: '../../public/assets/images/jobs/server.jpg',
         options: ['Salesperson', 'Scientist', 'Cashier', 'Server'],
         correctOption: 'Server',
     },
