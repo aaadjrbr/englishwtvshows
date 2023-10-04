@@ -1,0 +1,42 @@
+/* Custom SCSS for the Song Lyrics Training app */
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#lyrics-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    &-primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            border-color: darken($primary-color, 10%);
+        }
+    }
+
+    &-secondary {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+            border-color: darken($secondary-color, 10%);
+        }
+    }
+}

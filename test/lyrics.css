@@ -1,0 +1,142 @@
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by changing the last value (0.5 for 50% opacity) */
+    z-index: -1; /* Place it below other content */
+}
+
+body {
+    background-image: url('https://drive.google.com/uc?id=1wvkZ7wSsNdBvkx_cLlHey6MbfXsAa0cg'); /* Replace with your music-themed background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    position: relative; /* Add this to make sure the pseudo-element is positioned relative to the body */
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Allow background scrolling on small screens */
+    }
+    
+    h1 {
+        font-size: 24px; /* Reduce font size for smaller screens */
+    }
+
+    .card {
+        padding: 10px; /* Reduce card padding for smaller screens */
+    }
+
+    #lyrics-container {
+        padding: 10px; /* Reduce container padding for smaller screens */
+    }
+
+    #score {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    #audio {
+        margin-top: 10px; /* Reduce margin for audio player on smaller screens */
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 16px; /* Adjust button font size for smaller screens */
+    }
+}
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#lyrics-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #ff5722; /* Vibrant orange color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff4500; /* Slightly darker orange on hover */
+}
+
+.btn-secondary {
+    background-color: #2196F3; /* Blue color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #1976D2; /* Slightly darker blue on hover */
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.correct {
+    background-color: #4CAF50; /* Green background for correct answers */
+    color: #fff; /* White text for correct answers */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.wrong {
+    background-color: #FF5733; /* Red background for wrong answers */
+    color: #fff; /* White text for wrong answers */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#do-it-over-button {
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+}
+
