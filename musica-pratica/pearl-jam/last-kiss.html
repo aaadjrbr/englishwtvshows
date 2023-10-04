@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en, pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./pearl-jam.css">
+    <title>Pearl Jam - Last Kiss - English w/ TV Shows</title>
+    <meta name="description" content="Inglês com filmes e séries!">
+    <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+    <meta name="author" content="English w/ Adenilson">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="English w/ Tv Shows">
+    <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="icon" href="../../favicon.png" type="image/x-icon">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2110834991626364"
+     crossorigin="anonymous"></script>
+
+    <style type="text/scss">
+        @import "./pearl-jam.scss";
+    </style>
+</head>
+
+
+<body>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7LS5S7RDE3');
+</script>
+
+<header>
+    <br/>
+    <a href="../../index.html"><img class="eng-logo navbar-brand" style="width: 200px; height: 120px; margin: 0px 20px;" src="../../public/assets/images/eng-logo.png"></a>
+    <br/>
+    <h1 style="font-family: 'Anton-Regular', Arial, sans-serif; color: #007BFF;">🎵 Inglês com músicas 🎵</h1>
+    <p style="color: rgb(255, 255, 255);">Pratique inglês com suas músicas favoritas!</p>
+    <div style="text-align: center; margin-top: 20px;">
+        <a class="btn-primary" style="text-decoration: none;" href="../musica-menu.html">Voltar</a>
+    </div>
+    <br/>
+</header>
+
+
+    <div class="container">
+        <h1 class="text-center mt-4">Pearl Jam - Lass Kiss</h1>
+        
+
+
+    <div class="container">
+        <!-- ... (your existing content) ... -->
+
+        <div class="row mt-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- Part label -->
+                        <div id="part-label" class="text-center"></div> <!-- Add this line -->
+
+                        <!-- Phrase with options -->
+                        <div id="lyrics-container" class="text-center">
+                            <p id="phrase" class="h4"></p>
+                        </div>
+
+                        <!-- Options for filling in the gaps -->
+                        <div id="options-container" class="mt-4">
+                            <!-- Clickable options will be dynamically generated here -->
+                        </div>
+                        <br/>
+                        <div id="finishing-message-container" class="text-center">
+                            <button style="font-size: 0.8em; margin-top: 10px;" class="btn-primary" id="go-back-button">⏮️ Voltar Partes</button>
+                            <button style="font-size: 0.8em; margin-top: 10px;" class="btn-primary" class="btn-primary" id="restart-button">🔁 Recomeçar 🔁</button>
+                            <button style="font-size: 0.8em;  margin-top: 10px;" class="btn-primary" id="skip-button">Pular Partes ⏭️</button>
+                            
+                        </div>
+                        <!-- Displaying the score -->
+                        <div id="score" class="text-center mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-3">
+              <audio id="audio" controls>
+                <source id="audio-source" src="" type="audio/mpeg">
+              </audio>
+              <div class="audio-controls">
+                <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="play-button">Play ▶️</button>
+                <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="pause-button">Pausar ⏸️</button>
+                <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="restart-audio-button">Tocar do início ⏯️</button>
+              </div>
+            </div>
+          </div>
+
+<hr/>
+
+    <footer>
+        <br/>
+            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p>
+            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./pearl-jam.js"></script>
+</body>
+</html>

@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Anton-Regular';
+    src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+}
 
 body::before {
     content: "";
@@ -11,8 +15,9 @@ body::before {
 }
 
 body {
-    background-image: url('https://drive.google.com/uc?id=1wvkZ7wSsNdBvkx_cLlHey6MbfXsAa0cg'); /* Replace with your music-themed background image */
+    background-image: url('https://drive.google.com/uc?id=13MpOX8Ml-AReINkCDWYpnd5BwKscvupg'); /* Replace with your music-themed background image */
     background-size: cover;
+    padding: 25px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Arial', sans-serif;
@@ -20,14 +25,18 @@ body {
     position: relative; /* Add this to make sure the pseudo-element is positioned relative to the body */
 }
 
+#audio {
+    display: none;
+}
+
 /* Adjustments for small screens */
 @media screen and (max-width: 768px) {
     body {
         background-attachment: scroll; /* Allow background scrolling on small screens */
     }
-    
+
     h1 {
-        font-size: 24px; /* Reduce font size for smaller screens */
+        font-size: 1.3em; /* Reduce font size for smaller screens */
     }
 
     .card {
@@ -53,17 +62,26 @@ body {
     }
 }
 
+header {
+    background-color: #00000077;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+}
 
 .container {
     text-align: center;
-    padding: 20px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 1.6em;
     color: #ffffff;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+p {
+   color: rgb(0, 0, 0);
 }
 
 .card {
@@ -83,18 +101,26 @@ h1 {
     margin-top: 20px;
 }
 
+#part-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
 .btn-primary {
-    background-color: #ff5722; /* Vibrant orange color */
+    background-color: #007BFF;
     border: none;
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #ff4500; /* Slightly darker orange on hover */
+    background-color: #0056b3;
 }
 
 .btn-secondary {
@@ -119,24 +145,49 @@ h1 {
 
 #audio {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-
 .correct {
-    background-color: #4CAF50; /* Green background for correct answers */
-    color: #fff; /* White text for correct answers */
+    background-color: #4CAF50 !important; /* Use !important to ensure higher specificity */
+    color: #fff !important; /* Use !important to ensure higher specificity */
     transition: background-color 0.5s, color 0.5s;
+    z-index: 1; /* Ensure the correct and wrong backgrounds overlay the option box background */
 }
 
 .wrong {
-    background-color: #FF5733; /* Red background for wrong answers */
-    color: #fff; /* White text for wrong answers */
+    background-color: #FF5733 !important; /* Use !important to ensure higher specificity */
+    color: #fff !important; /* Use !important to ensure higher specificity */
     transition: background-color 0.5s, color 0.5s;
+    z-index: 1; /* Ensure the correct and wrong backgrounds overlay the option box background */
 }
+
 
 #do-it-over-button {
     display: block;
     margin: 0 auto; /* Center the button horizontally */
+}
+
+.option-box {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    border: 2px solid transparent; /* Transparent border by default */
+    background-color: #fff;
+    color: #2196F3; /* Blue text color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add box-shadow transition */
+    pointer-events: auto; /* Ensure click events work even with hover effects */
+}
+
+.option-box:hover {
+    background-color: #2196F3; /* Blue background color on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #2196F3; /* Blue border color on hover */
+}
+
+footer {
+    color: white;
 }
 

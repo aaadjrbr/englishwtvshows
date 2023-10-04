@@ -74,5 +74,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
       document.querySelector(".loader").style.display = "none";
       document.querySelector(".content").style.display = "block";
-  }, 3000); // 3 seconds delay (adjust as needed)
+  }, 2100); // 2,1 seconds delay (adjust as needed)
 });
