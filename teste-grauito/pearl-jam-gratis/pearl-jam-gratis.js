@@ -173,18 +173,23 @@ restartButton.addEventListener("click", () => {
   skipButton.style.display = "block";
 });
 
-    // Add an event listener to the skip button
+// Add an event listener to the skip button
 skipButton.addEventListener("click", () => {
-      // Check if there are more parts to skip to
-      if (currentSongIndex < songsData.length - 1) {
-        // Increase the current song index to skip to the next part
-        currentSongIndex++;
-        currentPhraseIndex = 0; // Reset the phrase index for the new part
-        score = 0; // Reset the score for the new part
-        // Load the first phrase of the new part
-        loadPhrase(currentSongIndex, currentPhraseIndex);
-      }
-    });
+  // Check if there are more parts to skip to
+  if (currentSongIndex < songsData.length - 1) {
+    // Pause the current audio before loading the new part
+    if (currentAudio) {
+      currentAudio.pause();
+    }
+
+    // Increase the current song index to skip to the next part
+    currentSongIndex++;
+    currentPhraseIndex = 0; // Reset the phrase index for the new part
+    score = 0; // Reset the score for the new part
+    // Load the first phrase of the new part
+    loadPhrase(currentSongIndex, currentPhraseIndex);
+  }
+});
 
     // Add an event listener to the go back button
 goBackButton.addEventListener("click", () => {
