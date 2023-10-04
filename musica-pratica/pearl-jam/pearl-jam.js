@@ -191,7 +191,6 @@ skipButton.addEventListener("click", () => {
   }
 });
 
-
     // Add an event listener to the go back button
 goBackButton.addEventListener("click", () => {
   // Check if there are previous parts to go back to
@@ -292,7 +291,7 @@ function loadAudio(driveFileId) {
   
     function nextPhrase(songIndex, phraseIndex) {
       if (songIndex === songsData.length - 1 && phraseIndex === songsData[songIndex].phrases.length - 1) {
-        phraseContainer.textContent = "🥳✨🎉 Parabéns! Você completou tudo.";
+        phraseContainer.textContent = "Assine já para a versão completa! Vá p/ início e comece hoje!";
         partLabelContainer.textContent = "";
         optionsContainer.innerHTML = "";
         scoreDisplay.textContent = `Frases Concluídas: ${score}`;
