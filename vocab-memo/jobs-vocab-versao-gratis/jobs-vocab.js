@@ -6,17 +6,27 @@ const nextButton1 = document.getElementById('next-button-1');
 
 const correctFeedback = [
     '✔️ Parabéns! Você acertou!',
-    '👍 Muito bem!',
-    '🎉 Excelente trabalho!',
-    '💯 Você acertou!',
+    '👍 Muito bom! Continue assim!',
+    '🎉 Fantástico! Você está arrasando!',
+    '💯 Incrível! Mais um acerto para você!',
+    '👏 Maravilhoso! Você está se saindo muito bem!',
+    '🌟 Está indo muito bem!',
+    '👌 Ótimo trabalho!',
+    '🤩 Fantástico! Sua pontuação está subindo!',
+    '👊 Isso aí! Mais um ponto para você!',
     // Add more feedback messages as needed
 ];
 
 const correctVideoFeedback = [
-    '✔️ Mandou bem!',
-    '👍 Muito bem!',
-    '🎉 Excelente trabalho!',
-    '💯 Você acertou!',
+    '✔️ Parabéns! Você acertou!',
+    '👍 Muito bom! Continue assim!',
+    '🎉 Fantástico! Você está arrasando!',
+    '💯 Incrível! Mais um acerto para você!',
+    '👏 Maravilhoso! Você está se saindo muito bem!',
+    '🌟 Está indo muito bem!',
+    '👌 Ótimo trabalho!',
+    '🤩 Fantástico! Sua pontuação está subindo!',
+    '👊 Isso aí! Mais um ponto para você!',
     // Add more feedback messages as needed
 ];
 
