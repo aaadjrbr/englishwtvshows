@@ -241,7 +241,7 @@ audio {
     
     /* Adjust sentence styles for small screens */
     .sentence {
-        font-size: 16px; /* Reduce the font size for sentences on small screens */
+        font-size: 1.2em; /* Reduce the font size for sentences on small screens */
         margin: 10px; /* Reduce margin for sentences on small screens */
         padding: 10px; /* Reduce padding for sentences on small screens */
     }
