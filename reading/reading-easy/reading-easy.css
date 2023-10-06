@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-weight: 400;
-    background-color: rgb(228, 241, 255);
+    background-color: #1b2735da;
     overflow-x: hidden;
 }
 
@@ -124,6 +124,54 @@ body.dark-mode::after {
     opacity: .65;
 }
 
+.tippy-box {
+    position: relative;
+    background-color: #594045;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+    outline: 0;
+    transition-property: transform,visibility,opacity;
+}
+
+.tippy-content {
+    position: relative;
+    padding: 5px 9px;
+    z-index: 1;
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+    bottom: -7px;
+    left: 0;
+    border-width: 8px 8px 0;
+    border-top-color: initial;
+    transform-origin: center top;
+}
+.tippy-arrow:before {
+    content: "";
+    background-color: #1B2735;
+    position: absolute;
+    /* border-color: transparent; */
+    border-style: solid;
+}
+
+.tippy-arrow:before {
+    content: "";
+    position: absolute;
+    border-color: transparent;
+    border-style: solid;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.tippy-arrow {
+    width: 16px;
+    height: 16px;
+    color: #594045;
+}
 
 /* Word Tooltip Styles */
 .word {
@@ -141,7 +189,7 @@ body.dark-mode::after {
     left: 0;
     right: 0;
     height: 2px; /* Height of the dots */
-    background: repeating-linear-gradient(90deg, #ccc, #ccc 3px, transparent 3px, transparent 6px); /* Dotted line pattern */
+    background: repeating-linear-gradient(90deg, #cccccc83, #cccccc83 3px, transparent 3px, transparent 6px); /* Dotted line pattern */
 }
 
 /* Style for the tooltips */
