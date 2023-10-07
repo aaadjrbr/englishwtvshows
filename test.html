@@ -15,7 +15,6 @@
         <p>Welcome to the protected content! This is only visible to logged-in users.</p>
     </div>
 
-    <!-- JavaScript to open the login modal -->
     <script>
         function openNetlifyModal() {
             if (window.netlifyIdentity) {
@@ -27,11 +26,13 @@
         }
 
         function logoutUser() {
-    console.log("Logout button clicked"); // Add this line for debugging
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.logout();
-    }
-}
+            console.log("Logout button clicked"); // Add this line for debugging
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.logout().then(() => {
+                    console.log("Logout event fired");
+                });
+            }
+        }
 
 
         if (window.netlifyIdentity) {
