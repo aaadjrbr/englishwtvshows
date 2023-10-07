@@ -34,27 +34,11 @@
             }
         }
 
-
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", (user) => {
-                if (user) {
-                    // User is logged in
-                    console.log("User is logged in:", user);
-                } else {
-                    // User is not logged in
-                    console.log("Not logged in");
-                }
-            });
-        }
-
-
         if (window.netlifyIdentity) {
     window.netlifyIdentity.on("logout", () => {
         console.log("Logout event fired");
     });
 }
-
-
 
         if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", (user) => {
