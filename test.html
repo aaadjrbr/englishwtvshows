@@ -45,17 +45,23 @@
         }
 
         if (window.netlifyIdentity) {
-            // Check if the user is logged in
-            window.netlifyIdentity.on("init", (user) => {
-                if (user) {
-                    // User is logged in, show the protected content
-                    document.getElementById("protected-content").style.display = "block";
-                } else {
-                    // User is not logged in, hide the protected content
-                    document.getElementById("protected-content").style.display = "none";
-                }
-            });
+    window.netlifyIdentity.on("init", (user) => {
+        if (user) {
+            // Check if the user is logged in and their email is confirmed
+            if (user.confirmed) {
+                // User is logged in and email is confirmed
+                document.getElementById("protected-content").style.display = "block";
+            } else {
+                // User is logged in but email is not confirmed
+                document.getElementById("protected-content").style.display = "none";
+            }
+        } else {
+            // User is not logged in
+            document.getElementById("protected-content").style.display = "none";
         }
+    });
+}
+
     </script>
 </body>
 </html>
