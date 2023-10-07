@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard Page</h1>
+    <div id="welcomeMessage"></div>
+
+
+    <script src="./public/js/auth-pages.js"></script> <!-- Include the main authentication script first -->
+    <script>
+// Check if the user is authenticated on this protected page
+if (!isAuthenticated()) {
+    // Redirect to the login page or a specific access denied page
+    window.location.href = './index.html'; // Replace with your login page URL or access denied page URL
+} else {
+    // Get the user's name from a cookie or session variable
+    const userName = getUserName(); // Replace with the function that retrieves the user's name
+
+    // Display the welcome message with the user's name
+    const welcomeMessage = document.getElementById("welcomeMessage");
+    welcomeMessage.textContent = `Welcome, ${userName}!`;
+}
+
+    </script>
+</body>
+</html>

@@ -1,62 +1,76 @@
-        // User data
-        const users = [
-            {
-                nome: "adj",
-                senha: "adj"
-            },
-            // Add more users as needed
-        ];
+// User data
+const users = [
+    {
+        nome: "adj",
+        senha: "adj"
+    },
+    // Add more users as needed
+];
 
-        // Function to handle form submission (authentication)
-        document.getElementById("loginForm").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the form from submitting
+// Function to handle form submission (authentication)
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from submitting
 
-            const inputNome = document.getElementById("nome").value;
-            const inputSenha = document.getElementById("senha").value;
-            const rememberMe = document.getElementById("rememberMe").checked;
+    const inputNome = document.getElementById("nome").value;
+    const inputSenha = document.getElementById("senha").value;
+    const rememberMe = document.getElementById("rememberMe").checked;
 
-            // Check if the entered nome and senha are correct (based on your sample data)
-            const user = users.find(u => u.nome === inputNome && u.senha === inputSenha);
+    // Check if the entered nome and senha are correct (based on your sample data)
+    const user = users.find(u => u.nome === inputNome && u.senha === inputSenha);
 
-// After the user is authenticated
-if (user) {
+    // After the user is authenticated
+    if (user) {
+        // Set a session cookie with an expiration time (1 hour)
+        const expirationTime = new Date();
+        expirationTime.setTime(expirationTime.getTime() + 60 * 60 * 1000); // 1 hour
+        document.cookie = `sessionToken=${inputNome}; expires=${expirationTime.toUTCString()}`;
+
+        // Redirect to a different page after successful login
+        window.location.href = '../../test.html'; // Replace with your desired page URL
+
+    } else {
+        // Authentication failed, show the error message
+        const errorMessage = document.getElementById("errorMessage");
+        errorMessage.style.display = "block";
+
+        // Automatically hide the error message after 5 seconds
+        setTimeout(function() {
+            errorMessage.style.display = "none";
+        }, 5000); // 5000 milliseconds = 5 seconds
+    }
+});
+
+// Check if the user is authenticated on page load
+function isAuthenticated() {
+    const cookies = document.cookie.split('; ');
+    const sessionCookie = cookies.find(cookie => cookie.startsWith('sessionToken='));
+
+    // Check if the session token is present and not expired
+    if (sessionCookie) {
+        const expirationDate = new Date(sessionCookie.split('=')[1]);
+        return expirationDate > new Date(); // Check if it's still valid
+    }
+    return false;
+}
+
+if (isAuthenticated()) {
     // User is authenticated, show the hidden content
     const hiddenContent = document.getElementById("hiddenContent");
     hiddenContent.style.display = "block";
-
-    // Show the success message
-    const successMessage = document.getElementById("successMessage");
-    successMessage.style.display = "block";
-
-    if (rememberMe) {
-        // Save the user's credentials to localStorage if "Remember Me" is checked
-        localStorage.setItem("rememberedNome", inputNome);
-        localStorage.setItem("rememberedSenha", inputSenha);
-    } else {
-        // Clear the remembered credentials if "Remember Me" is not checked
-        localStorage.removeItem("rememberedNome");
-        localStorage.removeItem("rememberedSenha");
-    }
-
-    // Hide the error message (if it was displayed previously)
-    const errorMessage = document.getElementById("errorMessage");
-    errorMessage.style.display = "none";
-
-    // Automatically hide the success message after 5 seconds
-    setTimeout(function() {
-        successMessage.style.display = "none";
-    }, 5000); // 5000 milliseconds = 5 seconds
-} else {
-    // Authentication failed, show the error message
-    const errorMessage = document.getElementById("errorMessage");
-    errorMessage.style.display = "block";
-
-    // Automatically hide the error message after 5 seconds
-    setTimeout(function() {
-        errorMessage.style.display = "none";
-    }, 5000); // 5000 milliseconds = 5 seconds
 }
-        });
+
+// Function to clear the session cookie on logout
+function logout() {
+    document.cookie = 'sessionToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    // Redirect to the login page or any other desired page
+    window.location.href = '../../test.html'; // Replace with your login page URL
+}
+
+// Attach the logout function to your logout button or link
+document.getElementById("logoutButton").addEventListener("click", logout);
+
+// Rest of your code remains the same
+
 
         // Check if remembered credentials exist in localStorage
         const rememberedNome = localStorage.getItem("rememberedNome");
