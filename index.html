@@ -40,6 +40,7 @@
             cursor: pointer;
             font-size: 0.9rem;
             font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
@@ -102,7 +103,7 @@
                     <a class="nav-link" href="#como-funciona2">Como usar o site?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#acessar-conta3">Acessar Conta</a>
+                    <a class="nav-link" href="./em-breve.html">Quem somos nós?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./contato.html">Contato</a>
@@ -124,16 +125,27 @@
     <a href="#como-funciona2"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Como usar o site? 💡</strong></button></a>
     <a href="#dicas-gratis"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Dicas grátis no e-mail 📩🔔</strong></button></a>
     <a href="./assine-ja.html"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Assine já ✍️ R$ 44,90/mensal 🎯</strong></button></a>
+
+   <div style="margin-top: 40px;"></div>
+
+    <section style="margin-top: 20px;" id="acessar-conta">
+    <div style="padding: 10px; text-align: left;">
+
+            <h2 style="color:#0056b3;">Já é assinante?</h2>
+            <a style="margin-left: 25px;" class="category-description-vocab-memo" href="./login.html"><button style="border-radius: 5px; background-color: #0056b3;"><strong>Acessar Conta</strong></button></a>
     
+    </div>
+    </section>
+
 
     <!-- Section 1: Teste grátis -->
     <section id="teste-gratis1"></section>
     <div class="container mt-5">   
-        <h1 class="section-heading text-center">Comece Gratuitamente:</h1>
+        <h1 class="section-heading text-center">Inglês com séries:</h1>
         <br/>
         <div class="">   
             <div class="category-card-caillou">
-                <h2 class="category-heading-caillou">Aprenda com Caillou</h2>
+                <h2 class="category-heading-caillou">Aprenda com Caillou 📺</h2>
                 <p class="category-description-caillou">Explore o mundo do Inglês com Caillou!</p>
                 <p class="category-description-caillou">Nível: básico, intermediário.</p>
                 <!-- Add a button or link to this category's content -->
@@ -145,7 +157,7 @@
         <br/>
         <div class="">   
             <div class="category-card-friends">
-                <h2 class="category-heading-friends">Aprenda com Friends</h2>
+                <h2 class="category-heading-friends">Aprenda com Friends 📺</h2>
                 <p class="category-description-friends">Explore o mundo do Inglês com Friends!</p>
                 <p class="category-description-friends">Nível: intermediário, avançado.</p>
                 <!-- Add a button or link to this category's content -->
@@ -222,84 +234,6 @@
     </section>
     <br><br><hr>
 
-    <!--Section 3: acessar conta-->
-    <section id="acessar-conta3">
-
-    <div class="container mt-5">
-        <h1 class="section-heading">Acesse sua conta:</h1>
-        <p class="category-description">Para saber como adquirir acesso total ao site, assine <a href="./assine-ja.html">aqui</a>.</p>
-        <div class="text-center" style="padding: 20px;">
-            <div class="form-container">
-                <form id="loginForm">
-                    <label for="nome" style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Nome:</label>
-                    <input style="font-family: Arial, Helvetica, sans-serif;" class="box" type="text" id="nome" name="nome" required><br>
-            
-                    <br>
-            
-                    <label for="senha" style="font-weight: bold; font-family: Arial, Helvetica, sans-serif;">Senha:</label>
-                    <input style="font-family: Arial, Helvetica, sans-serif;" class="box" type="password" id="senha" name="senha" required>
-                    <span id="togglePassword" style="cursor: pointer;">🙈</span><br>
-                    <br>
-            
-                    <p id="errorMessage" style="display: none; color: red; font-family: Arial, Helvetica, sans-serif;">Falha na autenticação. Certifique-se que seu nome e/ou senha estão corretos.</p>
-                    <p id="successMessage" style="display: none; color: green; font-family: Arial, Helvetica, sans-serif;">Bem-vindo de volta! Acesse o seu conteúdo abaixo.</p>
-
-            
-                    <input class="button2" type="submit" value="Acessar"><br>
-                    <br>
-                    <label for="rememberMe" style="font-family: 'Arial', Helvetica, sans-serif; font-size: 0.9rem; font-weight: bold;">Ficar conectado</label>
-                    <input type="checkbox" id="rememberMe" name="rememberMe">
-                </form>
-            </div>
-            
-
-        </div>
-    </div>
-    </section>
-    <br><br><hr>
-
-    <div id="hiddenContent" style="display: none;">
-        <!-- Paid content -->
-        <h2 style="text-align: center; margin-top: 20px;"> Bem-vindo(a)</h2>
-            <!-- Membership Benefits Section -->
-    <section class="container mt-4">
-        <div class="row">
-                <div class="col-md-6">
-                    <h2>📺 Aprenda Inglês Com Séries</h2>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Aprimore seu inglês enquanto se diverte com suas séries e filmes favoritos.</p>
-                    <br/>
-                    <a class="category-description-vocab-memo" href="./content/content-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-                </div>
-                <div class="col-md-6">
-                    <h2>🧠 Vocabulário & Memorização</h2>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>Aprenda com séries, filmes e várias atividades.</p>
-                    <br/>
-                    <a class="category-description-vocab-memo" href="./vocab-memo/vocab-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-                </div>
-            </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>🎧 Inglês Com Músicas</h2>
-                <p>Aprenda inglês com uma variedade de músicas.</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <br/>
-                <a class="category-description-vocab-memo" href="./musica-pratica/musica-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-            </div>
-            <div class="col-md-6">
-                <h2>☕️ Inglês com Textos </h2>
-                <p>Aprimore sua compreensão com atividades interativas.</p>
-                <p>⭐⭐⭐⭐⭐</p>
-                <br/>
-                <a class="category-description-vocab-memo" href="./reading/reading-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-            </div>
-        </div>
-    </section>
-
-    </div>
-
-    <br/><br/><br/><hr/>
 
             <section id="dicas-gratis">
                 <script async data-uid="b37ba78a7e" src="https://englishwtvshows.ck.page/b37ba78a7e/index.js"></script>
@@ -324,6 +258,6 @@
     
 
     <script src="./public/js/main.js"></script>
-    <script src="./public/js/auth-pages.js"></script>
+    <script src="./public/js/dictionary2.js"></script>
 </body>
 </html>

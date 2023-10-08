@@ -199,8 +199,8 @@ window.phrases = [
                 { word: "said", translation: "disse" },
                 { word: "that", translation: "que" },
                 { word: "he", translation: "ele" },
-                { word: "would", translation: "estaria" },
-                { word: "be", translation: "lá" },
+                { word: "would", translation: "" },
+                { word: "be", translation: "estaria" },
                 { word: "right", translation: "agora" },
                 { word: "over.", translation: "mesmo" }
             ]

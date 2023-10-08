@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2110834991626364">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Inglês com filmes e séries!">
+    <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+    <meta name="author" content="English w/ Adenilson">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="English w/ Tv Shows">
+    <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <title>Login - English w/ TV Shows</title>
+    <style>
+                @font-face {
+            font-family: 'Anton-Regular'; /* Specify the desired font family name */
+            src: url('./public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+            }
+
+
+        body, h1, h2, p {
+            font-family: 'Anton-Regular', Arial, sans-serif;
+            color: #007bff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set a background color and text color for the entire page */
+        body {
+            background-image: url('https://drive.google.com/uc?id=1IHYdSLBpuxIPmIhcJ0innmXwndyVFQ3q');
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-color: #eceef0 !important;
+            padding: 20px;
+            color: #333;
+            font-family: 'Anton-Regular', Arial, sans-serif;
+            margin: 0px 20px !important;
+        }
+
+
+        /* Style for the form container */
+        .form-container {
+            width: 95%; /* Adjust to fit the screen width */
+            max-width: 400px; /* Set a maximum width for the form */
+            margin: 100px auto;
+            padding: 10px;
+            background-color: #ffffffea;
+            border: 1px solid #ffffffea;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for form elements */
+        label, input, .button2, #errorMessage, #successMessage {
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .box {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button2 {
+            padding: 10px 20px;
+            font-size: 1rem !important;
+            font-weight: bold;
+            background-color: #007bff;
+            font-family: Arial, Helvetica, sans-serif !important;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button2:hover {
+            background-color: #0056b3;
+        }
+
+        #errorMessage, #successMessage {
+            display: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #errorMessage {
+            color: red;
+        }
+
+        #successMessage {
+            color: green;
+        }
+
+        /* Style for the checkbox */
+        #rememberMe {
+            font-family: 'Arial', Helvetica, sans-serif;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="section-heading">Acesse sua conta:</h1>
+        <p class="category-description">Para saber como adquirir acesso total<br> ao site, assine <a style="text-decoration: none; color: #007bff;" href="./assine-ja.html">aqui</a>.</p>
+
+        <a href="./index.html"><button class="button2" style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Voltar</strong></button></a><br/>
+        <div style="padding: 15px;" class="text-center">
+            <form id="loginForm">
+
+                <div style="margin-top: 35px;"></div>
+
+                <label for="nome">Usuário:</label><br/>
+                <input class="box" type="text" id="nome" name="nome" required><br>
+            
+                
+                <label for="senha">Senha:</label><br/>
+                <input class="box" type="password" id="senha" name="senha" required>
+                
+                <p id="errorMessage">Falha na autenticação. Certifique-se de que seu nome e/ou senha estão corretos.</p>
+                <p id="successMessage">Bem-vindo de volta! Acesse o seu conteúdo abaixo.</p>
+            
+                <div style="margin-top: 10px;"></div>
+                <input class="button2" type="submit" value="Acessar"><br>
+                <div style="margin-top: 10px;"></div>
+
+                <label for="rememberMe">Ficar conectado</label>
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+
+                <br/>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./public/js/main.js"></script>
+    <script src="./public/js/dictionary2.js"></script>
+</body>
+</html>
