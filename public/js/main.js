@@ -51,28 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // Array of phrases with line breaks
   const phrases = [
     "<strong>Você sabia?</strong><br>Com 2.000 palavras você<br> entende 80% do inglês falado 🤔",
-    "<strong>5 minutos todos os dias 📚📖📝</strong><br>Isso te leva a fluência!",
-    "<strong>Quase lá!</strong><br>Em 6 meses você pode aprender<br>+ de 2 mil palavras 💭",
-    "<strong>Aprenda inglês sozinho!</strong><br>Sabia que aqui no site tem aulas grátis? 💸",
-];
+    "<strong>A língua inglesa é incrível!</strong><br>Ela tem mais de 170.000 palavras! 📚",
+    "<strong>Curiosidade:</strong><br>Existem mais de 50 sotaques diferentes em inglês! 🗣️",
+    "<strong>Fatos Interessantes:</strong><br>O inglês é a língua oficial em 59 países! 🌎",
+    "<strong>Vocabulário Rico:</strong><br>O inglês tem palavras para tudo, até para o medo de ficar sem celular (nomofobia)! 😱📱",
+    "<strong>Origem Curiosa:</strong><br>O inglês tem influências do latim, francês, alemão e até mesmo do árabe! 🌍",
+    "<strong>Palavras Longas:</strong><br>O inglês tem palavras enormes, como 'pneumonoultramicroscopicsilicovolcanoconiosis'! 😮",
+    "<strong>A língua do negócio:</strong><br>O inglês é a língua mais usada em negócios e comércio internacional! 💼",
+    "<strong>Idioma Universal:</strong><br>O inglês é a língua franca da internet e da aviação! ✈️🌐",
+    "<strong>Curiosidade:</strong><br>Algumas palavras em inglês não têm tradução direta, como 'awkward'! 🤷‍♂️",
+  ];
+  
 
-  // Check if a phrase is stored in local storage
-  let storedPhrase = localStorage.getItem("loaderPhrase");
+  // Select a random phrase from the array
+  const randomIndex = Math.floor(Math.random() * phrases.length);
+  const randomPhrase = phrases[randomIndex];
 
-  // If a phrase is not stored, select a random phrase and store it
-  if (!storedPhrase) {
-      const randomIndex = Math.floor(Math.random() * phrases.length);
-      storedPhrase = phrases[randomIndex];
-      localStorage.setItem("loaderPhrase", storedPhrase);
-  }
-
-  // Update the loader text with the stored phrase
+  // Update the loader text with the random phrase
   const loaderPhrase = document.getElementById("loader-phrase");
-  loaderPhrase.innerHTML = storedPhrase;
+  loaderPhrase.innerHTML = randomPhrase;
 
   // After some time (you can adjust the delay), hide the loader and display the content
   setTimeout(function () {
-      document.querySelector(".loader").style.display = "none";
-      document.querySelector(".content").style.display = "block";
-  }, 2100); // 2,1 seconds delay (adjust as needed)
+    document.querySelector(".loader").style.display = "none";
+    document.querySelector(".content").style.display = "block";
+  }, 2100); // 2.1 seconds delay (adjust as needed)
 });
