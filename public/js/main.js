@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "<strong>A língua inglesa é incrível!</strong><br>Ela tem mais de 170.000 palavras! 📚",
     "<strong>Curiosidade:</strong><br>Existem mais de 50 sotaques diferentes em inglês! 🗣️",
     "<strong>Fatos Interessantes:</strong><br>O inglês é a língua oficial em 59 países! 🌎",
-    "<strong>Vocabulário Rico:</strong><br>O inglês tem palavras para tudo, até para o medo de ficar sem celular (nomofobia)! 😱📱",
-    "<strong>Origem Curiosa:</strong><br>O inglês tem influências do latim, francês, alemão e até mesmo do árabe! 🌍",
-    "<strong>Palavras Longas:</strong><br>O inglês tem palavras enormes, como 'pneumonoultramicroscopicsilicovolcanoconiosis'! 😮",
-    "<strong>A língua do negócio:</strong><br>O inglês é a língua mais usada em negócios e comércio internacional! 💼",
-    "<strong>Idioma Universal:</strong><br>O inglês é a língua franca da internet e da aviação! ✈️🌐",
-    "<strong>Curiosidade:</strong><br>Algumas palavras em inglês não têm tradução direta, como 'awkward'! 🤷‍♂️",
+    "<strong>Vocabulário Rico:</strong><br>O inglês tem palavras para tudo, até para o<br> medo de ficar sem celular (nomofobia)! 😱📱",
+    "<strong>Origem Curiosa:</strong><br>O inglês tem influências do latim, <br>francês, alemão e até mesmo do árabe! 🌍",
+    "<strong>Palavras Longas:</strong><br>O inglês tem palavras enormes, como<br> 'pneumonoultramicroscopicsilicovolcanoconiosis'! 😮",
+    "<strong>A língua do negócio:</strong><br>O inglês é a língua mais usada em<br> negócios e comércio internacional! 💼",
+    "<strong>Idioma Universal:</strong><br>O inglês é a língua franca da<br> internet e da aviação! ✈️🌐",
+    "<strong>Curiosidade:</strong><br>Algumas palavras em inglês não têm<br> tradução direta, como 'awkward'! 🤷‍♂️",
   ];
   
 
