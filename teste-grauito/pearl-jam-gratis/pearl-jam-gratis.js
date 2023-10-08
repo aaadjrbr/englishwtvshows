@@ -291,7 +291,7 @@ function loadAudio(driveFileId) {
   
     function nextPhrase(songIndex, phraseIndex) {
       if (songIndex === songsData.length - 1 && phraseIndex === songsData[songIndex].phrases.length - 1) {
-        phraseContainer.textContent = "Assine já para a versão completa! Vá p/ início e assine já!";
+        phraseContainer.textContent = "Assine já para a versão completa! Vá p/ início e comece hoje!";
         partLabelContainer.textContent = "";
         optionsContainer.innerHTML = "";
         scoreDisplay.textContent = `Frases Concluídas: ${score}`;
