@@ -178,7 +178,7 @@ body.dark-mode::after {
     text-decoration: none; /* Remove the default underline */
     cursor: pointer;
     position: relative; /* Relative positioning for dot border */
-    color: #ffffff; /* Blue color for words */
+    color: #ebe7e7; /* Blue color for words */
 }
 
 /* Add a series of dots as the underline */
@@ -189,7 +189,7 @@ body.dark-mode::after {
     left: 0;
     right: 0;
     height: 2px; /* Height of the dots */
-    background: repeating-linear-gradient(90deg, #cccccc83, #cccccc83 3px, transparent 3px, transparent 6px); /* Dotted line pattern */
+    background: repeating-linear-gradient(90deg, #cccccc11, #cccccc11 3px, transparent 3px, transparent 6px); /* Dotted line pattern */
 }
 
 /* Style for the tooltips */

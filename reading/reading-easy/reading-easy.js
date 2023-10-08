@@ -1,8 +1,7 @@
 // Your existing code for displaying sentences and navigation
+
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
-
-// Define a variable to keep track of the current sentence index
 let currentSentenceIndex = 0;
 
 function showSentence(index) {
@@ -22,25 +21,15 @@ function showSentence(index) {
 }
 
 // Function to toggle dark mode and update button label
-// Function to toggle dark mode and update button label with emojis
 function toggleDarkMode() {
     body.classList.toggle('dark-mode');
     const darkModeLabel = darkModeToggle.textContent;
     darkModeToggle.textContent = darkModeLabel === '🌙🦉 Dark Mode' ? '🕯️ Light Mode' : '🌙🦉 Dark Mode';
 }
 
-
 // Add an event listener to the dark mode toggle button
 darkModeToggle.addEventListener('click', () => {
     toggleDarkMode();
-});
-
-// Next Button Click Event
-document.getElementById('nextButton').addEventListener('click', () => {
-    if (currentSentenceIndex < window.phrases.length - 1) {
-        currentSentenceIndex++;
-        showSentence(currentSentenceIndex);
-    }
 });
 
 // Back Button Click Event
@@ -80,3 +69,31 @@ sentencesContent.forEach((sentence, index) => {
 
 // Show the first sentence initially
 showSentence(currentSentenceIndex);
+
+// Get references to the audio elements and store them in an array
+const audioElements = document.querySelectorAll('audio');
+
+// Function to pause audio
+function pauseAudio(index) {
+    if (index >= 0 && index < audioElements.length) {
+        audioElements[index].pause();
+        audioElements[index].currentTime = 0; // Reset audio to the beginning
+    }
+}
+
+// Function to show the next sentence
+function showNextSentence() {
+    if (currentSentenceIndex < window.phrases.length - 1) {
+        // Pause the current audio (if it's playing)
+        pauseAudio(currentSentenceIndex);
+
+        // Increment the index to the next sentence
+        currentSentenceIndex++;
+
+        // Show the next sentence
+        showSentence(currentSentenceIndex);
+    }
+}
+
+// Next Button Click Event
+document.getElementById('nextButton').addEventListener('click', showNextSentence);
