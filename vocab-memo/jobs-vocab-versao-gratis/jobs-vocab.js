@@ -181,7 +181,7 @@ const nextButton2 = document.getElementById('next-button-2');
 
 const videoQuestions = [
     {
-        videoUrl: 'https://drive.google.com/file/d/1K7lWBHa_1m3Rg9v8tVoTIkvU_n1SB_CA/preview',
+        videoUrl: 'https://drive.google.com/uc?export=download&id=1K7lWBHa_1m3Rg9v8tVoTIkvU_n1SB_CA',
         correctAnswer: 'Actor, Farmer, Server, Photographer', // Replace with the correct answer
     },
     // Add more questions for the video quiz
