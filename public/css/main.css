@@ -7,7 +7,7 @@
 /* Reset some default styles for better consistency */
 body, h1, h2, p, iframe {
     font-family: 'Anton-Regular', Arial, sans-serif;
-    color:#007bff;
+    color:#256cb9;
     margin: 0;
     padding: 0;
 }
@@ -38,7 +38,7 @@ body {
 
 /* Style the category heading */
 .category-heading {
-    color: #007bff;
+    color: #256cb9;
     font-size: 24px;
     font-weight: bold;
 }
@@ -129,7 +129,7 @@ nav {
 }
 
 .nav-link:hover {
-    color: #007BFF; /* Change the color on hover */
+    color: #0056b3; /* Change the color on hover */
 }
 
 .navbar ul {
@@ -212,13 +212,13 @@ nav {
 
 /* Style headings and paragraph text */
 h2 {
-    color: #007bff;
+    color: #256cb9;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 h3 {
-    color: #007bff;
+    color: #256cb9;
     font-family: 'Anton-Regular', Arial, sans-serif;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -236,7 +236,7 @@ p {
 
 /* Style links */
 a {
-    color: #007bff; /* Primary blue color */
+    color: #256cb9; /* Primary blue color */
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -268,7 +268,7 @@ a:hover {
 button {
     padding: 10px 20px;
     font-size: 0.9rem !important;
-    background-color: #007bff;
+    background-color: #256cb9;
     font-family: Arial, Helvetica, sans-serif !important;
     color: #fff;
     border: none;
@@ -286,7 +286,7 @@ button:hover {
     margin-top: 20px;
     font-size: 24px; /* Increase font size for better visibility */
     font-weight: bold;
-    color: #007bff; /* Primary blue color */
+    color: #256cb9; /* Primary blue color */
     background-color: #f2f2f2; /* Light gray background */
     padding: 10px; /* Add some padding to create space around the text */
     border-radius: 5px; /* Rounded corners */
@@ -296,7 +296,7 @@ button:hover {
 }
 
 #translatedText:hover {
-    background-color: #007bff; /* Darker blue background on hover */
+    background-color: #0056b3; /* Darker blue background on hover */
     color: #fff; /* White text on hover */
 }
 
@@ -376,7 +376,7 @@ footer {
 /* Styles for the loading text */
 #loader-phrase {
     margin-top: 20px;
-    color: #007bff;
+    color: #256cb9;
     text-align: center;
     font-size: 18px;
     /* Add any additional styles for the loading text */

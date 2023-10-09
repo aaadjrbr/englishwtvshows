@@ -1,0 +1,30 @@
+        /* Style for videos and titles */
+        .video-container2 {
+            display: none;
+        }
+
+        /* Style for the active video container */
+        .active-video2 {
+            display: block;
+        }
+
+        /* Style for buttons */
+        .button3 {
+            background-color: #256cb9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        /* Hover effect for buttons */
+        .button3:hover {
+            background-color: #0056b3;
+        }
+
+
+
+        

@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -36,10 +36,10 @@
 /* Style the category heading */
 .category-heading-caillou {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -56,7 +56,7 @@
 .category-button-caillou {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -96,7 +96,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -108,10 +108,10 @@
 /* Style the category heading */
 .category-heading-friends {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -128,7 +128,7 @@
 .category-button-friends {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -169,7 +169,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -181,10 +181,10 @@
 /* Style the category heading */
 .category-heading-himym {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -201,7 +201,7 @@
 .category-button-himym {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -241,7 +241,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -253,10 +253,10 @@
 /* Style the category heading */
 .category-heading-vocab-memo {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -273,7 +273,7 @@
 .category-button-vocab-memo {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -314,7 +314,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -326,10 +326,10 @@
 /* Style the category heading */
 .category-heading-jobs-vocab {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -346,7 +346,7 @@
 .category-button-jobs-vocab {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -386,7 +386,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -398,10 +398,10 @@
 /* Style the category heading */
 .category-heading-music-pratic {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -418,7 +418,7 @@
 .category-button-music-pratic {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -458,7 +458,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark black overlay with 50% opacity */
+    background-color: rgba(7, 0, 43, 0.753); /* Dark black overlay with 50% opacity */
     border-radius: 10px;
 }
 
@@ -470,10 +470,10 @@
 /* Style the category heading */
 .category-heading-reading-section {
     font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #007bff; /* Text color */
+    color: #256cb9; /* Text color */
 }
 
 /* Style the category description */
@@ -490,7 +490,7 @@
 .category-button-reading-section {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #007bff;
+    background-color: #256cb9;
     color: white;
     border: none;
     border-radius: 5px;
