@@ -1,8 +1,12 @@
 var currentVideo = 1;
-var videoCount = 3; // Total number of videos
+var videoCount = document.querySelectorAll('.video-container2').length;
+var videos = document.querySelectorAll('.video-container2 iframe');
 
 // JavaScript function to show a specific video container
 function showVideo(step) {
+    // Pause the current video
+    videos[currentVideo - 1].src = videos[currentVideo - 1].src; // Reloads the iframe to pause the video
+
     // Hide the current video container
     document.getElementById('video' + currentVideo).classList.remove('active-video2');
 
@@ -22,3 +26,6 @@ function showVideo(step) {
     // Update the current video variable
     currentVideo = nextVideo;
 }
+
+// Start playing the first video
+videos[currentVideo - 1].src = videos[currentVideo - 1].src; // Reloads the iframe to play the video
