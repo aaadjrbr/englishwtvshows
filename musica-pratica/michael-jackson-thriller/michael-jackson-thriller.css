@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Anton-Regular';
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by changing the last value (0.5 for 50% opacity) */
+    z-index: -1; /* Place it below other content */
+}
+
+body {
+    background-image: url('https://drive.google.com/uc?id=1yy9nodWWy-8EUZ63S_1HQwrRCO_jKxk1'); /* Replace with your music-themed background image */
+    background-size: cover;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    position: relative; /* Add this to make sure the pseudo-element is positioned relative to the body */
+}
+
+#audio {
+    display: none;
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Allow background scrolling on small screens */
+    }
+
+    h1 {
+        font-size: 1.3em; /* Reduce font size for smaller screens */
+    }
+
+    .card {
+        padding: 10px; /* Reduce card padding for smaller screens */
+    }
+
+    #lyrics-container {
+        padding: 10px; /* Reduce container padding for smaller screens */
+    }
+
+    #score {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    #audio {
+        margin-top: 10px; /* Reduce margin for audio player on smaller screens */
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 16px; /* Adjust button font size for smaller screens */
+    }
+}
+
+header {
+    background-color: #00000077;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6em;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+p {
+    color: #2196F3; /* Blue text color */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#lyrics-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+#part-label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #2196F3; /* Blue color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #1976D2; /* Slightly darker blue on hover */
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.correct {
+    background-color: #4CAF50 !important; /* Use !important to ensure higher specificity */
+    color: #fff !important; /* Use !important to ensure higher specificity */
+    transition: background-color 0.5s, color 0.5s;
+    z-index: 1; /* Ensure the correct and wrong backgrounds overlay the option box background */
+}
+
+.wrong {
+    background-color: #FF5733 !important; /* Use !important to ensure higher specificity */
+    color: #fff !important; /* Use !important to ensure higher specificity */
+    transition: background-color 0.5s, color 0.5s;
+    z-index: 1; /* Ensure the correct and wrong backgrounds overlay the option box background */
+}
+
+
+#do-it-over-button {
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+.option-box {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 1.5em;
+    margin: 5px;
+    border: 2px solid transparent; /* Transparent border by default */
+    background-color: #fff;
+    color: #2196F3; /* Blue text color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add box-shadow transition */
+    pointer-events: auto; /* Ensure click events work even with hover effects */
+}
+
+.option-box:hover {
+    background-color: #2196F3; /* Blue background color on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #2196F3; /* Blue border color on hover */
+}
+
+footer {
+    color: white;
+}
+
