@@ -116,6 +116,63 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       driveFileId: "1EWFqEI3pU63NfxyR5kJOuIh4GuKkKOR4" // Replace with your Google Drive file ID for the second part
     },
+    {
+    partLabel: "Parte 5",
+    phrases: [
+        ["I lifted her, ..."],
+        ["she looked at me and .... :"],
+        ["Hold me ..."],
+        ["just a little ..."],
+        ["I held her ... "],
+        ["I kissed her - our last ..."],      
+      ],
+    options: [
+        ["head", "help"],
+        ["say", "said"],
+        ["daring", "darling"],
+        ["while", "will"],
+        ["nose", "close"],
+        ["miss", "kiss"],
+    ],
+    answers: [
+        ["head"],
+        ["said"],
+        ["darling"],
+        ["while"],
+        ["close"],
+        ["kiss"],
+    ],
+    driveFileId: "1bd4oeHs_LqaJtsGIYkMQNQOPTfDWITC-" // Replace with your Google Drive file ID for the second part
+  },
+  {
+    partLabel: "Parte 6",
+    phrases: [
+        ["I found the ..."],
+        ["that I knew I had ..."],
+        ["Well now she's ..."],
+        ["even though I hold her ..."],
+        ["I lost my ..."],
+        ["my life that ..."],      
+      ],
+    options: [
+        ["loss", "love"],
+        ["messed", "missed"],
+        ["gone", "going"],
+        ["might", "tight"],
+        ["last", "love" ],
+        ["night", "fight"],
+    ],
+    answers: [
+        ["love"],
+        ["missed"],
+        ["gone"],
+        ["tight"],
+        ["love"],
+        ["night"],
+    ],
+    driveFileId: "1lat8qIBZo34tO7518czCzT_t6qtSxPZm" // Replace with your Google Drive file ID for the second part
+  },
+  
     // Add more parts with labels, phrases, options, and answers here
   ];
 
@@ -190,6 +247,7 @@ skipButton.addEventListener("click", () => {
     loadPhrase(currentSongIndex, currentPhraseIndex);
   }
 });
+
 
     // Add an event listener to the go back button
 goBackButton.addEventListener("click", () => {
@@ -291,7 +349,7 @@ function loadAudio(driveFileId) {
   
     function nextPhrase(songIndex, phraseIndex) {
       if (songIndex === songsData.length - 1 && phraseIndex === songsData[songIndex].phrases.length - 1) {
-        phraseContainer.textContent = "Assine já para a versão completa! Vá p/ início e comece hoje!";
+        phraseContainer.textContent = "🥳✨🎉 Parabéns! Você completou tudo.";
         partLabelContainer.textContent = "";
         optionsContainer.innerHTML = "";
         scoreDisplay.textContent = `Frases Concluídas: ${score}`;
