@@ -20,7 +20,7 @@
     <title>Início - English w/ TV Shows</title>
     <link rel="icon" href="./favicon.png" type="image/x-icon">
 
-
+    <link rel="stylesheet" href="./public/css/video-aulas.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/imagestocategories.css">
 
@@ -123,7 +123,8 @@
     </header>    
     
     <a href="#como-funciona2"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Como usar o site? 💡</strong></button></a>
-    <a href="#dicas-gratis"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Dicas grátis no e-mail 📩🔔</strong></button></a>
+    <a href="#dicas-gratis"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Dicas gratuitas no e-mail 📩🔔</strong></button></a>
+    <a href="#aulas-gratis"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Aulas gratuitas 🆓📢</strong></button></a>
     <a href="./assine-ja.html"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Assine já ✍️ R$ 44,90/mensal 🎯</strong></button></a>
 
    <div style="margin-top: 40px;"></div>
@@ -218,6 +219,46 @@
     <br/><br/><hr/>
 
 
+    <section id="aulas-gratis">
+            <div class="container mt-5">
+        <h1 class="section-heading text-center">Aulas Grauitas:</h1>
+        <div style="margin-bottom: 20px;"></div>
+    
+        <div id="video1" class="video-container2 active-video2">
+            <h2>Aula 1 - Alfabeto em Inglês</h2>
+            <p class="category-description">Pratique sua pronúncia</p>
+            <div style="margin-bottom: 20px;"></div>
+                <div class="video-container left-aligned">
+            <iframe width="560" height="315" src="https://drive.google.com/file/d/1C2h8tufvttUMGPJ8AMG-ISFJVWRXi2EH/preview" frameborder="0" allowfullscreen></iframe>
+                </div>
+        </div>
+    
+        <div id="video2" class="video-container2">
+            <h2>Aula 2 - Em breve</h2>
+            <p class="category-description">Acompanhe no Instagram p/ saber quando a próxima aula estará disponível.<br/>@englishwadenilson</p>
+            <div style="margin-bottom: 20px;"></div>
+                <div class="video-container left-aligned">
+            <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+        </div>
+    
+        <div id="video3" class="video-container2">
+            <h2>Aula 3 - Em breve</h2>
+            <p class="category-description">Acompanhe no Instagram p/ saber quando a próxima aula estará disponível.<br/>@englishwadenilson</p>
+            <div style="margin-bottom: 20px;"></div>
+                <div class="video-container left-aligned">
+            <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+        </div>
+    
+        <!-- Navigation buttons -->
+        <button class=button3 onclick="showVideo(-1)"><strong>◀️ Aula Anterior</strong></button>
+        <button class=button3 onclick="showVideo(1)"><strong>Próxima Aula ▶️</strong></button>
+            </div>
+    </section>
+        <br/><br/><hr/>
+
+
     <section id="como-funciona2">
     <div class="container mt-5">
         <!-- Section 2: Como funciona o site? -->
@@ -256,7 +297,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     
-
+    <script src="./public/js/video-aulas.js"></script>
     <script src="./public/js/main.js"></script>
     <script src="./public/js/dictionary2.js"></script>
 </body>
