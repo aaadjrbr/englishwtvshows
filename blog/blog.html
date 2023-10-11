@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en, pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inglês com filmes e séries!">
+    <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+    <meta name="author" content="English w/ Adenilson">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="English w/ TV Shows">
+    <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./blog.css">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <title>Blog - English w/ TV Shows</title>
+</head>
+
+<body>
+    <header>
+        <h1>English w/ TV Shows Blog</h1>
+        <br/>
+        <h2>Você, no caminho da fluência 🏆</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="tab1">
+            <article>
+                <h2 class="post-title" style="font-size: 1.9em;">Aprenda a ler em inglês</h2>
+                <p class="post-meta" style="font-size: 1em;">Published on <time datetime="2023-10-10">October 10, 2023</time> by <span class="author">Adenilson Ribeiro</span></p>
+                <p class="post-content" style="font-size: 1.5em; font-weight: bold;">Você provavelmente já sabe muito bem as vantagens de...</p>
+                <br/>
+                <a href="./aprenda-a-ler.html"><p style="color:#256cb9;">Continue lendo</p></a>
+            </article>
+        </div>
+<!--
+        <div id="tab2" style="display: none;">
+            <article>
+                <h2 class="post-title">Página 2</h2>
+                <p class="post-meta">Published on <time datetime="2023-10-11">October 11, 2023</time> by <span class="author">Adenilson Ribeiro</span></p>
+                <p class="post-content">This is the content of the second page.</p>
+                <br/>
+                <a href="./pagina2.html"><p>Continue lendo</p></a>
+            </article>
+        </div>
+
+        <div id="tab3" style="display: none;">
+            <article>
+                <h2 class="post-title">Página 3</h2>
+                <p class="post-meta">Published on <time datetime="2023-10-12">October 12, 2023</time> by <span class="author">Adenilson Ribeiro</span></p>
+                <p class="post-content">This is the content of the third page.</p>
+                <br/>
+                <a href="./pagina3.html"><p>Continue lendo</p></a>
+            </article>
+        </div> -->
+    </main>
+
+    <br/><br/><hr/>
+
+    <nav id="nav2" style="text-align: center;">
+        <ul id="ul2">
+            <li id="li2"><a id="a2" href="#tab1">< 1</a></li>
+            <li id="li2"><a id="a2" href="#tab2">2</a></li>
+            <li id="li2"><a id="a2" href="#tab3">3 ></a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle navigation
+        const tabs = document.querySelectorAll('#nav2 #ul2 #li2 #a2');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                const pages = document.querySelectorAll('main div');
+                pages.forEach(page => {
+                    if (page.getAttribute('id') === targetId) {
+                        page.style.display = 'block';
+                    } else {
+                        page.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
