@@ -75,5 +75,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.querySelector(".loader").style.display = "none";
     document.querySelector(".content").style.display = "block";
-  }, 2100); // 2.1 seconds delay (adjust as needed)
+  }, 1000); // 2.1 seconds delay (adjust as needed) [bc of halloween change to less]
 });

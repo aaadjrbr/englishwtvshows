@@ -3,13 +3,16 @@ const timeDelay = 2000;
 
 // Function to perform the redirection
 function redirect() {
-  window.location.href = "./index-second.html"; // Replace with your desired URL
+  window.location.replace("./index-second.html"); // Replace with your desired URL
 }
 
 // Set a timer to call the redirect function after the specified time delay
 setTimeout(redirect, timeDelay);
 
-// Add an event listener to trigger the redirection when leaving the page
-window.onbeforeunload = function () {
+// Add an event listener for the popstate event to trigger the redirection
+window.addEventListener('popstate', function() {
   redirect();
-};
+});
+
+// Store a state to prevent multiple redirects in the session history
+window.history.replaceState({ page: 1 }, '', window.location.href);
