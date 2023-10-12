@@ -101,7 +101,8 @@
     <div class="container mt-5">
         
 
-
+        <h2 style="color: white;">Ao finalizar a leitura, faça o Quiz abaixo 📝</h2>
+        <p style="font-size: 0.8em;"><em>*Clique na palavra para exibir a sua tradução.</em></p>
 
         <div class="sentence" id="sentence1">
             <audio style="margin-top: 20px;" controls>
@@ -111,7 +112,28 @@
             <div style="margin-top: 20px;"></div>
             <p id="text1"></p>
         
+
+            <div>
+                <div class="quiz-container1">
+                    <h2 style="color: white;"><em>Quiz<br/><div style="font-size: 0.6em !important;">(Verdadeiro[True] ou Falso[False])</div></em></h2>
+                    <br/>
+                    <h3 style="font-size: 1.4em;">Vamos checar a sua interpretação</h3><br/>
+                    <div id="question-container">
+                        <h2 style="font-size: 1.5em; color: white;" id="question"></h2>
+                    </div>
+                    <div id="options-container">
+                        <!-- Options will be inserted here dynamically -->
+                    </div><br>
+                    <button style="display: none;" id="next-button">Próximo</button>
+                    <div id="result-container">
+                        <p id="result"></p>
+                </div>
+            </div>
+
+            </div>
+
         </div>
+        
         <div class="sentence" id="sentence2">
             <div style="margin-top: 20px;"></div>
             <p id="text2"></p>
@@ -121,17 +143,20 @@
          
 
 
-            <p style="font-size: 0.8em;"><em>*Clique na palavra para exibir a sua tradução.</em></p>
+            
             <!-- Back Button -->
             <button class="btn btn-secondary mb-3" id="backButton" disabled>Voltar</button>
 
             <!-- Next Button -->
             <button class="btn btn-primary mb-3" id="nextButton">Próximo</button>
-        
-        
 
     
     </div>
+
+
+        
+        
+
 
 
     <br/><br/><hr>
@@ -150,9 +175,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script>
-        
-    </script>
+    <script src="./reading-easy-quiz-gratis.js"></script>
 
 
 </div><!-- div for loader -->

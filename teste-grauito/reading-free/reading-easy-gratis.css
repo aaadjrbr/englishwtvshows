@@ -263,6 +263,39 @@ audio {
     height: 40px;
 }
 
+/* Quiz stuff */
+
+.quiz-container1 {
+    padding: 15px 5px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    color: #fff;
+}
+
+button {
+    padding: 15px 20px;
+    margin: 2px;
+    border-radius: 7px;
+    background-color: #375265;
+    border-color: #375265;
+    color: #fff;
+    border: 2;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #1B2735;
+    border-color: #1B2735;
+}
+
+#result-container {
+    display: none;
+}
 
 /* Media Query for Small Screens */
 @media screen and (max-width: 768px) {
@@ -327,3 +360,35 @@ audio {
         height: 40px;
     }
 }
+
+/* Styles for small devices (up to 768px) */
+@media screen and (max-width: 768px) {
+    .quiz-container {
+      padding: 10px;
+    }
+  
+    h3 {
+      font-size: 1.5em;
+    }
+  
+    button {
+      padding: 10px 15px;
+    }
+  }
+  
+  /* Quiz container styles for all screen sizes */
+  .quiz-container1 {
+    padding: 15px 5px;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  #result-container {
+    display: none;
+  }

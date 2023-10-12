@@ -206,20 +206,16 @@ window.phrases = [
             ]
     },
     {
-        text: "Quer mais? Vá para início e comece agora com a versão completa! 🚀", 
+        text: "Nossa equipe está trabalhando em mais textos. 24/7.", 
         words: [
-            { word: "Quer", translation: "Quer"},
-            { word: "mais?", translation: "mais?"},
-            { word: "Vá", translation: "Vá"},
-            { word: "para", translation: "para"},
-            { word: "início", translation: "início"},
-            { word: "e", translation: "e"},
-            { word: "comece", translation: "comece"},
-            { word: "agora", translation: "agora"},
-            { word: "com", translation: "com"},
-            { word: "a", translation: "a"},
-            { word: "versão", translation: "versão"},
-            { word: "completa! 🚀", translation: "completa! 🚀"}
+            { word: "Nossa", translation: "Nossa"},
+            { word: "equipe", translation: "equipe"},
+            { word: "está", translation: "está"},
+            { word: "trabalhando", translation: "trabalhando"},
+            { word: "em", translation: "em"},
+            { word: "mais", translation: "mais"},
+            { word: "textos", translation: "textos"},
+            { word: "24/7", translation: "24 horas por dia, 7 dias por semana"}
         ]
     },
     // Add more phrases and translations here...
