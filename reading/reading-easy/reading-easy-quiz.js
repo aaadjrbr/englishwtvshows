@@ -112,6 +112,22 @@ nextButton.addEventListener("click", () => {
     }
 });
 
+const restartButton = document.getElementById("restart-button");
+restartButton.addEventListener("click", () => {
+    // Reset the quiz to its initial state
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+
+    // Hide the result container if it's visible
+    resultContainer.style.display = "none";
+    // Show the question and options container
+    questionElement.style.display = "block";
+    optionsContainer.style.display = "block";
+    // Show the next button
+    nextButton.style.display = "block";
+});
+
 // Start the quiz
 showQuestion();
 
