@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,39 +18,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+6iGpAde6PSISL7fF84xH4DW4fIbbVYNIH6Pvj3WhXaRkfj" crossorigin="anonymous">
     
     <!-- Add your custom CSS -->
-    <link rel="stylesheet" href="./season1/style.css">
+    <link rel="stylesheet" href="../content-menu/content-menu.css">
 
     <style>
 
-
-/* Apply a background color to the body */
-body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    margin: 20;
-}
-
-/* Header styles */
-header {
-    background-color: #000000;
-    border-radius: 10px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px;
-}
-
-/* Navigation styles (customize as needed) */
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-}
 
 /* Main section styles */
 .series-selection {
@@ -110,28 +81,30 @@ nav a {
     background-color: #0056b3;
 }
 
-/* Media query for responsiveness (adjust as needed) */
-@media (max-width: 768px) {
-    .series-option {
-        margin: 20px 0;
-        padding: 20px;
-    }
-
-    .series-option img {
-        max-width: 80%;
-        margin: 0 auto 10px;
-    }
-
-    .button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
 }
 
+#scrollToTopBtn:hover {
+    background-color: #141414;
+    color: #fff;
+}
     </style>
 
 
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
 <script>
@@ -143,42 +116,46 @@ nav a {
 </script>
 
 <body>
-    <header style="text-align: center; padding-bottom: 10px;">
-        <nav style="border-radius: 10px; width: 100%; height: 200px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);">
-            <div class="container">
-                <a href="../index.html"><img class="eng-logo navbar-brand" style="width: 200px; height: 100px; margin-bottom: 20px;" src="../../public/assets/images/eng-logo.png"></a>
-                <br/>
-                <a href="../../bem-vindo.html"><button style="border-radius: 5px; padding: 10px 20px; margin-bottom: 20px;"><strong>Início</strong></button></a>
-                <br>
-            </div>
+    <header>
+        <div class="netflixLogo">
+          <a id="logo" href="../content-menu.html"><img src="../../public/assets/images/eng-logo.png" alt="Logo Image"></a>
+        </div>      
+        <nav class="main-nav">                
+          <a style="padding: 5px;" href="../content-menu.html">Voltar</a>     
         </nav>
-    </header>
+        <nav class="sub-nav">
+          <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+          <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>       
+        </nav>    
+        
+      </header>
     <br/>
     <main>
-        <div class="container text-center">
-            <img style="width: 340px; height: 110px;" class="centered-element" src="../../public/assets/images/friends-banner.png"></img>
-            <h3 class="display-4 my-text" style="font-size: 1.4em;  color: rgb(0, 81, 255); text-shadow: 2px 2px 4px rgb(255, 255, 255);">Aprenda inglês com <em>Friends</em></h3><br/>
-            <p class="lead"><strong>Escolha um episódio para começar:</strong></p>
-        </div>
+        <section class="main-container">
+            <h1 style="font-size: 2.2em; margin-top: 20px;">Friends</h1>
+            <img style="border-radius: 5px; width: 300px; height: auto;" src="https://drive.google.com/uc?id=1bHcachxcN1whLPa1aqr1t1E1IzpGlG_f" alt="How I Met Your Mother (TV Show)">
+            <p class="lead" style="font-size: 1.8em; margin-top: 20px;"><strong>Escolha um episódio para começar:</strong></p>
+        </section>
+        <hr/>
 
-        <section id="season1" class="content-container">
+        <section id="season1" class="main-container">
             <h2>Primeira temporada</h2>
             <p>
                 <!-- Add clickable links for Season 1 episodes here -->
-                <a href="./season1/textep1friends.html">Rachel Runs Out on her Wedding to Barry</a> |
-                <a href="./season1/textep2friends.html">Ross reveals his Ex-Wife Carol is Pregnant</a> |
-                <a href="../../em-breve.html">Episódio 3</a> |
+                <a style="text-decoration: none; color:#fff;" href="./season1/textep1friends.html">Rachel Runs Out on her Wedding to Barry</a> <strong>|</strong>
+                <a style="text-decoration: none; color:#fff;" href="./season1/textep2friends.html">Ross reveals his Ex-Wife Carol is Pregnant</a> <strong>|</strong>
+                <a style="text-decoration: none; color:#fff;" href="../../em-breve.html">Episódio 3</a> <strong>|</strong>
                 <!-- Add more episode links as needed -->
             </p>
         </section>
-        <br/>
-        <section id="season2" class="content-container">
+
+        <section id="season2" class="main-container">
             <h2>Segunda temporada</h2>
             <p>
                 <!-- Add clickable links for Season 2 episodes here -->
-                <a href="../../em-breve.html">Episódio 1</a> |
-                <a href="../../em-breve.html">Episódio 2</a> |
-                <a href="../../em-breve.html">Episódio 3</a> |
+                <a style="text-decoration: none; color:#fff;" href="../../em-breve.html">Episódio 1</a> <strong>|</strong>
+                <a style="text-decoration: none; color:#fff;" href="../../em-breve.html">Episódio 2</a> <strong>|</strong>
+                <a style="text-decoration: none; color:#fff;" href="../../em-breve.html">Episódio 3</a> <strong>|</strong>
                 <!-- Add more episode links as needed -->
             </p>
         </section>
@@ -187,21 +164,31 @@ nav a {
 
     <br/><hr/>
     <footer>
-        <p>&copy; 2023 English w/ TV Shows</p><br/>
-        <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
+        <p class="sub-links">&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p><br/>
+        <p>Powered by <a style="text-decoration: none;" href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
     </footer>
 
-    <button id="scrollToTopBtn" onclick="scrollToTop()">Scroll to Top</button>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">🔼</button>
 
     <script>
-        // JavaScript function to scroll to the top of the page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+// Get the button element
+var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+scrollToTopBtn.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
+</script>
 
 <style>
 

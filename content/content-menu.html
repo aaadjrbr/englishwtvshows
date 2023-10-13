@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en, pt">
-
-
+<html>
 <head>
     <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2110834991626364">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="Inglês com filmes e séries!">
     <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
@@ -11,135 +9,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:title" content="English w/ Tv Shows">
     <meta property="og:description" content="Aprenda inglês com séries e filmes!">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <title>Filmes & Séries - Menu - English w/ TV Shows</title>
-    <link rel="icon" href="../favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../public/css/main.css">
-    <!-- Add your CSS styles here if needed -->
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="icon" href="../../favicon.png" type="image/x-icon">
+    
 
-    <style>
-        /* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <title>Filmes & Séries - English w/ TV Show</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 
-/* Apply a background color to the body */
-body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-}
+    <link rel="stylesheet" href="../content/content-menu/content-menu.css">
 
-/* Header styles */
-header {
-    background-color: #000000;
-    border-radius: 10px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px;
-}
 
-/* Navigation styles (customize as needed) */
-nav {
-    display: flex;
-    justify-content: center;
-}
+<style>
+          .loader-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(228, 241, 255);
+            z-index: 9999; /* Ensure the loader is on top of everything */
+        }
+</style>
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-}
 
-/* Main section styles */
-.series-selection {
-    text-align: center;
-    padding: 30px;
-}
-
-.section-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.category-description {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-/* Series option styles */
-.series-option {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-}
-
-.series-option img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.series-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.series-description {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer styles (customize as needed) */
-footer {
-    background-color: rgb(0, 0, 0);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    border-radius: 10px;
-}
-
-/* Media query for responsiveness (adjust as needed) */
-@media (max-width: 768px) {
-    .series-option {
-        margin: 20px 0;
-        padding: 20px;
-    }
-
-    .series-option img {
-        max-width: 80%;
-        margin: 0 auto 10px;
-    }
-
-    .button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-}
-
-    </style>
+  <script src="main.js"></script>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
 <script>
@@ -151,166 +51,101 @@ footer {
 </script>
 
 <body>
-    <!-- Header section -->
+            <!-- Loading spinner container -->
+            <div class="loader-container">
+              <img style="width: 150px; height: 150px;" src="../../public/assets/images/tv-loader-pages.gif"></img>
+          </div>
+
+<div id="site-content" style="display: none;">
+
+
+
+
+  <div class="wrapper">
+
+    <!-- HEADER -->
     <header>
-        <div class="container" style="border-radius: 10px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);">
-            <a href="../index.html"><img class="eng-logo navbar-brand" style="width: 250px; height: 150px; margin-bottom: 20px;" src="../public/assets/images/eng-logo.png"></a>
-            <br/>
-            <a href="../bem-vindo.html"><button style="border-radius: 5px; padding: 10px 20px; margin-bottom: 20px;"><strong>Início</strong></button></a>
-        </div>
-        
+      <div class="netflixLogo">
+        <a id="logo" href="../bem-vindo.html"><img src="../../public/assets/images/eng-logo.png" alt="Logo Image"></a>
+      </div>      
+      <nav class="main-nav">                
+        <a href="../bem-vindo.html">Voltar</a>     
+      </nav>
+      <nav class="sub-nav">
+        <a href="../contato.html">Contato</a>        
+      </nav>      
     </header>
+    <!-- END OF HEADER -->
+    <h3 style="padding: 10px; margin-left: 10px; margin-right: 10px; text-align: center; font-size: 1em;">⚠️ Importante: Nossos professores e desenvolvedores estão empenhados em trabalhar<br/> incansavelmente para enriquecer nossa plataforma com conteúdo adicional. </h3>
+    
+    <!-- MAIN CONTAINER -->
+    <section class="main-container" >
+      <div class="location" id="home">
+          <h1 id="home">Popular em English w/ TV Shows</h1>
+          <div class="box">
+            <a href="./how-i-met-your-mother/menu-himym.html"><img style="border-radius: 5px;" src="https://drive.google.com/uc?id=1SFIagKkqYLq_IEjURxUcMSaJrEQSmreM" alt="How I Met Your Mother (TV Show)"></a>   
+          </div>
+      </div>  
+      
+      <h1 id="series">Séries</h1>
+      <div class="box">
+        <a href="./friends/menu-friends.html"><img style="border-radius: 5px;" src="https://drive.google.com/uc?id=1bHcachxcN1whLPa1aqr1t1E1IzpGlG_f" alt="Friends (TV Show)"></a>
+        <a href="./how-i-met-your-mother/menu-himym.html"><img style="border-radius: 5px;" src="https://drive.google.com/uc?id=1SFIagKkqYLq_IEjURxUcMSaJrEQSmreM" alt="How I Met Your Mother (TV Show)"></a>
+              
+      </div>
+      
 
-    <!-- Main content section -->
-    <section class="series-selection">
-        <h2 class="section-heading">🍿 🎬 Escolha uma série ou filme e comece agora:</h2>
+      <h1 id="filmes">Filmes</h1>
+      <div class="box">
+              
+      </div>
 
-        <!-- Page 1 -->
-        <div class="page" id="page1">
-            <!-- Series Option 1 -->
-            <div class="series-option">
-                <h3 class="series-title">Friends</h3>
-                <p class="series-description">Vem aprender inglês com a turma de 'Friends' e bora dar um up no seu inglês!</p>
-                <img style="width: 300px; height: 200px; border-radius: 10px;" src="../public/assets/images/friends-bg.jpg" alt="Caillou"><br/>
-                <a class="category-description-vocab-memo" href="./friends/menu-friends.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-            </div>
+      <h1 id="desenhos">Desenhos</h1>
+      <div class="box">
+        <a href="./caillou/menu-caillou.html"><img style="border-radius: 5px;" src="https://drive.google.com/uc?id=1PV_4NMIMPiHGqD5-HelFXeucM767Rtbo" alt="Caillou (Cartoon)"></a>
+      </div>
+     
+    <!-- END OF MAIN CONTAINER -->
 
-            <!-- Series Option 2 -->
-            <div class="series-option">
-                <h3 class="series-title">Aprenda Inglês com Caillou</h3>
-                <p class="series-description">Vem aprender inglês com as aventuras do Caillou e se divirta enquanto melhora o seu inglês!</p>
-                <img style="width: 300px; height: 200px; border-radius: 10px;" src="../public/assets/images/caillou-bg.jpg" alt="Friends"><br/>
-                <a class="category-description-vocab-memo" href="./caillou/menu-caillou.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-            </div>
+  <div style="margin-top: 80px;"></div>
 
-            <!-- Series Option 3 -->
-            <div class="series-option">
-                <h3 class="series-title">How I Met Your Mother</h3>
-                <p class="series-description">Que tal aprender inglês com as histórias hilariantes de How I Met Your Mother? Garantimos risadas enquanto você aprimora o seu inglês!</p>
-                <img style="width: 300px; height: 200px; border-radius: 10px;" src="../public/assets/images/How-I-Met-Your-Mother-bg.jpg" alt="How I Met Your Mother"><br/>
-                <a class="category-description-vocab-memo" href="./how-i-met-your-mother/menu-himym.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-            </div>
-
-            <!-- Series Option 4 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <!-- Series Option 5 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button class="button" onclick="showPage('page2')">Próximo</button>
-            </div>
-        </div>
-
-        <!-- Page 2 (Initially hidden) -->
-        <div class="page" id="page2" style="display: none;">
-            <!-- Series Option 6 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <!-- Series Option 7 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <!-- Series Option 8 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <!-- Series Option 9 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <!-- Series Option 10 -->
-            <div class="series-option">
-                <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-                <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-            </div>
-
-            <div class="pagination">
-                <button class="button" onclick="showPage('page1')">Anterior</button>
-                <button class="button" onclick="showPage('page3')">Próximo</button>
-            </div>
-        </div>
-
-        <!-- Page 3 (Initially hidden) -->
-<div class="page" id="page3" style="display: none;">
-    <!-- Series Option 11 -->
-    <div class="series-option">
-        <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-        <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-    </div>
-
-    <!-- Series Option 12 -->
-    <div class="series-option">
-        <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-        <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-    </div>
-
-    <!-- Series Option 13 -->
-    <div class="series-option">
-        <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-        <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-    </div>
-
-    <!-- Series Option 14 -->
-    <div class="series-option">
-        <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-        <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-    </div>
-
-    <!-- Series Option 15 -->
-    <div class="series-option">
-        <h3 class="series-title">Em atualização 👷🏼👨🏻‍💻</h3>
-        <p class="series-description">Nossos professores, desenvolvedores estão trabalhando dia & noite para trazer mais conteúdos. ⏳</p>
-    </div>
-    <!-- Pagination (Page 3) -->
-<div class="pagination">
-    <button class="button" onclick="showPage('page2')">Anterior</button>
-</div>
-
-</div>
-        
-
+    <!-- LINKS -->
+    <section class="link">
+      <div class="logos">
+        <a href="https://www.instagram.com/englishwadenilson/"><i class="fab fa-instagram fa-2x logo"></i></a>
+        <a href="https://youtube.com/@englishwadenilson?si=gbm17DfbNwzTxxAJ"><i class="fab fa-youtube fa-2x logo"></i></a>
+      </div>
+      <div class="sub-links">
+        <ul>
+          <li><a href="../contato.html">Contato</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
     </section>
+    <!-- END OF LINKS -->
 
-    <!-- Footer section -->
+<script src="../content/content-menu/content-menu.js"></script>
+
+
+    <!-- FOOTER -->
     <footer>
-        <p style="color: #ffffff;">&copy; 2023 Learn with TV Shows. All rights reserved.</p>
+        <p class="sub-links">&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p><br/>
+        <p>Powered by <a style="text-decoration: none;" href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
     </footer>
+  </div>
 
 
 
-    <script src="../public/js/dictionary2.js"></script> <!-- Include the main authentication script first -->
-    <script src="../public/js/protected-pages.js"></script>
-    <!-- JavaScript to handle page switching -->
-    <script>
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(function(page) {
-                page.style.display = 'none';
-            });
 
-            // Show the selected page
-            document.getElementById(pageId).style.display = 'block';
-        }
-    </script>
-
-<script src="../public/js/dictionary2.js"></script> <!-- Include the main authentication script first -->
-<script src="../public/js/protected-pages.js"></script>
+</div><!-- div for loader -->
+<script>
+    // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
+</script>
 </body>
 </html>
