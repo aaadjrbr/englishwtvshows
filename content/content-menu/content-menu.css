@@ -101,7 +101,8 @@
   
   /* MAIN CONTIANER */
   .main-container {
-    padding: 50px;
+    padding: 30px;
+    margin-left: 40px;
   }
   
   .box {
