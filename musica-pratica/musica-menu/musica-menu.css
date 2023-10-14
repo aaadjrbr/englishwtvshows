@@ -11,6 +11,7 @@ body {
   background-color: #020129;
   font-family: "Gothic A1", sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
