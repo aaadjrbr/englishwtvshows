@@ -282,7 +282,7 @@
   var canvasContainer;
   var htmlBounds;
   var bounds;
-  var minimumStageWidth = 300;
+  var minimumStageWidth = 600;
   var minimumStageHeight = 300;
   var maxStageWidth = 800;
   var maxStageHeight = 1100;
@@ -350,7 +350,7 @@
   }
   
   function stageTooSmallHandler(){
-      var warning = "Desculpe, é necessário uma tela maior :(";
+      var warning = "Abra em seu computador";
       context.font = "bold normal 24px sans-serif";
       context.fillText(warning, bounds.getCenterX() - context.measureText(warning).width/2, bounds.getCenterY()-12);
   }
