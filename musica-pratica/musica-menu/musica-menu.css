@@ -50,6 +50,10 @@ main {
     margin: 10px 10px 0; /* Adjusted margin for smaller screens */
   }
 
+  .zoom-on-play-list {
+    margin-left: 80px;
+  }
+
   .playlist-view-bloco {
     flex-direction: column; /* Stack items vertically on smaller screens */
     gap: 10px; /* Add some vertical spacing between items */
@@ -173,6 +177,7 @@ main {
 .zoom-on-play-list:hover {
   transition: transform .3s;
   transform: scale(1.2);
+  
 }
 
 .playlist-view {
