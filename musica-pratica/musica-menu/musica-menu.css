@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020129;
+  font-family: "Gothic A1", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #040249;
+  width: 35%px; /* Adjusted to take full width on smaller screens */
+  min-height: 100vh; /* Changed 'height' to 'min-height' for responsiveness */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-spotify {
+  padding: 20px 20px 30px; /* Adjusted padding for smaller screens */
+}
+
+/* Media Query for smaller screens, e.g., phones */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar-spotify {
+    padding: 15px 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .sidebar-items-div-policies {
+    margin: 10px 10px 0; /* Adjusted margin for smaller screens */
+  }
+
+  .playlist-view-bloco {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Add some vertical spacing between items */
+  }
+
+  .playlist-view-bloco-container {
+    width: 100%; /* Take full width on smaller screens */
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .playlist-view-bloco-container-imagem {
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .playlist-view-bloco-container-tituloplaylist {
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .playlist-view-bloco-container-paragrafo {
+    font-size: 12px; /* Adjust font size for better readability on smaller screens */
+  }
+}
+
+.sidebar-spotify-icon {
+  width: 140px;
+  height: 70px;
+}
+
+.sidebar-items {
+  padding: 0px 20px 0px 20px;
+}
+
+#sidebar-items-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-items-line {
+  padding: 0px 0px 15px 0px;
+}
+
+.sidebar-items-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700px;
+  font-size: 13px;
+}
+
+.sidebar-items-div-policies{
+  width: 177px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  margin: 330px 30px 0px 20px;
+}
+
+
+.main-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  height: 59px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0px 8px 0px;
+  gap: 32px;
+  background-color: rgb(7, 3, 105);
+}
+
+.botao-voltaravancar {
+  color: #7a7a7a;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  font-size: 18px;
+  border: 0px;
+  background-color: #040249;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  padding: 0px 30px 0px 0px;
+}
+
+.header-link-inscreverentrar {
+  color: #a7a7a7;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#botao-entrar {
+  background-color: #ffffff;
+  border-radius: 27px;
+  width: 88px;
+  height: 43px;
+}
+
+#botao-entrar-texto {
+  color: #000;
+}
+
+.playlist-view {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: flex-start; /* Start new rows on the left */
+  max-width: 1200px; /* Adjust the maximum width to control the number of columns */
+  margin: 0 auto; /* Center the content on the page */
+}
+
+
+.playlist-view-bloco {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Corrected property */
+  align-items: center; /* Corrected property */
+  gap: 20px;
+}
+
+.playlist-view-bloco-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 12px 17px;
+  gap: 15px;
+  width: 175px;
+  height: 253px;
+  background: #040249;
+  border-radius: 6px;
+
+}
+
+.playlist-view-bloco-container-imagem{
+  width: 150px;
+  filter: drop-shadow(0px 0px 21.4649px rgba(5, 5, 5, 0.61));
+  border-radius: 5.15157px;
+}
+
+.playlist-view-bloco-container-tituloplaylist{
+  font-weight: 800;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: left;
+  color: white;
+}
+
+.playlist-view-bloco-container-paragrafo{
+  font-weight: 600;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 18px;
+  text-align: left;
+  color: #B3B3B3;
+}
