@@ -165,6 +165,15 @@ main {
   color: #000;
 }
 
+.zoom-on-play-list {
+  transition: transform .3s;
+}
+
+.zoom-on-play-list:hover {
+  transition: transform .3s;
+  transform: scale(1.2);
+}
+
 .playlist-view {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next row */
@@ -172,7 +181,6 @@ main {
   max-width: 1200px; /* Adjust the maximum width to control the number of columns */
   margin: 0 auto; /* Center the content on the page */
 }
-
 
 .playlist-view-bloco {
   padding: 30px;
