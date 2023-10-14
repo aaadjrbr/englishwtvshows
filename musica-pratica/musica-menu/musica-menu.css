@@ -35,7 +35,7 @@ main {
 /* Media Query for smaller screens, e.g., phones */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* Adjust font size for better readability on smaller screens */
+    font-size: 18px; /* Increase font size for better readability on smaller screens */
   }
 
   .sidebar {
@@ -57,7 +57,7 @@ main {
 
   .playlist-view-bloco-container {
     width: 100%; /* Take full width on smaller screens */
-    padding: 10px; /* Adjusted padding for smaller screens */
+    padding: 15px; /* Adjusted padding for smaller screens */
   }
 
   .playlist-view-bloco-container-imagem {
@@ -65,13 +65,14 @@ main {
   }
 
   .playlist-view-bloco-container-tituloplaylist {
-    font-size: 16px; /* Adjust font size for better readability on smaller screens */
+    font-size: 18px; /* Increase font size for better readability on smaller screens */
   }
 
   .playlist-view-bloco-container-paragrafo {
-    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    font-size: 16px; /* Increase font size for better readability on smaller screens */
   }
 }
+
 
 .sidebar-spotify-icon {
   width: 140px;
