@@ -561,7 +561,7 @@
         logoCanvas.height = logoCanvasBG.height = canvas.height / 4;
         logoCurrentY = logoY = canvas.height * 0.25;
         logoMaxY = canvas.height * 0.35;
-        logoDirection = 1;
+        logoDirection = 2;
       
         var logoContext = logoCanvas.getContext("2d");
         logoContext.textBaseline = "top";
@@ -571,7 +571,7 @@
         logoFontProps.fontSize = Sakri.CanvasTextUtil.getFontSizeForRect(logoText, fontProperties, textRect);
       
         var logoBGContext = logoCanvasBG.getContext("2d");
-        logoBGContext.fillStyle = "87CEEB"; // Light blue background color
+        logoBGContext.fillStyle = "#87CEEB"; // Light blue background color
         logoBGContext.fillRect(0, 0, logoCanvasBG.width, logoCanvasBG.height);
         logoBGContext.fillStyle = "#1874CD"; // Dark blue pattern color
         logoBGContext.fillRect(0, logoFontProps.fontSize / 2, logoCanvasBG.width, logoCanvasBG.height);
@@ -579,7 +579,7 @@
         logoContext.font = logoFontProps.getFontString();
         logoContext.fillStyle = logoContext.createPattern(logoCanvasBG, "repeat-x");
         logoContext.strokeStyle = "#FFFFFF"; // White border color
-        logoContext.lineWidth = 2; // Increase the border width for emphasis
+        logoContext.lineWidth = 1; // Increase the border width for emphasis
       
         var x = logoCanvas.width / 2 - logoContext.measureText(logoText).width / 2;
         var y = logoFontProps.fontSize / 2;
