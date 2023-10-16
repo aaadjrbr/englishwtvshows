@@ -579,7 +579,7 @@
         logoContext.font = logoFontProps.getFontString();
         logoContext.fillStyle = logoContext.createPattern(logoCanvasBG, "repeat-x");
         logoContext.strokeStyle = "#FFFFFF"; // White border color
-        logoContext.lineWidth = 1; // Increase the border width for emphasis
+        logoContext.lineWidth = 2; // Increase the border width for emphasis
       
         var x = logoCanvas.width / 2 - logoContext.measureText(logoText).width / 2;
         var y = logoFontProps.fontSize / 2;

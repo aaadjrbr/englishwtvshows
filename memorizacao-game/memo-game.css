@@ -74,3 +74,8 @@ html, body{
 .button.secondary:hover {
   background-color: #999; /* Change to the hover color */
 }
+
+p {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
