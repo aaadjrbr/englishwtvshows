@@ -282,7 +282,7 @@
   var canvasContainer;
   var htmlBounds;
   var bounds;
-  var minimumStageWidth = 600;
+  var minimumStageWidth = 300;
   var minimumStageHeight = 300;
   var maxStageWidth = 800;
   var maxStageHeight = 1100;
@@ -387,7 +387,7 @@
               gameOverCanvas = document.createElement("canvas");
               gameOverCanvasBG = document.createElement("canvas");
           }
-          createLogo("GAME OVER", gameOverCanvas, gameOverCanvasBG);
+          createLogo("FIM DE JOGO", gameOverCanvas, gameOverCanvasBG);
   
           createGroundPattern();
           createBird();
@@ -472,7 +472,7 @@
           //game over logo
           context.drawImage(gameOverCanvas, bounds.getCenterX() - logoCanvas.width/2, canvas.height *.2);
   
-          var instruction = "Click para começar novamente.";
+          var instruction = "Click para começar novamente. 😕";
           context.font = "bold normal 24px sans-serif";
           context.fillStyle = "#FFFFFF";
           context.fillText(instruction, bounds.getCenterX() - context.measureText(instruction).width/2, canvas.height *.25 + gameOverCanvas.height);
@@ -489,24 +489,51 @@
           }
       }
   
-      function renderInstructions(){
-          var instruction = "Click para começar :)";
-          context.font = "bold normal 24px sans-serif";
-          context.fillStyle = "#FFFFFF";
-          context.fillText(instruction, bounds.getCenterX() - context.measureText(instruction).width/2, canvas.height *.2);
+      function renderInstructions() {
+        var instruction = "Click para começar ▶️🕹️";
+        context.font = "bold 24px 'Your Custom Font', sans-serif"; // Use a custom font
+        context.fillStyle = "#687EFF"; // Use a different color
+        var textWidth = context.measureText(instruction).width;
+      
+        // Create a colorful button with a hover effect
+        context.fillRect(bounds.getCenterX() - textWidth / 2 - 10, canvas.height * 0.2 - 30, textWidth + 20, 40);
+    
+      
+        context.fillStyle = "#FFFFFF";
+        context.fillText(instruction, bounds.getCenterX() - textWidth / 2, canvas.height * 0.2);
       }
   
-      function renderScore(){
-          context.font = fontProperties.getFontString();
-          context.fillStyle = "#FFFFFF";
-          context.strokeStyle = "#000000";
-          context.lineWidth = 3;
-          var x = bounds.getCenterX() - context.measureText(score).width/2;
-          var y = bounds.height*.1;
-          context.fillText(score, x, y);
-          context.strokeText(score, x, y);
+      function renderScore() {
+        var x = bounds.getCenterX();
+        var y = bounds.height * 0.2;
+      
+        // Create a gradient fill for the score text
+        var gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+        gradient.addColorStop(0, "#FFFFFF"); // Start color
+        gradient.addColorStop(1, "#FFFFFF"); // End color
+      
+        context.font = fontProperties.getFontString();
+        context.fillStyle = gradient; // Apply the gradient fill
+        context.strokeStyle = "#687EFF";
+        context.lineWidth = 3;
+      
+        // Apply a shadow effect
+        context.shadowColor = "#0000";
+        context.shadowBlur = 5;
+        context.shadowOffsetX = 2;
+        context.shadowOffsetY = 2;
+      
+        // Draw the score text
+        context.fillText(score, x, y);
+        context.strokeText(score, x, y);
+      
+        // Remove the shadow effect
+        context.shadowColor = "transparent";
+        context.shadowBlur = 0;
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 0;
       }
-  
+      
       //========================================================================
       //========================:: LOGO ::======================================
       //========================================================================
@@ -522,37 +549,47 @@
       var logoMaxY;
       var logoDirection;
   
-      function createLogo(logoText, logoCanvas, logoCanvassBG){
-          logoCanvas.width = logoCanvasBG.width = canvas.width;
-          logoCanvas.height = logoCanvasBG.height = canvas.height / 4;
-          logoCurrentY = logoY = canvas.height * .25;
-          logoMaxY = canvas.height * .35;
-          logoDirection = 1;
-          var logoContext = logoCanvas.getContext("2d");
-          logoContext.textBaseline = "top";
-          var textRect = new Sakri.Geom.Rectangle(0, 0, logoCanvas.width * .8, logoCanvas.height);
-          var logoFontProps = fontProperties.clone();
-          logoFontProps.fontSize = Sakri.CanvasTextUtil.getFontSizeForRect(logoText, fontProperties, textRect);
-  
-  
-          var logoBGContext = logoCanvasBG.getContext("2d");
-          logoBGContext.fillStyle = "#f5eea5";
-          logoBGContext.fillRect(0, 0, logoCanvasBG.width, logoCanvasBG.height);
-          logoBGContext.fillStyle = "#9ce358";
-          logoBGContext.fillRect(0, logoFontProps.fontSize/2, logoCanvasBG.width, logoCanvasBG.height);
-  
-          logoContext.font = logoFontProps.getFontString();
-          logoContext.fillStyle = logoContext.createPattern(logoCanvasBG, "repeat-x");
-          logoContext.strokeStyle = "#000000";
-          logoContext.lineWidth = 3;
-          var x = logoCanvas.width/2 - logoContext.measureText(logoText).width/2;
-          var y = logoFontProps.fontSize/2;
-          logoContext.fillText(logoText, x, 0);
-          logoContext.strokeText(logoText, x, 0);
+      function createLogo(logoText, logoCanvas, logoCanvasBG) {
+        logoCanvas.width = logoCanvasBG.width = canvas.width;
+        logoCanvas.height = logoCanvasBG.height = canvas.height / 4;
+        logoCurrentY = logoY = canvas.height * 0.25;
+        logoMaxY = canvas.height * 0.35;
+        logoDirection = 1;
+      
+        var logoContext = logoCanvas.getContext("2d");
+        logoContext.textBaseline = "top";
+      
+        var textRect = new Sakri.Geom.Rectangle(0, 0, logoCanvas.width * 0.8, logoCanvas.height);
+        var logoFontProps = fontProperties.clone();
+        logoFontProps.fontSize = Sakri.CanvasTextUtil.getFontSizeForRect(logoText, fontProperties, textRect);
+      
+        var logoBGContext = logoCanvasBG.getContext("2d");
+        logoBGContext.fillStyle = "#00AEEF"; // Light blue background color
+        logoBGContext.fillRect(0, 0, logoCanvasBG.width, logoCanvasBG.height);
+        logoBGContext.fillStyle = "#0077B6"; // Dark blue pattern color
+        logoBGContext.fillRect(0, logoFontProps.fontSize / 2, logoCanvasBG.width, logoCanvasBG.height);
+      
+        logoContext.font = logoFontProps.getFontString();
+        logoContext.fillStyle = logoContext.createPattern(logoCanvasBG, "repeat-x");
+        logoContext.strokeStyle = "#FFFFFF"; // White border color
+        logoContext.lineWidth = 2; // Increase the border width for emphasis
+      
+        var x = logoCanvas.width / 2 - logoContext.measureText(logoText).width / 2;
+        var y = logoFontProps.fontSize / 2;
+        
+        // You can add a shadow effect to the text
+        logoContext.shadowColor = "rgba(0, 0, 0, 0.5)";
+        logoContext.shadowBlur = 5;
+        logoContext.shadowOffsetX = 2;
+        logoContext.shadowOffsetY = 2;
+      
+        logoContext.fillText(logoText, x, 0);
+        logoContext.strokeText(logoText, x, 0);
       }
+      
   
       //========================================================================
-      //========================:: BIRD ::==================================
+      //========================:: BIRD / BOXES ::==================================
       //========================================================================
   
       var birdCanvas;
@@ -560,353 +597,354 @@
       var gravity = 1;
       var tapBoost = 12;
       var birdSize = 60;
-  
-      function updateBird(){
-          characters[0].y += birdYSpeed;
-          birdYSpeed += gravity;
-  
-          //floor
-          if(characters[0].y >= groundGraphicRect.y - birdCanvas.height){
-              characters[0].y = groundGraphicRect.y - birdCanvas.height;
-              birdYSpeed = 0;
-          }
-          //celing
-          if(characters[0].y<=0){
-              characters[0].y = 1;
-              birdYSpeed = 0;
-          }
-          //tube collision
-          if(!isHit && checkTubesCollision()){
-              context.fillStyle = "#FFFFFF";
-              context.fillRect(0,0,canvas.width, canvas.height);
-              removeCharacter();
-              isHit = true;
-          }
+      
+      function updateBird() {
+        characters[0].y += birdYSpeed;
+        birdYSpeed += gravity;
+      
+        // Floor collision
+        if (characters[0].y >= groundGraphicRect.y - birdCanvas.height) {
+          characters[0].y = groundGraphicRect.y - birdCanvas.height;
+          birdYSpeed = 0;
+        }
+        // Ceiling collision
+        if (characters[0].y <= 0) {
+          characters[0].y = 1;
+          birdYSpeed = 0;
+        }
+        // Tube collision
+        if (!isHit && checkTubesCollision()) {
+          context.fillStyle = "#FFFFFF";
+          context.fillRect(0, 0, canvas.width, canvas.height);
+          removeCharacter();
+          isHit = true;
+        }
       }
-  
+      
       var currentTube;
       var isHit = false;
-      var ffScoreBugFix = 0;// for some reason the score would fire multiple times on firefox
-  
-      function updateScore(){
-          if(ffScoreBugFix>10 && currentTube.topRect.getRight() < characters[0].x){
-              if(!isHit){
-                  score++;
-              }
-              isHit = false;
-              var index = tubes.indexOf(currentTube) + 1;
-              index %= tubes.length;
-              currentTube = tubes[index];
-              ffScoreBugFix = 0;
+      var ffScoreBugFix = 0;
+      
+      function updateScore() {
+        if (ffScoreBugFix > 10 && currentTube.topRect.getRight() < characters[0].x) {
+          if (!isHit) {
+            score++;
           }
-          ffScoreBugFix++;
+          isHit = false;
+          var index = tubes.indexOf(currentTube) + 1;
+          index %= tubes.length;
+          currentTube = tubes[index];
+          ffScoreBugFix = 0;
+        }
+        ffScoreBugFix++;
       }
-  
-      function renderBird(){
-          context.drawImage(characters[0].image, characters[0].x, characters[0].y );
-          for(var i = 1; i < characters.length; i++){
-               characters[i].y = characters[i-1].y - (characters[i-1].y - characters[i].y) * .9;
-               context.drawImage(characters[i].image, characters[i].x, characters[i].y );
-          }
+      
+      function renderBird() {
+        context.drawImage(characters[0].image, characters[0].x, characters[0].y);
+        for (var i = 1; i < characters.length; i++) {
+          characters[i].y = characters[i - 1].y - (characters[i - 1].y - characters[i].y) * 0.9;
+          context.drawImage(characters[i].image, characters[i].x, characters[i].y);
+        }
       }
-  
-      function removeCharacter(){
-          if(characters.length==1){
-              //game over
-              gameState = GAME_OVER;
-          }
-          for(var i=0; i<characters.length-1;i++){
-              characters[i].image = characters[i+1].image;
-          }
-          characters.pop();
+      
+      function removeCharacter() {
+        if (characters.length == 1) {
+          // Game over
+          gameState = GAME_OVER;
+        }
+        for (var i = 0; i < characters.length - 1; i++) {
+          characters[i].image = characters[i + 1].image;
+        }
+        characters.pop();
       }
-  
-      function checkTubesCollision(){
-          for(var i= 0; i<tubes.length;i++){
-              if(checkTubeCollision(tubes[i])){
-                  return true;
-              }
+      
+      function checkTubesCollision() {
+        for (var i = 0; i < tubes.length; i++) {
+          if (checkTubeCollision(tubes[i])) {
+            return true;
           }
-          return false;
+        }
+        return false;
       }
-  
-  
+      
       var collisionPoint = new Sakri.Geom.Point();
       var birdPoints = [];
-  
-      function checkTubeCollision(tube){
-          birdPoints[0] = characters[0].x;
-          birdPoints[1] = characters[0].y;
-          birdPoints[2] = characters[0].x + birdSize;
-          birdPoints[3] = characters[0].y;
-          birdPoints[4] = characters[0].x + birdSize;
-          birdPoints[5] = characters[0].y + birdSize;
-          birdPoints[6] = characters[0].x;
-          birdPoints[7] = characters[0].y + birdSize;
-          for(var i=0; i<8; i+=2){
-              collisionPoint.x = birdPoints[i];
-              collisionPoint.y = birdPoints[i+1];
-              if(tube.topRect.containsPoint(collisionPoint.x, collisionPoint.y) || tube.bottomRect.containsPoint(collisionPoint.x, collisionPoint.y)){
-                  return true;
-              }
+      
+      function checkTubeCollision(tube) {
+        birdPoints[0] = characters[0].x;
+        birdPoints[1] = characters[0].y;
+        birdPoints[2] = characters[0].x + birdSize;
+        birdPoints[3] = characters[0].y;
+        birdPoints[4] = characters[0].x + birdSize;
+        birdPoints[5] = characters[0].y + birdSize;
+        birdPoints[6] = characters[0].x;
+        birdPoints[7] = characters[0].y + birdSize;
+        for (var i = 0; i < 8; i += 2) {
+          collisionPoint.x = birdPoints[i];
+          collisionPoint.y = birdPoints[i + 1];
+          if (
+            tube.topRect.containsPoint(collisionPoint.x, collisionPoint.y) ||
+            tube.bottomRect.containsPoint(collisionPoint.x, collisionPoint.y)
+          ) {
+            return true;
           }
-          return false;
+        }
+        return false;
       }
-  
+      
       var characters;
-      var birdFontProperties = new Sakri.CanvasTextProperties(Sakri.CanvasTextProperties.BOLD, null, 50);
-  
-      function createBird(){
-  
-          if(!birdCanvas){
-              birdCanvas = document.createElement("canvas");
-          }
-          birdCanvas.width = birdSize;
-          birdCanvas.height = birdSize;
-  
-          characters = [];
-          characters[0] = {}
-          characters[0].x = canvas.width / 3;
-          characters[0].y = groundGraphicRect.y / 2;
-          characters[0].image = createCharacterImage(word.charAt(word.length - 1));
-  
-          var x = characters[0].x -(birdCanvas.width + birdCanvas.width*.2);
-          for(var i=1; i<word.length ; i++){
-              characters[i] = {};
-              characters[i].x = x;
-              characters[i].y = characters[0].y;
-              x -= (birdCanvas.width + birdCanvas.width*.2);
-              characters[i].image = createCharacterImage(word.charAt(word.length - i - 1));
-          }
+      var birdFontProperties = new Sakri.CanvasTextProperties(
+        Sakri.CanvasTextProperties.BOLD,
+        null,
+        50
+      );
+      
+      function createBird() {
+        if (!birdCanvas) {
+          birdCanvas = document.createElement("canvas");
+        }
+        birdCanvas.width = birdSize;
+        birdCanvas.height = birdSize;
+      
+        characters = [];
+        characters[0] = {};
+        characters[0].x = canvas.width / 3;
+        characters[0].y = groundGraphicRect.y / 2;
+        characters[0].image = createCharacterSquare(word.charAt(word.length - 1));
+      
+        var x = characters[0].x - (birdCanvas.width + birdCanvas.width * 0.2);
+        for (var i = 1; i < word.length; i++) {
+          characters[i] = {};
+          characters[i].x = x;
+          characters[i].y = characters[0].y;
+          x -= birdCanvas.width + birdCanvas.width * 0.2;
+          characters[i].image = createCharacterSquare(word.charAt(word.length - i - 1));
+        }
       }
-  
-      function createCharacterImage(character){
-          var birdContext = birdCanvas.getContext("2d");
-          birdContext.textBaseline = "top";
-  
-          birdContext.font = birdFontProperties.getFontString();
-          birdContext.fillStyle = "#d5bb22";
-          birdContext.fillRect(0, 0, birdSize, birdSize/2);
-          birdContext.fillStyle = "#e97b13";
-          birdContext.fillRect(0, birdSize/2, birdSize, birdSize/2);
-          //hilite
-          birdContext.fillStyle = "#e0e9a9";
-          birdContext.fillRect(0, 0, birdSize, 6);
-          //"mouth"
-          birdContext.fillStyle = "#da473b";
-          birdContext.fillRect(0, birdSize - 10, birdSize, birdSize);
-  
-          birdContext.lineWidth = 3;
-          birdContext.strokeStyle = "#4d2f3b";
-          birdContext.strokeRect(2, 2, birdSize-4, birdSize-4);
-  
-          birdContext.fillStyle = "#e8fcd6";
-          birdContext.fillText(character, birdSize/2 - birdContext.measureText(character).width/2, 0);
-          birdContext.strokeText(character, birdSize/2 - birdContext.measureText(character).width/2, 0);
-  
-          var image = new Image();
-          image.width = birdSize;
-          image.height = birdSize;
-          image.src = birdCanvas.toDataURL();
-          return image;
+      
+      function createCharacterSquare(character) {
+        var birdContext = birdCanvas.getContext("2d");
+        birdContext.clearRect(0, 0, birdSize, birdSize);
+      
+        // Set square box properties
+        var boxSize = birdSize / 1.2;
+        var boxX = (birdSize - boxSize) / 2;
+        var boxY = (birdSize - boxSize) / 2;
+      
+        // Create a linear gradient for the box
+        var gradient = birdContext.createLinearGradient(0, boxY, 0, boxY + boxSize);
+        gradient.addColorStop(0, "#87CEEB"); // Light blue color at the top
+        gradient.addColorStop(1, "#1874CD"); // Dark blue color at the bottom
+      
+        // Fill the square box with the gradient
+        birdContext.fillStyle = gradient;
+        birdContext.fillRect(boxX, boxY, boxSize, boxSize);
+      
+        // Set text properties
+        var fontSize = 15; // Adjust the font size here
+        var yOffset = 5; // Move the text 5 pixels down
+        birdContext.font = birdFontProperties.getFontString(fontSize);
+        birdContext.fillStyle = "#000"; // Black color
+        birdContext.textAlign = "center";
+        birdContext.textBaseline = "middle";
+      
+        // Draw the character slightly lower in the square box
+        birdContext.fillText(character, birdSize / 2, birdSize / 2 + yOffset);
+      
+        var image = new Image();
+        image.width = birdSize;
+        image.height = birdSize;
+        image.src = birdCanvas.toDataURL();
+        return image;
       }
+      
+      
+      
+      
+
   
   
       //========================================================================
       //========================:: TUBES ::==================================
       //========================================================================
   
-      var tubeGapHeight = 230;//needs some logic
+      var tubeGapHeight = 230; // Adjust as needed
       var tubesGapWidth;
       var tubes;
-      var tubeWidth = 100;//needs some logic
-      var minTubeHeight = 50;//needs some logic
-  
-      function updateTubes(){
-          for(var i= 0; i<tubes.length;i++){
-              updateTube(tubes[i]);
-          }
+      var tubeWidth = 100; // Adjust as needed
+      var minTubeHeight = 50; // Adjust as needed
+      
+      function updateTubes() {
+        for (var i = 0; i < tubes.length; i++) {
+          updateTube(tubes[i]);
+        }
       }
-  
-      function updateTube(tube){
-          tube.topRect.x -= scrollSpeed;
-          tube.bottomRect.x = tube.topRect.x;
-          if(tube.topRect.x <= -tubeWidth ){
-              tube.topRect.x = tube.bottomRect.x = canvas.width;
-              renderTube(tube);
-          }
+      
+      function updateTube(tube) {
+        tube.topRect.x -= scrollSpeed;
+        tube.bottomRect.x = tube.topRect.x;
+        if (tube.topRect.x <= -tubeWidth) {
+          tube.topRect.x = tube.bottomRect.x = canvas.width;
+          renderTube(tube);
+        }
       }
-  
-  
-      function renderTubes(){
-          for(var i= 0; i<tubes.length;i++){
-              context.drawImage(tubes[i].canvas, tubes[i].bottomRect.x, 0);
-          }
+      
+      function renderTubes() {
+        for (var i = 0; i < tubes.length; i++) {
+          context.drawImage(tubes[i].canvas, tubes[i].bottomRect.x, 0);
+        }
       }
-  
-      function createTubes(){
-          tubes = [];
-          var totalTubes = 2;
-          tubesGapWidth = Math.floor(canvas.width/totalTubes);
-  
-          for(var i = 0; i < totalTubes; i++){
-              tubes[i] = {};
-              tubes[i].canvas = document.createElement("canvas");
-              tubes[i].topRect = new Sakri.Geom.Rectangle(canvas.width+(i * tubesGapWidth));
-              tubes[i].bottomRect = new Sakri.Geom.Rectangle(canvas.width+(i * tubesGapWidth));
-              renderTube(tubes[i]);
-          }
-          currentTube = tubes[0];
+      
+      function createTubes() {
+        tubes = [];
+        var totalTubes = 2;
+        tubesGapWidth = Math.floor(canvas.width / totalTubes);
+      
+        for (var i = 0; i < totalTubes; i++) {
+          tubes[i] = {};
+          tubes[i].canvas = document.createElement("canvas");
+          tubes[i].topRect = new Sakri.Geom.Rectangle(canvas.width + (i * tubesGapWidth));
+          tubes[i].bottomRect = new Sakri.Geom.Rectangle(canvas.width + (i * tubesGapWidth));
+          renderTube(tubes[i]);
+        }
+        currentTube = tubes[0];
       }
-  
-      var tubeOutlineColor = "#534130";
-      var tubeMainColor = "#75be2f";
+      
+      var tubeOutlineColor = "#80B3FF";
+      var tubeMainColor = "#687EFF";
       var tubeCapHeight = 40;
-  
-      function renderTube(tube){
-          tube.canvas.width = tubeWidth;
-          tube.canvas.height = groundGraphicRect.y;
-  
-          tube.bottomRect.width = tube.topRect.width = tubeWidth;
-          tube.topRect.y = 0;
-          tube.topRect.height = minTubeHeight + Math.round(Math.random()*(groundGraphicRect.y-tubeGapHeight-minTubeHeight*2));
-  
-          tube.bottomRect.y = tube.topRect.getBottom() + tubeGapHeight;
-          tube.bottomRect.height = groundGraphicRect.y - tube.bottomRect.y - 1;//minus one for stroke
-  
-          var tubeContext = tube.canvas.getContext("2d");
-          tubeContext.lineWidth = 2;
-          //top tube
-          renderTubeElement(tubeContext , 3, 0, tubeWidth-6, tube.topRect.height);
-          renderTubeElement(tubeContext , 1, tube.topRect.getBottom() - tubeCapHeight, tubeWidth-2, tubeCapHeight);
-  
-          //bottom tube
-          renderTubeElement(tubeContext , 3, tube.bottomRect.y, tubeWidth-6, tube.bottomRect.height);
-          renderTubeElement(tubeContext , 1, tube.bottomRect.y, tubeWidth-2, tubeCapHeight);
+      
+      function renderTube(tube) {
+        tube.canvas.width = tubeWidth;
+        tube.canvas.height = groundGraphicRect.y;
+      
+        tube.bottomRect.width = tube.topRect.width = tubeWidth;
+        tube.topRect.y = 0;
+        tube.topRect.height = minTubeHeight + Math.round(Math.random() * (groundGraphicRect.y - tubeGapHeight - minTubeHeight * 2));
+      
+        tube.bottomRect.y = tube.topRect.getBottom() + tubeGapHeight;
+        tube.bottomRect.height = groundGraphicRect.y - tube.bottomRect.y - 1; // minus one for stroke
+      
+        var tubeContext = tube.canvas.getContext("2d");
+        tubeContext.lineWidth = 2;
+      
+        // Render top tube
+        renderTubeElement(tubeContext, 3, 0, tubeWidth - 6, tube.topRect.height);
+        renderTubeElement(tubeContext, 1, tube.topRect.getBottom() - tubeCapHeight, tubeWidth - 2, tubeCapHeight);
+      
+        // Render bottom tube
+        renderTubeElement(tubeContext, 3, tube.bottomRect.y, tubeWidth - 6, tube.bottomRect.height);
+        renderTubeElement(tubeContext, 1, tube.bottomRect.y, tubeWidth - 2, tubeCapHeight);
       }
-  
-      function renderTubeElement(ctx, x, y, width, height){
-          ctx.fillStyle = tubeMainColor;
-          ctx.fillRect(x, y, width, height);
-          ctx.fillStyle = "#9de85a";
-          ctx.fillRect(x, y, width*.25, height);
-  
-          ctx.fillStyle = "#d9f881";
-          ctx.fillRect(x+width *.05, y, width *.05, height);
-  
-          ctx.fillStyle = "#547e25";
-          ctx.fillRect(x+width- width * .1, y, width *.1, height);
-          ctx.fillRect(x+width- width * .2, y, width *.05, height);
-  
-          ctx.strokeRect(x, y, width, height);
+      
+      function renderTubeElement(ctx, x, y, width, height) {
+        // Gradient for tube colors
+        var gradient = ctx.createLinearGradient(0, y, 0, y + height);
+        gradient.addColorStop(0, "#98E4FF"); // Light blue
+        gradient.addColorStop(1, "#687EFF"); // Dark blue
+      
+        ctx.fillStyle = gradient;
+        ctx.fillRect(x, y, width, height);
+      
+        ctx.strokeStyle = "black";
+        ctx.strokeRect(x, y, width, height);
       }
+      
   
   
       //========================================================================
       //========================:: CITY BG ::==================================
       //========================================================================
   
-  var cityGraphicCanvas;
-  
-  function createCityGraphic(){
-  
-      if(cityGraphicCanvas){
-          canvasContainer.removeChild(cityGraphicCanvas);
+      var cityGraphicCanvas;
+
+      function createCityGraphic() {
+          if (cityGraphicCanvas) {
+              canvasContainer.removeChild(cityGraphicCanvas);
+          }
+          cityGraphicCanvas = document.createElement("canvas");
+          cityGraphicCanvas.style.position = "absolute";
+          cityGraphicCanvas.style.left = canvas.style.left;
+          cityGraphicCanvas.style.top = canvas.style.top;
+          cityGraphicCanvas.width = canvas.width;
+          cityGraphicCanvas.height = canvas.height;
+          var cgContext = cityGraphicCanvas.getContext("2d");
+          var cityGraphicHeight = canvas.height * 0.25;
+      
+          // Fill with a gradient sky
+          var gradient = cgContext.createLinearGradient(0, 0, 0, canvas.height);
+          gradient.addColorStop(0, "#71c5cf"); // Light blue
+          gradient.addColorStop(1, "#4f6f9e"); // Dark blue
+          cgContext.fillStyle = gradient;
+          cgContext.fillRect(0, 0, canvas.width, canvas.height);
+      
+          cgContext.fillStyle = "#e9fad8";
+      
+          cgContext.save();
+          cgContext.translate(0, groundGraphicRect.y - cityGraphicHeight);
+      
+          // Clouds
+          var maxCloudRadius = cityGraphicHeight * 0.4;
+          var minCloudRadius = maxCloudRadius * 0.5;
+          cgContext.fillStyle = "rgba(255, 255, 255, 0.8)"; // Semi-transparent white for clouds
+      
+          for (iterator = 0; iterator < canvas.width; iterator += minCloudRadius * 2) {
+              cgContext.beginPath();
+              cgContext.arc(iterator, maxCloudRadius, Sakri.MathUtil.getRandomNumberInRange(minCloudRadius, maxCloudRadius), 0, Sakri.MathUtil.PI2);
+              cgContext.closePath();
+              cgContext.fill();
+          }
+      
+          cgContext.fillRect(0, maxCloudRadius, canvas.width, cityGraphicHeight);
+      
+          // Trees
+          var maxTreeRadius = cityGraphicHeight * 0.3;
+          var minTreeRadius = maxTreeRadius * 0.5;
+          var radius;
+          var strokeStartRadian = Math.PI + Math.PI / 4;
+          var strokeEndRadian = Math.PI + Math.PI / 4;
+          cgContext.fillStyle = "#81e18b";
+          cgContext.strokeStyle = "#72c887";
+          for (iterator = 0; iterator < canvas.width; iterator += minTreeRadius * 2) {
+              cgContext.beginPath();
+              radius = Sakri.MathUtil.getRandomNumberInRange(minTreeRadius, maxTreeRadius);
+              cgContext.arc(iterator, cityGraphicHeight, radius, 0, Sakri.MathUtil.PI2);
+              cgContext.closePath();
+              cgContext.fill();
+      
+              cgContext.beginPath();
+              cgContext.arc(iterator, cityGraphicHeight, radius, strokeStartRadian, strokeEndRadian);
+              cgContext.closePath();
+              cgContext.stroke();
+          }
+      
+          cgContext.restore();
+      
+          // Sand
+          var sandGradient = cgContext.createLinearGradient(0, groundGraphicRect.y, 0, canvas.height);
+          sandGradient.addColorStop(0, "#dbb768"); // Light sand color
+          sandGradient.addColorStop(1, "#bf935a"); // Dark sand color
+          cgContext.fillStyle = sandGradient;
+          cgContext.fillRect(0, groundGraphicRect.y, canvas.width, canvas.height);
+      
+          canvasContainer.insertBefore(cityGraphicCanvas, canvasContainer.firstChild);
       }
-      cityGraphicCanvas = document.createElement("canvas");
-      cityGraphicCanvas.style.position = "absolute";
-      cityGraphicCanvas.style.left = canvas.style.left;
-      cityGraphicCanvas.style.top = canvas.style.top;
-      cityGraphicCanvas.width = canvas.width;
-      cityGraphicCanvas.height = canvas.height;
-      var cgContext = cityGraphicCanvas.getContext("2d");
-      var cityGraphicHeight = canvas.height * .25;
-  
-      //fill with blue sky
-      cgContext.fillStyle = "#71c5cf";
-      cgContext.fillRect(0, 0, canvas.width, canvas.height);
-  
-      cgContext.fillStyle = "#e9fad8";
-  
-      cgContext.save();
-      cgContext.translate(0, groundGraphicRect.y - cityGraphicHeight);
-  
-      //CLOUDS
-      var maxCloudRadius = cityGraphicHeight * .4;
-      var minCloudRadius = maxCloudRadius * .5;
-  
-      for(iterator=0; iterator<canvas.width; iterator+=minCloudRadius){
-          cgContext.beginPath();
-          cgContext.arc( iterator , maxCloudRadius, Sakri.MathUtil.getRandomNumberInRange(minCloudRadius, maxCloudRadius), 0, Sakri.MathUtil.PI2);
-          cgContext.closePath();
-          cgContext.fill();
-      }
-  
-      cgContext.fillRect(0,maxCloudRadius, canvas.width, cityGraphicHeight );
-  
-      //HOUSES
-      var houseWidth;
-      var houseHeight;
-      cgContext.fillStyle = "#deefcb";
-      for(iterator=0; iterator<canvas.width; iterator+=(houseWidth+8)){
-          houseWidth = 20 + Math.floor(Math.random()*30);
-          houseHeight = Sakri.MathUtil.getRandomNumberInRange(cityGraphicHeight *.5 , cityGraphicHeight - maxCloudRadius *.8);
-          cgContext.fillRect(iterator, cityGraphicHeight - houseHeight, houseWidth, houseHeight);
-      }
-  
-      cgContext.fillStyle = "#dff1c4";
-      cgContext.strokeStyle = "#9fd5d5";
-      cgContext.lineWidth = 3;
-      for(iterator=0; iterator<canvas.width; iterator+=(houseWidth+8)){
-          houseWidth = 20 + Math.floor(Math.random()*30);
-          houseHeight = Sakri.MathUtil.getRandomNumberInRange(cityGraphicHeight *.5 , cityGraphicHeight - maxCloudRadius *.8);
-          cgContext.fillRect(iterator, cityGraphicHeight - houseHeight, houseWidth, houseHeight);
-          cgContext.strokeRect(iterator, cityGraphicHeight - houseHeight, houseWidth, houseHeight);
-      }
-  
-      //TREES
-      var maxTreeRadius = cityGraphicHeight * .3;
-      var minTreeRadius = maxTreeRadius * .5;
-      var radius;
-      var strokeStartRadian = Math.PI + Math.PI/4;
-      var strokeEndRadian = Math.PI + Math.PI/4;
-      cgContext.fillStyle = "#81e18b";
-      cgContext.strokeStyle = "#72c887";
-      for(iterator=0; iterator<canvas.width; iterator+=minTreeRadius){
-          cgContext.beginPath();
-          radius = Sakri.MathUtil.getRandomNumberInRange(minCloudRadius, maxCloudRadius)
-          cgContext.arc( iterator , cityGraphicHeight, radius, 0, Sakri.MathUtil.PI2);
-          cgContext.closePath();
-          cgContext.fill();
-  
-          cgContext.beginPath();
-          cgContext.arc( iterator , cityGraphicHeight, radius, strokeStartRadian, strokeEndRadian);
-          cgContext.closePath();
-          cgContext.stroke();
-      }
-  
-      cgContext.restore();
-      //sand
-      cgContext.fillStyle = sand;
-      cgContext.fillRect(0,groundGraphicRect.y, canvas.width, canvas.height);
-  
-      canvasContainer.insertBefore(cityGraphicCanvas, canvasContainer.firstChild);
-  }
-  
+
+      
   
       //========================================================================
       //========================:: GROUND ::==================================
       //========================================================================
   
       var groundX = 0;
-      function renderGroundPattern(){
+
+      function renderGroundPattern() {
           context.drawImage(groundPatternCanvas, groundX, groundGraphicRect.y);
           groundX -= scrollSpeed;
           groundX %= 16;
       }
-  
-  
-      //colors
+      
+      // Colors
       var groundLightGreen = "#97e556";
       var groundDarkGreen = "#73be29";
       var groundDarkerGreen = "#4b7e19";
@@ -915,78 +953,79 @@
       var sand = "#dcd795";
       var groundGraphicRect = new Sakri.Geom.Rectangle();
       var groundPatternCanvas;
-  
-      function createGroundPattern(){
-          groundGraphicRect.y = canvas.height*.85;
-          if(!groundPatternCanvas){
+      
+      function createGroundPattern() {
+          groundGraphicRect.y = canvas.height * 0.85;
+          if (!groundPatternCanvas) {
               groundPatternCanvas = document.createElement("canvas");
           }
           groundPatternCanvas.width = 16;
           groundPatternCanvas.height = 16;
           var groundContext = groundPatternCanvas.getContext("2d");
+      
+          // Fill with a light green color
           groundContext.fillStyle = groundLightGreen;
-          groundContext.fillRect(0,0,16,16);
-  
-          //diagonal graphic
+          groundContext.fillRect(0, 0, 16, 16);
+      
+          // Diagonal graphic
           groundContext.fillStyle = groundDarkGreen;
           groundContext.beginPath();
-          groundContext.moveTo(8,3);
-          groundContext.lineTo(16,3);
-          groundContext.lineTo(8,13);
-          groundContext.lineTo(0,13);
+          groundContext.moveTo(8, 3);
+          groundContext.lineTo(16, 3);
+          groundContext.lineTo(8, 13);
+          groundContext.lineTo(0, 13);
           groundContext.closePath();
           groundContext.fill();
-  
-          //top border
+      
+          // Top border
           groundContext.fillStyle = groundBorder;
-          groundContext.globalAlpha = .2;
-          groundContext.fillRect(0,0,16,1);
+          groundContext.globalAlpha = 0.2;
+          groundContext.fillRect(0, 0, 16, 1);
           groundContext.globalAlpha = 1;
-          groundContext.fillRect(0,1,16,1);
-          groundContext.globalAlpha = .6;
-          groundContext.fillRect(0,2,16,1);
-  
-          //hilite
+          groundContext.fillRect(0, 1, 16, 1);
+          groundContext.globalAlpha = 0.6;
+          groundContext.fillRect(0, 2, 16, 1);
+      
+          // Highlight
           groundContext.fillStyle = "#FFFFFF";
-          groundContext.globalAlpha = .3;
-          groundContext.fillRect(0,3,16,2);
-  
-          //bottom border
+          groundContext.globalAlpha = 0.3;
+          groundContext.fillRect(0, 3, 16, 2);
+      
+          // Bottom border
           groundContext.fillStyle = groundDarkerGreen;
-          groundContext.globalAlpha = .3;
-          groundContext.fillRect(0,10,16,3);
+          groundContext.globalAlpha = 0.3;
+          groundContext.fillRect(0, 10, 16, 3);
           groundContext.globalAlpha = 1;
-          groundContext.fillRect(0,11,16,1);
-  
-          //shadow
+          groundContext.fillRect(0, 11, 16, 1);
+      
+          // Shadow
           groundContext.fillStyle = groundShadow;
-          groundContext.fillRect(0,13,16,3);
-  
+          groundContext.fillRect(0, 13, 16, 3);
+      
           var groundPattern = context.createPattern(groundPatternCanvas, "repeat-x");
-  
+      
           groundPatternCanvas.width = canvas.width + 16;
           groundPatternCanvas.height = 16;
-  
+      
           groundContext.fillStyle = groundPattern;
           groundContext.fillRect(0, 0, groundPatternCanvas.width, 16);
-  
       }
-  
-      function clearTimeoutsAndIntervals(){
+      
+      function clearTimeoutsAndIntervals() {
           gameState = -1;
       }
-  
-      var maxCharacters = 8;
-  
-      function changeText(){
+      
+      var maxCharacters = 10;
+      
+      function changeText() {
           var textInput = document.getElementById("textInput");
-          if(textInput.value && textInput.text!=""){
-              if(textInput.value.length > maxCharacters){
-                  alert("Sorry, there is only room for "+maxCharacters+" characters. Try a shorter name.");
+          if (textInput.value && textInput.text != "") {
+              if (textInput.value.length > maxCharacters) {
+                  alert("Sorry, there is space for only " + maxCharacters + " characters. Try a shorter name.");
                   return;
               }
-              if(textInput.value.indexOf(" ")>-1){
-                  alert("Sorry, no support for spaces right now :(");
+              if (textInput.value.indexOf(" ") > -1) {
+                  alert("Sorry, no support for spaces at the moment :(");
                   return;
               }
               word = textInput.value;
