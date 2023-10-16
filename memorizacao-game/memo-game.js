@@ -751,7 +751,7 @@
       
         // Set text properties
         var fontSize = 14; // Adjust the font size here
-        var yOffset = 3; // Move the text 5 pixels down
+        var yOffset = -2.5; // Move the text 5 pixels down
         birdContext.font = birdFontProperties.getFontString(fontSize);
         birdContext.fillStyle = "#000"; // Black color
         birdContext.textAlign = "center";
