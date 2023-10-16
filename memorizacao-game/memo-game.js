@@ -514,7 +514,7 @@
       
         context.font = fontProperties.getFontString();
         context.fillStyle = gradient; // Apply the gradient fill
-        context.strokeStyle = "#687EFF";
+        context.strokeStyle = "#1874CD";
         context.lineWidth = 3;
       
         // Measure the width of the score text
@@ -571,9 +571,9 @@
         logoFontProps.fontSize = Sakri.CanvasTextUtil.getFontSizeForRect(logoText, fontProperties, textRect);
       
         var logoBGContext = logoCanvasBG.getContext("2d");
-        logoBGContext.fillStyle = "#00AEEF"; // Light blue background color
+        logoBGContext.fillStyle = "87CEEB"; // Light blue background color
         logoBGContext.fillRect(0, 0, logoCanvasBG.width, logoCanvasBG.height);
-        logoBGContext.fillStyle = "#0077B6"; // Dark blue pattern color
+        logoBGContext.fillStyle = "#1874CD"; // Dark blue pattern color
         logoBGContext.fillRect(0, logoFontProps.fontSize / 2, logoCanvasBG.width, logoCanvasBG.height);
       
         logoContext.font = logoFontProps.getFontString();
@@ -734,7 +734,7 @@
         birdContext.clearRect(0, 0, birdSize, birdSize);
       
         // Set square box properties
-        var boxSize = birdSize / 1.1;
+        var boxSize = birdSize / 1.0;
         var boxX = (birdSize - boxSize) / 2;
         var boxY = (birdSize - boxSize) / 2;
         var borderRadius = 10; // Adjust the border radius as needed
@@ -750,7 +750,7 @@
         birdContext.fill();
       
         // Set text properties
-        var fontSize = 14; // Adjust the font size here
+        var fontSize = 12; // Adjust the font size here
         var yOffset = -2.5; // Move the text 5 pixels down
         birdContext.font = birdFontProperties.getFontString(fontSize);
         birdContext.fillStyle = "#000"; // Black color
@@ -835,8 +835,8 @@
         currentTube = tubes[0];
       }
       
-      var tubeOutlineColor = "#80B3FF";
-      var tubeMainColor = "#687EFF";
+      var tubeOutlineColor = "#87CEEB";
+      var tubeMainColor = "#1874CD";
       var tubeCapHeight = 40;
       
       function renderTube(tube) {
@@ -1059,3 +1059,4 @@
               setTimeout(commitResize, 100);
           }
       }
+      
