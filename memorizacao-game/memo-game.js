@@ -472,7 +472,7 @@
           //game over logo
           context.drawImage(gameOverCanvas, bounds.getCenterX() - logoCanvas.width/2, canvas.height *.2);
   
-          var instruction = "Click para começar novamente. 😕";
+          var instruction = "Click p/ começar novamente.";
           context.font = "bold normal 24px sans-serif";
           context.fillStyle = "#FFFFFF";
           context.fillText(instruction, bounds.getCenterX() - context.measureText(instruction).width/2, canvas.height *.25 + gameOverCanvas.height);
@@ -517,6 +517,12 @@
         context.strokeStyle = "#687EFF";
         context.lineWidth = 3;
       
+        // Measure the width of the score text
+        var scoreTextWidth = context.measureText(score).width;
+      
+        // Calculate the x coordinate for center alignment
+        x = bounds.getCenterX() - scoreTextWidth / 2;
+      
         // Apply a shadow effect
         context.shadowColor = "#0000";
         context.shadowBlur = 5;
@@ -533,6 +539,7 @@
         context.shadowOffsetX = 0;
         context.shadowOffsetY = 0;
       }
+      
       
       //========================================================================
       //========================:: LOGO ::======================================
@@ -727,22 +734,24 @@
         birdContext.clearRect(0, 0, birdSize, birdSize);
       
         // Set square box properties
-        var boxSize = birdSize / 1.2;
+        var boxSize = birdSize / 1.1;
         var boxX = (birdSize - boxSize) / 2;
         var boxY = (birdSize - boxSize) / 2;
+        var borderRadius = 10; // Adjust the border radius as needed
       
         // Create a linear gradient for the box
         var gradient = birdContext.createLinearGradient(0, boxY, 0, boxY + boxSize);
         gradient.addColorStop(0, "#87CEEB"); // Light blue color at the top
         gradient.addColorStop(1, "#1874CD"); // Dark blue color at the bottom
       
-        // Fill the square box with the gradient
+        // Fill the square box with the gradient and border radius
         birdContext.fillStyle = gradient;
-        birdContext.fillRect(boxX, boxY, boxSize, boxSize);
+        birdContext.roundRect(boxX, boxY, boxSize, boxSize, borderRadius); // Custom function to create a rounded rectangle
+        birdContext.fill();
       
         // Set text properties
-        var fontSize = 15; // Adjust the font size here
-        var yOffset = 5; // Move the text 5 pixels down
+        var fontSize = 14; // Adjust the font size here
+        var yOffset = 3; // Move the text 5 pixels down
         birdContext.font = birdFontProperties.getFontString(fontSize);
         birdContext.fillStyle = "#000"; // Black color
         birdContext.textAlign = "center";
@@ -757,6 +766,22 @@
         image.src = birdCanvas.toDataURL();
         return image;
       }
+      
+      // Custom function to create a rounded rectangle
+      CanvasRenderingContext2D.prototype.roundRect = function (x, y, width, height, radius) {
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.lineTo(x + width - radius, y);
+        this.arcTo(x + width, y, x + width, y + radius, radius);
+        this.lineTo(x + width, y + height - radius);
+        this.arcTo(x + width, y + height, x + width - radius, y + height, radius);
+        this.lineTo(x + radius, y + height);
+        this.arcTo(x, y + height, x, y + height - radius, radius);
+        this.lineTo(x, y + radius);
+        this.arcTo(x, y, x + radius, y, radius);
+        this.closePath();
+        return this;
+      };
       
       
       
