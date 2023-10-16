@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    padding: 5px;
+    color: #256cb9;
+}
+
+p {
+    font-size: 1.6em;
+    color: #256cb9;
+}
+
+.dialogue-container {
+    background-color: #fff;
+    width: 80%;
+    height: 75%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+img#character {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.voltar-menu {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #256cb9;
+    border-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.voltar-menu:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+#back {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #256cb9;
+    border-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.options button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #256cb9;
+    border-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+#give-up {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#give-up:hover {
+    background-color: #df0404;
+    border-color: #df0404;
+}
+
+#try-again {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #009e0d;
+    border-color: #009e0d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#try-again:hover {
+    background-color: #01880c;
+    border-color: #01880c;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .dialogue-container {
+        width: 90%; /* Adjust the width for smaller screens */
+        padding: 10px; /* Adjust the padding for smaller screens */
+        font-size: 16px; /* Increase font size for better readability */
+    }
+
+    img#character {
+        width: 100%; /* Ensure the character image fits the screen width */
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+
+    #back,
+    .options button,
+    #give-up,
+    #try-again {
+        font-size: 14px; /* Reduce button font size for smaller screens */
+    }
+}

@@ -4,6 +4,22 @@
 }
 
 
+.shake {
+	animation: shake-animation 4.72s ease infinite;
+	transform-origin: 50% 50%;
+  }
+
+  @keyframes shake-animation {
+    0% { transform:translate(0,0) }
+   1.78571% { transform:translate(5px,0) }
+   3.57143% { transform:translate(0,0) }
+   5.35714% { transform:translate(5px,0) }
+   7.14286% { transform:translate(0,0) }
+   8.92857% { transform:translate(5px,0) }
+   10.71429% { transform:translate(0,0) }
+   100% { transform:translate(0,0) }
+ }
+
 /* Reset some default styles for better consistency */
 body, h1, h2, p, iframe {
     font-family: 'Anton-Regular', Arial, sans-serif;
@@ -182,6 +198,11 @@ nav {
 /* Media query for screens smaller than 768px (typical smartphones) */
 @media (max-width: 768px) {
     /* Adjust the video container size for small screens */
+
+    .navbar {
+        height: auto;
+    }
+
     .video-container {
         max-width: 100%; /* Make it 100% width of the parent container */
     }
