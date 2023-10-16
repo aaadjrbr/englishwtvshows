@@ -3,7 +3,7 @@ html, body{
   width : 100%;
   height : 100%;
   overflow: hidden;
-  background-color: #687EFF;
+  background-color: #1874CD;
 }
 
 #canvasContainer{
@@ -47,7 +47,7 @@ html, body{
   font-weight: 600;
   color: #fff !important;
   text-align: center;
-  background-color: #687EFF;
+  background-color: #1874CD;
   text-decoration: none;
   border: none;
   border-radius: 5px;
