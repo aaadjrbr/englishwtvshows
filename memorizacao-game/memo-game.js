@@ -492,7 +492,7 @@
       function renderInstructions() {
         var instruction = "Click para começar ▶️🕹️";
         context.font = "bold 24px 'Your Custom Font', sans-serif"; // Use a custom font
-        context.fillStyle = "#687EFF"; // Use a different color
+        context.fillStyle = "#1874CD"; // Use a different color
         var textWidth = context.measureText(instruction).width;
       
         // Create a colorful button with a hover effect
@@ -583,12 +583,6 @@
       
         var x = logoCanvas.width / 2 - logoContext.measureText(logoText).width / 2;
         var y = logoFontProps.fontSize / 2;
-        
-        // You can add a shadow effect to the text
-        logoContext.shadowColor = "rgba(0, 0, 0, 0.5)";
-        logoContext.shadowBlur = 5;
-        logoContext.shadowOffsetX = 2;
-        logoContext.shadowOffsetY = 2;
       
         logoContext.fillText(logoText, x, 0);
         logoContext.strokeText(logoText, x, 0);
