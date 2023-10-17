@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en, pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Inglês com filmes e séries!">
+    <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+    <meta name="author" content="English w/ Adenilson">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="English w/ Tv Shows">
+    <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="icon" href="../../favicon.png" type="image/x-icon">
+    <meta name="google-adsense-account" content="ca-pub-2110834991626364"> <!-- Add your AdSense account here -->
+
+    <title>Menu Jogos - English w/ TV Shows</title>
+    <link rel="stylesheet" href="./menu-jogos.css">
+
+
+<style>
+            .loader-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(228, 241, 255);
+            z-index: 9999; /* Ensure the loader is on top of everything */
+        }
+</style>
+
+</head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-7LS5S7RDE3');
+  </script>
+
+<body>
+
+<!-- Loading spinner container -->
+<div class="loader-container">
+<img style="width: 150px; height: 150px;" src="../public/assets/images/tv-loader-pages.gif"></img>
+</div>
+            
+<div id="site-content" style="display: none;">
+
+    <div class="container">
+        <div class="bar">
+            <div class="nav">
+                <div class="logo">
+                    <img src="../public/assets/images/eng-logo.png" alt="Logo">
+                </div>
+                <div class="item"><a style="text-decoration: none; color:white;" href="../index-second.html">Voltar</a></div>
+                <div class="item"><a style="text-decoration: none; color:white;" href="../contato.html">Contato</a></div>
+            </div>
+            <div class="profile-viewers">
+                <!-- Add viewer count or other content here -->
+            </div>
+        </div>
+        <div class="stream-content">
+            <h3>Jogos <span class="title-highlight">Populares</span></h3>
+            <br/><br/>
+            <div class="games-carousel">
+                <!-- Game 1 -->
+                <div class="game" style="margin-left: 5px; margin-top: 8px;">
+                    <a style="text-decoration: none; color:white;" href="./memorizacao-game/como-jogar.html">
+                    <div class="game-cover">
+                        <img src="https://drive.google.com/uc?id=11oa9zks0IcdWGLQTunyJZnyqBDuSMQpr" alt="Game 1" />
+                    </div>
+                    <div class="game-info">
+                        
+                        <div style="margin-top: 8px;"></div>
+                        <p class="game-title">Memo words</p>
+                        <br/>
+                        <p class="game-viewership">22.1K Visualizações</p>
+                    </div>
+                    <div class="game-categories">
+                        <div style="margin-bottom: 8px;"></div>
+                        <span>Memorização</span>
+                    </div>
+                    </a>
+                </div>
+                <!-- Game 2 -->
+                <div class="game" style="margin-left: 5px; margin-top: 8px;">
+                    <a style="text-decoration: none; color:white;" href="./memory-game/como-jogar.html">
+                    <div class="game-cover">
+                        <img src="https://drive.google.com/uc?id=1A6Nu_FDMQzxOqy_86oPBN52kqQDS0JJZ" alt="Game 2" />
+                    </div>
+                    <div class="game-info">
+                        <div style="margin-top: 8px;"></div>
+                        <p class="game-title">Jogo da Memória</p>
+                        <br/>
+                        <p class="game-viewership">28.9K Visualizações</p>
+                        <div style="margin-bottom: 8px;"></div>
+                    </div>
+                    <div class="game-categories">
+                        <span>Memorização</span>
+                    </div>
+                    </a>
+                </div>
+                <!-- Add more games as needed -->
+            </div>
+        </div>
+    </div>
+
+
+
+</div><!-- div for loader -->
+<script>
+    // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
+</script>
+
+
+</body>
+</html>
