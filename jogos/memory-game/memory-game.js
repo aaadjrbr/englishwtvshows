@@ -80,7 +80,7 @@ const fruits = [
 
         function checkWord(word) {
             if (gameOver || sequenceShowing || !canClickOptions) return;
-
+        
             if (wordSequence[clickedWords.length] === word) {
                 clickedWords.push(word);
                 if (clickedWords.length === wordSequence.length) {
@@ -101,6 +101,10 @@ const fruits = [
             } else {
                 attempts--;
                 attemptsDisplay.textContent = attempts;
+                
+                // Clear the clickedWords array
+                clickedWords = [];
+                
                 if (attempts === 0) {
                     messageDisplay.textContent = "Fim de Jogo";
                     restartButton.style.display = 'block';
@@ -113,6 +117,7 @@ const fruits = [
                 }
             }
         }
+        
 
         function generateSequence(level) {
             const sequence = [];
