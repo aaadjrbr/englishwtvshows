@@ -377,12 +377,12 @@
           canvas.addEventListener('touchstart', handleUserTap, false);
           canvas.addEventListener('mousedown', handleUserTap, false);
   
-          var logoText = "PALAVRA DO DIA";
+          var logoText = "MEMO WORDS";
           if(!logoCanvas){
               logoCanvas = document.createElement("canvas");
               logoCanvasBG = document.createElement("canvas");
           }
-          createLogo("PALAVRA DO DIA", logoCanvas, logoCanvasBG);
+          createLogo("MEMO WORDS", logoCanvas, logoCanvasBG);
           if(!gameOverCanvas){
               gameOverCanvas = document.createElement("canvas");
               gameOverCanvasBG = document.createElement("canvas");
