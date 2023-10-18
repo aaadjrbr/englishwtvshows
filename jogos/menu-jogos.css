@@ -73,9 +73,10 @@ html, body {
 }
 
 .stream-content {
+  margin: 10px;
   padding: 20px;
   background-color: #020129;
-  overflow-y: scroll;
+  overflow-y: hidden; /* It was scroll before */
 }
 
 h3 {
@@ -99,7 +100,7 @@ h3 {
 }
 
 .game:hover {
-  transform: translate(5px, -5px);
+  transform: translate(4px, -4px);
   cursor: pointer;
 }
 
