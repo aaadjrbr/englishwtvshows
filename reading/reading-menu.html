@@ -18,7 +18,12 @@
     <!-- Add your CSS styles here if needed -->
 
     <style>
-        /* Reset some default styles */
+
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +33,7 @@
 /* Apply a background color to the body */
 body {
     background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
 }
 
 /* Header styles */
@@ -39,8 +44,9 @@ header {
     padding: 10px 10px;
 }
 
-h2, h3 {
-  letter-spacing: 1.6px;
+h3 {
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-size: 1.7em !important;
 }
 
 /* Navigation styles (customize as needed) */
@@ -63,7 +69,7 @@ nav a {
 }
 
 .section-heading {
-    font-size: 24px;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -94,7 +100,7 @@ nav a {
 }
 
 .series-description {
-    font-size: 16px;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -115,13 +121,13 @@ nav a {
 }
 
 .series-description {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     font-weight: bold;
 }
 
 /* Footer styles (customize as needed) */
 footer {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     color: #333;
     text-align: center;
     padding: 20px 0;
@@ -142,6 +148,7 @@ footer {
 
     .button {
         font-size: 16px;
+        font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
         padding: 8px 16px;
     }
 }
@@ -165,15 +172,15 @@ footer {
         <div class="container" style="border-radius: 10px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);">
             <a href="../index.html"><img class="eng-logo navbar-brand" style="width: 250px; height: 150px; margin-bottom: 20px;" src="../public/assets/images/eng-logo.png"></a>
             <br/>
-            <a href="../bem-vindo.html"><button style="border-radius: 5px; padding: 10px 20px; margin-bottom: 20px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);"><strong>Voltar</strong></button></a>
         </div>
         
     </header>
 
     <!-- Main content section -->
     <section class="series-selection">
+        <a href="../bem-vindo.html"><button style="font-family: 'Poppins-Regular', Helvetica, sans-serif !important; border-radius: 5px; padding: 10px 20px; margin-bottom: 20px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);"><strong>Voltar</strong></button></a>
         <h2 style="font-size: 1.9em;" class="section-heading">📚☕️ Melhore sua leitura:</h2>
-        <p style="font-size: 1.4em;">Escolha uma categoria para começar:</p>
+        <p style="font-size: 1.4em; font-family: 'Poppins-Regular', Helvetica, sans-serif;">Escolha uma categoria para começar:</p>
 
         <!-- Page 1 -->
         <div class="page" id="page1">
@@ -182,7 +189,7 @@ footer {
                 <h3 class="series-title">Leitura para iniciantes</h3>
                 <p class="series-description">Nível: Básico, Intermediário (A1/A2)</p>
                 <img style="width: 300px; height: 200px; border-radius: 10px;" src="https://drive.google.com/uc?id=1RF348GsK7ZR_wcb6ujjWDdOstsIxr_6K" alt="English level A1, A2"></img><br/>
-                <a class="category-description-vocab-memo" href="./reading-easy/reading-easy.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
+                <a class="category-description-vocab-memo" href="./reading-easy/reading-easy.html"><button class="gelatine" style="border-radius: 5px; font-family: 'Poppins-Regular', Helvetica, sans-serif !important; font-weight: 600;"><strong>Estudar</strong></button></a>
             </div>
 
             <!-- Series Option 2 -->

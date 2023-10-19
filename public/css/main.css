@@ -3,6 +3,21 @@
     src: url('../assets/fonts/Anton-Regular.ttf') format('truetype'),
 }
 
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Bold'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Italic'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype'),
+}
+
 
 .gelatine:hover {
     transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
