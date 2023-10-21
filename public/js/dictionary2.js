@@ -72,12 +72,8 @@ scrollToTopBtn.onclick = function() {
 // User data
 const users = [
     {
-        nome: "adj",
-        senha: "adj"
-    },
-    {
-        nome: "adenilson",
-        senha: "adenilson"
+        nome: "teste",
+        senha: "teste"
     },
     // Add more users as needed
 ];
