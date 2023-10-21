@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en, pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="Inglês com filmes e séries!">
+  <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+  <meta name="author" content="English w/ Adenilson">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="English w/ Tv Shows">
+  <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+  <link rel="icon" href="../../favicon.png" type="image/x-icon">
+  <meta name="google-adsense-account" content="ca-pub-2110834991626364"> <!-- Add your AdSense account here -->
+
+  <link rel="stylesheet" href="./scrambled-words.css">
+  <title>Scrambled Words - English w/ TV Shows</title>
+</head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-7LS5S7RDE3');
+  </script>
+
+<body>
+  <nav>
+    <h1>Scrambled Words 🔮</h1> 
+  </nav>
+
+  
+
+  <div id="rules">
+    
+    <p class="lead">Desembaralhe as palavras</p>
+    <p>Digite o seu palpite <small>(Pressione Enter)</small></p>
+    <p>Acerte três vezes e suba de nível</p>
+    <p>Errar uma palavra três vezes reinicia o jogo</p>
+    <p>Conclua o nível 8 para vencer</p>
+    <p style="font-size: 1.4em;"><strong>Boa sorte!</strong></p>
+    <button id="play-btn">Vamos Jogar</button><br/><br/>
+    <a href="../menu-jogos.html"><button class="goBack">Sair</button></a>
+  </div>
+  
+
+  <div id="game-container" class="hidden">
+    <p>Nível: <span id="level">1</span></p>
+    <p>Pontuação: <span id="score">0</span></p>
+    <p>Tentativas: <span id="attempts">0</span></p>
+    <p id="info"></p>
+
+    <div id="guess-container">
+      <p id="scrambled-word"></p>
+  
+      <input id="user-guess" type="text" placeholder="Qual a palavra? 🎲">
+      <br/>
+      <button id="submit">Enviar</button>
+      <button id="reset-btn">Reiniciar</button>
+      <br/><br/>
+      <button style="font-size: 0.8em;" id="back-to-rules" class="goBack">Voltar</button>
+    </div>
+  </div>
+    
+
+  <div style="margin-top: 60px;"></div>
+  <footer>
+    <p style="text-align: center;">&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="./scrambled-words.js"></script>
+</body>
+
+</html>

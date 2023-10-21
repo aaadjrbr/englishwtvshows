@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Anton-Regular'; /* Specify the desired font family name */
+  src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+
+html, body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+/* Estilos para o cabeçalho e navegação */
+nav {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 5px; /* Adjust the padding as needed */
+  display: block;
+  height: 2em;
+}
+
+h1 {
+  margin: 0 auto 15px !important;
+  font-size: 1.6em !important;
+  display: block;
+  width: fit-content;
+  color: #0056b3;
+}
+
+#contact a {
+  color: #000;
+}
+
+/* Estilos para o contêiner das regras do jogo */
+#rules {
+  position: absolute;
+  z-index: 999;
+  margin-top: 25px !important;
+  width: 80%;
+  height: auto;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.1em;
+}
+
+#rules p {
+  margin-bottom: 1.25em;
+}
+
+/* Estilos para o contêiner do jogo */
+#game-container {
+  width: 80%;
+  height: auto;
+  text-align: center;
+  margin: 2em auto;
+  max-width: 100%;
+}
+
+#game-container p {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+#game-container p span {
+  font-weight: 300;
+  font-size: 1.3em;
+}
+
+#scrambled-word {
+  font-size: 2.8em !important;
+  font-family: 'Anton-Regular', sans-serif;
+  color: #0056b3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#user-guess {
+  width: 65%;
+  max-width: 100%; /* Alterado para 100% para dispositivos pequenos */
+  height: 15px;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 0 auto 1.25em;
+  border: 1px solid #000;
+  outline-color: #1874CD;
+  font-size: 1.1em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.lead {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.correct, .incorrect {
+  font-size: 1.2em !important;
+  font-weight: 700;
+  display: block;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  animation: shake-animation 4.72s ease infinite;
+	transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+  0% { transform:translate(0,0) }
+ 1.78571% { transform:translate(5px,0) }
+ 3.57143% { transform:translate(0,0) }
+ 5.35714% { transform:translate(5px,0) }
+ 7.14286% { transform:translate(0,0) }
+ 8.92857% { transform:translate(5px,0) }
+ 10.71429% { transform:translate(0,0) }
+ 100% { transform:translate(0,0) }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Estilos para os botões */
+button {
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  background-color: #256cb9 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3 !important;
+}
+
+#submit,
+#play-btn {
+  background: #fff;
+  border: 2px solid #0056b3;
+}
+
+#submit:hover,
+#play-btn:hover {
+  background: #1874CD;
+  color: #fff;
+}
+
+.goBack {
+  background: #fff;
+  border: 2px solid #0056b3;
+}
+
+.goBack:hover {
+  background: #1874CD;
+  color: #fff;
+}
+
+#reset-btn {
+  background: #fff;
+  border: none;
+  box-shadow: 1px 1px 1px #999;
+}
+
+#reset-btn:hover {
+  box-shadow: 1px 1px 1px #1874CD;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+#restart-button {
+  font-size: 1.4em;
+  animation: shake-animation 4.72s ease infinite;
+	transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+  0% { transform:translate(0,0) }
+ 1.78571% { transform:translate(5px,0) }
+ 3.57143% { transform:translate(0,0) }
+ 5.35714% { transform:translate(5px,0) }
+ 7.14286% { transform:translate(0,0) }
+ 8.92857% { transform:translate(5px,0) }
+ 10.71429% { transform:translate(0,0) }
+ 100% { transform:translate(0,0) }
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0; /* Set your desired background color */
+  text-align: center;
+  padding: 5px; /* Adjust the padding as needed */
+}
+
+/* Media queries para dispositivos pequenos (como smartphones) */
+@media screen and (max-width: 768px) {
+  #user-guess {
+    max-width: 70%; /* Ajuste a largura máxima conforme necessário */
+  }
+}
