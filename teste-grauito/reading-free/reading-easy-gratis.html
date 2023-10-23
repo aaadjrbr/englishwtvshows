@@ -18,6 +18,7 @@
     <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.6/dist/tippy-bundle.umd.min.js"></script>
 
+    <link rel="stylesheet" href="./reading-easy-scrambled1-gratis.css">
     <link rel="stylesheet" href="./reading-easy-gratis.css">
     <link rel="stylesheet" href="./reading-easy-gratis.scss">
 
@@ -101,20 +102,26 @@
     <div class="container mt-5">
         
 
-        <h2 style="color: white;">Ao finalizar a leitura, faça o Quiz abaixo 📝</h2>
+        <h2 style="color: white;">Após concluir a leitura, realize as atividades abaixo. 📝</h2>
         <p style="font-size: 0.8em;"><em>*Clique na palavra para exibir a sua tradução.</em></p>
 
         <div class="sentence" id="sentence1">
-            <audio style="margin-top: 20px;" controls>
-                <source src="https://drive.google.com/uc?export=download&id=198lUgYbDy1PEKBnTfKZ-KNtLRhKlBW5n" type="audio/mpeg">
+            <audio id="myAudio" style="margin-top: 20px;" controls controlslist="nodownload">
+                <source src="https://drive.google.com/uc?export=download&id=1oJYt_zQC_k2EeHKr9LEkij1P1ZdacHoz" type="audio/mpeg">
                 Your browser does not support the audio element.
-            </audio>
+            </audio><br/>
+            <img src="https://drive.google.com/uc?id=1WvXeJn5bBLElmWwSmmK-5ZlildEhlfwj" id="rewindButton" class="seconds-stuff1" alt="Rewind 5 seconds" onclick="rewindAudio()">
+            <img src="https://drive.google.com/uc?id=15mNGrfPDlfffuxPTzqOA5rCVdkPQFljA" class="seconds-stuff2" id="fastForwardButton" alt="Fast Forward 5 seconds" onclick="fastForwardAudio()">
             <div style="margin-top: 15px;"></div>
-            <img style="width: 300px; height: 200px; border-radius: 10px;" src="https://drive.google.com/uc?id=1cEWn8TKdTJEQiA5neseeDiMD7eBhECcD" alt="Woman and her son"></img><br/>
+            <img style="width: 250px; height: 250px; border-radius: 10px;" src="https://drive.google.com/uc?id=1dGdLfWU58Mc7a50DTYSSBBczOKNQXbb2" alt="Girls in the zoo"></img><br/>
 
             <div style="margin-top: 20px;"></div>
             <p id="text1"></p>
         
+
+            <br/>
+            <div class="hr2"><hr/></div>
+
 
             <div>
                 <div class="quiz-container1">
@@ -124,7 +131,7 @@
                         <button class="btn btn-primary mb-3" id="restart-button">Refazer Quiz</button>
                     </div>
                     <div style="margin-top: 15px;"></div>
-                    <h3 style="font-size: 1.4em;">Vamos checar a sua interpretação:</h3><br/>
+                    <h3 style="font-size: 1.3em !important; color: #ddd; margin-bottom: 15px;"><a style="color: #ffffff;" target="_blank" href="https://www.linguee.com.br/">Dicionário 📚</a></h3>
                     <div id="question-container">
                         <h2 style="font-size: 1.5em; color: white;" id="question"></h2>
                     </div>
@@ -143,7 +150,33 @@
 
             </div>
 
+<div class="hr2"><hr/></div>
+
+            <h2 style="color: white;"><em>Scrambled Words</em></h2>
+            <div class="container2">
+              <div id="phraseContainer">
+                <p style="display: none;" id="currentPhrase"></p>
+                <div id="wordContainer"></div>
+                <button id="hintButton">Dica 💡</button>
+                <div id="hint" style="display: none; margin-top: 20px;">
+                  <p>Dica:</p>
+                   <!-- Add the hint content here -->
+                </div>
+              </div>
+              <div id="selectedWordsContainer">
+                <p>Palavras Selecionadas:</p>
+                <div id="selectedWords"></div>
+              </div>
+              <button class="btn btn-primary mb-3" id="redoButton">Refazer</button>
+              <button class="btn btn-primary mb-3" id="checkButton">Verificar Ordem</button>
+              <p id="resultMessage"></p>
+            </div>
+
+
+
         </div>
+
+        
         
         <div class="sentence" id="sentence2">
             <div style="margin-top: 20px;"></div>
@@ -178,6 +211,8 @@
         </div>
     </footer>
 
+
+    <script src="./reading-easy-scrambled1-gratis.js"
     <script src="../gratis.js"></script>
     <script src="./reading-easy-words-gratis.js" defer></script> <!-- Load test1.js with the defer attribute -->
     <script src="./reading-easy-gratis.js" defer></script>   <!-- Load test.js with the defer attribute -->

@@ -1,57 +1,56 @@
-//Verb "to be" Quiz
-
 const questions = [
     {
-        question: "Nancy and her son were living in America for a year before the incident with the dog.",
+        question: "She goes to the zoo.",
+        options: ["True", "False"],
+        correctAnswer: "True"
+    },
+    {
+        question: "She sees a lion.",
+        options: ["True", "False"],
+        correctAnswer: "True"
+    },
+    {
+        question: "The lion roars.",
+        options: ["True", "False"],
+        correctAnswer: "True"
+    },
+    {
+        question: "The elephant has feathers.",
         options: ["True", "False"],
         correctAnswer: "False"
     },
     {
-        question: "Nancy and her son found an apartment in Arcadia within two months of coming to America.",
+        question: "She sees a turtle.",
         options: ["True", "False"],
         correctAnswer: "True"
     },
     {
-        question: "The neighbor's dog attacked Nancy's son, leading to the confrontation.",
+        question: "The turtle is fast.",
         options: ["True", "False"],
         correctAnswer: "False"
     },
     {
-        question: "Nancy was willing to physically harm the dog to protect her son.",
-        options: ["True", "False"],
-        correctAnswer: "True"
-    },
-        {
-        question: "After the dog incident, Nancy and her son spent the entire weekend in their apartment.",
+        question: "She sees a rabbit.",
         options: ["True", "False"],
         correctAnswer: "True"
     },
     {
-        question: "Nancy and her son moved to a new apartment closer to her son's school.",
+        question: "The rabbit has scales.",
+        options: ["True", "False"],
+        correctAnswer: "False"
+    },
+    {
+        question: "She sees a gorilla.",
         options: ["True", "False"],
         correctAnswer: "True"
     },
     {
-        question: "Nancy's son's coughing and asthma attack were exacerbated by all the walking they did.",
+        question: "The gorilla is playing the piano.",
         options: ["True", "False"],
-        correctAnswer: "True"
-    },
-    {
-        question: "Nancy also suffered from asthma.",
-        options: ["True", "False"],
-        correctAnswer: "True"
-    },
-    {
-        question: "Nancy wanted to buy a new car for her family.",
-        options: ["True", "False"],
-        correctAnswer: "True"
-    },
-    {
-        question: "A Honda salesman who spoke Nancy's language agreed to pick her up to discuss buying a new car.",
-        options: ["True", "False"],
-        correctAnswer: "True"
+        correctAnswer: "False"
     }
 ];
+
 
 let currentQuestion = 0;
 let score = 0;
@@ -112,6 +111,7 @@ nextButton.addEventListener("click", () => {
     }
 });
 
+
 const restartButton = document.getElementById("restart-button");
 restartButton.addEventListener("click", () => {
     // Reset the quiz to its initial state
@@ -127,6 +127,7 @@ restartButton.addEventListener("click", () => {
     // Show the next button
     nextButton.style.display = "block";
 });
+
 
 // Start the quiz
 showQuestion();

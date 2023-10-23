@@ -1,0 +1,103 @@
+
+  
+  #phraseContainer {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Add spacing at the bottom */
+  }
+  
+  #currentPhrase {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px; /* Increase the spacing */
+  }
+  
+  #wordContainer {
+    padding: 15px 20px;
+    font-size: 1.3em;
+    margin: 2px;
+    border-radius: 7px;
+    border: 2;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Increase the gap between word blocks */
+    justify-content: center;
+  }
+  
+  #wordContainer div {
+    background-color: #375265;
+    border-color: #375265;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #wordContainer div:hover {
+    background-color: #00495D;
+  }
+  
+  #resultMessage {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px; /* Add spacing at the top */
+    color: #ffffff !important; /* Change result message color to a shade of blue */
+  }
+  
+  #hintButton {
+    background-color: #375265;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Add spacing at the top */
+  }
+  
+  #hintButton:hover {
+    background-color: #00495D;
+  }
+
+  #selectedWords {
+    color: white;
+    font-size: 1.6em;
+  }
+  
+  #hint {
+    background-color: #ddd;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hide the hint container */
+  }
+
+  #hint div {
+    margin-bottom: 10px; /* Add spacing between words */
+    width: 60%;
+  }
+
+  .hr2 {
+    border: none; /* Remove the default border */
+    height: 1px; /* Set the height of the line */
+    background-color: #ffffff; /* Change the line color to gray (#333) */
+    margin: 20px 0; /* Add margin above and below the line */
+  }
+
+  
+  /* Add a media query for responsive design */
+  @media (max-width: 480px) {
+    #wordContainer {
+      flex-direction: column; /* Stack words vertically on smaller screens */
+      align-items: center; /* Horizontally center items */
+    }
+    #wordContainer div {
+      margin-bottom: 10px; /* Add spacing between words */
+      width: 60%;
+    }
+  }
+  
