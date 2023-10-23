@@ -87,17 +87,4 @@
     background-color: #ffffff; /* Change the line color to gray (#333) */
     margin: 20px 0; /* Add margin above and below the line */
   }
-
-  
-  /* Add a media query for responsive design */
-  @media (max-width: 480px) {
-    #wordContainer {
-      flex-direction: column; /* Stack words vertically on smaller screens */
-      align-items: center; /* Horizontally center items */
-    }
-    #wordContainer div {
-      margin-bottom: 10px; /* Add spacing between words */
-      width: 60%;
-    }
-  }
   
