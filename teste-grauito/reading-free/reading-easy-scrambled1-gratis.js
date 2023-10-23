@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function displayHint() {
     if (!hintDisplayed) {
       hintContainer.style.display = "block";
-      hintContainer.innerHTML = "Correct Order: " + phrases[currentPhraseIndex];
+      hintContainer.innerHTML = "💡 Sequência correta: " + phrases[currentPhraseIndex];
       hintDisplayed = true;
 
       setTimeout(() => {
