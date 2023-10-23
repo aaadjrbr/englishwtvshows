@@ -97,3 +97,29 @@ function showNextSentence() {
 
 // Next Button Click Event
 document.getElementById('nextButton').addEventListener('click', showNextSentence);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById("myAudio");
+    const rewindButton = document.getElementById("rewindButton");
+    const fastForwardButton = document.getElementById("fastForwardButton");
+  
+    rewindButton.addEventListener("click", rewindAudio);
+    fastForwardButton.addEventListener("click", fastForwardAudio);
+  
+    function rewindAudio() {
+      if (audio.currentTime >= 5) {
+        audio.currentTime -= 5; // Go back 5 seconds
+      } else {
+        audio.currentTime = 0; // Skip to the beginning if 5 seconds not available
+      }
+    }
+  
+    function fastForwardAudio() {
+      if (audio.duration - audio.currentTime >= 5) {
+        audio.currentTime += 5; // Fast forward 5 seconds
+      } else {
+        audio.currentTime = audio.duration; // Skip to the end if 5 seconds not available
+      }
+    }
+  });
