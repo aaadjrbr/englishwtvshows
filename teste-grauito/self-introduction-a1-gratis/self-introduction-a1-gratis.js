@@ -60,9 +60,9 @@ const dialogues = [
 ];
 
 const resultImages = {
-    correct: '../../public/assets/images/dialogues/correct.jpg',
-    incorrect: '../../public/assets/images/dialogues/incorrect.jpg',
-    congrats: '../../public/assets/images/dialogues/congrats.jpg',
+    correct: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/dialogues-section%2Fself-introduction%20(dialogue)%2Fcorrect.jpg?alt=media&token=6640f815-33fd-41fd-8816-510dce5ae3da&_gl=1*1qjyg3p*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDIwMDYuNjAuMC4w',
+    incorrect: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/dialogues-section%2Fself-introduction%20(dialogue)%2Fincorrect.jpg?alt=media&token=06373e31-c813-424a-9ec7-2b400eaef9fb&_gl=1*162saw6*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDIwMjMuNDMuMC4w',
+    congrats: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/dialogues-section%2Fself-introduction%20(dialogue)%2Fcongrats.jpg?alt=media&token=ab6e8372-0b9d-4bc7-a58a-1e5505f614a6&_gl=1*tf9rof*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDE4OTQuMzguMC4w',
 };
 
 let currentDialogueIndex = 0;
