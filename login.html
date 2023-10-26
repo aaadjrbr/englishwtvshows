@@ -187,75 +187,11 @@
                 <p style="text-align: center; margin: 0; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 0.9em;">&copy; 2023 English w/ TV Shows. Todos os direitos reservados. | <a style="text-decoration: none; color:#fff;" href="./public/politica-privacidade.html">Política de Privacidade</a>.</p>
         </footer>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const loginForm = document.getElementById('loginForm');
-                const errorMessage = document.getElementById('errorMessage');
-                const successMessage = document.getElementById('successMessage');
-        
-                loginForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    
-                    const email = document.getElementById('nome').value;
-                    const password = document.getElementById('senha').value;
-        
-                    // Sign in the user with Firebase Authentication
-                    firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function (user) {
-        // User successfully signed in
-        errorMessage.style.display = 'none';
-        successMessage.style.display = 'block';
-
-        // Redirect to a specific page (change 'your-page.html' to the desired URL)
-        window.location.href = './bem-vindo.html';
-    })
-    .catch(function (error) {
-        // Handle errors
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Falha na autenticação. Certifique-se de que seu nome e/ou senha estão corretos.';
-        console.error(error); // Log the error to the console for debugging
-    });
-
-
-                });
-            });
-        </script>
-        
+    <script src="./public/js/main.js"></script>
+    <script src="./public/js/dictionary2.js"></script>
 
 
 </div><!-- div for loader -->
-
-<!-- Include Firebase JavaScript SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"></script>
-
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyBAGs-2m-qzleMxKS7-G4Vi53yOwhm99SA",
-      authDomain: "english-with-tv-shows.firebaseapp.com",
-      projectId: "english-with-tv-shows",
-      storageBucket: "english-with-tv-shows.appspot.com",
-      messagingSenderId: "382097760520",
-      appId: "1:382097760520:web:a8a33c9143a76e21320cbd",
-      measurementId: "G-M2SEMVXFPL"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
-
-
-
 <script>
     // Simulate loading delay (remove this in your actual site)
     setTimeout(function() {
