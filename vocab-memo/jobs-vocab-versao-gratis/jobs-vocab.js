@@ -103,7 +103,7 @@ const questions = [
         correctOption: 'Singer',
     },
     {
-        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fteacher.webp?alt=media&token=68164656-4fce-48a5-8784-0d82f8ea17da&_gl=1*1da5hkt*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzM1NjAuNDEuMC4w',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fteacher.jpg?alt=media&token=4650d8af-9eb0-42aa-b0cf-7f1cb5dfdc61&_gl=1*1wtxf4a*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzc2MTYuMjMuMC4w',
         options: ['Teacher', 'Artist', 'Musician', 'Priest'],
         correctOption: 'Teacher',
     },
