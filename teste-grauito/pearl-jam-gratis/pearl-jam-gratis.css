@@ -3,6 +3,31 @@
     src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
 }
 
+#rewind-button {
+    vertical-align: middle;
+    background-color: #ffffff73;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 32.4px;
+    height: 32.4px;
+    border-radius: 16.2px;
+    margin-top: 10.8px;
+    cursor: pointer;
+}
+
+#fast-forward-button {
+    vertical-align: middle;
+    background-color: #ffffff73;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 32.4px;
+    height: 32.4px;
+    border-radius: 16.2px;
+    margin-top: 10.8px;
+    cursor: pointer;
+}
+
+
 body::before {
     content: "";
     position: fixed;
@@ -15,7 +40,7 @@ body::before {
 }
 
 body {
-    background-image: url('https://drive.google.com/uc?id=13MpOX8Ml-AReINkCDWYpnd5BwKscvupg'); /* Replace with your music-themed background image */
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fpearl-jam%2Fpearl-jam.png?alt=media&token=730381d3-405a-4005-a492-be0364f466fb&_gl=1*1yeuqnl*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzNDA3MDguMjMuMC4w'); /* Replace with your music-themed background image */
     background-size: cover;
     padding: 25px;
     background-repeat: no-repeat;
