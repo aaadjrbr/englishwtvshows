@@ -6,84 +6,114 @@ const nextButton1 = document.getElementById('next-button-1');
 
 const correctFeedback = [
     '✔️ Parabéns! Você acertou!',
-    '👍 Muito bom! Continue assim!',
-    '🎉 Fantástico! Você está arrasando!',
-    '💯 Incrível! Mais um acerto para você!',
-    '👏 Maravilhoso! Você está se saindo muito bem!',
-    '🌟 Está indo muito bem!',
-    '👌 Ótimo trabalho!',
-    '🤩 Fantástico! Sua pontuação está subindo!',
-    '👊 Isso aí! Mais um ponto para você!',
+    '👍 Muito bem!',
+    '🎉 Excelente trabalho!',
+    '💯 Você acertou!',
+    '🌟 Fantástico!',
+    '👏 Ótimo trabalho!',
+    '👌 Perfeito!',
+    '🤩 Impressionante!',
+    '🥇 Número um!',
+    '🏆 Você está arrasando!',
+    '🌠 Incrível!',
+    '💪 Você está no caminho certo!',
+    '👊 Você é um campeão!',
+    '🌻 Maravilhoso!',
+    '😄 Continue assim!',
+    '💥 Sensacional!',
+    '🎓 Você é um gênio!',
+    '🚀 Você está progredindo!',
+    '🤗 Está indo muito bem!',
+    '💡 Inteligente!',
+    '⭐ Estrela brilhante!',
+    '🔥 Excepcional!',
+    '💕 Parabéns!',
+    '📚 Seu esforço vale a pena!'
     // Add more feedback messages as needed
 ];
 
 const correctVideoFeedback = [
     '✔️ Parabéns! Você acertou!',
-    '👍 Muito bom! Continue assim!',
-    '🎉 Fantástico! Você está arrasando!',
-    '💯 Incrível! Mais um acerto para você!',
-    '👏 Maravilhoso! Você está se saindo muito bem!',
-    '🌟 Está indo muito bem!',
-    '👌 Ótimo trabalho!',
-    '🤩 Fantástico! Sua pontuação está subindo!',
-    '👊 Isso aí! Mais um ponto para você!',
+    '👍 Muito bem!',
+    '🎉 Excelente trabalho!',
+    '💯 Você acertou!',
+    '🌟 Fantástico!',
+    '👏 Ótimo trabalho!',
+    '👌 Perfeito!',
+    '🤩 Impressionante!',
+    '🥇 Número um!',
+    '🏆 Você está arrasando!',
+    '🌠 Incrível!',
+    '💪 Você está no caminho certo!',
+    '👊 Você é um campeão!',
+    '🌻 Maravilhoso!',
+    '😄 Continue assim!',
+    '💥 Sensacional!',
+    '🎓 Você é um gênio!',
+    '🚀 Você está progredindo!',
+    '🤗 Está indo muito bem!',
+    '💡 Inteligente!',
+    '⭐ Estrela brilhante!',
+    '🔥 Excepcional!',
+    '💕 Parabéns!',
+    '📚 Seu esforço vale a pena!'
     // Add more feedback messages as needed
 ];
 
 
 const questions = [
     {
-        image: 'https://drive.google.com/uc?id=1Ir8YCguktJtxjWWpf9wNPxvontnjTFAI',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Factor.webp?alt=media&token=94681b4b-e23d-4ab1-a01b-4e5972084ad7&_gl=1*k7arps*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzE1MjUuMzcuMC4w',
         options: ['Doctor', 'Actor', 'Vet', 'Fireman'],
         correctOption: 'Actor',
     },
     {
-        image: 'https://drive.google.com/uc?id=1E4yIKVGrvImKbLmcYUBeHcJdEAODa2uM',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fbus-driver.webp?alt=media&token=efa3502c-9054-449b-9684-e236048b9813&_gl=1*1yga0h8*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzE3MzUuNDEuMC4w',
         options: ['Farmer', 'Police Officer', 'Singer', 'Bus Driver'],
         correctOption: 'Bus Driver',
     },
     {
-        image: 'https://drive.google.com/uc?id=1CwgHC9imnvyfWzhz0kekyRWojjocOjT7',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fchef.webp?alt=media&token=a179d961-5b7e-427b-898d-34136864a04c&_gl=1*1i5f9bk*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzE4MTcuNTEuMC4w',
         options: ['Accountant', 'Teacher', 'Server', 'Chef'],
         correctOption: 'Chef',
     },
     {
-        image: 'https://drive.google.com/uc?id=1xHklpJk40e67kGOCN_5Zdmjmzmn9rcry',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fdoctor.webp?alt=media&token=cc111e4d-329b-4f4a-8285-394e1d1d956b&_gl=1*181x7pk*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzE5MTYuNTAuMC4w',
         options: ['Nurse', 'Secretary', 'Locksmith', 'Doctor'],
         correctOption: 'Doctor',
     },
     {
-        image: 'https://drive.google.com/uc?id=1VR5RH3rijo0XLYecLVsaPCUs8Bp82ra9',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Ffarmer.jpg?alt=media&token=f47a94f7-40cb-4b6a-8ca3-879c629960e1&_gl=1*1lzyiby*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzI1MjQuNDYuMC4w',
         options: ['Farmer', 'Hairdresser', 'Plumber', 'Vet'],
         correctOption: 'Farmer',
     },
     {
-        image: 'https://drive.google.com/uc?id=1lBi4rt845aqzJFVFHt6V0ONG9o_7GHxT',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Ffire-man.webp?alt=media&token=4cebc989-35ad-4fc0-acce-50d68d934de3&_gl=1*322vq6*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzMxMDUuMzMuMC4w',
         options: ['Judge', 'Lawyer', 'Server', 'Fireman/Firefigther'],
         correctOption: 'Fireman/Firefigther',
     },
     {
-        image: 'https://drive.google.com/uc?id=1zc9SlPvsgCN-1SPl1AdEfvbuPo1I3voh',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fpolice-officer.jpg?alt=media&token=80b7150d-4ed3-4e76-8748-cbfbf1c8f127&_gl=1*1xtmabd*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzMyNTMuMzUuMC4w',
         options: ['Police Officer', 'Hairdresser', 'Plumber', 'Vet'],
         correctOption: 'Police Officer',
     },
     {
-        image: 'https://drive.google.com/uc?id=1SxsgZqPgbifqduoJTxiAUSxXGXWfMQX9',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fsinger.jpg?alt=media&token=2eefdaf3-7087-4952-949e-228d5f168fd7&_gl=1*1g1ewlw*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzM0MjUuMzMuMC4w',
         options: ['Waiter', 'Writer', 'Singer', 'Director'],
         correctOption: 'Singer',
     },
     {
-        image: 'https://drive.google.com/uc?id=1JvNJxzNQmNs65JU62AYF6TPQ9YOO7KVd',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fteacher.webp?alt=media&token=68164656-4fce-48a5-8784-0d82f8ea17da&_gl=1*1da5hkt*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzM1NjAuNDEuMC4w',
         options: ['Teacher', 'Artist', 'Musician', 'Priest'],
         correctOption: 'Teacher',
     },
     {
-        image: 'https://drive.google.com/uc?id=1ki0JTdRQ6L34sNhXIiYrV5d46gy9u9Cr',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fserver.webp?alt=media&token=08476e48-a869-412d-a2fd-563bc35efb67&_gl=1*djnagy*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzM2NjAuMzIuMC4w',
         options: ['Salesperson', 'Scientist', 'Cashier', 'Server'],
         correctOption: 'Server',
     },
     {
-        image: 'https://drive.google.com/uc?id=1KWV09gpocVGo7t6sR1yGxzHw7eanC9se',
+        image: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-images%2Fphotographer.jpg?alt=media&token=82881a5b-668b-4a8a-b228-257ac020a5b1&_gl=1*12uok3f*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzM3NTUuNDQuMC4w',
         options: ['Vet', 'Teacher', 'Fireman', 'Photographer'],
         correctOption: 'Photographer',
     },
@@ -181,7 +211,7 @@ const nextButton2 = document.getElementById('next-button-2');
 
 const videoQuestions = [
     {
-        videoUrl: 'https://drive.google.com/uc?export=download&id=1K7lWBHa_1m3Rg9v8tVoTIkvU_n1SB_CA',
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-videos%2Factor-farmer-server-photographer.mp4?alt=media&token=ce36c64b-730d-482a-9666-5985eab92a8a&_gl=1*2vwy7t*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzQyMDkuMTkuMC4w',
         correctAnswer: 'Actor, Farmer, Server, Photographer', // Replace with the correct answer
     },
     // Add more questions for the video quiz
