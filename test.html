@@ -18,33 +18,26 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-auth.js"></script>
 
     <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBAGs-2m-qzleMxKS7-G4Vi53yOwhm99SA",
+            authDomain: "english-with-tv-shows.firebaseapp.com",
+            projectId: "english-with-tv-shows",
+            storageBucket: "english-with-tv-shows.appspot.com",
+            messagingSenderId: "382097760520",
+            appId: "1:382097760520:web:a8a33c9143a76e21320cbd",
+            measurementId: "G-M2SEMVXFPL"
+        };
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBAGs-2m-qzleMxKS7-G4Vi53yOwhm99SA",
-    authDomain: "english-with-tv-shows.firebaseapp.com",
-    projectId: "english-with-tv-shows",
-    storageBucket: "english-with-tv-shows.appspot.com",
-    messagingSenderId: "382097760520",
-    appId: "1:382097760520:web:a8a33c9143a76e21320cbd",
-    measurementId: "G-M2SEMVXFPL"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
 
         function login() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
+            const errorMessageElement = document.getElementById('error-message');
 
-            firebase.auth().signInWithEmailAndPassword(email, password)
+            firebase.auth(app).signInWithEmailAndPassword(email, password)
                 .then((userCredential) => {
                     // User is signed in
                     const user = userCredential.user;
@@ -54,7 +47,7 @@
                 })
                 .catch((error) => {
                     const errorMessage = error.message;
-                    document.getElementById('error-message').innerText = errorMessage;
+                    errorMessageElement.innerText = 'Wrong password or user.';
                 });
         }
     </script>
