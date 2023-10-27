@@ -1,5 +1,6 @@
 const dictionary = {
     "water": "água",
+    "each": "cada",
     "You're": "Você está, Você é",
     "getting": "ficando",
     "to": "para",
@@ -10,7 +11,7 @@ const dictionary = {
     "kid": "criança",
     "who's": "que está",
     "four": "quatro",
-    "Each": "Cada",
+    "Each": "cada",
     "day": "dia",
     "big": "grande",
     "grow": "cresço",
