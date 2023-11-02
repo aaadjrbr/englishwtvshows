@@ -1,7 +1,8 @@
 html {
+	padding: 5px 5px;
 	height: 100%;
 	background: #757472;
-	background: linear-gradient(to right, rgb(67, 85, 251) 0%, rgb(29, 13, 247) 100%);
+	background: linear-gradient(to right, #0056b3 0%, rgb(29, 13, 247) 100%);
   }
   
   body {
@@ -11,7 +12,7 @@ html {
 	background: radial-gradient(ellipse at center, rgba(252, 252, 252, 1) 0%, rgb(69, 134, 254) 100%);
 	background-repeat: no-repeat;
 	border-radius: 10px;
-	height: 438px;
+	height: 96%;
 	overflow-x: hidden;
   }
   
