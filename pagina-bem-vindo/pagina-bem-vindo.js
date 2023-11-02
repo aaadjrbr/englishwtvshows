@@ -1,5 +1,5 @@
 // Set the time delay in milliseconds (2 seconds in this example)
-const timeDelay = 3000;
+const timeDelay = 2000;
 
 // Function to perform the redirection
 function redirect() {
