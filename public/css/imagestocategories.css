@@ -1,3 +1,36 @@
+.button-category {
+    padding: 10px 20px;
+    font-size: 0.9rem !important;
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, #256cb9, rgba(2,126,251,1) 100%);
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-category:hover {
+    background: transparent;
+    color:#fff;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: none;
+}
+
+.button-category:hover:before {
+   height: 100%;
+ }
+
+.button-category:hover:after {
+   width: 100%;
+ }
+
+.button-category:hover{
+    color:#fff;
+ }
+
+
+
 /* IMAGE FOR CAILLOU  ---------------------------------------- */
 
 .category-card-caillou {
@@ -68,6 +101,7 @@
 
 .category-button-caillou:hover {
     background-color: #0056b3;
+    color: #fff !important;
 }
 
 /* IMAGE FOR FRIENDS ---------------------------------------- */
