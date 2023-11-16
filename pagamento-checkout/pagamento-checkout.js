@@ -10,7 +10,7 @@ $(document).ready(function() {
     function submitForm() {
         const name = nameInput.val();
         if (name.trim().length < 5) {
-            validationMessage.text("🚩 Por favor, seu nome deve conter pelo menos 5 letras.");
+            validationMessage.text("⚠️ Por favor, digite seu nome completo.");
             validationMessage.addClass("text-danger");
         } else {
             validationMessage.text(""); // Clear the validation message
