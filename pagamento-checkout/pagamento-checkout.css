@@ -10,6 +10,10 @@ body {
     font-family: 'Anton-Regular', Arial, sans-serif;
 }
 
+.container-border {
+    margin: 0px 20px !important; /* Add margin to both left and right sides */
+}
+
 body, h1, h2, p {
     font-family: Arial, Helvetica, sans-serif;
     color:#256cb9;
