@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -11,7 +11,7 @@
     <meta property="og:description" content="Aprenda inglês com séries e filmes!">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     <link rel="icon" href="./favicon.png" type="image/x-icon">
-    <title>Assine já!</title>
+    <title>Assine já! R$ 44,90 - Cancele quando quiser, sem fidelidade!</title>
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="./public/css/main.css">
     <!-- Link to Bootstrap CSS (you can use a CDN) -->
@@ -36,36 +36,37 @@
 <body>
     <header>
         <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="./index.html"><img class="eng-logo navbar-brand" src="./public/assets/images/eng-logo.png"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="./index.html">Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./contato.html">Contato</a>
-            </li>
-        </ul>
-    </div>
-            <!-- Video Background -->
-            <video autoplay muted loop playsinline id="video-bg" class="video-background">
-                <source src="./public/assets/videos/video-bg.mp4" type="video/mp4">
-                <!-- You can add multiple <source> elements for different video formats -->
-            </video>
-            <br/>
-            <button id="pauseVideoBtn" style="font-family: Arial, Helvetica, sans-serif;">Pausar ⏸️</button>
-        
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="./index.html"><img style="position: absolute; top: 10px; left: 10px;" class="eng-logo navbar-brand" src="./public/assets/images/eng-logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="position: absolute; top: 30px; right: 0;">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#como-funciona2">Como usar o site?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+                    <!-- Video Background -->
+                    <video autoplay muted loop playsinline id="video-bg" class="video-background">
+                        <source src="./public/assets/videos/video-bg.mp4" type="video/mp4">
+                        <!-- You can add multiple <source> elements for different video formats -->
+                    </video>
+                    <br/>
+                    <button id="pauseVideoBtn" style="font-family: Arial, Helvetica, sans-serif; margin-bottom: 5px; position: absolute; bottom: 5px; right: 10px; margin-top: 40px;">Pausar ⏸️</button>
+            </nav>
         <div class="container text-center">
             <h2 style="font-size: 1.8em; margin-bottom: 10px;">Pronto para Impulsionar seu Inglês?</h2>
             <h2 style="font-size: 1.4em;">Ainda em dúvida? Vá p/ <a style="color: #256cb9;" href="./index.html">início</a> e teste nosso site gratuitamente!</h2>
         </div>
     </header>
 
+
+<div class="container-border">
     <!-- Membership Benefits Section -->
     <section style="padding: 10px;">
         <div class="row">
@@ -94,7 +95,7 @@
     <section class="container text-center">
         <h2>Você está pronto?</h2>
         <h2 style="font-size: 1.4em;">Sem fidelidade, cancele quando quiser!</h2>
-        <a href="./pagamento-checkout/pagamento-checkout.html" class="btn btn-primary btn-lg" style="background-color: #256cb9;">Assine já!</a>
+        <a href="./pagamento-checkout/pagamento-checkout.html" class="btn btn-primary btn-lg" class="assine-ja" style="background-color: #256cb9;">Assine já!</div></a>
     </section>
 
     <!-- Footer -->
@@ -110,7 +111,7 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" onclick="scrollToTop()">🔼</button>
-
+</div> <!-- div for the container-border -->
     <!-- JavaScript for Scroll to Top Button -->
     <script>
         function scrollToTop() {
