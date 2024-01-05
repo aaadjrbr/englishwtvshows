@@ -1,3 +1,21 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Trigger animation when the DOM is fully loaded
+  animateText();
+});
+
+function animateText() {
+  const textElements = document.querySelectorAll('.animate-text');
+  
+  textElements.forEach((element, index) => {
+    const delay = index * 500; // Add a delay for each element
+    setTimeout(() => {
+      element.style.animationPlayState = 'running';
+    }, delay);
+  });
+}
+
+
 // Set the time delay in milliseconds (2 seconds in this example)
 const timeDelay = 2000;
 
