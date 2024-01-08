@@ -427,6 +427,78 @@
     background-color: #0056b3;
 }
 
+/* IMAGE FOR 250 MOST USED WORDS  ---------------------------------------- */
+
+.category-card-250-words {
+    position: relative;
+    border: 1px solid #ccc;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/250-words-background.jpg?alt=media&token=4314db1f-def8-44a0-a782-96ea031db9c3');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.category-card-250-words::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 9, 68, 0.829); /* Dark black overlay with 50% opacity */
+    border-radius: 10px;
+}
+
+.category-card-250-words:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Style the category heading */
+.category-heading-250-words {
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1; /* Place text above the colored background */
+    color: #256cb9; /* Text color */
+}
+
+/* Style the category description */
+.category-description-250-words {
+    margin-top: 10px;
+    position: relative;
+    z-index: 1; /* Place text above the colored background */
+    color: rgb(233, 229, 229); /* Text color */
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+}
+
+/* Style the button */
+.category-button-250-words {
+    position: relative;
+    z-index: 1; /* Place button above the colored background */
+    background-color: #256cb9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-button-250-words:hover {
+    background-color: #0056b3;
+}
+
 /* IMAGE FOR MUSIC AND STUFF  ---------------------------------------- */
 
 .category-card-music-pratic {
