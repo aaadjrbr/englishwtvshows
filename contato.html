@@ -78,13 +78,6 @@
 <div style="margin-top: 50px;"></div>
 <hr/>
 
-    <footer class="text-white text-center">
-        <div class="container">
-            <p style="font-family: Arial, Helvetica, sans-serif;">&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p><br>
-            <p>Powered by <a href="./index-second.html">English w/ Adenilson</a>.</p>
-        </div>
-    </footer>
-
     <button id="scrollToTopBtn" onclick="scrollToTop()">&#128316;</button>
 
     <script>
@@ -93,5 +86,14 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+        <script>
+            // Check if a footer element exists on the page
+            if (!document.querySelector('footer')) {
+                // Footer element does not exist, dynamically load the footer snippet
+                const script = document.createElement('script');
+                script.src = './footer/footer-snippet.js';
+                document.body.appendChild(script);
+            }
+        </script>
 </body>
 </html>

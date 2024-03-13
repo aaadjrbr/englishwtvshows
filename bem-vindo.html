@@ -185,12 +185,15 @@
     </section>
     <br/><hr/>
 
-    <footer class="text-white text-center">
-        <div class="container">
-            <p>&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p><br>
-            <p>Powered by <a href="./index-second.html">English w/ Adenilson</a>.</p>
-        </div>
-    </footer>
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = './footer/footer-snippet.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
 <script src="./public/js/dictionary2.js"></script> <!-- Include the main authentication script first -->
 <script src="./public/js/protected-pages.js"></script>

@@ -22,11 +22,20 @@
 
 
         body, h1, h2, p {
-            font-family: 'Anton-Regular', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             letter-spacing: 0.4px;
-            color: #256cb9;
+            color: #ffffff;
             margin: 0;
             padding: 0;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        .color1 {
+            color: #256cb9;
+            font-family: 'Anton-Regular', Arial, sans-serif;
         }
 
         /* Set a background color and text color for the entire page */
@@ -151,8 +160,8 @@
 
 
     <div class="form-container">
-        <h1 class="section-heading">Acesse sua conta:</h1>
-        <p class="category-description">Para saber como adquirir acesso total<br> ao site, assine <a style="text-decoration: none; color: #007bff;" href="./assine-ja.html">aqui</a>.</p>
+        <h1 class="section-heading color1">Acesse sua conta:</h1>
+        <p class="category-description color1">Para saber como adquirir acesso total<br> ao site, assine <a style="text-decoration: none; color: #007bff;" href="./assine-ja.html">aqui</a>.</p>
 
         <a href="./index-second.html"><button class="button2" style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Voltar</strong></button></a><br/>
         <div style="padding: 15px;" class="text-center">
@@ -182,13 +191,17 @@
         </div>
     </div>
 
-        <!-- Footer -->
-        <footer>
-                <p style="text-align: center; margin: 0; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 0.9em;">&copy; 2024 English w/ TV Shows. Todos os direitos reservados. | <a style="text-decoration: none; color:#fff;" href="./public/politica-privacidade.html">Política de Privacidade</a>.</p>
-        </footer>
-
     <script src="./public/js/main.js"></script>
     <script src="./public/js/dictionary2.js"></script>
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = './footer/footer-snippet.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
 
 </div><!-- div for loader -->

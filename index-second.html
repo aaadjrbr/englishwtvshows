@@ -211,7 +211,7 @@
         <br/>
         <div class="category-card-music-pratic">
             <h2 class="category-heading-music-pratic">🎵 Aprenda com Músicas 🎵</h2>
-            <p class="category-description-music-pratic">Treine seu "listening" com Inglês com músicas.</p>
+            <p class="category-description-music-pratic">Treine seu "listening" com músicas.</p>
             <p class="category-description-music-pratic">Incluso no teste grátis. Aproveite!</p>
             <br/>
             <a class="category-description-music-pratic" href="./teste-grauito/pearl-jam-gratis/pearl-jam-gratis.html"><button class="button-category"><strong>Experimente agora</strong></button></a>
@@ -317,12 +317,7 @@
             </section>
     <br/><hr/>
 
-    <footer class="text-white text-center">
-        <div class="container">
-            <p>&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p><br>
-            <p>Powered by <a href="./index-second.html">English w/ Adenilson</a> | <a href="./public/politica-privacidade.html">Política de Privacidade</a>.</p>
-        </div>
-    </footer>
+
 
 </div> <!-- div for the container-border -->
 </div> <!-- div for the loader -->
@@ -335,5 +330,14 @@
     
     <script src="./public/js/video-aulas.js"></script>
     <script src="./public/js/main.js"></script>
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = './footer/footer-snippet.js';
+            document.body.appendChild(script);
+        }
+    </script>
 </body>
 </html>
