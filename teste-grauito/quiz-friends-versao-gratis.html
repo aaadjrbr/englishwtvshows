@@ -61,7 +61,7 @@
 }
 
 .nav-link:hover {
-    color: #007BFF; /* Change the color on hover */
+    color: #246499;
 }
 
 .navbar ul {
@@ -71,13 +71,13 @@
 
 /* Style links */
 a {
-    color: #007bff; /* Primary blue color */
+    color: #246499;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #0056b3; /* Slightly darker blue on hover */
+    color: #246499;
 }
 
 
@@ -87,7 +87,8 @@ a:hover {
 
         .flashcard {
             width: 200px;
-            background-color: #fff;
+            background-color: #246499;
+            color: #eceef0;
             border: 1px solid #ccc;
             margin: 10px;
             padding: 20px;
@@ -103,6 +104,7 @@ a:hover {
 
         .flashcard:hover {
             background-color: #e0e0e0;
+            color: #246499;
         }
 
         .word {
@@ -136,8 +138,8 @@ a:hover {
             margin-top: 10px;
             padding: 5px 15px;
             font-size: 14px;
-            background-color: #007BFF;
-            color: #fff;
+            background-color: #eceef0;
+            color: #246499d5;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -187,10 +189,10 @@ a:hover {
             width: 80%;
         }
 
-        .button1 {
+.button1 {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #246499;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -199,9 +201,14 @@ a:hover {
     margin: 0 auto; /* Center align horizontally */
 }
 
-        .button1:hover {
-         background-color: #0056b3;
-       }
+
+.button1:hover {
+    background-color: #246499d5;
+}
+
+p {
+    color: #000000 !important;
+}
 
        /* Footer Styles */
 footer {
@@ -217,21 +224,19 @@ footer {
     right: 30px;
     z-index: 99;
     font-size: 0.8rem;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
+    background: #246499e0 !important;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 10px;
 }
 
 #scrollToTopBtn:hover {
-    background-color: #141414;
-    color: #fff;
+    background: #246499a4 !important;
 }
 
 .eng-logo {
-    width: 160px;
+    width: auto;
     height: 85px;
 }
 
@@ -590,12 +595,17 @@ scrollToTopBtn.onclick = function() {
     </div>
 
 
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p><br>
-            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
-        </div>
-    </footer>
+
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../footer/footer2/footer-snippet2.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
     <script src="./gratis.js"></script>
 </body>

@@ -597,12 +597,16 @@
     <script src="../public/js/dictionary.js"></script>
 
 
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p><br>
-            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
-        </div>
-    </footer>
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../footer/footer2/footer-snippet2.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
 </div><!-- div for loader -->
 <script>
