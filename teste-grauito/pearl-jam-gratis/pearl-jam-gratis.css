@@ -3,6 +3,21 @@
     src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Bold'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Italic'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Italic.ttf') format('truetype'),
+}
+
 #rewind-button {
     vertical-align: middle;
     background-color: #ffffff73;
@@ -37,6 +52,14 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by changing the last value (0.5 for 50% opacity) */
     z-index: -1; /* Place it below other content */
+}
+
+a {
+    color: #246499;
+}
+
+p {
+    color: #eceef0;
 }
 
 body {
@@ -88,9 +111,9 @@ body {
 }
 
 header {
-    background-color: #00000077;
+    background-color: #eceef021;
     border-radius: 10px;
-    color: #fff;
+    color: #eceef0;
     text-align: center;
     padding: 10px 10px;
 }
@@ -101,12 +124,12 @@ header {
 
 h1 {
     font-size: 1.6em;
-    color: #ffffff;
+    color: #eceef0;
     font-weight: bold;
 }
 
 p {
-    color: #2196F3; /* Blue text color */
+    color: #246499; /* Blue text color */
 }
 
 .card {
@@ -120,6 +143,7 @@ p {
 
 #lyrics-container {
     background-color: rgba(255, 255, 255, 0.95);
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -145,11 +169,11 @@ p {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #246499;
 }
 
 .btn-secondary {
-    background-color: #2196F3; /* Blue color */
+    background-color: #246499; /* Blue color */
     border: none;
     padding: 10px 20px;
     font-size: 18px;
@@ -159,7 +183,7 @@ p {
 }
 
 .btn-secondary:hover {
-    background-color: #1976D2; /* Slightly darker blue on hover */
+    background-color: #246499; /* Slightly darker blue on hover */
 }
 
 #score {
@@ -177,6 +201,7 @@ p {
     background-color: #4CAF50 !important; /* Use !important to ensure higher specificity */
     color: #fff !important; /* Use !important to ensure higher specificity */
     transition: background-color 0.5s, color 0.5s;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     z-index: 1; /* Ensure the correct and wrong backgrounds overlay the option box background */
 }
 
@@ -184,6 +209,7 @@ p {
     background-color: #FF5733 !important; /* Use !important to ensure higher specificity */
     color: #fff !important; /* Use !important to ensure higher specificity */
     transition: background-color 0.5s, color 0.5s;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     z-index: 1; /* Ensure the correct and wrong backgrounds overlay the option box background */
 }
 
@@ -195,12 +221,13 @@ p {
 
 .option-box {
     display: inline-block;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     font-size: 1.5em;
     padding: 8px 16px;
     margin: 5px;
     border: 2px solid transparent; /* Transparent border by default */
     background-color: #fff;
-    color: #2196F3; /* Blue text color */
+    color: #246499; /* Blue text color */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add box-shadow transition */
@@ -208,9 +235,9 @@ p {
 }
 
 .option-box:hover {
-    background-color: #2196F3; /* Blue background color on hover */
+    background-color: #246499; /* Blue background color on hover */
     color: #fff; /* White text color on hover */
-    border-color: #2196F3; /* Blue border color on hover */
+    border-color: #246499; /* Blue border color on hover */
 }
 
 footer {
