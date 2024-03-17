@@ -128,8 +128,12 @@ h1 {
     font-weight: bold;
 }
 
-p {
+#phrase {
     color: #246499; /* Blue text color */
+}
+
+p {
+    color: #eceef0;
 }
 
 .card {
