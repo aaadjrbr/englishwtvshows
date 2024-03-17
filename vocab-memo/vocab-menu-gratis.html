@@ -14,7 +14,7 @@
 
 
 
-    <title>Vocabulário Menu (Grátis) - English w/ TV Shows</title>
+    <title>Vocabulário - Menu (Grátis) - English w/ TV Shows</title>
     <link rel="icon" href="../favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../public/css/imagestocategories.css">
     <link rel="stylesheet" href="../public/css/main.css"> <!-- Replace with your CSS file path -->
@@ -72,7 +72,7 @@
     </header> 
     
 <div class="container-border">
-    <a href="../index-second.html"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Início</strong></button></a>
+    <a href="../index-second.html"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Voltar</strong></button></a>
     <br/>
 
     <div class="container" style="padding: 20px;">
@@ -81,9 +81,9 @@
             <div class="category-heading-vocab-memo">📚 100 Frases Mais Usadas Em Inglês 📚</div>
             <div class="category-description-vocab-memo">Com vídeo-aula, exercícios de memorização e prática de listening, fica mais fácil de aprender.</div>
             <br/>
-            <p style="font-size: 1.3em; letter-spacing: 0.6px; color: rgb(255, 255, 255); font-family: 'Anton-Regular', Arial, sans-serif;" class="category-description-vocab-memo">CONTEÚDO GRÁTIS, TESTE JÁ</p>
+            <p style="font-size: 1.3em; letter-spacing: 0.6px; color: rgb(255, 255, 255); font-family: 'Anton-Regular', Arial, sans-serif;" class="category-description-vocab-memo">CONTEÚDO GRÁTIS</p>
             <br/>
-            <a class="category-description-vocab-memo" href="./100-primeiras-frases/100-primeiras-frases.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
+            <a class="category-button-vocab-memo" href="./100-primeiras-frases/100-primeiras-frases.html"><strong>Estudar</strong></a>
         </div>
         <br/>
 
@@ -92,9 +92,9 @@
             <div class="category-heading-250-words">📝 250 Palavras Mais Usadas Em Inglês 📝</div>
             <div class="category-description-250-words">Com vídeo-aula, flashcards para memorização e lista completa com as palavras.</div>
             <br/>
-            <p style="font-size: 1.3em; letter-spacing: 0.6px; color: rgb(255, 255, 255); font-family: 'Anton-Regular', Arial, sans-serif;" class="category-description-vocab-memo">CONTEÚDO GRÁTIS, TESTE JÁ</p>
+            <p style="font-size: 1.3em; letter-spacing: 0.6px; color: rgb(255, 255, 255); font-family: 'Anton-Regular', Arial, sans-serif;" class="category-description-vocab-memo">CONTEÚDO GRÁTIS</p>
             <br/>
-            <a class="category-description-250-words" href="./250-primeiras-palavras/250-primeiras-palavras.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
+            <a class="category-button-vocab-memo" href="./250-primeiras-palavras/250-primeiras-palavras.html"><strong>Estudar</strong></a>
         </div>
     <br/>
 
@@ -102,9 +102,9 @@
             <div class="category-heading-jobs-vocab">👷🏽‍♀️👩‍💻 Profissões 👨‍⚕🕵</div>
             <div class="category-description-jobs-vocab">Aprenda com vídeos, exercícios práticos profissões em Inglês.</div>
             <br/>
-            <p style="font-size: 1.3em; letter-spacing: 0.6px; color: rgb(255, 255, 255); font-family: 'Anton-Regular', Arial, sans-serif;" class="category-description-jobs-vocab">CONTEÚDO GRÁTIS, TESTE JÁ</p>
+            <p style="font-size: 1.3em; letter-spacing: 0.6px; color: rgb(255, 255, 255); font-family: 'Anton-Regular', Arial, sans-serif;" class="category-description-jobs-vocab">CONTEÚDO GRÁTIS</p>
             <br/>
-            <a class="category-description-jobs-vocab" href="./jobs-vocab-versao-gratis/jobs-vocab.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
+            <a class="category-button-vocab-memo" href="./jobs-vocab-versao-gratis/jobs-vocab.html"><strong>Estudar</strong></a>
         </div>
         </div>
 
@@ -112,17 +112,21 @@
         <hr/>
         <br/><br/>
 
-        <h1 class="section-heading">⚠️📢 Gostou? Assine já e tenha acesso à conteúdos exclusivos! R$ 44,90/mensal </h1>
-        <p class="category-description">Para saber como adquirir acesso total ao site, assine <a href="../assine-ja.html">aqui</a>.</p>
+        <h1 class="section-heading" style="text-align: center;">📢 Gostou? Assine já e tenha acesso à conteúdos exclusivos!</h1>
+        <p class="category-description" style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Para saber como adquirir acesso total ao site, clique <a href="../assine-ja.html">aqui</a>.</p>
 
     <br/><br/><hr/>
 
-    <footer class="text-white text-center">
-        <div class="container">
-            <p>&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p><br>
-            <p>Powered by <a href="../index-second.html">English w/ Adenilson</a>.</p>
-        </div>
-    </footer>
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../footer/footer2/footer-snippet2.js';
+            document.body.appendChild(script);
+        }
+    </script>
 </div> <!--div for the margin stuff -->    
 
     <script src="../public/js/auth-pages.js"></script>

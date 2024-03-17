@@ -1,18 +1,39 @@
+@font-face {
+    font-family: 'Anton-Regular'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Bold'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Italic'; /* Specify the desired font family name */
+    src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype'),
+}
+
 .button-category {
     padding: 10px 20px;
     font-size: 0.9rem !important;
-    background: rgb(0,172,238);
-    background: linear-gradient(0deg, #256cb9, rgba(2,126,251,1) 100%);
-    font-family: Arial, Helvetica, sans-serif !important;
+    background: transparent;
+    color:#fff;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: none;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
     color: #fff;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .button-category:hover {
-    background: transparent;
     color:#fff;
+    background-color: #ffffff2c;
     border: 2px solid rgb(255, 255, 255);
     box-shadow: none;
 }
@@ -68,11 +89,11 @@
 
 /* Style the category heading */
 .category-heading-caillou {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -81,7 +102,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -89,7 +110,7 @@
 .category-button-caillou {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -100,7 +121,7 @@
 }
 
 .category-button-caillou:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
     color: #fff !important;
 }
 
@@ -141,11 +162,11 @@
 
 /* Style the category heading */
 .category-heading-friends {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -154,7 +175,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -162,7 +183,7 @@
 .category-button-friends {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -173,7 +194,7 @@
 }
 
 .category-button-friends:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 
@@ -214,11 +235,11 @@
 
 /* Style the category heading */
 .category-heading-himym {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -227,7 +248,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -235,7 +256,7 @@
 .category-button-himym {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -246,7 +267,7 @@
 }
 
 .category-button-himym:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 /* IMAGE FOR VOCAB & MEMO  ---------------------------------------- */
@@ -319,11 +340,11 @@
 
 /* Style the category heading */
 .category-heading-vocab-memo {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -332,7 +353,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -340,9 +361,11 @@
 .category-button-vocab-memo {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
-    color: white;
-    border: none;
+    background: transparent;
+    color:#fff;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: none;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
@@ -351,7 +374,10 @@
 }
 
 .category-button-vocab-memo:hover {
-    background-color: #0056b3;
+    color:#fff;
+    background-color: #ffffff2c;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: none;
 }
 
 
@@ -392,11 +418,11 @@
 
 /* Style the category heading */
 .category-heading-jobs-vocab {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -405,7 +431,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -413,7 +439,7 @@
 .category-button-jobs-vocab {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -424,7 +450,7 @@
 }
 
 .category-button-jobs-vocab:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 /* IMAGE FOR 250 MOST USED WORDS  ---------------------------------------- */
@@ -464,11 +490,12 @@
 
 /* Style the category heading */
 .category-heading-250-words {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
+    
 }
 
 /* Style the category description */
@@ -477,7 +504,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -485,7 +512,7 @@
 .category-button-250-words {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -496,7 +523,7 @@
 }
 
 .category-button-250-words:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 /* IMAGE FOR MUSIC AND STUFF  ---------------------------------------- */
@@ -536,11 +563,11 @@
 
 /* Style the category heading */
 .category-heading-music-pratic {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -549,7 +576,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -557,7 +584,7 @@
 .category-button-music-pratic {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -568,7 +595,7 @@
 }
 
 .category-button-music-pratic:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 /* IMAGE FOR READING STUFF  ---------------------------------------- */
@@ -608,11 +635,12 @@
 
 /* Style the category heading */
 .category-heading-reading-section {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
+    
 }
 
 /* Style the category description */
@@ -621,7 +649,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -629,7 +657,7 @@
 .category-button-reading-section {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -640,7 +668,7 @@
 }
 
 .category-button-reading-section:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 
@@ -681,11 +709,11 @@
 
 /* Style the category heading */
 .category-heading-game-section {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -694,7 +722,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -702,7 +730,7 @@
 .category-button-game-section {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -713,7 +741,7 @@
 }
 
 .category-button-game-section:hover {
-    background-color: #0056b3;
+    background-color: #246499dc;
 }
 
 /* IMAGE FOR DIALOGUE STUFF  ---------------------------------------- */
@@ -753,11 +781,11 @@
 
 /* Style the category heading */
 .category-heading-dialogue-section {
-    font-size: 24px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.7);
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #256cb9; /* Text color */
+    color: #ffffff; /* Text color */
 }
 
 /* Style the category description */
@@ -766,7 +794,7 @@
     position: relative;
     z-index: 1; /* Place text above the colored background */
     color: rgb(233, 229, 229); /* Text color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -774,7 +802,7 @@
 .category-button-dialogue-section {
     position: relative;
     z-index: 1; /* Place button above the colored background */
-    background-color: #256cb9;
+    background-color: #246499;
     color: white;
     border: none;
     border-radius: 5px;
@@ -785,5 +813,5 @@
 }
 
 .category-button-dialogue-section:hover {
-    background-color: #0056b3;
+background-color: #246499dc;
 }

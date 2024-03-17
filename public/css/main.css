@@ -61,7 +61,7 @@
 /* Reset some default styles for better consistency */
 body, h1, h2, p, iframe {
     font-family: 'Anton-Regular', Arial, sans-serif;
-    color:#256cb9;
+    color:#246499;
     margin: 0;
     padding: 0;
 }
@@ -95,7 +95,7 @@ body {
 
 /* Style the category heading */
 .category-heading {
-    color: #256cb9;
+    color: #246499;
     font-size: 24px;
     font-weight: bold;
 }
@@ -364,8 +364,9 @@ a:hover {
 button {
     padding: 10px 20px;
     font-size: 0.9rem !important;
-    background: rgb(0,172,238);
-    background: linear-gradient(0deg, #256cb9, rgba(2,126,251,1) 100%);
+    background: #246499;
+    background: linear-gradient(0deg, #496785, #246499 100%);
+    
     font-family: Arial, Helvetica, sans-serif !important;
     color: #fff;
     border: none;
@@ -375,7 +376,7 @@ button {
 
 button:hover {
     background: transparent;
-    border: 2px solid rgba(2,126,251,1);
+    border: 2px solid #246499;
     box-shadow: none;
 }
 
@@ -387,7 +388,7 @@ button:hover:before {
  }
 
 button:hover{
-    color: rgba(2,126,251,1);
+    color: #246499;
  }
 
 /* Style for the translated text display */
@@ -502,7 +503,7 @@ footer {
 /* Styles for the loading text */
 #loader-phrase {
     margin-top: 20px;
-    color: #256cb9;
+    color: #246499;
     text-align: center;
     font-size: 18px;
     /* Add any additional styles for the loading text */
