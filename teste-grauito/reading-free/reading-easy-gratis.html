@@ -64,7 +64,7 @@
 
 
     <nav class="navbar navbar-expand-lg">
-        <a href="../../index.html"><img class="eng-logo navbar-brand" style="width: 200px; height: 100px;" src="../../public/assets/images/eng-logo.png"></a>
+        <a href="../../index.html"><img class="eng-logo navbar-brand" style="width: auto; height: 100px;" src="../../public/assets/images/eng-logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">☰</span>
         </button>
@@ -88,7 +88,7 @@
 
     
     <div class="centered-container"> <!-- Centered container -->
-        <h1>📚☕️ Melhore sua leitura:</h1><br/>
+        <h1>📚☕️ Melhore sua leitura 📚☕️</h1><br/>
         <p>Nível: Básico, Intermediário</p>
     </div>
 
@@ -205,12 +205,16 @@
 
 
     <br/><br/><hr>
-    <footer class="text-white text-center">
-        <div class="container">
-            <p>&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p>
-            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
-        </div>
-    </footer>
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
 
     <script src="./reading-easy-scrambled1-gratis.js"
