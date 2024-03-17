@@ -22,19 +22,18 @@
     padding: 10px 20px;
     font-size: 0.9rem !important;
     background: transparent;
-    color:#fff;
-    border: 2px solid rgb(255, 255, 255);
+    color:#eceef0;
+    border: 2px solid #eceef0;
     box-shadow: none;
     font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
-    color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .button-category:hover {
-    color:#fff;
+    color:#eceef0;
     background-color: #ffffff2c;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #eceef0;
     box-shadow: none;
 }
 
@@ -47,7 +46,7 @@
  }
 
 .button-category:hover{
-    color:#fff;
+    color:#eceef0;
  }
 
 
@@ -56,7 +55,7 @@
 
 .category-card-caillou {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/caillou-bg_780x439.jpg?alt=media&token=8e350eb5-4360-474f-9e1b-8d459fd17cbe&_gl=1*1i8y2lp*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQxMjcuNDguMC4w');
     background-size: cover;
     background-position: center center;
@@ -93,7 +92,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -101,7 +100,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -111,7 +110,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -122,14 +121,14 @@
 
 .category-button-caillou:hover {
     background-color: #246499dc;
-    color: #fff !important;
+    color: #eceef0 !important;
 }
 
 /* IMAGE FOR FRIENDS ---------------------------------------- */
 
 .category-card-friends {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/friends-bg_780x439.jpg?alt=media&token=cd0456f5-1a11-4d6e-863a-41d3c14be2fa&_gl=1*cco4l8*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQyNTYuMjQuMC4w');
     background-size: cover;
     background-position: center center;
@@ -166,7 +165,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -174,7 +173,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -184,7 +183,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -202,7 +201,7 @@
 
 .category-card-himym {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/How-I-Met-Your-Mother-bg_780x439.jpg?alt=media&token=bfc805fd-a680-45c0-bac9-3b9e034fa220&_gl=1*19f9p9j*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQzMjMuNTAuMC4w');
     background-size: cover;
     background-position: center center;
@@ -239,7 +238,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -247,7 +246,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -257,7 +256,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -274,7 +273,7 @@
 
 .category-card-vocab-memo2 {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocab-category1.jpg?alt=media&token=2668a846-94e3-41f4-af0a-63aa2c04c4c8&_gl=1*1m3o1ld*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzgxNjAuMzIuMC4w');
     background-size: cover;
     background-position: center center;
@@ -307,7 +306,7 @@
 
 .category-card-vocab-memo {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/cartoons-bg_780x439.jpg?alt=media&token=b1899bd7-d293-422f-9ef6-1a4c28007217&_gl=1*19sct7c*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQ0NzcuNDkuMC4w');
     background-size: cover;
     background-position: center center;
@@ -344,7 +343,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -352,7 +351,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -362,8 +361,8 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background: transparent;
-    color:#fff;
-    border: 2px solid rgb(255, 255, 255);
+    color:#eceef0;
+    border: 2px solid #eceef0;
     box-shadow: none;
     font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
     border-radius: 5px;
@@ -376,7 +375,7 @@
 .category-button-vocab-memo:hover {
     color:#fff;
     background-color: #ffffff2c;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #eceef0;
     box-shadow: none;
 }
 
@@ -385,7 +384,7 @@
 
 .category-card-jobs-vocab {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/bob-the-builder-bg_780x439.jpg?alt=media&token=221066ea-1bb5-4d5c-934b-faa7f0b8613d&_gl=1*zhpvp4*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQ1MzcuNDkuMC4w');
     background-size: cover;
     background-position: center center;
@@ -422,7 +421,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -430,7 +429,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -440,7 +439,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -457,7 +456,7 @@
 
 .category-card-250-words {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/250-words-background.jpg?alt=media&token=4314db1f-def8-44a0-a782-96ea031db9c3');
     background-size: cover;
     background-position: center center;
@@ -494,7 +493,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
     
 }
 
@@ -503,7 +502,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -513,7 +512,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -530,7 +529,7 @@
 
 .category-card-music-pratic {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fphoto-1510915361894-db8b60106cb1.avif?alt=media&token=1a056763-5721-45c5-ae3d-f343462e66d4&_gl=1*1g0gk1u*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQ3ODEuNTIuMC4w');
     background-size: cover;
     background-position: center center;
@@ -567,7 +566,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -585,7 +584,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -602,7 +601,7 @@
 
 .category-card-reading-section {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/reading-section%2Fbooks-bg_1_780x439.png?alt=media&token=6ba50860-d927-4475-9f47-23e8cc3ca6da&_gl=1*1wv4cve*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDQ5NzEuNDkuMC4w');
     background-size: cover;
     background-position: center center;
@@ -639,7 +638,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
     
 }
 
@@ -648,7 +647,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -658,7 +657,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -676,7 +675,7 @@
 
 .category-card-game-section {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/game-section%2Fmario1_780x439.jpg?alt=media&token=600cca8b-82e0-4206-904c-abc85342f1f7&_gl=1*1t9y4qc*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDUwNzMuMTYuMC4w');
     background-size: cover;
     background-position: center center;
@@ -713,7 +712,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -721,7 +720,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -731,7 +730,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -748,7 +747,7 @@
 
 .category-card-dialogue-section {
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #eceef0;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/dialogues-section%2Fphoto-1573496546038-82f9c39f6365.avif?alt=media&token=495ec8f2-45b7-4f89-b636-b72931e290d7&_gl=1*1ba2ypl*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODE5ODcxMS4xMS4xLjE2OTgyMDM4MjQuNDQuMC4w');
     background-size: cover;
     background-position: center center;
@@ -785,7 +784,7 @@
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.6);
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: #ffffff; /* Text color */
+    color: #eceef0; /* Text color */
 }
 
 /* Style the category description */
@@ -793,7 +792,7 @@
     margin-top: 10px;
     position: relative;
     z-index: 1; /* Place text above the colored background */
-    color: rgb(233, 229, 229); /* Text color */
+    color: #eceef0; /* Text color */
     font-family: 'Poppins-Regular', Helvetica, sans-serif;
     text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
@@ -803,7 +802,7 @@
     position: relative;
     z-index: 1; /* Place button above the colored background */
     background-color: #246499;
-    color: white;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
