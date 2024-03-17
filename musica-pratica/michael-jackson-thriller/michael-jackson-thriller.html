@@ -80,64 +80,75 @@
 </header>
 
 
-    <div class="container">
-        <h1 class="text-center mt-4">Michael Jackson - Thriller</h1>
-        
+<div class="container">
+    <h1 class="text-center mt-4">Michael Jackson - Thriller</h1>
+    <img style="width: auto; height: 200px; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fartworks-KzY0QtXcdmm6lyls-LzdPNQ-t500x500.jpg?alt=media&token=912542e5-29d5-4b0a-8c91-f9e6d3668493" alt="Michael Jackson"><br/>
+    <br/>
+    <h2 style="font-size: 0.9em; color: white;" class="text-center mt-4">Para começar, é bastante simples. Clique no botão "play" abaixo para ouvir o áudio e, em seguida, selecione as opções correspondentes.</h2>
+    
 
 
-    <div class="container">
-        <!-- ... (your existing content) ... -->
+<div class="container">
+    <!-- ... (your existing content) ... -->
 
-        <div class="row mt-4">
-            <div class="col-md-8 offset-md-2">
-                <div class="card">
-                    <div class="card-body">
-                        <!-- Part label -->
-                        <div id="part-label" class="text-center"></div> <!-- Add this line -->
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Part label -->
+                    <div id="part-label" class="text-center"></div> <!-- Add this line -->
 
-                        <!-- Phrase with options -->
-                        <div id="lyrics-container" class="text-center">
-                            <p id="phrase" class="h4"></p>
-                        </div>
-
-                        <!-- Options for filling in the gaps -->
-                        <div id="options-container" class="mt-4">
-                            <!-- Clickable options will be dynamically generated here -->
-                        </div>
-                        <br/>
-                        <div id="finishing-message-container" class="text-center">
-                            <button style="font-size: 0.8em; margin-top: 10px;" class="btn-primary" id="go-back-button">⏮️ Voltar Partes</button>
-                            <button style="font-size: 0.8em; margin-top: 10px;" class="btn-primary" class="btn-primary" id="restart-button">🔁 Recomeçar 🔁</button>
-                            <button style="font-size: 0.8em;  margin-top: 10px;" class="btn-primary" id="skip-button">Pular Partes ⏭️</button>
-                            
-                        </div>
-                        <!-- Displaying the score -->
-                        <div id="score" class="text-center mt-3"></div>
+                    <!-- Phrase with options -->
+                    <div id="lyrics-container" class="text-center">
+                        <p id="phrase" class="h4"></p>
                     </div>
+
+                    <!-- Options for filling in the gaps -->
+                    <div id="options-container" class="mt-4">
+                        <!-- Clickable options will be dynamically generated here -->
+                    </div>
+                    <br/>
+                    <div id="finishing-message-container" class="text-center">
+                        <button style="font-size: 0.8em; margin-top: 10px;" class="btn-primary" id="go-back-button">⏮️ Voltar Partes</button>
+                        <button style="font-size: 0.8em; margin-top: 10px;" class="btn-primary" class="btn-primary" id="restart-button">🔁 Recomeçar 🔁</button>
+                        <button style="font-size: 0.8em;  margin-top: 10px;" class="btn-primary" id="skip-button">Pular Partes ⏭️</button>
+                        
+                    </div>
+                    <!-- Displaying the score -->
+                    <div id="score" class="text-center mt-3"></div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row mt-4">
-            <div class="col-md-6 offset-md-3">
-              <audio id="audio" controls>
-                <source id="audio-source" src="" type="audio/mpeg">
-              </audio>
-              <div class="audio-controls">
-                <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="play-button">Play ▶️</button>
-                <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="pause-button">Pausar ⏸️</button>
-                <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="restart-audio-button">Tocar do início ⏯️</button>
-              </div>
-            </div>
+    <div class="row mt-4">
+        <div class="col-md-6 offset-md-3">
+          <audio id="audio" controls>
+            <source id="audio-source" src="" type="audio/mpeg">
+          </audio>
+          <div class="audio-controls">
+            <img id="rewind-button" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Frewind-time%20(1).png?alt=media&token=96506f2a-7171-48ae-8766-e1946c4498d0&_gl=1*gpve4h*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODM1MzM0OC4xNC4xLjE2OTgzNTM0MzUuNjAuMC4w" alt="Rewind">
+            <img id="fast-forward-button" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fforward-time.png?alt=media&token=8718f411-e136-4e85-8be2-1f3d2414b2fd&_gl=1*15s7v6x*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODM1MzM0OC4xNC4xLjE2OTgzNTMzOTYuMTIuMC4w" alt="Fast Forward">
+            <br/>
+            <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="play-button">Play ▶️</button>
+            <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="pause-button">Pausar ⏸️</button>
+            <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="restart-audio-button">Tocar do início ⏯️</button>
           </div>
+        </div>
+      </div>
 
 <hr/>
 
-    <footer>
-        <br/>
-            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p>
-            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
-    </footer>
+    <!-- Footer -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

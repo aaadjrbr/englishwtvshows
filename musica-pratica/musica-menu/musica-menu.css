@@ -21,7 +21,6 @@ main {
 }
 
 .sidebar {
-  background-color: #040249;
   width: 35%px; /* Adjusted to take full width on smaller screens */
   min-height: 100vh; /* Changed 'height' to 'min-height' for responsiveness */
   padding: 0;
@@ -129,7 +128,6 @@ main {
   align-items: center;
   padding: 8px 0px 8px 0px;
   gap: 32px;
-  background-color: rgb(7, 3, 105);
 }
 
 .botao-voltaravancar {

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["dark"],
         // Add four more sets of answers here for the first part
       ],
-      driveFileId: "1raUJE2jzzs5t-fZMWFOgHH1bGbQtQd60" // Replace with your Google Drive file ID for the first part
+      audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part1.mp3?alt=media&token=0dcdab23-4f29-4f54-b202-67602ad3a14a"
     },
     {
       partLabel: "Parte 2",
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["heart"],
         // Add four more sets of answers here for the first part
       ],
-      driveFileId: "12HdolutY8SoPqIQpsyRcXO2W2pDXI7RP" // Replace with your Google Drive file ID for the first part
+      audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part2.mp3?alt=media&token=ad717254-713b-40f2-a4f9-76384afafdac"
     },
     {
       partLabel: "Parte 3",
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["make it"],
         // Add four more sets of answers here for the first part
       ],
-      driveFileId: "1B6FxfrZSzJAKjq7G5Ulldg2Ko4BvuaL5" // Replace with your Google Drive file ID for the first part
+      audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part3.mp3?alt=media&token=49bdb9b4-034d-4891-88ea-40176027dff7"
     },
     {
       partLabel: "Parte 4",
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["paralyzed"],
         // Add four more sets of answers here for the first part
       ],
-      driveFileId: "1V6CYoWe5yrCHJtBYuMk4z7JQj3ZHjX8V" // Replace with your Google Drive file ID for the first part
+      audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part4.mp3?alt=media&token=d4e9080d-07c8-43a0-a090-0e758d0d42c3"
     },
     {
       partLabel: "Parte 5",
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["strike"],
         // Add four more sets of answers here for the first part
       ],
-      driveFileId: "1uW4uwobpftlIpXyG1bmPAKkodSZ-kuBj" // Replace with your Google Drive file ID for the first part
+      audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part5.mp3?alt=media&token=b31855b1-2757-4e9c-b1e3-392a5639e46b"
     },
   {
     partLabel: "Parte 6",
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["life"],
         ["thriller"],
     ],
-    driveFileId: "1YTpaHv0eLoXkGVgleAM19vgShl7jnS11" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part6.mp3?alt=media&token=6f4b838e-bfbd-420f-9aa5-fe801d7f4bb5"
   },
   {
     partLabel: "Parte 7",
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["realize"],
         ["run"],
     ],
-    driveFileId: "1i72Z1BcMzWs-LfJsiL4-1lxgsMbmARa0" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part7.mp3?alt=media&token=bb89fd4c-259e-4f0a-8482-e91ab132ff3c"
   },
   {
     partLabel: "Parte 8",
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["wonder"],
         ["sun"],
     ],
-    driveFileId: "1zGlGGhCBlfkayAmGvWKDJ3IxBp2ijtnf" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part8.mp3?alt=media&token=ccf25abc-65d1-48f7-a473-8118fcbd1329"
   },
   {
     partLabel: "Parte 9",
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["hope"],
         ["imagination"],
     ],
-    driveFileId: "1QmRiV7sE4mv50Qeu6yR3M0KYJ1wCKAY5" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part9.mp3?alt=media&token=99a22fb4-a45d-460b-9fa3-6c4c96af028d"
   },
   {
     partLabel: "Parte 10",
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["behind"],
         ["time"],
     ],
-    driveFileId: "1hLA1IRXfpLB3Yc9-2EAxI4iM97eMd0MG" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part10.mp3?alt=media&token=68938763-81e6-4998-ae82-b4b0b4a74efa"
   },
   {
     partLabel: "Parte 11",
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["demons"],
         ["side"],
     ],
-    driveFileId: "1dHa4wBgdnW2AV89byhZfLeVGO7QLiII-" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part11.mp3?alt=media&token=05b409f2-a144-49fb-8aa5-6982e47a82f1"
   },
   {
     partLabel: "Parte 12",
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["number"],
         ["dial"],
     ],
-    driveFileId: "1vQFvY8_SIx0Bwh22E_j1_U1MtWfzBOfv" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part12.mp3?alt=media&token=d7dcf360-aedf-45c4-84d9-50a8688df641"
   },
   {
     partLabel: "Parte 13",
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["cuddle"],
         ["together"],
     ],
-    driveFileId: "1DO9qwz7yd1hNcoHF4Xy62acP2FubPYV5" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part13.mp3?alt=media&token=ab592530-1e74-4eac-a9a0-de9a4a06b3c2"
   },
   {
     partLabel: "Parte 14",
@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ["screen"],
         ["see"],
     ],
-    driveFileId: "1Is8N1MffwAtyVGCeP860Ng6DOOHoSRft" // Replace with your Google Drive file ID for the second part
+    audioURL: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fmichael-jackson-thriller-part14.mp3?alt=media&token=27596c7e-137e-49df-a3f4-0cc0035b6d84"
   },
   
     // Add more parts with labels, phrases, options, and answers here
@@ -313,182 +313,197 @@ document.addEventListener("DOMContentLoaded", function () {
   const pauseButton = document.getElementById("pause-button");
   const restartAudioButton = document.getElementById("restart-audio-button");
   const audio = document.getElementById("audio");
+  const fastForwardImage = document.getElementById("fast-forward-button");
+  const rewindImage = document.getElementById("rewind-button");
 
 
-  // Add event listeners for the audio control buttons
+  // Forward & Rewind Buttons
+  fastForwardImage.addEventListener("click", fastForward);
+  rewindImage.addEventListener("click", rewind);
 
-  playButton.addEventListener("click", () => {
-    if (currentAudio) {
-      currentAudio.play();
-    }
-  });
-
-  pauseButton.addEventListener("click", () => {
-    if (currentAudio) {
-      currentAudio.pause();
-    }
-  });
-
-  restartAudioButton.addEventListener("click", () => {
-    if (currentAudio) {
-      currentAudio.currentTime = 0;
-      currentAudio.play();
-    }
-  });
-
-
-  // Add an event listener to the restart button
-restartButton.addEventListener("click", () => {
-  // Reset the current song and phrase index, as well as the score
-  currentSongIndex = 0;
-  currentPhraseIndex = 0;
-  score = 0;
-  
-  // Load the first phrase of the first part
-  loadPhrase(currentSongIndex, currentPhraseIndex);
-  
-  // Show the skip button
-  skipButton.style.display = "block";
-});
-
-// Add an event listener to the skip button
-skipButton.addEventListener("click", () => {
-  // Check if there are more parts to skip to
-  if (currentSongIndex < songsData.length - 1) {
-    // Pause the current audio before loading the new part
-    if (currentAudio) {
-      currentAudio.pause();
-    }
-
-    // Increase the current song index to skip to the next part
-    currentSongIndex++;
-    currentPhraseIndex = 0; // Reset the phrase index for the new part
-    score = 0; // Reset the score for the new part
-    // Load the first phrase of the new part
-    loadPhrase(currentSongIndex, currentPhraseIndex);
+// Function to fast forward 3 seconds
+function fastForward() {
+  if (currentAudio) {
+    currentAudio.currentTime += 3; // Adjust the time you want to fast forward by
   }
-});
-
-
-    // Add an event listener to the go back button
-goBackButton.addEventListener("click", () => {
-  // Check if there are previous parts to go back to
-  if (currentSongIndex > 0) {
-    // Decrease the current song index to go back to the previous part
-    currentSongIndex--;
-    currentPhraseIndex = 0; // Reset the phrase index for the previous part
-    score = 0; // Reset the score for the previous part
-    // Load the first phrase of the previous part
-    loadPhrase(currentSongIndex, currentPhraseIndex);
-    
-    // Show the skip button again
-    skipButton.style.display = "block";
-  }
-});
-
-function loadAudio(driveFileId) {
-  const driveFileURL = `https://drive.google.com/uc?id=${driveFileId}`;
-  currentAudio = new Audio(driveFileURL);
-  audio.src = "";
-  audio.load();
 }
 
-  function loadPhrase(songIndex, phraseIndex) {
-      const currentSong = songsData[songIndex];
-      const phrase = currentSong.phrases[phraseIndex];
-      const options = currentSong.options[phraseIndex];
-      const audioId = `audio-${songIndex}-${phraseIndex}`; // Unique audio element ID
+// Function to rewind 3 seconds
+function rewind() {
+  if (currentAudio) {
+    currentAudio.currentTime -= 3; // Adjust the time you want to rewind by
+  }
+}
+  // Function to load audio
+  function loadAudio(audioUrl) {
+    if (currentAudio) {
+      currentAudio.pause();
+    }
+    currentAudio = new Audio(audioUrl);
+    audio.src = audioUrl;
+    audio.load();
     
-      // Store the current playback position
-      const currentTime = audio.currentTime;
-    
-      phraseContainer.textContent = phrase;
-      partLabelContainer.textContent = currentSong.partLabel;
-      optionsContainer.innerHTML = "";
-    
-      options.forEach((option, index) => {
-        const optionBox = document.createElement("div");
-        optionBox.classList.add("option-box");
-        optionBox.textContent = option;
-        optionBox.addEventListener("click", () => {
-          selectOption(option, songIndex, phraseIndex);
-        });
-    
-        optionsContainer.appendChild(optionBox);
-      });
-    
-      loadAudio(currentSong.driveFileId, audioId);
-      scoreDisplay.textContent = `Frases Concluídas: ${score}`;
-    
-      // Set the playback position to the stored value
-      audio.currentTime = currentTime;
-    }      
-    
+    // Reattach event listeners for audio control buttons
+    playButton.addEventListener("click", () => {
+      if (currentAudio) {
+        currentAudio.play();
+      }
+    });
 
-  function selectOption(selectedOption, songIndex, phraseIndex) {
-      const currentSong = songsData[songIndex];
-      const currentAnswers = currentSong.answers[phraseIndex];
-    
-      const optionBoxes = optionsContainer.querySelectorAll(".option-box");
-    
-      // Remove the 'correct' and 'wrong' classes from all option boxes
-      optionBoxes.forEach((box) => {
-        box.classList.remove("correct", "wrong", "inactive");
+    pauseButton.addEventListener("click", () => {
+      if (currentAudio) {
+        currentAudio.pause();
+      }
+    });
+
+    restartAudioButton.addEventListener("click", () => {
+      if (currentAudio) {
+        currentAudio.currentTime = 0;
+        currentAudio.play();
+      }
+    });
+  }
+
+  // Function to load a phrase
+  function loadPhrase(songIndex, phraseIndex) {
+    const currentSong = songsData[songIndex];
+    const phrase = currentSong.phrases[phraseIndex];
+    const options = currentSong.options[phraseIndex];
+
+    phraseContainer.textContent = phrase;
+    partLabelContainer.textContent = currentSong.partLabel;
+    optionsContainer.innerHTML = "";
+
+    options.forEach((option, index) => {
+      const optionBox = document.createElement("div");
+      optionBox.classList.add("option-box");
+      optionBox.textContent = option;
+      optionBox.addEventListener("click", () => {
+        selectOption(option, songIndex, phraseIndex);
       });
-    
-      if (currentAnswers.includes(selectedOption)) {
-        optionBoxes.forEach((box) => {
-          if (box.textContent === selectedOption) {
-            box.classList.add("correct");
-          } else {
-            box.classList.add("inactive");
-          }
-        });
-        phraseContainer.textContent = "✔️ Correto!";
-        score++;
-        setTimeout(() => {
-          nextPhrase(songIndex, phraseIndex);
-        }, 1000);
+
+      optionsContainer.appendChild(optionBox);
+    });
+
+    loadAudio(currentSong.audioURL);
+    scoreDisplay.textContent = `Frases Concluídas: ${score}`;
+  }
+
+
+// Function to select an option
+function selectOption(selectedOption, songIndex, phraseIndex) {
+  const currentSong = songsData[songIndex];
+  const currentAnswers = currentSong.answers[phraseIndex];
+  const optionBoxes = optionsContainer.querySelectorAll(".option-box");
+
+  optionBoxes.forEach((box) => {
+    box.classList.remove("correct", "wrong", "inactive");
+  });
+
+  if (currentAnswers.includes(selectedOption)) {
+    optionBoxes.forEach((box) => {
+      if (box.textContent === selectedOption) {
+        box.classList.add("correct");
       } else {
-        optionBoxes.forEach((box) => {
-          if (box.textContent === selectedOption) {
-            box.classList.add("wrong");
-          } else {
-            box.classList.add("inactive");
-          }
-        });
-        phraseContainer.textContent = "😕 Incorreto. Tente novamente.";
-        setTimeout(() => {
-          optionBoxes.forEach((box) => {
-            box.classList.remove("wrong");
-            box.classList.remove("inactive");
-          });
-          phraseContainer.textContent = songsData[songIndex].phrases[phraseIndex];
-        }, 1500);
+        box.classList.add("inactive");
       }
-    }
-  
-    function nextPhrase(songIndex, phraseIndex) {
-      if (songIndex === songsData.length - 1 && phraseIndex === songsData[songIndex].phrases.length - 1) {
-        phraseContainer.textContent = "🥳✨🎉 Parabéns! Você completou tudo.";
-        partLabelContainer.textContent = "";
-        optionsContainer.innerHTML = "";
-        scoreDisplay.textContent = `Frases Concluídas: ${score}`;
-        skipButton.style.display = "none";
-      } else if (phraseIndex < songsData[songIndex].phrases.length - 1) {
-        loadPhrase(songIndex, phraseIndex + 1);
-      } else if (songIndex < songsData.length - 1) {
-        currentAudio.pause(); // Pause the audio before moving to the next part
-        // Increase the current song index to skip to the next part
-        currentSongIndex++;
-        currentPhraseIndex = 0; // Reset the phrase index for the new part
-        score = 0; // Reset the score for the new part
-        // Load the first phrase of the new part
-        loadPhrase(currentSongIndex, currentPhraseIndex);
+    });
+    phraseContainer.textContent = "✔️ Correto!";
+    score++;
+    setTimeout(() => {
+      nextPhrase(songIndex, phraseIndex);
+    }, 1000);
+  } else {
+    optionBoxes.forEach((box) => {
+      if (box.textContent === selectedOption) {
+        box.classList.add("wrong");
+      } else {
+        box.classList.add("inactive");
       }
+    });
+    phraseContainer.textContent = "😕 Incorreto. Tente novamente.";
+    setTimeout(() => {
+      optionBoxes.forEach((box) => {
+        box.classList.remove("wrong");
+        box.classList.remove("inactive");
+      });
+      phraseContainer.textContent = songsData[songIndex].phrases[phraseIndex];
+    }, 1500);
+  }
+}
+
+
+
+  // Function to go to the next phrase or part
+  function nextPhrase(songIndex, phraseIndex) {
+    if (songIndex === songsData.length - 1 && phraseIndex === songsData[songIndex].phrases.length - 1) {
+      phraseContainer.textContent = "Parabéns! Você mandou bem na música! Pronto para dar um passo adiante? É só clicar em 'Voltar' e seguir praticando! 🥳";
+      partLabelContainer.textContent = "";
+      optionsContainer.innerHTML = "";
+      scoreDisplay.textContent = `Frases Concluídas: ${score}`;
+      skipButton.style.display = "none";
+    } else if (phraseIndex < songsData[songIndex].phrases.length - 1) {
+      loadPhrase(songIndex, phraseIndex + 1);
+    } else if (songIndex < songsData.length - 1) {
+      currentAudio.pause();
+      currentSongIndex++;
+      currentPhraseIndex = 0;
+      score = 0;
+      loadPhrase(currentSongIndex, currentPhraseIndex);
     }
+
+    // Reattach event listeners for audio control buttons
+    playButton.addEventListener("click", () => {
+      if (currentAudio) {
+        currentAudio.play();
+      }
+    });
+
+    pauseButton.addEventListener("click", () => {
+      if (currentAudio) {
+        currentAudio.pause();
+      }
+    });
+
+    restartAudioButton.addEventListener("click", () => {
+      if (currentAudio) {
+        currentAudio.currentTime = 0;
+        currentAudio.play();
+      }
+    });
+  }
+
+  // Add an event listener to the restart button
+  restartButton.addEventListener("click", () => {
+    currentPhraseIndex = 0;
+    score = 0;
+    loadPhrase(currentSongIndex, currentPhraseIndex);
+  });
+
+  // Add an event listener to the skip button
+  skipButton.addEventListener("click", () => {
+    if (currentSongIndex < songsData.length - 1) {
+      if (currentAudio) {
+        currentAudio.pause();
+      }
+      currentSongIndex++;
+      currentPhraseIndex = 0;
+      score = 0;
+      loadPhrase(currentSongIndex, currentPhraseIndex);
+    }
+  });
+
+  // Add an event listener to the go back button
+  goBackButton.addEventListener("click", () => {
+    if (currentSongIndex > 0) {
+      currentSongIndex--;
+      currentPhraseIndex = 0;
+      score = 0;
+      loadPhrase(currentSongIndex, currentPhraseIndex);
+    }
+  });
 
   // Initialize the first phrase and audio
   loadPhrase(currentSongIndex, currentPhraseIndex);
-  loadAudio(songsData[currentSongIndex].driveFileId);
+  loadAudio(songsData[currentSongIndex].audioURL);
 });

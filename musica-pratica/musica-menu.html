@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en, pt">
+<html lang="en, pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,6 @@
                     <h2 style="margin-bottom: 15px; text-align: center; color: #7a7a7a;">🎧 Inglês Com Músicas</h2>
                     <p style="margin-bottom: 15px; text-align: center; color: #7a7a7a; font-weight: 700px;">Escolha uma categoria para começar:</p>
                     <a class="sidebar-items-link" href="../bem-vindo.html"><span id="sidebar-items-icon" class="fa fa-home"></span><span>Início</span></a> 
-                    <p style="color: #7a7a7a; margin-top: 260px; text-align: center;">&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p>
                 </li>
             </ul>
         </section>
@@ -65,7 +64,7 @@
                     <div class="playlist-view-bloco" id="bloco-foco">
                         <div class="playlist-view-bloco-container">
                             <img class="playlist-view-bloco-container-imagem"
-                                src="https://drive.google.com/uc?id=1GmcqPGTMWvawPzas4XWhVpSO4nuneblC" />
+                                src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fpearl-jam%2Fr-22502885-1647223165-7864-ejfzlb.webp?alt=media&token=9899c51f-8963-48ce-9849-8e4645f0a5d4" />
                             <h3 class="playlist-view-bloco-container-tituloplaylist">Pearl Jam - Last Kiss</h3>
                             <p class="playlist-view-bloco-container-paragrafo">Pearl Jam é uma banda norte-americana de rock.</p>
                         </div>
@@ -78,7 +77,7 @@
                     <div class="playlist-view-bloco" id="bloco-playlists">
                         <div class="playlist-view-bloco-container">
                             <img class="playlist-view-bloco-container-imagem"
-                                src="https://drive.google.com/uc?id=1smfzp2iWb9L13QWrpRZq44OtpyqCp3VV" />
+                                src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fmichael-jackson%2Fartworks-KzY0QtXcdmm6lyls-LzdPNQ-t500x500.jpg?alt=media&token=912542e5-29d5-4b0a-8c91-f9e6d3668493" />
                             <h3 class="playlist-view-bloco-container-tituloplaylist">Michael Jackson - Thriller</h3>
                             <p class="playlist-view-bloco-container-paragrafo">O "Rei do Pop".</p>
                         </div>
@@ -92,11 +91,21 @@
     </section>
 
 
-</main>
 
 
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../footer/footer2/footer-snippet2.js';
+            document.body.appendChild(script);
+        }
+    </script>
         <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>
     </main>
+    
 
     <script src="./musica-menu/musica-menu.js"></script>
 
@@ -104,4 +113,4 @@
     <script src="../public/js/protected-pages.js"></script>
 </body>
 
-</html>      
+</html>

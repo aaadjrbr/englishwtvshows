@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en, pt">
+<html lang="en, pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2110834991626364">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./pearl-jam.css">
@@ -18,24 +19,23 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2110834991626364"
      crossorigin="anonymous"></script>
 
-
         <!--Styles for loader-->
 
         <style>
-            .loader-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(228, 241, 255);
-            z-index: 9999; /* Ensure the loader is on top of everything */
-                }
-            </style>
+        .loader-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(228, 241, 255);
+        z-index: 9999; /* Ensure the loader is on top of everything */
+            }
+        </style>
 
 
 
@@ -56,13 +56,13 @@
 
 <body>
 
-
             <!-- Loading spinner container -->
             <div class="loader-container">
                 <img style="width: 150px; height: 150px;" src="../../public/assets/images/tv-loader-pages.gif"></img>
             </div>
 
 <div id="site-content" style="display: none;">
+
 
 
 
@@ -82,6 +82,9 @@
 
     <div class="container">
         <h1 class="text-center mt-4">Pearl Jam - Last Kiss</h1>
+        <img style="width: auto; height: 200px; border-radius: 10px; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fpearl-jam%2Fr-22502885-1647223165-7864-ejfzlb.webp?alt=media&token=9899c51f-8963-48ce-9849-8e4645f0a5d4&_gl=1*ujdeth*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzNDA3NTQuNTcuMC4w" alt="Pearl Jam"><br/>
+        <br/>
+        <h2 style="font-size: 0.9em; color: white;" class="text-center mt-4">Para começar, é bastante simples. Clique no botão "play" abaixo para ouvir o áudio e, em seguida, selecione as opções correspondentes.</h2>
         
 
 
@@ -124,6 +127,9 @@
                 <source id="audio-source" src="" type="audio/mpeg">
               </audio>
               <div class="audio-controls">
+                <img id="rewind-button" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Frewind-time%20(1).png?alt=media&token=96506f2a-7171-48ae-8766-e1946c4498d0&_gl=1*gpve4h*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODM1MzM0OC4xNC4xLjE2OTgzNTM0MzUuNjAuMC4w" alt="Rewind">
+                <img id="fast-forward-button" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/music-section%2Fforward-time.png?alt=media&token=8718f411-e136-4e85-8be2-1f3d2414b2fd&_gl=1*15s7v6x*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODM1MzM0OC4xNC4xLjE2OTgzNTMzOTYuMTIuMC4w" alt="Fast Forward">
+                <br/>
                 <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="play-button">Play ▶️</button>
                 <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="pause-button">Pausar ⏸️</button>
                 <button style="padding: 10px; margin-top: 5px;" class="btn-primary" id="restart-audio-button">Tocar do início ⏯️</button>
@@ -133,19 +139,26 @@
 
 <hr/>
 
-    <footer>
-        <br/>
-            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p>
-            <p>Powered by <a href="https://adenilsonribeiro.com">English w/ Adenilson</a>.</p>
-    </footer>
+    <!-- Footer -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./pearl-jam.js"></script>
 
+
     <script src="../../public/js/dictionary2.js"></script> <!-- Include the main authentication script first -->
     <script src="../../public/js/protected-pages.js"></script>
+
 
 </div><!-- div for loader -->
 <script>
