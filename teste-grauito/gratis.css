@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     z-index: 1;
 }
@@ -14,7 +14,7 @@
 .popup-image {
     max-width: 80%;
     max-height: 80%;
-    margin-top: 10%;
+    margin-top: 5%;
     border-radius: 10px;
 }
 
@@ -26,3 +26,13 @@
     color: white;
     cursor: pointer;
 }
+
+/* Styles for small screens (less than or equal to 600px width) */
+@media only screen and (max-width: 600px) {
+    .popup-image {
+        max-width: 80%;
+        max-height: 80%;
+        margin-top: 25%;
+        border-radius: 10px;
+    }
+  }
