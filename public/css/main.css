@@ -308,13 +308,13 @@ nav {
 
 /* Style headings and paragraph text */
 h2 {
-    color: #256cb9;
+    color: #246499;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 h3 {
-    color: #256cb9;
+    color: #246499;
     font-family: 'Anton-Regular', Arial, sans-serif;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -332,7 +332,7 @@ p {
 
 /* Style links */
 a {
-    color: #256cb9; /* Primary blue color */
+    color: #246499; /* Primary blue color */ 
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -396,7 +396,7 @@ button:hover{
     margin-top: 20px;
     font-size: 24px; /* Increase font size for better visibility */
     font-weight: bold;
-    color: #256cb9; /* Primary blue color */
+    color: #246499; /* Primary blue color */
     background-color: #f2f2f2; /* Light gray background */
     padding: 10px; /* Add some padding to create space around the text */
     border-radius: 5px; /* Rounded corners */
