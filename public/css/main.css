@@ -188,7 +188,8 @@ nav {
 .nav-link {
     font-size: 18px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    color: #fff !important;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+    color: #eceef0 !important;
     transition: color 0.3s; /* Add a smooth color transition on hover */
     margin: 0 20px; /* Add margin to each link for spacing */
 }
@@ -445,8 +446,8 @@ footer {
     padding: 10px 20px;
     font-size: 0.9rem !important;
     background: rgba(0, 0, 0, 0.445);
-    font-family: Arial, Helvetica, sans-serif !important;
-    color: #fff;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -454,7 +455,7 @@ footer {
 
 #pauseVideoBtn:hover {
     background: transparent;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #eceef0;
     box-shadow: none;
 }
 
