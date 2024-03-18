@@ -71,7 +71,8 @@
         #welcomeMessage {
             font-size: 1.4em;
             font-family: 'Anton-Regular', Arial, sans-serif;
-            color: #246499;
+            color: #555;
+            margin-top: 10px;
         }
 
         .loader-container {
@@ -88,7 +89,16 @@
             z-index: 9999; /* Ensure the loader is on top of everything */
         }
         
-    </style>
+
+        /* Custom style for <hr> */
+        .custom-hr {
+            border: none; /* Remove default border */
+            height: 1.5px; /* Set the height of the line */
+            border-radius: 5px;
+            background-color: #2464996c; /* Set the color of the line */
+            margin: 30px 0; /* Add some margin for spacing */
+        }
+</style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
@@ -116,33 +126,53 @@
                 <div style="width: 100%; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);">
                     <img class="eng-logo navbar-brand" style="width: auto; height: 90px; margin-bottom: 20px;" src="./public/assets/images/eng-logo.png">
                     <br/>
-                </div>      
+                </div> 
+                <h1 class="section-heading text-center" style="background-color: #fff; font-size: 1em; font-family: 'Poppins-Regular', Helvetica, sans-serif; padding: 5px;">Simplicidade e acessibilidade, nosso site é feito pra todos. 🇺🇸</h1>      
     </header> 
 
 <div class="container-border">
-
-    <button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;" id="logoutButton" class="gelatine"><strong>Sair da conta 👋</strong></button>
-    <br/>    
+    <button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;" id="logoutButton" class="gelatine"><strong>Sair da conta</strong></button>
+    <a href="./como-usar-o-site-premium.html"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Como usar o site</strong></button></a>
+    <a href="#aulas"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Aulas</strong></button></a>
+    <a href="#materiais-estudo"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Materiais de estudo</strong></button></a>
+    <a href="./contato.html"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Contato</strong></button></a>
+    <br/>
+    <div id="welcomeMessage"></div>
 
         <div style="padding: 10px;">
     <br/>
     <div class="text-center">
         <img style="height: 150px; width: auto; margin-bottom: 20px;" src="../public/assets/images/eng-logo2.png" alt="Logo - English w/ TV Shows"></img>
 
-    <h1 class="section-heading" style="color: #246499 !important;">Área do Estudante Premium</h1> 
-
-        
-    <div class="text-center" id="welcomeMessage"></div>
-    
-    <br/>
-    <p style="margin-top: 40px; font-size: 1.5em;">Escolha uma categoria abaixo para começar:</p>
-    </div>
-    
+    <h1 class="section-heading" style="color: #246499 !important;">Área do Estudante Premium</h1>
     <br/>
 
-    
-    
+    <div class="custom-hr"><hr></div>
+    <br/><br/>
+     
+
+</div>
+<p style="margin-top: 40px; font-size: 2.4em; text-align: center;" id="aulas">🚀 Comece Aqui:</p>
+<p style="text-align: center; font-size: 1.4em;" class="shake">Antes de ir para as aulas, assista esse <a href="./como-usar-o-site-premium.html">vídeo aqui</a></p>
+        <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>🎥 Aulas Gravadas</h2>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p style="font-size: 1.3em;">AULAS/CURSO</p>
+                <p>Do básico ao avançado, com atualização diária.</p>
+                <a class="category-description-vocab-memo" href="./aulas-gravadas/aulas-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
+            </div>
         </div>
+        </section>
+
+
+        <br/><br/>
+
+        <br/>
+        <p style="margin-top: 40px; font-size: 2.4em; text-align: center;" id="materiais-estudo">📚 Materiais De Estudo:</p>
+        </div>
+
 
     <section class="container mt-4">
         <div class="row">
@@ -167,7 +197,7 @@
                 <a class="category-description-vocab-memo" href="./musica-pratica/musica-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
             </div>
             <div class="col-md-6">
-                <h2>☕️ Inglês Com Textos </h2>
+                <h2>📄 Inglês Com Textos </h2>
                 <p>⭐⭐⭐⭐⭐</p>
                 <br/>
                 <a class="category-description-vocab-memo" href="./reading/reading-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
@@ -181,12 +211,6 @@
                 <br/>
                 <a class="category-description-vocab-memo" href="./dialogues/dialogue-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
             </div>
-                <div class="col-md-6">
-                    <h2>🎥 Aulas Gravadas</h2>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <br/>
-                    <a class="category-description-vocab-memo" href="./aulas-gravadas/aulas-menu.html"><button style="border-radius: 5px;"><strong>Estudar</strong></button></a>
-                </div>
         </div>
     </section>
     <br/><hr/>
@@ -201,8 +225,8 @@
         }
     </script>
 
-<script src="./public/js/dictionary2.js"></script> <!-- Include the main authentication script first -->
-<script src="./public/js/protected-pages.js"></script>
+    <script src="./public/js/dictionary2.js"></script> <!-- Include the main authentication script first -->
+    <script src="./public/js/protected-pages.js"></script>
     <!-- Bootstrap JS and jQuery (for Bootstrap components) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
