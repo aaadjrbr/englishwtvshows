@@ -9,13 +9,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:title" content="English w/ Tv Shows">
     <meta property="og:description" content="Aprenda inglês com séries e filmes!">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/apple-touch-icon.png?alt=media&token=190e7f58-4f90-4fc6-8d84-d564f6c658ad">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/favicon.png?alt=media&token=a8159732-30b4-451f-873a-9a34f56211ad" type="image/x-icon">
     <title>Ops! Erro 404 :(</title>
 
-    <link rel="stylesheet" href="./public/css/404.css">
-    <link rel="stylesheet" href="./public/css/css2/404.css">
-    <link rel="stylesheet" href="./public/css/css2/css3/404.css">
+    <style>
+      @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+html {
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #000000;
+  background-image: radial-gradient(#000, #000), url("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/tv-404.gif?alt=media&token=c80f5cbe-e6b7-4aac-9389-293e591bc8fb");
+  background-size: cover;
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgba(0, 17, 255, 0.8);
+  text-shadow:
+      0 0 1ex rgb(0, 3, 189),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.noise {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/tv-404.gif?alt=media&token=c80f5cbe-e6b7-4aac-9389-293e591bc8fb");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  animation: noise 5s steps(10) infinite;
+  opacity: .1;
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 7%, 9% {
+    transform: translate(0, 0);
+  }
+  1% {
+    transform: translate(-5%, -5%);
+  }
+  2% {
+    transform: translate(5%, -5%);
+  }
+  4% {
+    transform: translate(-5%, 5%);
+  }
+  6% {
+    transform: translate(5%, 5%);
+  }
+  8% {
+    transform: translate(-5%, -5%);
+  }
+  10% {
+    transform: translate(5%, -5%);
+  }
+}
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+      repeating-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  background-size: auto 4px;
+  z-index: 1;
+}
+
+.overlay::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(9, 10, 112, 0.2) 3%,
+      rgb(0, 3, 189, 0.2) 3%,
+      rgba(8, 9, 80, 0.2) 3%,
+      transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear 0s infinite;
+}
+
+@keyframes scan {
+  0%        { background-position: 0 -100vh; }
+  35%, 100% { background-position: 0 100vh; }
+}
+
+.terminal {
+  box-sizing: inherit;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.output {
+  color: rgba(0, 17, 255, 0.8);
+  text-shadow:
+      0 0 1ex rgb(0, 3, 189, 0.8),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.output::before {
+  content: "> ";
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "[";
+}
+
+a::after {
+  content: "]";
+}
+
+.errorcode {
+  color: white;
+}
+    </style>
+
 </head>
 
 <!-- Google tag (gtag.js) -->
