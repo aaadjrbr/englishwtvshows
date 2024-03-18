@@ -111,7 +111,7 @@ body {
 }
 
 header {
-    background-color: #eceef021;
+    background-color: #00000096;
     border-radius: 10px;
     color: #eceef0;
     text-align: center;
@@ -124,8 +124,10 @@ header {
 
 h1 {
     font-size: 1.6em;
+    letter-spacing: 1.2px;
     color: #eceef0;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #phrase {
