@@ -263,7 +263,7 @@ p {
 
 /* Vintage Typography Styles */
 h1 {
-    font-family: 'Baskerville', serif; /* Vintage font for headings and content */
+    font-family: Helvetica, Arial, sans-serif; /* Vintage font for headings and content */
     font-weight: bold;
     color: white;
 }
