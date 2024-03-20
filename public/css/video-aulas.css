@@ -10,21 +10,35 @@
 
         /* Style for buttons */
         .button3 {
-            background-color: #256cb9;
-            color: #fff;
             padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            margin-right: 10px;
+            font-size: 0.9rem !important;
+            background: #246499;
+            background: linear-gradient(0deg, #496785, #246499 100%);
+            font-family: Arial, Helvetica, sans-serif !important;
             margin-top: 10px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 10px;
+            color: #eceef0;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
         }
 
         /* Hover effect for buttons */
         .button3:hover {
-            background-color: #0056b3;
+            background: transparent;
+            border: 2px solid #246499;
+            box-shadow: none;
         }
 
-
-
-        
+        .button3:hover:before {
+            height: 100%;
+          }
+        .button3:hover:after {
+            width: 100%;
+          }
+         
+        .button3:hover{
+             color: #246499;
+          }
