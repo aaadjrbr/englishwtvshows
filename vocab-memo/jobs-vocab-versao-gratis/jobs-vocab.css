@@ -15,17 +15,21 @@
     src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
 /* Body Styles */
 body {
-    margin: 20px auto;
-    padding: var(--root-padding);
+    margin: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     font-weight: 600;
     color: var(--text-color);
-    background-color: rgb(228, 241, 255);
+    background-color: #eceef0;
     overflow-x: hidden;
 }
 
@@ -35,17 +39,18 @@ body {
     margin: 10px auto;
     padding: 5px 10px;
     font-size: 1.2em;
-    color: #007bff;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #007bff;
-    background-color: rgb(174, 210, 255);
-    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    box-shadow: 0px 3px 0px 0px #246499;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .next-button:hover {
-    background-color: #ffffff;
+    background-color: #eceef0;
+    color: #246499;
 }
 
 /* Quiz Container */
@@ -69,12 +74,15 @@ body {
 /* Paragraph Styles */
 p {
     text-align: center;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
 }
 
 /* Heading 1 Styles */
 h1 {
     font-weight: 600;
-    color: #007bff;
+    font-size: 2.3em;
+    color: #246499;
+    letter-spacing: 1.1px;
     margin-bottom: 10px;
     text-align: center;
     font-family: 'Anton-Regular', Arial, sans-serif;
@@ -82,17 +90,18 @@ h1 {
 
 /* Heading 2 Styles */
 h2 {
-    font-size: 1.5em !important;
-    color: #007bff;
+    font-size: 1.8em !important;
+    letter-spacing: 1.1px;
+    color: #246499;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Anton-Regular', Arial, sans-serif;
     font-weight: 600px;
 }
 
 h3 {
     font-size: 1.3em;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     font-weight: 600px;
 }
 
@@ -108,17 +117,18 @@ h3 {
     margin-right: 5px;
     padding: 5px 10px;
     font-size: 1.2em;
-    color: #007bff;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #007bff;
-    background-color: rgb(174, 210, 255);
-    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    box-shadow: 0px 3px 0px 0px #246499;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .options-container button:hover {
-    background-color: #ffffff;
+    background-color: #eceef0;
+    color: #246499;
 }
 
 /* Feedback */
@@ -130,8 +140,8 @@ h3 {
 /* Image Styles */
 .question img {
     border-radius: 10px;
-    box-shadow: 0px 5px 0px 0px #2e8cf0;
-    width: 400px;
+    box-shadow: 0px 5px 0px 0px #246499;
+    width: auto;
     height: 300px;
     max-width: 100%;
     max-height: 100%;
@@ -163,26 +173,28 @@ h2 {
     height: 70%;
     max-width: 100%;
     max-height: 100%;
-    box-shadow: 0px 5px 0px 0px #2e8cf0;
+    box-shadow: 0px 5px 0px 0px #246499;
 }
 
 /* Option Buttons for Video Quiz */
 .options-video-quiz button {
-    display: block;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     padding: 5px 10px;
     font-size: 1.2em;
-    color: #007bff;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid #007bff;
-    background-color: rgb(174, 210, 255);
-    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    box-shadow: 0px 3px 0px 0px #246499;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .options-video-quiz button:hover {
-    background-color: #ffffff;
+    background-color: #eceef0;
+    color: #246499;
 }
 
 /* Feedback for Video Quiz */
@@ -196,7 +208,7 @@ h2 {
     width: 60%;
     height: 20px;
     padding: 10px;
-    color: #007bff;
+    color: #246499;
     font-size: 1.2em;
     border: 1px solid var(--grey-color);
     border-radius: var(--border-radius);
@@ -205,28 +217,30 @@ h2 {
 
 /* Check Button */
 .check-button {
-    color: var(--darker-grey-color);
+    color: #246499;
     font-size: 1.2em;
+    padding: 5px;
     margin: 5px 5px 5px 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid var(--grey-color);
-    background-color: white;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #eceef0;
     border-radius: 10px;
-    box-shadow: 0px 3px 0px 0px var(--grey-color);
+    box-shadow: 0px 3px 0px 0px #246499;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .check-button:hover {
-    background-color: rgba(58, 58, 58, 0.2);
-    color: rgb(105, 105, 105);
+    background-color: #246499;
+    box-shadow: 0px 3px 0px 0px #eceef0;
+    color: #eceef0;
 }
 
 /* Header Styles */
 header {
-    background-color: rgb(174, 210, 255);
-    color: #007bff;
+    background-color: #2464993a;
+    color: #246499;
     width: 100% !important;
-    border-radius: 10px;
 }
 
 /* Video and Content Styles */
@@ -245,14 +259,26 @@ header {
 
 }
 
+#text-input {
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+}
+
 /* Footer Styles */
 footer {
     width: 100%;
-    color: #007bff;
+    color: rgb(105, 105, 105) !important;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 2px solid var(--grey-color);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Scroll To Top Button Styles */
@@ -263,7 +289,7 @@ footer {
     right: 30px;
     z-index: 99;
     font-size: 0.8rem;
-    background: rgba(2, 126, 251, 0.61) !important;
+    background: #246499e0 !important;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -271,7 +297,7 @@ footer {
 }
 
 #scrollToTopBtn:hover {
-    background: rgba(58, 149, 240, 0.61) !important;
+    background: #246499a4 !important;
 }
 
 /* Go Back Styles */
@@ -282,19 +308,24 @@ footer {
 }
 
 #goback a {
-    color: #007bff;
+    margin-top: 20px;
     text-decoration: none;
-    padding: 5px 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    box-shadow: 0px 3px 0px 0px #246499;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
-    border: 1px solid #007bff;
-    background-color: rgb(174, 210, 255);
-    box-shadow: 0px 3px 0px 0px #2e8cf0;
+    cursor: pointer;
 }
 
 #goback a:hover {
-    background-color: #ffffff;
+    background-color: #eceef0;
+    color: #246499;
 }
 
 /* Loader Container Styles */
@@ -336,4 +367,14 @@ footer {
     }
 
     /* Add more adjustments as needed for smaller screens */
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.eng-logo {
+    width: auto;
+    height: 80px;
+    margin: 0 auto; /* This will center the image horizontally within its container */
 }

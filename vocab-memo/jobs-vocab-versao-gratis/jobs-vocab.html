@@ -35,17 +35,19 @@
     <div id="site-content" style="display: none;">
         <header>
             <br/>
-            <a href="../../index.html"><img class="eng-logo navbar-brand" style="width: 150px; height: 80px; margin: 0px 20px;" src="../../public/assets/images/eng-logo.png"></a>
+            <div class="logo-container">
+                <a href="../../index.html"><img class="eng-logo navbar-brand" src="../../public/assets/images/eng-logo.png"></a>
+            </div>            
             <h1>👷🏽‍♀️👩‍💻 Profissões 👨‍⚕🕵</h1>
             <div id="goback" style="text-align: center;">
                 <a href="../vocab-menu-gratis.html">Voltar</a>
             </div>
             <br/>
-            <a style="text-decoration: none; font-size: 1em;" href="./jobs-vocab-lista.html"><p>📝 Confira a lista de profissões aqui</p></a>
+            <a style="text-decoration: underline; font-size: 1.2em;" href="./jobs-vocab-lista.html"><p style="color: #246499e0;">📝 Confira a lista de profissões com áudio</p></a>
             <br/><br/>
         </header>
         <br/>
-        <h2>ESTUDE COMIGO:</h2>
+        <h2>🧠 Estude comigo:</h2>
         
         <div class="video-and-content">
             <iframe width="450" height="300" src="https://www.youtube.com/embed/Cu3JbOVkaRk" frameborder="0" allowfullscreen></iframe>
@@ -99,11 +101,15 @@
 
         <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
         <br/><br/>
-        <footer>
-            <div class="container" style="text-align: center;">
-                <p>&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p>
-            </div>
-        </footer>
+        <script>
+            // Check if a footer element exists on the page
+            if (!document.querySelector('footer')) {
+                // Footer element does not exist, dynamically load the footer snippet
+                const script = document.createElement('script');
+                script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+                document.body.appendChild(script);
+            }
+        </script>
 
         <script>
             var scrollToTopBtn = document.getElementById("scrollToTopBtn");

@@ -32,6 +32,11 @@ const correctFeedback = [
     // Add more feedback messages as needed
 ];
 
+const correctVideoFeedback2 = [
+    '✔️ Parabéns! Clique em "Próximo" para mais vídeos.',
+    '👍 Muito bem! Clique em "Próximo" para mais vídeos.'
+]
+
 const correctVideoFeedback = [
     '✔️ Parabéns! Você acertou!',
     '👍 Muito bem!',
@@ -214,6 +219,14 @@ const videoQuestions = [
         videoUrl: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-videos%2Factor-farmer-server-photographer.mp4?alt=media&token=ce36c64b-730d-482a-9666-5985eab92a8a&_gl=1*2vwy7t*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzQyMDkuMTkuMC4w',
         correctAnswer: 'Actor, Farmer, Server, Photographer', // Replace with the correct answer
     },
+    {
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-videos%2Fbusdriver-fireman-artist-priest.mp4?alt=media&token=143b1a0c-ec7c-48d5-a525-9c30917eccea',
+        correctAnswer: 'Bus Driver, Fireman, Artist, Priest', // Replace with the correct answer
+    },
+    {
+        videoUrl: 'https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/vocabulary-section%2Fjobs-videos%2Fchef-policeofficer-dentist-salesman.mp4?alt=media&token=0c42eb16-b81e-4bbe-84f6-9a2158eff605',
+        correctAnswer: 'Chef, Police Officer, Dentist, Salesman', // Replace with the correct answer
+    },
     // Add more questions for the video quiz
 ];
 
@@ -231,6 +244,7 @@ function showVideoQuestion() {
 
     textInputElement.value = ''; // Clear the input field
     videoFeedbackElement.textContent = '';
+    nextButton2.style.display = 'none'; // Hide the "Next" button for the next question
     attempts = 0; // Reset the number of attempts for each new question
 
     // Hide the paragraphs for quiz 1 info (just to be consistent)
@@ -243,6 +257,7 @@ function showVideoQuestion() {
 function nextVideoQuestion() {
     videoFeedbackElement.textContent = ''; // Clear feedback before proceeding
     videoCurrentQuestionIndex++;
+    attempts = 0; // Reset attempts counter
     if (videoCurrentQuestionIndex < videoQuestions.length) {
         showVideoQuestion();
         nextButton2.style.display = 'none'; // Hide the "Next" button for the next question
@@ -252,9 +267,19 @@ function nextVideoQuestion() {
         quizVideoInfo.style.display = 'none';
         
         // Display the feedback and completion message
-        videoQuestionElement.innerHTML = '<h2>🥳🎉 Parabéns! Continue assim.<br><br> Quer mais? Vá p/ "início" e assine p/ versão completa!</h2>';
+        videoQuestionElement.innerHTML = `
+            <h2>🥳🎉 Parabéns! Continue assim.<br><br> Quer mais? Vá p/ <a style="color: #428fca;" href="../../index-second.html">início</a> e assine a versão completa!</h2>
+            <button class="next-button" id="restart-button">Faça o quiz novamente</button>
+        `;
         textInputElement.style.display = 'none';
         videoFeedbackElement.innerHTML = '<h3>🚀 Você completou todo desafio! 🚀</h3>';
+        
+        // Attach event listener to the "do the quiz again" button
+        const restartButton = document.getElementById('restart-button');
+        restartButton.addEventListener('click', function() {
+            // Reload the page to restart the quiz
+            location.reload();
+        });
         
         // Optionally, you can also hide the input field, "Corrigir" (Check) button, and "Próximo" (Next) button
         textInputElement.style.display = 'none';
@@ -265,30 +290,41 @@ function nextVideoQuestion() {
 
 
 
+
+
 function checkVideoAnswer() {
     const videoQuestion = videoQuestions[videoCurrentQuestionIndex];
     const userAnswer = textInputElement.value.trim();
 
-            // Clear the translated text after 10 seconds
-            setTimeout(function () {
-                videoFeedbackElement.style.display = 'none';
-                videoFeedbackElement.textContent = '';
-            }, 1500); // 1,5 seconds
+    // Check if the input field is empty
+    if (userAnswer === '') {
+        videoFeedbackElement.textContent = '⚠️ Por favor, digite algo antes de corrigir.';
+        // Clear the message after 3 seconds
+        setTimeout(function() {
+            videoFeedbackElement.textContent = '';
+        }, 3000);
+        return; // Exit the function if the input field is empty
+    }
 
-            if (userAnswer.toLowerCase() === videoQuestion.correctAnswer.toLowerCase()) {
-                const randomIndex = Math.floor(Math.random() * correctVideoFeedback.length);
-                videoFeedbackElement.textContent = correctVideoFeedback[randomIndex];
-                nextButton2.style.display = 'block'; // Display the "Next" button
-            } else {
+    if (userAnswer.toLowerCase() === videoQuestion.correctAnswer.toLowerCase()) {
+        const randomIndex = Math.floor(Math.random() * correctVideoFeedback2.length);
+        videoFeedbackElement.textContent = correctVideoFeedback2[randomIndex];
+        nextButton2.style.display = 'block'; // Display the "Next" button
+    } else {
         attempts++;
         if (attempts === 1) {
             videoFeedbackElement.textContent = '😕 Incorreto. Tente novamente.';
         } else if (attempts === 2) {
+            videoFeedbackElement.textContent = '😕 Incorreto novamente. Você tem mais uma chance.';
+        } else if (attempts === 3) {
             videoFeedbackElement.textContent = `❌ Incorreto. A resposta correta é: "${videoQuestion.correctAnswer}"`;
-            nextButton2.style.display = 'block'; // Display the "Next" button after two attempts
+            nextButton2.style.display = 'block'; // Display the "Next" button after three attempts
         }
     }
 }
+
+
+
 
 showVideoQuestion();
 
