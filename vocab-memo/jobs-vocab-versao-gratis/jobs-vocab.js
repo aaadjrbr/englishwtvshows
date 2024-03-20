@@ -150,6 +150,12 @@ function showQuestion() {
 
 function checkAnswer(selectedOption) {
     const question = questions[currentQuestionIndex];
+    const optionButtons = optionsContainer.querySelectorAll('button');
+
+    // Disable all option buttons
+    optionButtons.forEach(button => {
+        button.disabled = true;
+    });
 
     if (selectedOption === question.correctOption) {
         const randomIndex = Math.floor(Math.random() * correctFeedback.length);
@@ -160,17 +166,19 @@ function checkAnswer(selectedOption) {
     } else {
         attemptsRemaining--;
 
-        if (attemptsRemaining === 1) {
-            feedbackElement.textContent = '😕 Incorreto. Tente novamente. Você tem mais 1 tentativa. ⌛';
-        } else if (attemptsRemaining === 0) {
+        if (attemptsRemaining > 0) {
+            feedbackElement.textContent = `😕 Incorreto. Tente novamente. Você tem mais ${attemptsRemaining} tentativa(s). ⌛`;
+            // Enable all option buttons for another attempt
+            optionButtons.forEach(button => {
+                button.disabled = false;
+            });
+        } else {
             feedbackElement.textContent = `❌ Incorreto. A resposta correta é: "${question.correctOption}"`;
+            nextButton1.style.display = 'block'; // Display the "Next" button for incorrect answers after 2 attempts
         }
     }
-
-    if (attemptsRemaining === 0) {
-        nextButton1.style.display = 'block'; // Display the "Next" button for incorrect answers after 2 attempts
-    }
 }
+
 
 
 function displayScore() {
