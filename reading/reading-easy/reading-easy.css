@@ -1,0 +1,414 @@
+/* Global Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/reading-section%2Fblured-bg.png?alt=media&token=0e3aa374-9f42-432d-a7b3-636e6c7a0b8e&_gl=1*1gt85gp*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzg4MDUuMTcuMC4w');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-weight: 400;
+    background-color: #1b2735da;
+    overflow-x: hidden;
+}
+
+.seconds-stuff1 {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 32.4px;
+    height: 32.4px;
+    border-radius: 16.2px;
+    margin-top: 10.8px;
+    cursor: pointer;
+}
+
+.seconds-stuff2 {
+    vertical-align: middle;
+    margin-left: 10px;
+    width: 32.4px;
+    height: 32.4px;
+    border-radius: 16.2px;
+    margin-top: 10.8px;
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    position: relative; /* Set the parent container as relative */
+    color: #fff; /* Text color in dark mode */
+}
+
+/* Add an overlay pseudo-element */
+body.dark-mode::after {
+    content: "";
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #120e10de; /* Adjust the background color and opacity as needed */
+    z-index: -1; /* Place the overlay behind other content */
+}
+
+
+.container {
+    margin-top: 2rem;
+}
+
+
+.centered-container { /* title */
+    background-color: #1b2735da;
+    padding: 10px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1b2735da;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff; /* White color for the navbar brand text */
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff00; /* White background for the navbar toggler icon */
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #1b2735da;
+}
+
+/* Sentence Styles */
+.sentence {
+    font-size: 20px;
+    margin: 20px;
+    display: none; /* Initially hide all sentences */
+    padding: 20px; /* Add some padding for readability */
+    background-color: #1b2735da;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow */
+    border-radius: 8px; /* Rounded corners for sentences */
+}
+
+.button-general {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    background-color: #1B2735;
+    color: white
+}
+
+.button-general:hover {
+    background-color: #375265;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.btn-secondary {
+    background-color: #594045;
+    border-color: #594045;
+}
+
+.btn-primary {
+    background-color: #375265;
+    border-color: #375265;
+}
+
+.btn-primary:hover {
+    background-color: #1B2735;
+    border-color: #1B2735;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #375265;
+    border-color: #375265;
+}
+
+.btn.disabled, .btn:disabled {
+    opacity: .65;
+}
+
+.tippy-box {
+    position: relative;
+    background-color: #594045;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+    outline: 0;
+    transition-property: transform,visibility,opacity;
+}
+
+.tippy-content {
+    position: relative;
+    padding: 5px 9px;
+    z-index: 1;
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+    bottom: -7px;
+    left: 0;
+    border-width: 8px 8px 0;
+    border-top-color: initial;
+    transform-origin: center top;
+}
+.tippy-arrow:before {
+    content: "";
+    background-color: #1B2735;
+    position: absolute;
+    /* border-color: transparent; */
+    border-style: solid;
+}
+
+.tippy-arrow:before {
+    content: "";
+    position: absolute;
+    border-color: transparent;
+    border-style: solid;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.tippy-arrow {
+    width: 16px;
+    height: 16px;
+    color: #594045;
+}
+
+/* Word Tooltip Styles */
+.word {
+    text-decoration: none; /* Remove the default underline */
+    cursor: pointer;
+    position: relative; /* Relative positioning for dot border */
+    color: #ebe7e7; /* Blue color for words */
+}
+
+/* Add a series of dots as the underline */
+.word::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust the position as needed */
+    left: 0;
+    right: 0;
+    height: 2px; /* Height of the dots */
+    background: repeating-linear-gradient(90deg, #cccccc11, #cccccc11 3px, transparent 3px, transparent 6px); /* Dotted line pattern */
+}
+
+/* Style for the tooltips */
+.word[data-tippy-root] {
+    text-decoration: none; /* Remove the underline when tooltip is active */
+}
+
+/* Style for the tooltip content */
+.word[data-tippy-root]::before {
+    content: attr(data-translation); /* Use the translation attribute as content */
+    background-color: #f0f0f0; /* Background color for the tooltip */
+    color: #3333333a; /* Text color for the tooltip */
+    border: 1px solid #ccc; /* Border for the tooltip */
+    border-radius: 4px; /* Rounded corners for the tooltip */
+    padding: 4px 8px; /* Padding for the tooltip */
+    position: absolute;
+    bottom: 110%; /* Position the tooltip above the word */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    white-space: nowrap; /* Prevent line breaks in the tooltip */
+    opacity: 0; /* Initially hide the tooltip */
+    transition: opacity 0.2s ease-in-out; /* Add a smooth transition effect */
+    
+}
+
+/* Show the tooltip on hover */
+.word[data-tippy-root]:hover::before {
+    opacity: 1; /* Show the tooltip on hover */
+}
+
+/* Dark Mode Toggle Button Styles */
+#darkModeToggle {
+    margin-top: 2rem;
+}
+
+
+.book-cover {
+    width: 100px; /* Adjust the size of book cover thumbnails */
+    height: 150px;
+    margin: 10px;
+    background-color: #fff; /* White background for book covers */
+    border: 2px solid #ccc; /* Border for book covers */
+    border-radius: 4px; /* Rounded corners for book covers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    color:rgb(255, 255, 255);
+}
+
+/* Vintage Typography Styles */
+h1 {
+    font-family: Helvetica, Arial, sans-serif; /* Vintage font for headings and content */
+    font-weight: bold;
+    color: white;
+}
+
+/* Page Turn Animation Styles */
+.sentence-enter-active, .sentence-leave-active {
+    transition: transform 0.5s; /* Add a smooth page turn transition */
+}
+
+.sentence-enter, .sentence-leave-to /* .sentence-leave-active in <2.1.8 */ {
+    transform: scaleX(0); /* Start with zero width */
+    transform-origin: right; /* Make the transformation originate from the right */
+}
+
+
+audio {
+    height: 40px;
+}
+
+/* Quiz stuff */
+
+.quiz-container1 {
+    padding: 15px 5px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    color: #fff;
+}
+
+button {
+    padding: 15px 20px;
+    margin: 2px;
+    border-radius: 7px;
+    background-color: #375265;
+    border-color: #375265;
+    color: #fff;
+    border: 2;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #1B2735;
+    border-color: #1B2735;
+}
+
+#result-container {
+    display: none;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/reading-section%2Fblured-bg.png?alt=media&token=0e3aa374-9f42-432d-a7b3-636e6c7a0b8e&_gl=1*1gt85gp*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzg4MDUuMTcuMC4w');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* Adjust navbar styles for small screens */
+    .navbar {
+        background-color: #1b2735da;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem; /* Reduce the font size for the navbar brand on small screens */
+    }
+
+    .navbar-toggler-icon {
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+    }
+    
+    /* Adjust sentence styles for small screens */
+    .sentence {
+        font-size: 1.2em; /* Reduce the font size for sentences on small screens */
+        margin: 10px; /* Reduce margin for sentences on small screens */
+        padding: 10px; /* Reduce padding for sentences on small screens */
+    }
+
+    /* Adjust button styles for small screens */
+    .btn {
+        font-size: 0.9rem; /* Reduce the font size for buttons on small screens */
+    }
+
+    /* Adjust word tooltip styles for small screens */
+    .word::before {
+        bottom: -1px; /* Adjust the position of the underline dots on small screens */
+    }
+
+    /* Adjust book cover styles for small screens */
+    .book-cover {
+        width: 80px; /* Reduce the size of book cover thumbnails on small screens */
+        height: 120px;
+        margin: 5px; /* Reduce margin for book covers on small screens */
+    }
+
+    /* Adjust vintage typography styles for small screens */
+    h1 {
+        font-size: 1.6em; /* Reduce the font size for h1 on small screens */
+    }
+
+    /* Adjust dark mode toggle button styles for small screens */
+    #darkModeToggle {
+        margin-top: 1rem; /* Reduce the top margin on small screens */
+        font-size: 0.9rem; /* Reduce the font size for the dark mode toggle button on small screens */
+    }
+
+    audio {
+        width: 80%;
+        height: 40px;
+    }
+}
+
+/* Styles for small devices (up to 768px) */
+@media screen and (max-width: 768px) {
+    .quiz-container {
+      padding: 10px;
+    }
+  
+    h3 {
+      font-size: 1.5em;
+    }
+  
+    button {
+      padding: 10px 15px;
+    }
+  }
+  
+  /* Quiz container styles for all screen sizes */
+  .quiz-container1 {
+    padding: 15px 5px;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  #result-container {
+    display: none;
+  }  
