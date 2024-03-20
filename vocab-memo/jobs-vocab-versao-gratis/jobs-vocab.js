@@ -184,7 +184,7 @@ function checkAnswer(selectedOption) {
 function displayScore() {
     questionElement.innerHTML = `<h2>🥳✨🎉 Parabéns! Você completou tudo.<br/> Vá para o próximo desafio abaixo. 👇</h2>`;
     optionsContainer.innerHTML = `<h3>Sua pontuação final é: ${score}/${questions.length}</h3>`;
-    feedbackElement.innerHTML = '';
+    feedbackElement.innerHTML = '<h3>Gostou desse Quiz? Atualize a página para refazer. 🔄</h3>';
     nextButton1.style.display = 'none';
 
     // Hide the quiz info container for the first quiz
