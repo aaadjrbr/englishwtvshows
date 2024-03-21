@@ -1,6 +1,16 @@
+@font-face {
+    font-family: 'Anton-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    background-color: #e9e9e9;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    background-color: #eceef0;
     color: #333;
     margin: 0;
     padding: 0;
@@ -22,28 +32,67 @@ iframe {
     }
 }
 
+.button1 {
+    padding: 10px 20px;
+    font-size: 0.9rem !important;
+    background: #246499;
+    background: linear-gradient(0deg, #496785, #246499 100%);
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+    color: #eceef0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background: #eceef0;
+    color: #246499;
+    border: 2px solid #246499;
+    box-shadow: none;
+}
+
+.button2 {
+    padding: 10px 20px;
+    font-size: 0.9rem !important;
+    background: #eceef0;
+    border: 2px solid #eceef0;
+    color: #246499;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background: transparent;
+    color: #eceef0;
+    border: 2px solid #eceef0;
+    box-shadow: none;
+}
 
 li {
     margin-bottom: 7px; /* Adjust the spacing between list items */
 }
 
 a {
-    color: #fff;
+    color: #eceef0;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ffffffc2;
+    color: #eceef0c0;
 }
 
 header {
-    background-color: #256cb9;
-    color: #fff;
+    background-color: #246499ce;
+    color: #eceef0;
     text-align: center;
     padding: 20px;
 }
 
 h1 {
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    letter-spacing: 1.1px;
     margin: 0;
 }
 
@@ -53,7 +102,7 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: #eceef0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
@@ -61,7 +110,10 @@ section {
 }
 
 h2 {
-    color: #256cb9;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    letter-spacing: 1.1px;
+    font-size: 1.6em;
+    color: #246499;
     padding-bottom: 10px;
 }
 
@@ -74,23 +126,35 @@ p {
     display: inline-block;
     align-items: center;
     margin: 0;
-    background-color: #256cb9;
-    color: #fff;
+    background-color: #246499;
+    color: #eceef0;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
 }
 
+#highFrequencyWords li {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
 footer {
     margin-top: 30px;
     font-size: 1em;
-    color: #000000;
+    color: #000000 !important;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0;
+}
+
+footer a {
+    color: #246499 !important;
+}
+
+footer a:hover {
+    color: #246499ad !important;
 }
 
 .container {
@@ -130,9 +194,9 @@ footer {
     align-items: center;
     position: absolute;
     backface-visibility: hidden;
-    border: 2px solid #256cb9;
+    border: 2px solid #246499;
     border-radius: 10px;
-    background-color: #e9e9e948;
+    background-color: #ffffff;
 }
 
 .card-back {
@@ -143,8 +207,8 @@ button {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #256cb9;
-    color: #fff;
+    background-color: #246499;
+    color: #eceef0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -152,15 +216,21 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #246499a8;
 }
 
 #button-hidden {
-    background-color: rgb(243, 34, 34);
+    background-color: transparent;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+    border: 2px solid #246499;
+    color: #246499;
 }
 
 #button-hidden:hover {
     background-color: rgba(243, 34, 34, 0.932);
+    border: 2px solid rgba(243, 34, 34, 0.664);
+    color: #eceef0;
+    font-weight: bold;
 }
 
 #flash1 {

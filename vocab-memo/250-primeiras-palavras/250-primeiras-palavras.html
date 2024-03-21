@@ -29,12 +29,13 @@
 
     <!-- Header Section -->
     <header>
+        <a href="../index.html"><img class="eng-logo navbar-brand" style="width: auto; height: 90px; margin-top: 10px; margin-bottom: 10px;" src="../../public/assets/images/eng-logo.png"></a>
         <h1>Primeiras Palavras Em Inglês 🇺🇸</h1>
-        <h2 style="color: #fff">Lista com 250 palavras</h2>
+        <h2 style="color: #eceef0;">Lista com 250 palavras</h2>
         <p>*Algumas palavras podem aparecer mais de uma vez.</p>
-        <p><a href="../vocab-menu-gratis.html">Voltar</a></p>
+        <a href="../vocab-menu-gratis.html"><button class="button2" style="border-radius: 5px; padding: 10px 20px; margin-top: 20px; margin-left: 3px;"><strong>Voltar</strong></button></a>
     </header>
-    
+
     <!-- Main Content Section -->
     <main>
 
@@ -319,21 +320,25 @@
             </div>
             <p style="font-size: 0.8em;">*Para ir p/ próxima palavra, clique em "<strong>mostrar palavra</strong>".</p>
             <br/>
-            <button onclick="showAnswer()">Mostrar Resposta</button>
-            <button onclick="nextCard()">Próxima Palavra</button>
+            <button class="button1" onclick="showAnswer()">Mostrar Resposta</button>
+            <button class="button1" onclick="nextCard()">Próxima Palavra</button>
             <br/>
-            <button id="button-hidden" onclick="seeQuestionAgain()" style="display: none;" id="custom-button">Mostrar Palavra Novamente</button> <!-- New button -->
+            <button id="button-hidden" onclick="seeQuestionAgain()" style="display: none;" id="custom-button">Mostrar Palavra Novamente 🔄</button> <!-- New button -->
         </section>
 
 
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+            document.body.appendChild(script);
+        }
+    </script>
 
     <script src="./250-primeiras-palavras.js"></script>
 </body>
