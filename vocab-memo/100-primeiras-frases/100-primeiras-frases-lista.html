@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en, pt">
+<html lang="en, pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -16,20 +16,25 @@
     <style>
         @font-face {
             font-family: 'Anton-Regular';
-            src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+            src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+            src: url('../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins-Regular', Helvetica, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: rgb(228, 241, 255);
+            background-color: #eceef0;
         }
 
         header {
-            background-color: rgb(174, 210, 255);
+            background-color: #2464993a;
             font-family: 'Anton-Regular', Arial, sans-serif;
-            color: #007bff;
+            color: #246499;
             padding: 10px;
             text-align: center;
         }
@@ -44,14 +49,15 @@
 
         .container {
             max-width: 800px;
-            color: #007bff;
+            color: #246499;
             margin: 0 auto;
             padding: 20px;
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 1.6em;
             text-align: center;
+            letter-spacing: 1.1px;
         }
 
         .phrase-list {
@@ -74,22 +80,27 @@
         }
 
         #goback a {
-            color: #007bff;
+            margin-top: 20px;
             text-decoration: none;
-            padding: 5px 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 5px 10px;
+            font-size: 1.2em;
+            color: #eceef0;
+            font-family: 'Poppins-Regular', Helvetica, sans-serif;
+            border: 1px solid #246499;
+            background-color: #428fca;
+            box-shadow: 0px 3px 0px 0px #246499;
             border-radius: 10px;
-            font-family: 'Anton-Regular', Arial, sans-serif;
-            font-weight: 600;
-            font-size: 1.3em;
-            border: 1px solid #007bff;
-            background-color: rgb(174, 210, 255);
-            box-shadow: 0px 3px 0px 0px #2e8cf0;
+            cursor: pointer;
         }
 
         #goback a:hover {
-            background-color: #ffffff;
+            background-color: #eceef0;
+            color: #246499;
         }
 
+        /* Scroll To Top Button Styles */
         #scrollToTopBtn {
             display: none;
             position: fixed;
@@ -97,17 +108,15 @@
             right: 30px;
             z-index: 99;
             font-size: 0.8rem;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
+            background: #246499e0 !important;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             padding: 10px;
         }
 
         #scrollToTopBtn:hover {
-            background-color: #141414;
-            color: #fff;
+            background: #246499a4 !important;
         }
 
         .loader-container {
@@ -165,7 +174,7 @@
                             <div id="site-content" style="display: none;">
 
     <header>
-        <a href="../../index.html"><img class="eng-logo navbar-brand" style="width: 150px; height: 80px; margin: 0px 20px;" src="../../public/assets/images/eng-logo.png"></a>
+        <a href="../../index.html"><img class="eng-logo navbar-brand" style="width: auto; height: 80px; margin: 0px 20px;" src="../../public/assets/images/eng-logo.png"></a>
         <h1>📚 100 Frases Mais Usadas Em Inglês 📚</h1>
         <div id="goback">
             <a href="./100-primeiras-frases.html">Voltar</a>
@@ -983,11 +992,15 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container" style="text-align: center;">
-            <p>&copy; 2023 English w/ TV Shows. Todos os direitos Reservados.</p>
-        </div>
-    </footer>
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+            document.body.appendChild(script);
+        }
+    </script>
     
 
     <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
