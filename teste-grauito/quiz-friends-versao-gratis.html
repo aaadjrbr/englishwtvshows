@@ -54,6 +54,7 @@
 
 .nav-link {
     font-size: 18px;
+    text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
     transition: color 0.3s; /* Add a smooth color transition on hover */
@@ -201,20 +202,19 @@ a:hover {
     margin: 0 auto; /* Center align horizontally */
 }
 
-
 .button1:hover {
     background-color: #246499d5;
 }
 
-p {
-    color: #000000 !important;
-}
-
-       /* Footer Styles */
+/* Footer Styles */
 footer {
     text-align: center;
     color: #000000; /* White text color */
     padding: 20px 0; /* Add some padding top and bottom */
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 #scrollToTopBtn {
@@ -280,7 +280,7 @@ footer {
 
         <a href="./friends-versao-gratis.html"><button  class="button1" style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Voltar para o texto</strong></button></a>
         <h1 class="display-4 my-text" style="color: rgb(0, 81, 255); text-shadow: 2px 2px 4px rgb(255, 255, 255);">Revise todas as palavras que você aprendeu</h1>
-        <p style="font-size: 1.2rem; text-align: center; color: #000000; margin-bottom: 20px;">Você está revisando o vocabulário de: <strong>Friends: Rachel Runs Out on her Wedding to Barry (Season 1 Clip)</strong>. É importante que você apenas comece nos flashcards depois de ter estudado o texto.</p><p><strong>Clique na palavra e digite sua tradução.<br/><br/>As traduções podem variar de acordo com o contexto, por favor procure mais definições <a href="https://www.merriam-webster.com/" target="_blank">aqui (dictionary)</a>.</strong></p><br><br><br>
+        <p style="font-size: 1.2rem; text-align: center; color: #000000; margin-bottom: 20px;">Você está revisando o vocabulário de: <strong>Friends: Rachel Runs Out on her Wedding to Barry (Season 1 Clip)</strong>. É importante que você apenas comece nos flashcards depois de ter estudado o texto.</p><p><strong>Clique na palavra e digite sua tradução.</strong></p><br><strong>As traduções podem variar de acordo com o contexto, por favor procure mais definições <a href="https://www.merriam-webster.com/" target="_blank">aqui (dictionary)</a>.</strong></p><br><br><br>
         <hr>
     </header>
     <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
@@ -595,7 +595,11 @@ scrollToTopBtn.onclick = function() {
     </div>
 
 
-
+    <style>
+        p {
+            color: #246499;
+        }
+    </style>
     <!-- Footer section -->
     <script>
         // Check if a footer element exists on the page
