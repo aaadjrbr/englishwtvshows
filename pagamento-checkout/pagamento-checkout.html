@@ -54,37 +54,50 @@
     <div class="container">
         <div class="text-center">
             <h1 class="mb-4" style="font-family: 'Anton-Regular', Arial, sans-serif;">Pagamento Checkout 💰</h1>
-            <h1>R$ 44,90/mensal</h1>
-            <p>Mensalidades por PIX. Sem fidelidade.</p>
-            <p style="font-size: 0.8em;">Cada pagamento de R$ 44,90 concede acesso por um período de 30 dias.</p>
+            <h1>R$ 109,90/mensal</h1>
+            <p>Mensalidades por Pix/Cartão de crédito. Sem fidelidade.</p><br/>
+            <p style="font-size: 0.8em;">Cada pagamento de R$ 109,90 concede acesso por um período de 30 dias.</p>
             <br/>
+            <a href="https://api.whatsapp.com/send/?phone=5564992521429"><p style="font-size: 0.8em;">Dúvidas?</p></a>
+            <br/>
+            
         </div>
-        <div class="form-group">
-            <label for="nameInput">Digite seu nome completo:</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Nome Completo">
-            <p id="validationMessage" class="text-danger"></p>
-            <a href="https://api.whatsapp.com/send/?phone=5564992521429"><p style="font-size: 0.8em;">Problemas?</p></a>
-        </div>
-        <button class="btn btn-primary btn-block mt-3" id="submitBtn">Assinar</button>
-        <br/>
-        <p style="font-size: 0.8em;">Ao assinar, você está concordando com nossa <a href="./politica-pagamento.html">política de pagamento</a>.</p>
-        <div class="mt-4" id="confirmation" style="display: none;">
-            <p class="text-success">⚠️ Após o pagamento, siga as instruções abaixo. ⚠️</p>
-            <img id="qrCode" src="../public/assets/images/caixa-qr-code.png" alt="QR Code" class="img-fluid mb-3">
-            <p><strong>Chave pix:</strong> aaadjrbr@gmail.com</p>
-            <a href="https://api.whatsapp.com/send/?phone=5564992521429&text=Hey%21+Adenilson%2C+gostaria+de+saber+como+ter+acesso+total+no+site+English+with+TVShows%3F&type=phone_number&app_absent=0"><button style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Enviar Comprovante</strong></button></a>
-        </div>
-        <p class="mt-4" id="paymentInfo" style="display: none;">⚠️ <strong>IMPORTANTE: Após concluir o processo de pagamento, solicitamos gentilmente que envie o comprovante via WhatsApp, utilizando o botão localizado acima. Após a confirmação do pagamento, o seu login e senha serão prontamente encaminhados. Este processo pode levar até 24 horas para ser concluído, embora geralmente seja realizado em um período menor de tempo.</strong></p>
-    </div>
+        <a href="https://www.mercadopago.com.br/subscriptions/checkout?preapproval_plan_id=2c9380848e60bfe0018e67550dd40445" name="MP-payButton" id='blue-ar-l-rn-none'>Assinar</a>
+        <script type="text/javascript">
+           (function() {
+              function $MPC_load() {
+                 window.$MPC_loaded !== true && (function() {
+                 var s = document.createElement("script");
+                 s.type = "text/javascript";
+                 s.async = true;
+                 s.src = document.location.protocol + "//secure.mlstatic.com/mptools/render.js";
+                 var x = document.getElementsByTagName('script')[0];
+                 x.parentNode.insertBefore(s, x);
+                 window.$MPC_loaded = true;
+              })();
+           }
+           window.$MPC_loaded !== true ? (window.attachEvent ? window.attachEvent('onload', $MPC_load) : window.addEventListener('load', $MPC_load, false)) : null;
+           })();
+          /*
+                // to receive event with message when closing modal from congrants back to site
+                function $MPC_message(event) {
+                  // onclose modal ->CALLBACK FUNCTION
+                 // !!!!!!!!FUNCTION_CALLBACK HERE Received message: {event.data} preapproval_id !!!!!!!!
+                }
+                window.$MPC_loaded !== true ? (window.addEventListener("message", $MPC_message)) : null; 
+                */
+        </script>
+</div>
+<br/>
+<p style="text-align: center;">*Por enquanto, a opção Pix está disponível somente para os alunos que realizarem a assinatura usando uma conta Mercado Pago.</p>
+        
     <br/>
     <div class="image-container">
+        <img src="../public/assets/images/mercado-pago.png" alt="Pagamento seguro">
         <img src="../public/assets/images/compra-segura.png" alt="Pagamento seguro">
         <img src="../public/assets/images/ssl.png" alt="Pagamento seguro">
-        <img src="../public/assets/images/pix.png" alt="Pagamento seguro">
     </div>
-<br><br>
- <p style="text-align: center;">*No momento, oferecemos exclusivamente a opção de pagamento via PIX, mas estamos empenhados em<br> expandir nossas opções de pagamento para incluir cartão de crédito e débito.</p>   
-       
+<br><br> 
 
             <br><br><hr>
 
