@@ -1,9 +1,14 @@
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
 body {
-    font-family: 'Arial', sans-serif !important;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #256cb9;
+    background-color: #eceef0;
+    color: #246499;
 }
 
 header {
@@ -36,7 +41,8 @@ nav a {
 }
 
 a:hover {
-    color:#527ead
+    color:#527ead;
+    text-decoration: underline !important;
 }
 
 main {
