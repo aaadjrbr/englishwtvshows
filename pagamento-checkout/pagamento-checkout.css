@@ -3,6 +3,11 @@
     src: url('../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
 }
 
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
 
 body {
     background-color: #eceef0 !important; /* Replace with your desired background color */
@@ -15,10 +20,14 @@ body {
 }
 
 body, h1, h2, p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     color:#246499;
     margin: 0;
     padding: 0;
+}
+
+a {
+    transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -32,7 +41,7 @@ body, h1, h2, p {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -45,7 +54,7 @@ h2 {
 
 h3 {
     color: #246499;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
@@ -69,11 +78,12 @@ input[type="text"] {
     font-weight: bold;
     background: #246499;
     background: linear-gradient(0deg, #496785, #246499 100%);
-    font-family: Arial, Helvetica, sans-serif !important;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
     color: #eceef0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 #blue-ar-l-rn-none:hover {
@@ -88,18 +98,18 @@ input[type="text"] {
 .button2 {
     padding: 10px 20px;
     font-size: 0.9rem !important;
-    background: #246499;
-    background: linear-gradient(0deg, #496785, #246499 100%);
-    font-family: Arial, Helvetica, sans-serif !important;
+    background: transparent;
+    border: 2px solid #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     color: #eceef0;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .button2:hover {
-    background: transparent;
     border: 2px solid #eceef0;
+    background-color: #eceef069;
     color: #eceef0;
     box-shadow: none;
 }
@@ -109,11 +119,11 @@ button {
     font-size: 0.9rem !important;
     background: #246499;
     background: linear-gradient(0deg, #496785, #246499 100%);
-    font-family: Arial, Helvetica, sans-serif !important;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {

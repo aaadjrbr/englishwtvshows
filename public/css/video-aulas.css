@@ -14,7 +14,7 @@
             font-size: 0.9rem !important;
             background: #246499;
             background: linear-gradient(0deg, #496785, #246499 100%);
-            font-family: Arial, Helvetica, sans-serif !important;
+            font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
             margin-top: 10px;
             margin-bottom: 5px;
             margin-left: 5px;
@@ -23,6 +23,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
         /* Hover effect for buttons */
