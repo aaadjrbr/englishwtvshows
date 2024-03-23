@@ -245,12 +245,18 @@ const phrases = [
 
   // Pop up button
 
-  document.querySelector('.button-popup').addEventListener('click', function() {
-    document.querySelector('.overlay').style.display = 'block';
-    document.querySelector('.popup').style.display = 'block';
-  });
-  
-  document.querySelector('.overlay').addEventListener('click', function() {
-    document.querySelector('.overlay').style.display = 'none';
-    document.querySelector('.popup').style.display = 'none';
-  });
+
+document.querySelector('.button-popup').addEventListener('click', function() {
+  document.querySelector('.overlay').style.display = 'block';
+  document.querySelector('.popup').style.display = 'block';
+});
+
+document.querySelector('.overlay').addEventListener('click', function() {
+  document.querySelector('.overlay').style.display = 'none';
+  document.querySelector('.popup').style.display = 'none';
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+  document.querySelector('.overlay').style.display = 'none';
+  document.querySelector('.popup').style.display = 'none';
+});
