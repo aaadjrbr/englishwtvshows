@@ -13,7 +13,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Função para lidar com o envio do formulário de login
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
+document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
     console.log("Formulário de login submetido"); // Adicione esta linha
 
