@@ -19,22 +19,32 @@
             font-family: 'Anton-Regular'; /* Specify the desired font family name */
             src: url('./public/assets/fonts/Anton-Regular.ttf') format('truetype'),
             }
+        @font-face {
+            font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+            src: url('./public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+            }
+
 
 
         body, h1, h2, p {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins-Regular', Arial, sans-serif;
+            color: #246499;
             letter-spacing: 0.4px;
-            color: #ffffff;
+            color: #eceef0;
             margin: 0;
             padding: 0;
         }
 
+        h1 {
+            letter-spacing: 0.9px !important;
+        }
+
         a {
-            color: #ffffff;
+            color: #eceef0;
         }
 
         .color1 {
-            color: #256cb9;
+            color: #246499;
             font-family: 'Anton-Regular', Arial, sans-serif;
         }
 
@@ -57,8 +67,8 @@
             max-width: 400px; /* Set a maximum width for the form */
             margin: 100px auto;
             padding: 10px;
-            background-color: #ffffffde;
-            border: 1px solid #ffffffde;
+            background-color: #eceef0dc;
+            border: 1px solid #eceef0;
             border-radius: 5px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
@@ -66,7 +76,7 @@
         /* Style for form elements */
         label, input, .button2, #errorMessage, #successMessage {
             font-size: 1em;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Poppins-Regular', Arial, sans-serif;
         }
 
         label {
@@ -83,18 +93,23 @@
 
         .button2 {
             padding: 10px 20px;
-            font-size: 1rem !important;
+            font-size: 0.9rem !important;
+            background: #246499;
+            background: linear-gradient(0deg, #496785, #246499 100%);
+            font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
             font-weight: bold;
-            background-color: #256cb9;
-            font-family: Arial, Helvetica, sans-serif !important;
-            color: #fff;
+            color: #eceef0;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
         .button2:hover {
-            background-color: #0056b3;
+            background: transparent;
+            border: 2px solid #246499;
+            box-shadow: none;
+            color: #246499;
         }
 
         #errorMessage, #successMessage {
@@ -136,6 +151,76 @@
             background-color: rgb(228, 241, 255);
             z-index: 9999; /* Ensure the loader is on top of everything */
         }
+
+        /* General style for the container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #246499;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 
     </style>
 </head>
@@ -183,8 +268,12 @@
                 <input class="button2" type="submit" value="Acessar"><br>
                 <div style="margin-top: 10px;"></div>
 
-                <label for="rememberMe">Ficar conectado</label>
-                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <br/>
+                <label for="rememberMe" class="checkbox-container">Ficar conectado
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <!--if you want it to be marked use: checked="checked" on input -->
+                    <span class="checkmark"></span>
+                </label>
 
                 <br/>
             </form>
