@@ -372,6 +372,10 @@
     .wrapper {
         padding: 10px;
     }
+
+    footer {
+        padding: 10px;
+    }
   
     .top__container {
         margin-top: 20px;
