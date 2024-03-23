@@ -33,7 +33,7 @@
             localStorage.removeItem('sessionToken');
 
             // Redirect to the index page
-            window.location.href = './index.html';
+            window.location.href = './login.html';
         }
 
         // Attach the logout function to your logout button
