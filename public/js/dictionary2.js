@@ -138,7 +138,7 @@ function logout() {
     localStorage.removeItem('sessionToken');
 
     // Redirect to the login page or any other desired page
-    window.location.href = '../../index.html'; // Replace with your login page URL
+    window.location.href = '../../login.html'; // Replace with your login page URL
 }
 
 // Attach the logout function to your logout button or link
