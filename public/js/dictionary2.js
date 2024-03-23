@@ -14,23 +14,23 @@ firebase.initializeApp(firebaseConfig);
 
 // Função para lidar com o envio do formulário de login
 document.getElementById("loginForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    console.log("Formulário de login submetido"); // Adicione esta linha
+    e.preventDefault(); // Prevent the default form submission
 
-    const inputNome = document.getElementById("nome").value;
-    const inputSenha = document.getElementById("senha").value;
+    const inputEmail = document.getElementById("nome").value;
+    const inputPassword = document.getElementById("senha").value;
 
-    firebase.auth().signInWithEmailAndPassword(inputNome, inputSenha)
-    .then(() => { // Remova 'userCredential' se não for usada
-        // Login bem-sucedido
-        window.location.href = '../../bem-vindo.html';
-    })
-    .catch((error) => {
-        // Erro no login
-        const errorMessage = document.getElementById("errorMessage");
-        errorMessage.innerText = error.message;
-        errorMessage.style.display = "block";
-    });
+    firebase.auth().signInWithEmailAndPassword(inputEmail, inputPassword)
+        .then((userCredential) => {
+            // Signed in 
+            window.location.replace('../../bem-vindo.html'); // Use replace to avoid navigation history
+        })
+        .catch((error) => {
+            // Error handling
+            const errorMessage = document.getElementById("errorMessage");
+            errorMessage.innerText = error.message;
+            errorMessage.style.display = "block";
+            // Clear the fields or handle the error as needed
+        });
 
 
 // Função para fazer logout
