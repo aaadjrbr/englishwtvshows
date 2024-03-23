@@ -1,0 +1,414 @@
+:root {
+    --grey-color: rgb(174, 210, 255);
+    --darker-grey-color: rgb(189, 189, 189);
+    --text-color: rgb(60, 60, 60);
+    --border-radius: 15px;
+    --correct-color: #2ec748;
+    --incorrect-color: #ff4242;
+    --root-padding: 20px;
+  }
+  
+  @font-face {
+    font-family: 'Anton-Regular';
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+  }
+  
+  body {
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: #eceef0;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  header {
+    background-color: #2464993a;
+    color: #246499;
+    width: 100% !important;
+  }
+  
+  .video-and-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  
+  iframe {
+    max-width: 600px;
+    height: 350px;
+    border-radius: 10px;
+  }
+  
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  p {
+    text-align: center;
+    color: #246499;
+  }
+  
+  h1 {
+    font-weight: 600;
+    color: #246499;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    letter-spacing: 1.1px;
+  }
+  
+  h2 {
+    font-size: 1.5em !important;
+    color: #246499;
+    text-align: center;
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    letter-spacing: 1.1px;
+    font-weight: 600px;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-weight: 600px;
+  }
+  
+  .top__container {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  #original__text {
+    border: 2px solid #246499;
+    background-color: #fff;
+    color: #246499;
+    padding: 1.4em;
+    width: 70%;
+    border-radius: var(--border-radius);
+    margin: 0 auto; /* Center horizontally */
+    font-size: 1.6em;
+    text-align: center; /* Center text inside */
+  }
+  
+  
+  span {
+    display: inline-block;
+    border-bottom: 2px dashed var(--darker-grey-color);
+    margin-right: 5px;
+  }
+  
+  #destination__container {
+    padding: 0.5em 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #origin__container {
+    padding: 3em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .word__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjust as needed to control spacing between boxes */
+  }
+  
+  .word {
+    position: relative;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    padding: 10px; /* Add padding to create space inside each box */
+    border-radius: var(--border-radius);
+    box-shadow: 0px 3px 0px 0px #246499;
+    transition: 0.2s transform ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  
+  .word:hover {
+    background-color: #eceef0;
+    color: #246499;
+  }
+  
+  .word__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.2em 0;
+    padding: 0.3em 0.5em;
+    border-radius: var(--border-radius);
+  }
+  
+  .word.correct {
+    background-color: var(--correct-color);
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .word.incorrect {
+    background-color: var(--incorrect-color);
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .correct {
+    font-size: 1.1em;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    color: var(--correct-color);
+  }
+  
+  .incorrect {
+    color: var(--incorrect-color);
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+  
+  .word__container:empty {
+    background: var(--grey-color);
+  }
+  
+  .word:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  
+  #goback {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #goback a {
+    margin-top: 20px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    box-shadow: 0px 3px 0px 0px #246499;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #goback a:hover {
+    background-color: #eceef0;
+    color: #246499;
+  }
+  
+  /* Footer Styles */
+  footer {
+    width: 100%;
+    color: rgb(105, 105, 105) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid var(--grey-color);
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  #correction-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fix the position of the container */
+    bottom: 0; /* Place it at the bottom of the viewport */
+    background-color: #eceef0; /* Set the background color of the container */
+    padding: 10px; /* Add padding for spacing */
+    z-index: 1; /* Ensure it's above other content */
+  }
+  
+  
+  .button-container {
+    text-align: center; /* Center-align the buttons */
+  }
+  
+  /* Individual buttons */
+  .check_button,
+  .skip_button {
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0.8em 2.5em;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    transition: 0s all ease-in-out;
+    cursor: pointer;
+    margin: 0 10px; /* Add margin between buttons */
+  }
+  
+  .skip_button {
+    color: #246499;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #eceef0;
+    border-radius: 10px;
+    box-shadow: 0px 3px 0px 0px #246499;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .skip_button:hover {
+    background-color: #246499;
+    box-shadow: 0px 3px 0px 0px #eceef0;
+    color: #eceef0;
+  }
+  
+  .check_button {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #eceef0;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    border: 1px solid #246499;
+    background-color: #428fca;
+    box-shadow: 0px 3px 0px 0px #246499;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .check_button:hover {
+    background-color: #eceef0;
+    color: #246499;
+  }
+  
+  
+  .skip_button:active,
+  .check_button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  
+  .divider {
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid var(--grey-color);
+  }
+  
+  #portuguese__text {
+    font-size: 1.6em;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center;
+    margin-bottom: 5px;
+    color: #246499;
+    font-weight: bold;
+  }
+  
+  .feedback-container {
+    width: 100%;
+    color: #246499;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .wrapper {
+        padding: 10px;
+    }
+  
+    .top__container {
+        margin-top: 20px;
+    }
+  
+    .word {
+        padding: 0.3em 0.5em;
+        margin: 0.1em 0.3em;
+        font-size: 1.2em;
+    }
+  
+    .skip_button,
+    .check_button {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+    }
+  
+    iframe {
+        max-width: 360px;
+        height: 270px;
+        border-radius: 10px;
+    }
+  
+    h1 {
+        margin-top: 10px;
+        font-size: 1.4em;
+        color: #246499;
+    }
+  
+    #portuguese__text {
+        font-size: 1.2em;
+        color: #246499;
+        font-weight: bold;
+    }
+  
+    .feedback-container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  }

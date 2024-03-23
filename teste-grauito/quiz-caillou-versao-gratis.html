@@ -2,6 +2,7 @@
 <html lang="en, pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2110834991626364">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Inglês com filmes e séries!">
     <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
@@ -10,237 +11,103 @@
     <meta property="og:title" content="English w/ Tv Shows">
     <meta property="og:description" content="Aprenda inglês com séries e filmes!">
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <link rel="icon" href="../favicon.png" type="image/x-icon">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2110834991626364"
      crossorigin="anonymous"></script>
 
+    
     <title>Teste Grátis | Caillou - English w/ TV Shows</title>
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+6iGpAde6PSISL7fF84xH4DW4fIbbVYNIH6Pvj3WhXaRkfj" crossorigin="anonymous">
+    
+    <!-- Add your custom CSS -->
+    <link rel="stylesheet" href="../content/caillou/season1/style.css">
     <link rel="stylesheet" href="./gratis.css">
+    <link rel="stylesheet" href="./quiz-universal.css">
 
+    <!--Styles for loader-->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-
-        /* Navbar Styles */
-.navbar {
-    background-image: url('../public/assets/images/bg1.png'); /* Replace 'background.jpg' with your image file path */
-    background-size: cover; /* or 'contain' or specific dimensions */
-    background-position: center center; /* Center the image both horizontally and vertically */
-    background-repeat: no-repeat;
-    border-radius: 10px; /* Remove border radius */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    padding: 10px 0; /* Add padding to the Navbar */
-}
-
-.navbar-brand {
-    padding: 0px 20px;
-    font-size: 20px; /* Larger font size for the brand */
-    font-weight: bold;
-    color: #fff; /* White text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: left;
-}
-
-.navbar-toggler-icon {
-    background-color: #fff; /* White toggle icon color */
-}
-
-.nav-link {
-    font-size: 18px;
-    text-decoration: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #fff;
-    transition: color 0.3s; /* Add a smooth color transition on hover */
-    margin: 0 20px; /* Add margin to each link for spacing */
-}
-
-.nav-link:hover {
-    color: #246499;
-}
-
-.navbar ul {
-    list-style-type: none;
-    text-align: left;
-}
-
-/* Style links */
-a {
-    color: #246499;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #246499;
-}
-
-
-        header {
-            text-align: center;
-        }
-
-        .flashcard {
-            width: 200px;
-            background-color: #246499;
-            color: #eceef0;
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
-            transition: background-color 0.3s ease;
-        }
-
-        .flashcard:hover {
-            background-color: #e0e0e0;
-            color: #246499;
-        }
-
-        .word {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .translation {
-            font-size: 14px;
-            color: #555;
-            position: absolute;
-            bottom: 10px;
-            display: none;
-        }
-
-        .input-box {
-            margin-top: 10px;
-            display: none;
-            text-align: center;
-        }
-
-        .input-box input {
-            padding: 5px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 80%;
-        }
-
-        .input-box button {
-            margin-top: 10px;
-            padding: 5px 15px;
-            font-size: 14px;
-            background-color: #eceef0;
-            color: #246499d5;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            display: none;
-        }
-
-        .user-answer {
-            margin-top: 10px;
-            font-weight: bold;
-            max-height: 40px; /* Limit the height of the answer section */
-            overflow: auto; /* Add scroll if needed */
-            display: none;
-        }
-
-        .correct-answer {
-            margin-top: 10px;
-            font-weight: bold;
-            max-height: 40px; /* Limit the height of the answer section */
-            overflow: auto; /* Add scroll if needed */
-            display: none;
-        }
-
-                /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-.button1 {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #246499;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block; /* Makes the button a block-level element */
-    margin: 0 auto; /* Center align horizontally */
-}
-
-.button1:hover {
-    background-color: #246499d5;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    color: #000000; /* White text color */
-    padding: 20px 0; /* Add some padding top and bottom */
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-#scrollToTopBtn {
-    display: none;
+    .loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 0.8rem;
-    background: #246499e0 !important;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-#scrollToTopBtn:hover {
-    background: #246499a4 !important;
-}
-
-.eng-logo {
-    width: auto;
-    height: 85px;
-}
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(228, 241, 255);
+    z-index: 9999; /* Ensure the loader is on top of everything */
+        }
     </style>
+
+<style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 500px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 99;
+    }
+    
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 99;
+    }
+    
+    .button-popup {
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+        font-weight: bold;
+        color: #246499;
+        background: transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .button-extra {
+        padding: 10px 20px;
+        font-size: 1.1em !important;
+        background: transparent;
+        border: 2px solid #246499;
+        box-shadow: none;
+        font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+        color: #246499;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+.button-extra:hover {
+        background: #246499;
+        background: linear-gradient(0deg, #496785, #246499 100%);
+        color: #eceef0;
+        transition: all 0.3s ease-in-out;
+        box-shadow: none;
+    }
+    </style>
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
@@ -253,423 +120,89 @@ footer a:hover {
 </script>
 
 <body>
-    <header style="text-align: center;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div style="text-align: left;" class="container">
-                <a href="../index.html"><img class="eng-logo navbar-brand" src="../public/assets/images/eng-logo.png"></a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../index-second.html#aulas-gratis">Aulas Gratuitas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../contato.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Loading spinner container -->
+            <div class="loader-container">
+                <img style="width: 150px; height: 150px;" src="../public/assets/images/tv-loader-pages.gif"></img>
             </div>
-        </nav>  
-        
-        <div id="popupContainer" class="popup-container">
-            <span id="closeButton" class="close-button">&times;</span>
-            <img src="../public/assets/images/sale-popup.png" alt="Pop-up Image" class="popup-image">
-        </div>
 
-        <a href="./caillou-versao-gratis.html"><button  class="button1" style="border-radius: 5px; padding: 10px 20px; margin-top: 20px;"><strong>Voltar para o texto</strong></button></a>
-        <h1 class="display-4 my-text" style="color: red; text-shadow: 2px 2px 4px rgb(255, 255, 255);">Revise todas as palavras que você aprendeu</h1>
-        <p style="font-size: 1.2rem; text-align: center; color: #000000; margin-bottom: 20px;">Você está revisando o vocabulário de: <strong>Caillou - Caillou Makes Cookies
-            (Season 1 - Episode 1)</strong>. É importante que você apenas comece nos flashcards depois de ter estudado o texto.</p><p><strong>Clique na palavra e digite sua tradução.</strong></p><br><strong>As traduções podem variar de acordo com o contexto, por favor procure mais definições <a href="https://www.merriam-webster.com/" target="_blank">aqui (dictionary)</a>.</strong></p><br><br><br>
-        <hr>
-    </header>
-    <button id="scrollToTopBtn" title="Go to top">&#128316;</button>
-
-    <!-- Modal for displaying results -->
-    <div id="resultsModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Resultado:</h2>
-            <div id="resultText"></div>
-        </div>
-    </div>
-
-    <!-- Flashcard container -->
-    <div id="flashcardsContainer"></div>
-
-    <script>
-const dictionary = {
-  "You're": "Você está, Você é",
-  "getting": "ficando",
-  "to": "para",
-  "be": "ser, estar",
-  "a": "um, uma",
-  "big": "grande",
-  "boy": "menino",
-  "I'm": "Estou",
-  "just": "apenas, só",
-  "kid": "criança",
-  "who's": "que está",
-  "four": "quatro",
-  "Each": "Cada",
-  "day": "dia",
-  "I": "eu",
-  "grow": "cresço, crescer",
-  "some": "algum, algum(a)",
-  "more": "mais",
-  "like": "gosto de",
-  "exploring": "explorar",
-  "I'm Caillou.": "Eu sou Caillou.",
-  "So": "Então, Assim",
-  "many": "muitas",
-  "things": "coisas",
-  "do": "fazer",
-  "is": "é",
-  "something": "algo",
-  "new": "novo, nova",
-  "I'll": "Eu vou",
-  "share": "compartilho",
-  "them": "com eles, com você, com vocês",
-  "My": "Meu, Minha",
-  "world": "mundo",
-  "turning": "girando",
-  "changing": "mudando",
-  "each": "cada",
-  "with": "com",
-  "mommy": "mamãe",
-  "daddy": "papai",
-  "finding": "encontrando",
-  "my": "meu, minha",
-  "way!": "caminho!",
-  "Growing": "Crescer",
-  "up": "crescer, crescendo",
-  "not": "não",
-  "so": "tão, tão",
-  "tough,": "difícil",
-  "except": "exceto",
-  "when": "quando",
-  "had": "tive, tinha",
-  "enough.": "suficiente.",
-  "But": "Mas",
-  "there's": "há",
-  "lots": "muitas",
-  "fun": "divertidas, divertido",
-  "stuff.": "coisas, coisinhas",
-  "I'm Caillou,": "Eu sou Caillou,",
-  "Caillou, Caillou,": "Caillou, Caillou,",
-  "Eh": "Eh",
-  "heh": "heh",
-  "heh": "heh",
-  "heh": "heh",
-  "That's me,": "Esse sou eu,",
-  "Storytime, kids.": "Hora da História, crianças.",
-  "Now,": "Agora,",
-  "what": "o que",
-  "did": "fez",
-  "today?": "hoje?",
-  "Today's": "A história de hoje é chamada de",
-  "story": "história",
-  "called": "chamada",
-  "makes": "faz",
-  "Cookies": "biscoitos",
-  "It": "Isso",
-  "all": "tudo",
-  "happened": "aconteceu",
-  "when": "quando",
-  "was": "era, estava",
-  "just": "apenas, só",
-  "three": "três",
-  "years": "anos",
-  "old.": "velho.",
-  "You": "Você",
-  "have": "tem",
-  "to": "para",
-  "play": "brincar, jogar",
-  "quietly": "silenciosamente",
-  "now.": "agora.",
-  "Rosie": "Rosie",
-  "is": "está",
-  "going": "indo",
-  "take": "tirar",
-  "her": "sua",
-  "nap.": "soneca.",
-  "Shhh.": "Shhh.",
-  "But...I": "Mas... eu",
-  "want": "quero",
-  "to": "para",
-  "play.": "brincar, jogar.",
-  "You": "Você",
-  "can": "pode",
-  "still": "ainda",
-  "play--": "brincar--",
-  "just": "apenas, só",
-  "do": "faça",
-  "it": "isso",
-  "quietly.": "silenciosamente.",
-  "felt": "sentiu",
-  "that": "que",
-  "being": "ficar",
-  "quiet": "quieto",
-  "wasn't": "não era",
-  "as": "tão",
-  "much": "divertido",
-  "fun": "divertido",
-  "as": "como",
-  "being": "sendo",
-  "noisy.": "barulhento.",
-  "Caillou...": "Caillou...",
-  "I": "eu",
-  "asked": "pedi",
-  "you": "você",
-  "to": "para",
-  "play": "brincar, jogar",
-  "quietly.": "silenciosamente.",
-  "Cookies.": "Biscoitos.",
-  "want": "quero",
-  "cookies.": "biscoitos.",
-  "I'm": "Estou",
-  "hungry.": "com fome.",
-  "So": "Então",
-  "Caillou": "Caillou",
-  "went": "foi",
-  "to": "para",
-  "the": "a",
-  "kitchen...": "cozinha...",
-  "decided": "decidiu",
-  "to": "para",
-  "make": "fazer",
-  "some": "alguns, algumas",
-  "honey": "mel",
-  "cookies.": "biscoitos.",
-  "And": "E",
-  "so,": "assim,",
-  "got": "conseguiu",
-  "to": "para",
-  "work—": "trabalho—",
-  "making": "fazendo",
-  "a": "um, uma",
-  "whole": "inteiro",
-  "bunch": "monte",
-  "of": "de",
-  "honey": "mel",
-  "cookies:": "biscoitos:",
-  "fat": "gordos",
-  "ones,": "magros, finos",
-  "skinny": "magros",
-  "ones,": "finos",
-  "flat": "achatados",
-  "ones,": "achatados",
-  "and": "e",
-  "round": "redondos",
-  "ones.": "uns.",
-  "Oh": "Ah",
-  "Caillou.": "Caillou.",
-  "What": "O que",
-  "are": "você está",
-  "you": "fazendo?",
-  "I'm": "Estou",
-  "making": "fazendo",
-  "cookies.": "biscoitos.",
-  "Look": "Veja",
-  "at": "na, para, às",
-  "mess": "bagunça",
-  "you": "você",
-  "made.": "fez.",
-  "want": "quero",
-  "to": "para",
-  "help": "Ajuda, socorro",
-  "Mommy": "Mamãe",
-  "clean": "limpo, limpar",
-  "it": "isso",
-  "up?": "acima?",
-  "That's": "Esse é",
-  "the": "o, a",
-  "way,": "caminho, jeito",
-  "helper.": "Ajudante",
-  "Daddy.": "Papai",
-  "Try": "Experimente",
-  "did-": "Fiz",
-  "What": "O que? ou Qual",
-  "are": "é, estão",
-  "you": "você",
-};
-
-
-        let correctCount = 0;
-        let wrongCount = 0;
-
-        function revealTranslation(card) {
-            const translation = card.querySelector('.translation');
-            if (translation.style.display === 'none') {
-                translation.style.display = 'block';
-            } else {
-                translation.style.display = 'none';
-            }
-        }
-
-        function checkAnswer(card, expectedTranslation) {
-    const inputBox = card.querySelector('.input-box input');
-    const result = card.querySelector('.result');
-    const userAnswer = card.querySelector('.user-answer');
-    const correctAnswer = card.querySelector('.correct-answer');
-
-    const userEnteredAnswer = inputBox.value.toLowerCase(); // Convert user input to lowercase
-    const expectedAnswers = expectedTranslation.toLowerCase().split(',').map(answer => answer.trim()); // Convert expected answers to lowercase and split by comma
-
-    // Remove punctuation and whitespace for comparison
-    const cleanedUserAnswer = userEnteredAnswer.replace(/[.,;!?]/g, '').trim();
-
-    userAnswer.textContent = `Sua resposta: ${inputBox.value}`;
-    correctAnswer.textContent = `Correto: ${expectedTranslation}`;
-
-    userAnswer.style.display = 'block';
-    correctAnswer.style.display = 'block';
-
-    let isCorrect = false;
-
-    // Check if the cleaned user answer matches any of the expected answers
-    for (const expectedAnswer of expectedAnswers) {
-        if (cleanedUserAnswer === expectedAnswer) {
-            isCorrect = true;
-            break;
-        }
-    }
-
-    if (isCorrect) {
-        result.textContent = 'Correto! ✔️';
-        result.style.color = 'green';
-        correctCount++;
-    } else {
-        result.textContent = 'Incorreto! ❌';
-        result.style.color = 'red';
-        wrongCount++;
-    }
-    result.style.display = 'block';
-
-    // Automatically hide the result message, user answer, and correct answer after 6 seconds (6000 milliseconds)
-    setTimeout(function () {
-        result.style.display = 'none';
-        userAnswer.style.display = 'none';
-        correctAnswer.style.display = 'none';
-    }, 6000);
-}
+<div id="site-content" style="display: none;">
 
 
 
-        function createFlashcard(word, translation) {
-        const flashcard = document.createElement('div');
-        flashcard.classList.add('flashcard');
-        flashcard.innerHTML = `
-            <div class="word">${word}</div>
-            <div class="translation">${translation}</div>
-            <div class="input-box">
-                <input type="text" placeholder="Digite a tradução" onkeydown="handleEnter(event, this)">
-                <button onclick="checkAnswer(this.parentElement.parentElement, '${translation}')">Enviar</button>
-            </div>
-            <div class="user-answer"></div>
-            <div class="correct-answer"></div>
-            <div class="result"></div>
-        `;
-        flashcard.addEventListener('click', function () {
-            showInputBox(this);
-        });
-        return flashcard;
-    }
-
-    function handleEnter(event, inputElement) {
-        if (event.key === 'Enter') {
-            const card = inputElement.parentElement.parentElement;
-            const expectedTranslation = card.querySelector('.translation').textContent;
-            checkAnswer(card, expectedTranslation);
-        }
-    }
-
-        const flashcardsContainer = document.body;
-
-        for (const word in dictionary) {
-            const translation = dictionary[word];
-            const flashcard = createFlashcard(word, translation);
-            flashcardsContainer.appendChild(flashcard);
-        }
-
-        function showInputBox(card) {
-            const inputBox = card.querySelector('.input-box');
-            inputBox.style.display = 'block';
-        }
-
-        function showResults() {
-            const resultText = `✔️ Corretas: ${correctCount} | ❌ Erradas: ${wrongCount}`;
-            const modal = document.getElementById('resultsModal');
-            const resultContainer = document.getElementById('resultText');
-
-            resultContainer.textContent = resultText;
-            modal.style.display = 'block';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('resultsModal');
-            modal.style.display = 'none';
-        }
-
-// Add this code after your existing JavaScript code
-document.addEventListener('click', function (event) {
-    const flashcards = document.querySelectorAll('.flashcard');
-    flashcards.forEach(function (flashcard) {
-        const inputBox = flashcard.querySelector('.input-box');
-        // Check if the clicked element is not inside the input box or flashcard
-        if (!flashcard.contains(event.target)) {
-            inputBox.style.display = 'none';
-        }
-    });
-});
-
-// Modify the showInputBox function
-function showInputBox(card) {
-    const inputBox = card.querySelector('.input-box');
-    const allInputBoxes = document.querySelectorAll('.input-box');
-    allInputBoxes.forEach(function (box) {
-        box.style.display = 'none';
-    });
-    inputBox.style.display = 'block';
-}
-
-
-
-// Get the button element
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-};
-
-// When the user clicks on the button, scroll to the top of the document
-scrollToTopBtn.onclick = function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-};
-
-
-    </script>
 
     
-    <br/><br/>
-    <div><button class="button1" onclick="showResults()">Resultado</button>
-    <br/>
-    <p style="font-size: 1.2rem; text-align: center; color: #000000; margin-bottom: 20px;">Você está revisando o vocabulário de: <strong>Caillou - Caillou Makes Cookies
-        (Season 1 - Episode 1)</strong>. É importante que você apenas comece nos flashcards depois de ter estudado o texto.</p><br><br><br><hr>
-    </div>
+    
+    
+    <div class="container text-center mt-4">
+        <a href="./caillou-versao-gratis.html" class="button-extra" style="text-decoration: none;"><strong>Voltar para o texto</strong></a>
+        <h1 class="display-4 my-text" style="color: red; text-shadow: 2px 2px 4px rgb(255, 255, 255);">Revise todas as frases que você aprendeu</h1>
 
-    <style>
-        p {
-            color: #246499;
-        }
-    </style>
+        <img style="width: auto; height: 120px; border-radius: 5px;" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fcaillou.jpg?alt=media&token=224a60a8-acaa-4695-ab55-ef8db9f140d9"></img>
+
+        <p style="font-size: 1.5em;"><a class="button-popup"> Dica (clique aqui)</a></p>
+        <br/>
+
+        <div class="overlay"></div>
+        <div class="popup">
+            <h1>Dica</h1>
+            <p style="font-size: 1em; text-align: center; color: #000000; margin-bottom: 20px;">Você está revisando o vocabulário de: <strong>Caillou - Caillou Makes Cookies(Season 1 - Episode 1)</strong>.<br/> É importante começar a revisão das frases abaixo apenas depois de concluir a revisão do texto na página anterior.</p>
+            <p><strong>É recomendável que você utilize o navegador Google Chrome.</strong></p>
+            <p><strong>Instale a extensão <a style="text-decoration: underline;" href="https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en-US&utm_source=ext_sidebar" target="_blank">Google tradutor</a> e selecione a palavra que deseja ouvir a pronúncia e clique no ícone do tradutor.</strong></p>
+            <p>Ícone do Google tradutor: <img style="width: auto; height: 15px;" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/Google_Translate_Icon.png?alt=media&token=69d2759f-ccef-4d69-a815-fd2af48c6a8a"></img></p>
+            
+            <br/>
+            <p>*Para traduzir no celular, simplesmente selecione a palavra ou frase desejada e toque em "traduzir", desde que tenha um aplicativo de tradução instalado.</p>
+        </div>
+
+    </div>
+    
+    <hr/><br/>
+
+    <div class="wrapper">
+        <div class="text__container">
+            <p style="font-size: 1.3em;">Traduza a seguinte frase, para inglês:</p><br/>
+            <div id="portuguese__text"></div><br/>
+            <div id="english__text"></div>
+        </div>
+        <div class="text__container">
+            <div id="original__text"></div>
+            <div class="translated__text" id="translated__text"></div>
+        </div>
+        <div class="word__container" id="word__container"></div>
+        <div style="margin-bottom: 70px;" class="feedback-container">
+            <div id="feedback_container"></div>
+            <br/>
+            <div class="correction-buttons button-container">
+                <button class="skip_button"  id="skip_button">Pular</button>
+                <button class="check_button" id="check_button">Corrigir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+        <!-- Add Bootstrap JS and jQuery if needed -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- Add Bootstrap JavaScript and Popper.js (place this before your custom script.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+6iGpAde6PSISL7fF84xH4DW4fIbbVYNIH6Pvj3WhXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+6iGpAde6PSISL7fF84xH4DW4fIbbVYNIH6Pvj3WhXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Your custom script.js -->
+    <script src="./quiz-caillou-versao-gratis.js"></script>
+    <script src="./gratis.js"></script>
+    <script src="../public/js/script.js"></script>
+    <script src="../public/js/dictionary.js"></script>
+
+
     <!-- Footer section -->
     <script>
         // Check if a footer element exists on the page
@@ -681,7 +214,15 @@ scrollToTopBtn.onclick = function() {
         }
     </script>
 
+</div><!-- div for loader -->
+<script>
+    // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
+</script>
 
-    <script src="./gratis.js"></script>
 </body>
 </html>
