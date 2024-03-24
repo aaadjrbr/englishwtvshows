@@ -129,6 +129,7 @@ const phrases = [
             checkButton.disabled = true; // Disable the check button
             skipButton.disabled = true; // Disable the skip button
         }
+        
     }
     
     
@@ -143,33 +144,35 @@ const phrases = [
       
       function checkAnswer() {
         if (isButtonDisabled) return; // Return if button is disabled
-      
+    
         if (checkAllWordsCompleted()) {
             feedbackContainer.textContent = "Você pulou todas as frases 🤔🤷🏽‍♂️";
             checkButton.disabled = true; // Disable the check button
             skipButton.disabled = true; // Disable the skip button
             return;
         }
-      
-        // Disable the buttons for 2 seconds
+    
+        // Disable the buttons and wordContainer for 2 seconds
         isButtonDisabled = true;
         checkButton.disabled = true;
         skipButton.disabled = true;
-      
+        wordContainer.style.pointerEvents = 'none'; // Disable clicking on words
+    
         setTimeout(() => {
             isButtonDisabled = false;
             checkButton.disabled = false;
             skipButton.disabled = false;
+            wordContainer.style.pointerEvents = 'auto'; // Re-enable clicking on words
         }, 2000);
-      
+    
         const userWords = selectedWordsOrder.join(' ');
         const currentPhrase = phrases[currentPhraseIndex].english;
-      
+    
         if (userWords === currentPhrase) {
             feedbackContainer.textContent = "✔️ Mandou bem!";
             feedbackContainer.classList.remove("incorrect");
             feedbackContainer.classList.add("correct");
-      
+    
             setTimeout(() => {
                 currentPhraseIndex++;
                 if (currentPhraseIndex < phrases.length) {
@@ -179,15 +182,15 @@ const phrases = [
                     feedbackContainer.textContent = "🥳🎉 Parabéns! Você completou todas as frases.";
                     checkButton.disabled = true; // Disable the check button
                     skipButton.disabled = true; // Disable the skip button
-      
+    
                     // Hide the buttons
                     checkButton.style.display = "none";
                     skipButton.style.display = "none";
-      
+    
                     // Add a break line
                     var breakLine = document.createElement("br");
                     feedbackContainer.appendChild(breakLine);
-      
+    
                     // Add a button to redo the quiz
                     var redoButton = document.createElement("button");
                     redoButton.textContent = "Refazer o quiz";
@@ -197,8 +200,8 @@ const phrases = [
                     });
                     feedbackContainer.appendChild(redoButton);
                 }
-      
-            }, 2500);
+    
+            }, 1500);
         } else {
             if (chancesLeft > 0) {
                 feedbackContainer.textContent = `❌ Incorreto. Você tem ${chancesLeft} tentativas. ⏳`;
@@ -209,7 +212,7 @@ const phrases = [
                 feedbackContainer.textContent = `😕 Incorreto. A resposta correta é: "${currentPhrase}".`;
                 feedbackContainer.classList.remove("correct");
                 feedbackContainer.classList.add("incorrect");
-      
+    
                 setTimeout(() => {
                     // Don't increment currentPhraseIndex if answer is incorrect
                     displayPhrase();
@@ -217,11 +220,12 @@ const phrases = [
                 }, 2000);
             }
         }
-      
+    
         const selectedWords = document.querySelectorAll(".word.selected");
         selectedWords.forEach((element) => element.classList.remove("selected"));
         selectedWordsOrder = [];
-      }
+    }
+    
       
       function skipPhrase() {
         if (currentPhraseIndex === phrases.length - 1) {

@@ -150,12 +150,19 @@ const phrases = [
     
               wordContainer.appendChild(wordBalloon);
           });
+    
+          // Hide the skip button if the current phrase is the last one
+          skipButton.style.display = currentPhraseIndex === phrases.length - 1 ? "none" : "inline";
+    
       } else {
           phraseContainer.textContent = "Parabéns! Você completou todas as frases.";
           checkButton.disabled = true; // Disable the check button
           skipButton.disabled = true; // Disable the skip button
       }
+      
     }
+    
+    
     
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -175,15 +182,17 @@ const phrases = [
           return;
       }
     
-      // Disable the buttons for 2 seconds
+      // Disable the buttons and wordContainer for 2 seconds
       isButtonDisabled = true;
       checkButton.disabled = true;
       skipButton.disabled = true;
+      wordContainer.style.pointerEvents = 'none'; // Disable clicking on words
     
       setTimeout(() => {
           isButtonDisabled = false;
           checkButton.disabled = false;
           skipButton.disabled = false;
+          wordContainer.style.pointerEvents = 'auto'; // Re-enable clicking on words
       }, 2000);
     
       const userWords = selectedWordsOrder.join(' ');
@@ -222,7 +231,7 @@ const phrases = [
                   feedbackContainer.appendChild(redoButton);
               }
     
-          }, 2500);
+          }, 1500);
       } else {
           if (chancesLeft > 0) {
               feedbackContainer.textContent = `❌ Incorreto. Você tem ${chancesLeft} tentativas. ⏳`;
@@ -247,7 +256,14 @@ const phrases = [
       selectedWordsOrder = [];
     }
     
+    
     function skipPhrase() {
+      if (currentPhraseIndex === phrases.length - 1) {
+          feedbackContainer.textContent = "Você pode pular, é a última frase.";
+          skipButton.disabled = true;
+          return;
+      }
+    
       currentPhraseIndex++;
       if (currentPhraseIndex < phrases.length) {
           displayPhrase();
@@ -259,6 +275,7 @@ const phrases = [
       }
     }
     
+    
     checkButton.addEventListener("click", checkAnswer);
     skipButton.addEventListener("click", skipPhrase);
     
@@ -267,3 +284,22 @@ const phrases = [
     function checkAllWordsCompleted() {
       return currentPhraseIndex >= phrases.length;
     }
+    
+    
+    // Pop up button
+    
+    
+    document.querySelector('.button-popup').addEventListener('click', function() {
+    document.querySelector('.overlay').style.display = 'block';
+    document.querySelector('.popup').style.display = 'block';
+    });
+    
+    document.querySelector('.overlay').addEventListener('click', function() {
+    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.popup').style.display = 'none';
+    });
+    
+    document.querySelector('.close').addEventListener('click', function() {
+    document.querySelector('.overlay').style.display = 'none';
+    document.querySelector('.popup').style.display = 'none';
+    });

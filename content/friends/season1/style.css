@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Anton-Regular'; /* Specify the desired font family name */
+    src: url('../../../public/assets/fonts/Anton-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
+
 /* Example media query for screens smaller than 768px (typical smartphones) */
 @media (max-width: 768px) {
     /* Adjust styles for small screens here */
@@ -11,16 +22,21 @@
 }
 
 /* Reset some default styles for better consistency */
-body, h1, h2, p, iframe {
+body, h2, p, iframe {
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    font-family: 'Anton-Regular', Arial, sans-serif;
+    letter-spacing: 1.1px;
 }
 
 /* Set a background color and text color for the entire page */
 body {
     background-color: #eceef0; /* Light gray background */
     color: #333;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins-Regular', Helvetica, sans-serif;
     margin: 0 20px; /* Add margin to both left and right sides */
 }
 
@@ -154,7 +170,6 @@ h2 {
 
 p {
     color: #555;
-    font-size: 16px;
 }
 
 
