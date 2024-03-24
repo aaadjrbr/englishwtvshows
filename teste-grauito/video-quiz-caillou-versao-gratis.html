@@ -119,6 +119,10 @@
             cursor: text !important;
         }
 
+        input[type="text"]::placeholder {
+            color: #c1c1c1; /* Change this to your desired color */
+        }
+
         button, input[type="text"] {
             font-size: 16px;
             padding: 10px 20px;
@@ -180,14 +184,30 @@
 
         @media (max-width: 500px) {
             #video-container {
-                width: 90%;
-            }
-
-            input[type="text"] {
-                width: calc(100% - 70px);
-            }
+            width: 90%;
+            margin: 0 auto; /* Center the container */
         }
-    </style>
+
+        input[type="text"] {
+            width: calc(100% - 70px);
+            margin: 0 auto; /* Center the input */
+            display: block; /* Ensure the input takes up the full width */
+        }
+
+        button {
+            margin: 5px auto; /* Center the buttons */
+            display: block; /* Ensure the buttons take up the full width */
+        }
+
+        #result {
+            text-align: center; /* Center the result text */
+        }
+
+        .footer-content {
+            text-align: center; /* Center the footer content */
+        }
+        }
+</style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
@@ -240,8 +260,9 @@
         
         <!-- Answer input -->
         <input type="text" id="answer" placeholder="Digite o que você ouvir">
+        <button id="submit-answer">Verificar Resposta</button><br/>
+        <div style="margin-top: 5px;"></div>
         <button id="previous-button">Anterior</button>
-        <button id="submit-answer">Verificar Resposta</button>
         <button id="next-button">Próximo</button>
         
         <!-- Result message -->
