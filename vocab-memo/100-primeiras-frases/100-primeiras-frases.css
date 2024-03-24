@@ -69,10 +69,14 @@ iframe {
 }
 
 .wrapper {
-    width: 100%;
-    padding: 20px;
+    background-color: #24649911;
     box-sizing: border-box;
-}
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 2em;
+    width: 100%;
+    padding: 10px;
+  }
 
 p {
     text-align: center;
@@ -161,9 +165,10 @@ span {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px; /* Adjust as needed to control spacing between boxes */
-  }
+}
+
   
-  .word {
+.word {
     position: relative;
     border: 1px solid #246499;
     background-color: #428fca;
@@ -177,7 +182,7 @@ span {
     z-index: 1;
     font-size: 1.2em;
     font-weight: 400;
-  }
+}
   
   
 
@@ -214,7 +219,7 @@ span {
     margin: 0 auto;
     text-align: center;
     font-weight: 600;
-    color: var(--correct-color);
+    color: green;
 }
 
 .incorrect {
@@ -263,8 +268,6 @@ span {
 
 /* Footer Styles */
 footer {
-    width: 100%;
-    padding: 10px !important;
     font-size: 0.9em;
     color: rgb(105, 105, 105) !important;
     display: flex;
@@ -394,6 +397,11 @@ footer a:hover {
         padding: 0.3em 0.5em;
         margin: 0.1em 0.3em;
         font-size: 1.2em;
+    }
+    
+    footer {
+        font-size: 0.9em;
+        padding: 5px !important;
     }
 
     .skip_button,

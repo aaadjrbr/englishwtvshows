@@ -61,9 +61,13 @@
   }
   
   .wrapper {
-    width: 100%;
-    padding: 20px;
+    background-color: #24649911;
     box-sizing: border-box;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 2em;
+    width: 100%;
+    padding: 10px;
   }
   
   p {
@@ -203,16 +207,16 @@
     margin: 0 auto;
     text-align: center;
     font-weight: 600;
-    color: var(--correct-color);
-  }
-  
-  .incorrect {
+    color: green;
+}
+
+    .incorrect {
     color: var(--incorrect-color);
     margin: 0 auto;
     text-align: center;
     font-weight: 600;
     font-size: 1.1em;
-  }
+}
   
   .word__container:empty {
     background: var(--grey-color);
