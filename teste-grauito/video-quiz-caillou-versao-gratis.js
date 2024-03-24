@@ -34,10 +34,8 @@ function playSegment() {
   }
   audioPlayer.currentTime = question.startTime;
 
-  // Wait for the 'canplay' event before playing
-  audioPlayer.addEventListener('canplay', function() {
-    audioPlayer.play();
-  }, { once: true }); // Use 'once: true' to remove the event listener after it fires
+  // Start playback directly after setting currentTime
+  audioPlayer.play();
 
   // Stop the audio at the end time
   clearTimeout(timeoutId);
