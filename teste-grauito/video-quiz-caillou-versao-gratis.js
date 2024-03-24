@@ -115,6 +115,14 @@ function redoQuiz() {
   playSegment();
 }
 
+function pauseAudio() {
+  if (audioPlayer) {
+    audioPlayer.pause();
+    clearTimeout(timeoutId);
+  }
+}
+
+
 document.getElementById("play-button").addEventListener("click", playSegment);
 document.getElementById("pause-button").addEventListener("click", pauseAudio);
 document.getElementById("next-button").addEventListener("click", nextQuestion);
