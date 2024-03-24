@@ -1,7 +1,7 @@
 const quizQuestions = [
   {
     startTime: 54.7, // Start time in seconds
-    endTime: 59.7, // End time in seconds
+    endTime: 59.3, // End time in seconds
     correctAnswer: "Today's story is called Caillou Makes Cookies"
   },
   {
@@ -30,25 +30,24 @@ let timeoutId;
 function playSegment() {
   const question = quizQuestions[currentQuestionIndex];
   if (!audioPlayer) {
-    audioPlayer = new Audio("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillouMakesCookies(S01E01).mp3?alt=media&token=be6c2471-fcca-4c08-bff9-5c4c478b4789"); // URL of the full audio file
+    audioPlayer = new Audio("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillouMakesCookies(S01E01).mp3?alt=media&token=be6c2471-fcca-4c08-bff9-5c4c478b4789");
   }
   audioPlayer.currentTime = question.startTime;
-  audioPlayer.play();
+
+  // Wait for the 'canplay' event before playing
+  audioPlayer.addEventListener('canplay', function() {
+    audioPlayer.play();
+  }, { once: true }); // Use 'once: true' to remove the event listener after it fires
 
   // Stop the audio at the end time
   clearTimeout(timeoutId);
-  const playDuration = (question.endTime - question.startTime) * 1000; // Duration in milliseconds
+  const playDuration = (question.endTime - question.startTime) * 1000;
   timeoutId = setTimeout(() => {
     audioPlayer.pause();
   }, playDuration);
 }
 
-function pauseAudio() {
-  if (audioPlayer) {
-    audioPlayer.pause();
-    clearTimeout(timeoutId);
-  }
-}
+
 
 function checkAnswer() {
   const userAnswer = document.getElementById("answer").value;
