@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2110834991626364">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Inglês com filmes e séries!">
+    <meta name="keywords" content="tvshows, séries, filmes, inglês, aprender">
+    <meta name="author" content="English w/ Adenilson">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="English w/ Tv Shows">
+    <meta property="og:description" content="Aprenda inglês com séries e filmes!">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <title>Teste Grátis | Caillou - English w/ TV Shows</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+
+        <!--Styles for loader-->
+        <style>
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(228, 241, 255);
+            z-index: 9999; /* Ensure the loader is on top of everything */
+        }
+        </style>
+
+    <style>
+        :root {
+            --background-color: #111010; /* Dark background */
+            --text-color: #e8eaed; /* Light text */
+            --accent-color: #2e1b76; /* Blue accent */
+            --border-color: #5f6368; /* Slightly lighter border color */
+            --button-color: #303134; /* Dark button background */
+            --button-hover-color: #5f6368; /* Button hover state color */
+            --input-background-color: #5f6368; /* Input background */
+            --border-radius: 8px; /* Border radius for elements */
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: "Open Sans", sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            background: linear-gradient(to right, #7a74e9, #624ab1, #4a2da0, #3a238b, #2e1b76);
+            background-clip: text; /* Standard property */
+            -webkit-background-clip: text; /* Vendor-prefixed property for WebKit browsers */
+            color: transparent; /* This is the standard way to make the text color transparent */
+            -webkit-text-fill-color: transparent; /* Vendor-prefixed property for WebKit browsers */
+            text-decoration: none; /* To ensure no underline is applied */
+            display: inline-block;
+            font-size: 2.6em; /* Adjust the size as needed */
+            margin: 0.5em 0;
+        }
+
+
+        p, a {
+            color: var(--text-color);
+        }
+
+
+        #video-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* This ensures that the video iframe is responsive and maintains aspect ratio */
+        .player-wrapper {
+            position: relative;
+            display: none;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: var(--border-radius); /* Use the border-radius from your root variables */
+            overflow: hidden; /* This ensures that the content inside follows the border radius */
+        }
+
+        .player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius); /* Apply the border-radius here as well */
+        }
+
+
+        /* This ensures that the player-wrapper is centered and has a max-width */
+        #video-container .player-wrapper {
+            margin: auto;
+            max-width: 640px; /* You can set this to the max width you prefer */
+        }
+
+        a:hover {
+            text-decoration: underline !important;
+        }
+
+        input[type="text"] {
+            cursor: text !important;
+        }
+
+        button, input[type="text"] {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--button-color);
+            color: var(--text-color);
+            cursor: pointer;
+            outline: none;
+        }
+
+        button {
+            background-color: var(--accent-color);
+        }
+
+        button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        input[type="text"] {
+            width: calc(100% - 50px);
+            background-color: var(--input-background-color);
+            border: none;
+        }
+
+        #result {
+            margin-top: 10px;
+        }
+
+        #quiz-finish {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #e8eaed;
+        }
+
+        #redo-quiz-button {
+            background-color: var(--button-color);
+            border: none;
+        }
+
+
+/* Footer Styling */
+        footer {
+            align-items: center;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        footer a {
+            color: #e8eaed; /* Links color */
+            text-decoration: none;
+            margin: 0 15px; /* Spacing between links */
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+            #video-container {
+                width: 90%;
+            }
+
+            input[type="text"] {
+                width: calc(100% - 70px);
+            }
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LS5S7RDE3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7LS5S7RDE3');
+</script>
+
+
+<body>
+            <!-- Loading spinner container -->
+            <div class="loader-container">
+                <img style="width: 150px; height: 150px;" src="../public/assets/images/tv-loader-pages.gif"></img>
+            </div>
+
+<div id="site-content" style="display: none;">
+
+
+    <div id="video-container">
+
+        
+        <h1 class="display-4 my-text" style="color: red;">Revise todas as frases que você aprendeu</h1>
+        <a href="./caillou-versao-gratis.html" style="text-decoration: none;"><strong>Voltar - Quiz anterior</strong></a>
+        <div style="font-size: 0.9em;">
+            <p>*Caso o áudio não carregue, clique aqui:</p>
+            <button style="font-size: 0.9em;" id="redo-quiz-button" onclick="location.reload()">Atualizar</button>
+        </div>
+        <br/>
+
+        <img style="width: auto; height: 120px; border-radius: 5px;" src="https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fcaillou.jpg?alt=media&token=224a60a8-acaa-4695-ab55-ef8db9f140d9">
+        
+        <!-- The YouTube video in a responsive wrapper -->
+        <div class="player-wrapper">
+            <div id="player" class="player"></div>
+        </div>
+        
+        <div style="margin-top: 10px;"></div>
+        <p>Caillou - Caillou Makes Cookies (Season 1 - Episode 1)</p>
+        <a href="./caillou-versao-gratis.html"><p>Voltar para texto</p></a>
+        <h2>🎧 Pratique seu listening: Escreva o que você ouvir</h2>
+        
+        <!-- Control buttons -->
+        <button id="play-button">Play Clip</button>
+        <button id="pause-button">Pause</button>
+
+
+        
+        <!-- Answer input -->
+        <input type="text" id="answer" placeholder="Digite o que você ouvir">
+        <button id="previous-button">Anterior</button>
+        <button id="submit-answer">Verificar Resposta</button>
+        <button id="next-button">Próximo</button>
+        
+        <!-- Result message -->
+        <div id="result" style="font-size: 1.6em;"></div>
+        
+        <!-- Quiz finish message -->
+        <div id="quiz-finish">
+            <p>Você terminou o quiz!</p>
+            <button id="redo-quiz-button" onclick="location.reload()">Refazer Quiz</button>
+        </div>
+        <p>*reporte qualquer erro <a href="../contato.html">aqui</a>.</p>
+
+    <br/><br/>
+        <!-- Footer section -->
+        <div class="footer-content">
+        <script>
+            // Check if a footer element exists on the page
+            if (!document.querySelector('footer')) {
+                // Footer element does not exist, dynamically load the footer snippet
+                const script = document.createElement('script');
+                script.src = '../footer/footer2/footer-snippet2.js';
+                document.body.appendChild(script);
+            }
+        </script>
+        </div>
+
+    <script src="./gratis.js"></script>
+    <script src="../public/js/script.js"></script>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./video-quiz-caillou-versao-gratis.js"></script>
+
+</div><!-- div for loader -->
+<script>
+    // Simulate loading delay (remove this in your actual site)
+    setTimeout(function() {
+        // Hide the loader and show the site content when loading is done
+        document.querySelector('.loader-container').style.display = 'none';
+        document.querySelector('#site-content').style.display = 'block';
+    }, 1500); // 1,5 seconds - Adjust the time as needed
+</script>
+</body>
+</html>
