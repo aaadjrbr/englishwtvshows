@@ -1,24 +1,24 @@
 const quizQuestions = [
   {
-    startTime: 54.7, // Start time in seconds
-    endTime: 59.3, // End time in seconds
+    audioClip: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillou-audios%2F54-59-caillou.mp3?alt=media&token=00081081-b37e-412f-b147-1d197b76073b",
     correctAnswer: "Today's story is called Caillou Makes Cookies"
-  },
+  }, //59.7 - 59.3 sec
   {
-    startTime: 1 * 60 + 25.5,
-    endTime: 1 * 60 + 29,
+    audioClip: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillou-audios%2F1.25-1.29-caillou.mp3?alt=media&token=d458482a-a982-4c03-b98f-ee6900c34562",
     correctAnswer: "You can still play, just do it quietly"
-  },
+  }, //1:25.5 - 1:29 sec
   {
-    startTime: 1 * 60 + 47,
-    endTime: 1 * 60 + 51.3,
+    audioClip: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillou-audios%2F1.47-1.51-caillou.mp3?alt=media&token=c07e531a-3304-4592-8022-4150654756ae",
     correctAnswer: "Cookies. I want cookies. I'm hungry"
-  },
+  }, //1:47 - 1:51.3 sec
   {
-    startTime: 2 * 60 + 35,
-    endTime: 2 * 60 + 39,
+    audioClip: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillou-audios%2F2.35-2.39-caillou.mp3?alt=media&token=d912f720-0448-4a42-9f64-1e05f5835fa9",
     correctAnswer: "Caillou decided to make some honey cookies"
-  },
+  }, //2:35 - 2:39 sec
+  {
+    audioClip: "https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillou-audios%2F3.50-3.57-caillou.mp3?alt=media&token=1f36b9ce-6de5-4f2e-b600-c05678f6f6cc",
+    correctAnswer: "Who made these good cookies? I did and mommy helped"
+  }, //3:50.8 - 3:57.3 sec
   // Add more questions as needed
 ];
 
@@ -30,22 +30,11 @@ let timeoutId;
 function playSegment() {
   const question = quizQuestions[currentQuestionIndex];
   if (!audioPlayer) {
-    audioPlayer = new Audio("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillouMakesCookies(S01E01).mp3?alt=media&token=be6c2471-fcca-4c08-bff9-5c4c478b4789");
+    audioPlayer = new Audio();
   }
-  audioPlayer.currentTime = question.startTime;
-
-  // Start playback directly after setting currentTime
+  audioPlayer.src = question.audioClip;
   audioPlayer.play();
-
-  // Stop the audio at the end time
-  clearTimeout(timeoutId);
-  const playDuration = (question.endTime - question.startTime) * 1000;
-  timeoutId = setTimeout(() => {
-    audioPlayer.pause();
-  }, playDuration);
 }
-
-
 
 function checkAnswer() {
   const userAnswer = document.getElementById("answer").value;
