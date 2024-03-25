@@ -43,12 +43,7 @@ const quizQuestions = [
     audioPlayer.play();
   
     // Stop the audio at the end time
-    clearTimeout(timeoutId);
-    const playDuration = (question.endTime - question.startTime) * 1000;
-    timeoutId = setTimeout(() => {
-      audioPlayer.pause();
-    }, playDuration);
-  }
+    
   
   
   
