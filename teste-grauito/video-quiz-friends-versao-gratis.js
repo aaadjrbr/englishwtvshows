@@ -31,21 +31,25 @@ const quizQuestions = [
   let attemptCount = 0;
   let audioPlayer;
   let timeoutId;
+
   
-  function playSegment() {
-    const question = quizQuestions[currentQuestionIndex];
-    if (!audioPlayer) {
-      audioPlayer = new Audio("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FFriendsRachelRunsOutonherWeddingtoBarry(Season%201%20Clip).mp3?alt=media&token=50ffa404-d938-482e-8302-51a5ddfb160a");
-    }
-    audioPlayer.currentTime = question.startTime;
-  
-    // Start playback directly after setting currentTime
-    audioPlayer.play();
-  
-    // Stop the audio at the end time
-    
-  
-  
+ function playSegment() {
+  const question = quizQuestions[currentQuestionIndex];
+  if (!audioPlayer) {
+    audioPlayer = new Audio("https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/content-section%2Fvideo-quiz-audios%2FCaillouMakesCookies(S01E01).mp3?alt=media&token=be6c2471-fcca-4c08-bff9-5c4c478b4789");
+  }
+  audioPlayer.currentTime = question.startTime;
+
+  // Start playback directly after setting currentTime
+  audioPlayer.play();
+
+  // Stop the audio at the end time
+  clearTimeout(timeoutId);
+  const playDuration = (question.endTime - question.startTime) * 1000;
+  timeoutId = setTimeout(() => {
+    audioPlayer.pause();
+  }, playDuration);
+}
   
   function checkAnswer() {
     const userAnswer = document.getElementById("answer").value;
