@@ -1,7 +1,7 @@
 const quizQuestions = [
     {
       startTime: 36, // Start time in seconds
-      endTime: 40, // End time in seconds
+      endTime: 39.95, // End time in seconds
       correctAnswer: "I'll be fine, alright? Really, everyone I hope she'll be very happy"
     },
     {
