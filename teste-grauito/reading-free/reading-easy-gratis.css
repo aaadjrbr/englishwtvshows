@@ -1,6 +1,16 @@
 /* Global Styles */
+@font-face {
+    font-family: 'Poppins-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'ProductSans-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/ProductSans-Regular.ttf') format('truetype'),
+}
+
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "ProductSans-Regular", sans-serif;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/english-with-tv-shows.appspot.com/o/reading-section%2Fblured-bg.png?alt=media&token=0e3aa374-9f42-432d-a7b3-636e6c7a0b8e&_gl=1*1gt85gp*_ga*MTc3Mzk3ODA2Ni4xNjk0NzIzNTU1*_ga_CW55HF8NVT*MTY5ODMzMDI0OS4xMy4xLjE2OTgzMzg4MDUuMTcuMC4w');
@@ -257,14 +267,13 @@ body.dark-mode::after {
 }
 
 p {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "ProductSans-Regular", sans-serif;
     color:rgb(255, 255, 255);
 }
 
 /* Vintage Typography Styles */
 h1 {
-    font-family: Helvetica, Arial, sans-serif; /* Vintage font for headings and content */
-    font-weight: bold;
+    font-family: "ProductSans-Regular", sans-serif;
     color: white;
 }
 
