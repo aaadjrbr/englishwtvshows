@@ -1,30 +1,51 @@
+:root {
+    --background-color: #0a0909; /* Dark background */
+    --text-color: #e8eaed; /* Light text */
+    --accent-color: #2e1b76; /* Blue accent */
+    --border-color: #5f6368; /* Slightly lighter border color */
+    --button-color: #303134; /* Dark button background */
+    --button-hover-color: #161313; /* Button hover state color */
+    --input-background-color: #5f6368; /* Input background */
+    --border-radius: 8px; /* Border radius for elements */
+}
+
+@font-face {
+    font-family: 'ProductSans-Regular'; /* Specify the desired font family name */
+    src: url('../../public/assets/fonts/ProductSans-Regular.ttf') format('truetype'),
+  }
+
+@font-face {
+    font-family: 'Anton-Regular';
+    src: url('../../public/assets/fonts/Anton-Regular.ttf') format('truetype');
+  }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "ProductSans-Regular", sans-serif !important;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
     padding: 10px;
 }
 
 h1 {
+    color: #fff;
     font-size: 2em;
     padding: 5px;
-    color: #256cb9;
 }
 
-p {
+p, a {
     font-size: 1.6em;
-    color: #256cb9;
+    color: var(--text-color);
 }
 
 .dialogue-container {
-    background-color: #fff;
+    background-color: #2f1b7662;
     width: 80%;
     height: 75%;
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 img#character {
@@ -33,54 +54,72 @@ img#character {
 }
 
 .voltar-menu {
-    margin: 10px;
-    padding: 10px 20px;
     font-size: 16px;
-    background-color: #256cb9;
-    border-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    font-family: "ProductSans-Regular", sans-serif;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--button-color);
+    color: var(--text-color);
     cursor: pointer;
+    outline: none;
+}
+
+.voltar-menu {
+    background-color: var(--accent-color);
 }
 
 .voltar-menu:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: var(--button-hover-color);
+}
+
+
+#back {
+    font-size: 16px;
+    font-family: "ProductSans-Regular", sans-serif;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    outline: none;
 }
 
 #back {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #256cb9;
-    border-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: var(--accent-color);
 }
 
 #back:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: var(--button-hover-color);
 }
 
 .options button {
-    margin: 10px;
-    padding: 10px 20px;
     font-size: 16px;
-    background-color: #256cb9;
-    border-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    font-family: "ProductSans-Regular", sans-serif;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--button-color);
+    color: var(--text-color);
     cursor: pointer;
+    outline: none;
 }
 
 .options button:hover {
     background-color: #0056b3;
     border-color: #0056b3;
+}
+
+.options button {
+    background-color: var(--accent-color);
+}
+
+.options button:hover {
+    background-color: var(--button-hover-color);
 }
 
 #give-up {
@@ -130,6 +169,16 @@ img#character {
         font-size: 16px; /* Increase font size for better readability */
     }
 
+    footer p {
+        font-size: 0.9em !important;
+    }
+    
+    footer a {
+        color: #e8eaed; /* Links color */
+        font-size: 0.9em !important;
+        text-decoration: none;
+    }
+
     img#character {
         width: 100%; /* Ensure the character image fits the screen width */
     }
@@ -144,4 +193,25 @@ img#character {
     #try-again {
         font-size: 14px; /* Reduce button font size for smaller screens */
     }
+}
+
+/* Footer Styling */
+footer {
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+footer p {
+    font-size: 1em !important;
+}
+
+footer a {
+    color: #e8eaed; /* Links color */
+    font-size: 1em !important;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #2e1b76;
 }

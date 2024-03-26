@@ -64,7 +64,7 @@
     <div id="site-content" style="display: none;">
         <h1>Iniciantes (Teste Grátis) - Apresente-se em Inglês:</h1>
         <a href="../../index-second.html"><button class="voltar-menu">Voltar</button></a>
-
+        <br/><br/>
         <div class="dialogue-container">
             <img id="character" src="" alt="Character Image">
             <p id="dialogue">Welcome to English Dialogue Practice!</p>
@@ -78,11 +78,17 @@
             <button id="back" style="display: none">Voltar</button>
         </div>
 
-        <!-- FOOTER -->
-        <footer>
-            <p class="footer">&copy; 2024 English w/ TV Shows. Todos os direitos reservados.</p>
-            <p class="footer">Powered by <a style="text-decoration: none;" href="../../index-second.html">English w/ Adenilson</a>.</p>
-        </footer>
+        <br/><br/>
+    <!-- Footer section -->
+    <script>
+        // Check if a footer element exists on the page
+        if (!document.querySelector('footer')) {
+            // Footer element does not exist, dynamically load the footer snippet
+            const script = document.createElement('script');
+            script.src = '../../footer/footer2/footer-snippet2.js';
+            document.body.appendChild(script);
+        }
+    </script>
     </div><!-- End site-content div -->
 
     <script>
