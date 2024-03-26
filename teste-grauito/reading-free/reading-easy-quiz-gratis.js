@@ -99,7 +99,7 @@ function showResult() {
 
         // Display correct answers for each question
         questions.forEach((question, index) => {
-            resultElement.innerHTML += `<strong>Questão ${index + 1}:</strong> ${question.correctAnswer}<br>`;
+            resultElement.innerHTML += `Questão ${index + 1}: ${question.correctAnswer}<br>`;
         });  
 }
 
