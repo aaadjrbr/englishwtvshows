@@ -41,7 +41,6 @@
   }
   
   #resultMessage {
-    font-weight: bold;
     font-size: 18px;
     margin-top: 20px; /* Add spacing at the top */
     color: #ffffff !important; /* Change result message color to a shade of blue */
