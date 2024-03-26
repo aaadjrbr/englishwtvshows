@@ -3,6 +3,8 @@ const characterImage = document.getElementById('character');
 const tryAgainButton = document.getElementById('try-again');
 const giveUpButton = document.getElementById('give-up');
 const backButton = document.getElementById('back');
+const redoQuizButton = document.getElementById('redo-quiz');
+const finishMessage = document.getElementById('finish-message');
 const preloadedImages = {}; // Store preloaded images
 
 const dialogues = [
@@ -66,6 +68,7 @@ const resultImages = {
 };
 
 let currentDialogueIndex = 0;
+let score = 0; // Variable to store the score
 
 function preloadImage(imageUrl) {
     const img = new Image();
@@ -94,27 +97,41 @@ function checkAnswer(selectedOption) {
     const currentDialogue = dialogues[currentDialogueIndex];
     if (selectedOption === currentDialogue.correctOption) {
         // Correct answer
-        currentDialogueIndex++;
-        if (currentDialogueIndex < dialogues.length) {
-            displayDialogue(currentDialogueIndex);
-        } else {
-            dialogueElement.textContent = '🥳 Parabéns! Você completou o diálogo. Assine já, para muito mais. 🚀';
-            characterImage.src = resultImages.congrats;
-            hideOptions(); // Call the function to hide options
-            backButton.style.display = 'inline'; // Show the "Back" button
-        }
+        score++; // Increase the score
     } else {
         // Incorrect answer
+        score--; // Decrease the score for incorrect answers
         characterImage.src = resultImages.incorrect;
+        dialogueElement.textContent = `Sorry, the correct answer is: ${currentDialogue.options[currentDialogue.correctOption - 1]}`;
         for (let i = 0; i < 3; i++) {
             const optionBtn = document.getElementsByClassName('options')[0].getElementsByTagName('button')[i];
             optionBtn.disabled = true; // Disable answer buttons
         }
-        dialogueElement.textContent = "Sorry, I don't understand. Could you repeat? 🥺";
         tryAgainButton.style.display = 'inline';
         giveUpButton.style.display = 'inline';
+        return; // Exit the function early to prevent further execution
+    }
+
+    currentDialogueIndex++;
+    if (currentDialogueIndex < dialogues.length) {
+        displayDialogue(currentDialogueIndex);
+    } else {
+        // End of quiz
+        displayScore(); // Display the final score and congratulations message
     }
 }
+
+function displayScore() {
+    // Display the final score
+    dialogueElement.textContent = `🥳 Parabéns! Você completou o diálogo. Sua pontuação final é: ${score}/${dialogues.length}`;
+    characterImage.src = resultImages.congrats;
+    hideOptions(); // Call the function to hide options
+    backButton.style.display = 'inline'; // Show the "Back" button
+    redoQuizButton.style.display = 'inline'; // Show the "Redo Quiz" button
+    finishMessage.style.display = 'block'; // Show the finish message
+}
+
+
 
 function hideOptions() {
     for (let i = 0; i < 3; i++) {
@@ -136,5 +153,11 @@ backButton.addEventListener('click', () => {
     // Redirect to a different page
     window.location.href = '../../index-second.html'; // Replace with the desired URL
 });
+
+redoQuizButton.addEventListener('click', () => {
+    // Reload the page to redo the quiz
+    location.reload();
+});
+
 
 displayDialogue(currentDialogueIndex);

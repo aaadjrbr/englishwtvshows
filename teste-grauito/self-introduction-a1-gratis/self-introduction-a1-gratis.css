@@ -75,7 +75,7 @@ img#character {
 }
 
 
-#back {
+#back, #redo-quiz {
     font-size: 16px;
     font-family: "ProductSans-Regular", sans-serif;
     padding: 10px 20px;
@@ -88,11 +88,11 @@ img#character {
     outline: none;
 }
 
-#back {
+#back, #redo-quiz {
     background-color: var(--accent-color);
 }
 
-#back:hover {
+#back:hover, #redo-quiz:hover {
     background-color: var(--button-hover-color);
 }
 
@@ -190,6 +190,7 @@ img#character {
     #back,
     .options button,
     #give-up,
+    #redo-quiz
     #try-again {
         font-size: 14px; /* Reduce button font size for smaller screens */
     }
