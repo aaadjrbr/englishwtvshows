@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en, pt">
+<head>
+  <title>Aprenda Inglês Sozinho - Curso</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./roteiro-de-estudos.css">
+  <link rel="icon" href="../favicon.png" type="image">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+  <style>
+        body {
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .header--logo {
+            display: inline-block;
+        }
+  </style>
+
+<style>
+    .center {
+      display: flex;
+      justify-content: center;
+      
+      height: 50vh; /* You can adjust this for desired vertical alignment */
+    }
+
+    .img2 {
+      max-width: 100%;
+      max-height: 260px;
+      border-radius: 80%;
+    }
+    
+    .video-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 60%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; /* Ensure the video appears on top of other content */
+    }
+
+  /* Customize the size of the video */
+  .video-popup video {
+  width: 100%;
+  height: 100%;
+  }
+
+  /* Add your custom button styles */
+  .custom-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+
+    /* Center the button horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+  </style>
+
+</head>
+<body>
+    <header>
+        <br>
+    <a class="header--logo" href="https://www.instagram.com/englishwadenilson">
+        <p>English w/ Adenilson</p></a>
+        <br><br>
+    </header>
+    <hr>
+
+<h1 style="text-align: center;">Cansado(a) de tentar aprender Inglês e não conseguir?</h1>
+
+
+<h2 style="text-align: center">Com esse roteiro prático e métodos eficientes,<br> eu te ajudo a aprender e ter uma<br> rotina de estudos que realmente funciona.</h2>
+
+      <!-- Add a button or link to open the video popup -->
+      <button onclick="openVideoPopup()" class="custom-button">Entenda melhor, assista o vídeo</button>
+
+      <!-- The video popup container -->
+      <div id="videoPopup" class="video-popup">
+        <span onclick="closeVideoPopup()">Fechar</span>
+        <video controls>
+          <source src="https://aaadjrbr.github.io/personal-site/assets/videos/roteiro-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <br>
+
+<h2 style="text-align: center">Clique na imagem abaixo e<br> garanta já o seu roteiro<br> de estudos, por <br>apenas R$ 17,97 ou<br> 3x de R$ 6,39:</h2>
+    <div class="center">
+      <a href="https://chk.eduzz.com/2068282">
+        <img class="img2" src="https://aaadjrbr.github.io/personal-site/assets/img/services-aprenda-sozinho.png" alt="Aprenda Inglês Sozinho">
+      </a>
+    </div>
+<br/>
+
+<script>
+    function openVideoPopup() {
+      var popup = document.getElementById("videoPopup");
+      popup.style.display = "block";
+      var video = popup.querySelector("video");
+      video.play(); // Autoplay the video
+    }
+    
+    function closeVideoPopup() {
+      var popup = document.getElementById("videoPopup");
+      popup.style.display = "none";
+      var video = popup.querySelector("video");
+      video.pause();
+      video.currentTime = 0; // Reset video playback position
+    }
+    
+    // Close the video pop-up when clicking outside the video
+    window.addEventListener("click", function(event) {
+      var popup = document.getElementById("videoPopup");
+      var video = popup.querySelector("video");
+      if (event.target === popup) {
+        popup.style.display = "none";
+        video.pause();
+        video.currentTime = 0; // Reset video playback position
+      }
+    });
+    </script>
+
+</body>
+</html>
