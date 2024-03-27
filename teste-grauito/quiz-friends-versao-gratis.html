@@ -249,15 +249,17 @@
 
 
     <!-- Footer section -->
-    <script>
-        // Check if a footer element exists on the page
-        if (!document.querySelector('footer')) {
-            // Footer element does not exist, dynamically load the footer snippet
-            const script = document.createElement('script');
-            script.src = '../footer/footer2/footer-snippet2.js';
-            document.body.appendChild(script);
-        }
-    </script>
+    <div style="padding: 10px;">
+        <script>
+            // Check if a footer element exists on the page
+            if (!document.querySelector('footer')) {
+                // Footer element does not exist, dynamically load the footer snippet
+                const script = document.createElement('script');
+                script.src = '../footer/footer2/footer-snippet2.js';
+                document.body.appendChild(script);
+            }
+        </script>
+        </div>
 
 </div><!-- div for loader -->
 <script>
