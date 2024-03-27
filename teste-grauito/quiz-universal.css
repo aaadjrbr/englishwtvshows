@@ -380,7 +380,7 @@ footer a:hover {
   }
 
   footer {
-      padding: 10px !important;
+      padding: 10px 10px 10px -20px !important;
   }
 
   .top__container {
