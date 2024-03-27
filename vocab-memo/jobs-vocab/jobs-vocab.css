@@ -265,6 +265,7 @@ header {
 
 /* Footer Styles */
 footer {
+    font-size: 0.9em !important;
     width: 100%;
     color: rgb(105, 105, 105) !important;
     display: flex;
