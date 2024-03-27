@@ -23,7 +23,7 @@
 @font-face {
     font-family: 'ProductSans-Regular'; /* Specify the desired font family name */
     src: url('../../public/assets/fonts/ProductSans-Regular.ttf') format('truetype'),
-  }
+}
 
 /* Body Styles */
 body {
