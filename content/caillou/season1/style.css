@@ -49,7 +49,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-image: url('../../../public/assets/images/friends2-bg.jpg'); /* Replace 'background.jpg' with your image file path */
+    background-image: url('../../../public/assets/images/bg1.png'); /* Replace 'background.jpg' with your image file path */
     background-size: cover; /* or 'contain' or specific dimensions */
     background-position: center center; /* Center the image both horizontally and vertically */
     background-repeat: no-repeat;
