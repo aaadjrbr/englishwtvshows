@@ -49,8 +49,17 @@
 
 
 
-    <div style="margin-top: 50px;"></div>
-    <footer><p style="text-align: center;">&copy; 2023 English w/ TV Shows. Todos os direitos reservados.</p></footer>
+    <div style="margin-top: 10px;"></div>
+        <!-- Footer section -->
+        <script>
+          // Check if a footer element exists on the page
+          if (!document.querySelector('footer')) {
+              // Footer element does not exist, dynamically load the footer snippet
+              const script = document.createElement('script');
+              script.src = '../../footer/footer2/footer3/footer-snippet3.js';
+              document.body.appendChild(script);
+          }
+      </script>
 
 
 

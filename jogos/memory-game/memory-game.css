@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,500;1,500&display=swap');
+
 body {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-family: "Instrument Sans", sans-serif;
 	text-align: center;
 	background-color: #f0f0f0;
 	margin: 0;
 	padding: 10px;
 }
+
+a:hover {
+	text-decoration: underline !important;
+}
+
 #word-container {
 	margin-top: 20px;
 	font-size: 1.6em;
 }
+
 .word {
 	display: inline-block;
 	padding: 15px;
@@ -20,9 +28,11 @@ body {
 	font-size: 1.3em;
 	transition: background-color 0.3s ease;
 }
+
 .word:hover {
 	background-color: #2581c2;
 }
+
 .attempts {
 	margin-top: 10px;
 	font-weight: bold;
@@ -47,6 +57,7 @@ body {
 	border-radius: 10px;
 	transition: background-color 0.3s ease;
 }
+
 .button:hover {
 	background-color: #2581c2;
 }
@@ -65,8 +76,9 @@ body {
 	border-radius: 10px;
 	transition: background-color 0.3s ease;
 }
+
 .goBackButton:hover {
-	background-color: #2581c2;
+	background-color: #2581c2 !important;
 }
 
 
@@ -79,6 +91,9 @@ body {
 }
 
 footer {
+	color: #2581c2 !important;
+	padding: 10px !important;
+	font-size: 0.9em;
 	text-align: center !important;
 	margin: 0;
 }

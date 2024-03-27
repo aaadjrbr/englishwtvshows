@@ -8,6 +8,8 @@
     src: url('../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,500;1,500&display=swap');
+
 
 body {
     background-color: #eceef0 !important; /* Replace with your desired background color */
@@ -20,7 +22,7 @@ body {
 }
 
 body, h1, h2, p {
-    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-family: "Instrument Sans", sans-serif;
     color:#246499;
     margin: 0;
     padding: 0;
@@ -54,7 +56,7 @@ h2 {
 
 h3 {
     color: #246499;
-    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-family: "Instrument Sans", sans-serif;
     font-size: 1.4em;
     margin-bottom: 10px;
 }
@@ -78,7 +80,7 @@ input[type="text"] {
     font-weight: bold;
     background: #246499;
     background: linear-gradient(0deg, #496785, #246499 100%);
-    font-family: 'Poppins-Regular', Helvetica, sans-serif !important;
+    font-family: "Instrument Sans", sans-serif;
     color: #eceef0;
     border: none;
     border-radius: 5px;
@@ -100,7 +102,7 @@ input[type="text"] {
     font-size: 0.9rem !important;
     background: transparent;
     border: 2px solid #eceef0;
-    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-family: "Instrument Sans", sans-serif;
     color: #eceef0;
     border-radius: 5px;
     cursor: pointer;

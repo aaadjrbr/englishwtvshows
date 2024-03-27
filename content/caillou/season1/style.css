@@ -8,6 +8,8 @@
     src: url('../../../public/assets/fonts/Poppins-Regular.ttf') format('truetype'),
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,500;1,500&display=swap');
+
 
 /* Example media query for screens smaller than 768px (typical smartphones) */
 @media (max-width: 768px) {
@@ -27,6 +29,10 @@ body, h2, p, iframe {
     padding: 0;
 }
 
+a:hover { 
+    text-decoration: underline;
+}
+
 h1 {
     font-family: 'Anton-Regular', Arial, sans-serif;
     letter-spacing: 1.1px;
@@ -36,14 +42,14 @@ h1 {
 body {
     background-color: #eceef0; /* Light gray background */
     color: #333;
-    font-family: 'Poppins-Regular', Helvetica, sans-serif;
+    font-family: "Instrument Sans", sans-serif;
     margin: 0 20px; /* Add margin to both left and right sides */
 }
 
 
 /* Navbar Styles */
 .navbar {
-    background-image: url('../../../public/assets/images/bg1.png'); /* Replace 'background.jpg' with your image file path */
+    background-image: url('../../../public/assets/images/friends2-bg.jpg'); /* Replace 'background.jpg' with your image file path */
     background-size: cover; /* or 'contain' or specific dimensions */
     background-position: center center; /* Center the image both horizontally and vertically */
     background-repeat: no-repeat;
