@@ -265,6 +265,7 @@ header {
 
 /* Footer Styles */
 footer {
+    font-size: 0.9em !important;
     width: 100%;
     color: rgb(105, 105, 105) !important;
     display: flex;
@@ -344,7 +345,7 @@ footer a:hover {
 }
 
 /* Media Query for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     .question-video-quiz video {
         width: 100%;
@@ -373,7 +374,8 @@ footer a:hover {
     }
 
     footer {
-        padding: 20px !important;
+        font-size: 0.9em;
+        padding: 5px;
     }
 
     /* Add more adjustments as needed for smaller screens */

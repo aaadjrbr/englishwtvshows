@@ -375,7 +375,7 @@ footer a:hover {
 
     footer {
         font-size: 0.9em;
-        padding: 5px !important;
+        padding: 5px;
     }
 
     /* Add more adjustments as needed for smaller screens */
