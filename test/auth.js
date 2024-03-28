@@ -17,17 +17,17 @@ const auth = getAuth(app);
 
 // Function to protect a page
 export function protectPage() {
-    console.log("protectPage function called."); // This should appear in the console
-    onAuthStateChanged(auth, (user) => {
-      console.log("User state change detected:", user); // This should log the user object or null
-      if (!user) {
-        console.log("No user logged in. Redirecting to login page."); // This should log if no user is found
-        window.location.href = './test.html'; // Redirect to login
-      } else {
-        console.log("User is logged in: ", user.email); // This should log the user's email if logged in
-      }
-    });
-  }
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // User is not logged in, redirect to login page
+      window.location.href = './test.html';
+    } else {
+      // User is logged in, display welcome message
+      const welcomeMessage = `Hi ${user.displayName || 'user'}, welcome to the protected page!`;
+      document.getElementById('welcome-message').textContent = welcomeMessage;
+    }
+  });
+}
   
 // Logout function
 export function logout() {
