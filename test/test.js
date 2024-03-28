@@ -23,16 +23,16 @@ export function signInWithGoogle() {
         // The signed-in user info.
         const user = result.user;
         console.log("Google user signed in:", user.uid);
-        // Redirect to a different page or display a success message
+        // Redirect to a different page
+        window.location.href = './protected-page.html'; // Change this to your desired URL
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
-        const email = error.email; // The email of the user's account used
-        const credential = GoogleAuthProvider.credentialFromError(error); // The firebase.auth.AuthCredential type that was used
-        console.error("Error in Google sign-in:", errorMessage, "Code:", errorCode, "Email:", email, "Credential:", credential);
+        console.error("Error in Google sign-in:", errorMessage);
       });
 }
+
 
 
 // Email Password Signup
