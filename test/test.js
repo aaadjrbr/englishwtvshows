@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBAGs-2m-qzleMxKS7-G4Vi53yOwhm99SA",
@@ -15,6 +15,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+
+
+// Function to send a password reset email
+export function resetPassword(email) {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        // Password reset email sent!
+        console.log("Password reset email sent");
+        // Inform the user that the email has been sent
+      })
+      .catch((error) => {
+        // Error occurred
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error("Error in sending password reset email:", errorMessage);
+        // Inform the user about the error
+      });
+}
 
 // Google sign-in
 export function signInWithGoogle() {
@@ -32,8 +50,6 @@ export function signInWithGoogle() {
         console.error("Error in Google sign-in:", errorMessage);
       });
 }
-
-
 
 // Email Password Signup
 export function signUpWithEmailPassword(email, password) {

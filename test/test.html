@@ -9,6 +9,8 @@
     <h2>Login</h2>
     <input type="email" id="email" placeholder="Email">
     <input type="password" id="password" placeholder="Password">
+    <a href="#" id="forgot-password">Forgot Password?</a>
+
     <button id="login-btn">Login</button>
     <button id="signup-btn">Sign up with Email</button>
     <button id="google-signin-btn">Sign in with Google</button>
@@ -29,7 +31,7 @@
   <script type="module" src="./test.js"></script>
 
   <script type="module">
-    import { signInWithGoogle, signUpWithEmailPassword } from './test.js';
+    import { signInWithGoogle, signUpWithEmailPassword, resetPassword } from './test.js';
   
     document.getElementById('google-signin-btn').addEventListener('click', function() {
       signInWithGoogle();
@@ -42,6 +44,13 @@
         signUpWithEmailPassword(email, password);
         modal.style.display = "none"; // Close the modal after signup
     });
+
+    document.getElementById('forgot-password').addEventListener('click', function() {
+    const email = prompt("Please enter your email address:");
+    if (email) {
+      resetPassword(email);
+    }
+  });
   </script>
 
   <script>
