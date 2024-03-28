@@ -1,5 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.10/firebase-app.js";
-import { getAuth, applyActionCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/10.6.10/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getAuth, applyActionCode, confirmPasswordReset } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 // Initialize Firebase
 const firebaseConfig = {
