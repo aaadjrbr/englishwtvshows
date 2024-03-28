@@ -29,7 +29,7 @@ document.getElementById('password-reset-form').addEventListener('submit', functi
             // Password reset successful
             document.getElementById('message').innerText = 'Your password has been reset successfully.';
             // Redirect the user to the login page or show a success message
-            window.location.href = './test.html';
+            window.location.href = './test.html'; // Assuming the login page is login.html
         })
         .catch((error) => {
             // Error occurred
