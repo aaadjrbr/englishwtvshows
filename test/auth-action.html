@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication Action</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <!-- Content for Email Verification -->
+        <div id="verify-email" style="display: none;">
+            <h2>Email Verification</h2>
+            <p>Please wait... We are verifying your email.</p>
+        </div>
+
+        <!-- Content for Password Reset -->
+        <div id="reset-password" style="display: none;">
+            <h2>Reset Password</h2>
+            <input type="password" id="new-password" placeholder="New password">
+            <input type="password" id="confirm-password" placeholder="Confirm new password">
+            <button id="reset-password-btn">Submit</button>
+            <p id="reset-password-message"></p>
+            <a href="./test.html" id="back-to-login" style="display: none;">Back to Login</a> <!-- Add this line -->
+        </div>
+
+
+        <!-- Content for Recovery Email -->
+        <div id="recover-email" style="display: none;">
+            <h2>Recover Email</h2>
+            <p>Please wait... We are recovering your email.</p>
+        </div>
+
+        <!-- Generic Message Container -->
+        <div id="message-container" style="display: none;">
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.6.10/firebase-auth.js"></script>
+    <script type="module" src="auth-action.js"></script>
+</body>
+</html>
