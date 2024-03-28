@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Protected Page</title>
+  <link rel="stylesheet" type="text/css" href="./test.css">
+</head>
+<body>
+  <button id="logout-btn">Logout</button>
+  <!-- Your protected page content -->
+  <h1>Hi, this is a protected page :)</h1>
+
+  <script type="module">
+    import { protectPage, logout } from './auth.js';
+    protectPage();
+
+    document.getElementById('logout-btn').addEventListener('click', function() {
+      logout();
+    });
+  </script>  
+</body>
+</html>
